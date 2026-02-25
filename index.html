@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning" />
+  <meta property="og:description" content="We propose Game-RL, constructing diverse game tasks for RL training to boost VLMs' general reasoning ability. Our Code2Logic approach synthesizes the GameQA dataset of 30 games and 158 verifiable tasks." />
+  <meta property="og:type" content="website" />
+
+  <!-- Import FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    :root {
+      --text-primary: #2d3748;
+      --text-secondary: #718096;
+      --background-primary: #fff;
+      --background-secondary: #f7fafc;
+      --border-color: #e2e8f0;
+      --link-color: #3182ce;
+      --accent-color: #667eea;
+      --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text-primary);
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: linear-gradient(to bottom, #f7fafc 0%, #ffffff 100%);
+      scroll-behavior: smooth;
+    }
+
+    .content-wrapper {
+      margin: 0 auto;
+      padding: 0 1rem;
+      background: transparent;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+
+    /* More Research */
+    .more-research-container {
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0 0.3rem;
+    }
+
+    .more-research-trigger {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .more-research-trigger:hover {
+      background: rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .more-research-trigger i {
+      font-size: 0.75rem;
+      transition: transform 0.2s ease;
+    }
+
+    /* Header */
+    header {
+      max-width: 1060px;
+      margin: 0 auto 0.5rem;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0 0 0.8rem;
+      line-height: 1.3;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeIn 1s ease-out 0.3s both;
+    }
+
+    .venue-badge {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #8b5cf6;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      animation: fadeIn 1s ease-out 0.45s both;
+    }
+
+    .authors {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-top: 1.5rem;
+    }
+
+    .authors span {
+      text-decoration: none;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .authors sup {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .affiliations {
+      color: var(--text-secondary);
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .affiliations sup {
+      margin: 0 2px;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .symbol-note {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      display: block;
+      margin-top: 0.4rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Buttons */
+    .button-wrapper {
+      max-width: 1060px;
+      margin: 0.15rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      background: var(--accent-gradient);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 9999px;
+      padding: 0.65rem 1.2rem;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      border: none;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .btn-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+      transition: left 0.3s ease;
+    }
+
+    .btn-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-link:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-link:hover::before {
+      left: 100%;
+    }
+
+    .btn-link i, .btn-link .btn-icon {
+      margin-right: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-link:hover i, .btn-link:hover .btn-icon {
+      transform: scale(1.1);
+    }
+
+    /* Text Section */
+    .text-section {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      text-align: justify;
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+    }
+
+    .text-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .text-section p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .text-section strong {
+      color: var(--accent-color);
+      font-weight: 600;
+      padding: 0 2px;
+    }
+
+    /* Section Header */
+    .section-header {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--text-primary);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--accent-gradient);
+      border-radius: 2px;
+    }
+
+    /* Main picture */
+    .main-picture-wrapper {
+      margin: 2rem auto;
+      padding: 0 1rem;
+      max-width: 1000px;
+      animation: fadeIn 1.2s ease-out 0.9s both;
+    }
+
+    .main-picture {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      display: block;
+    }
+
+    .main-picture:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(102, 126, 234, 0.2);
+      border-color: rgba(102, 126, 234, 0.3);
+    }
+
+    /* Image wrapper for content images */
+    .image-wrapper {
+      margin: 2rem auto;
+      padding: 0 1rem;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .image-wrapper.small img {
+      max-width: 500px;
+    }
+
+    /* News Section */
+    .news-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: left;
+    }
+
+    .news-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-section li {
+      position: relative;
+      padding: 0.75rem 0 0.75rem 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .news-section li:last-child {
+      border-bottom: none;
+    }
+
+    .news-section li::before {
+      content: '🔥';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+    }
+
+    .news-section .news-date {
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-right: 0.5rem;
+    }
+
+    .news-section a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    .news-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Key finding subsections */
+    .finding-block {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 0 2rem;
+      text-align: justify;
+    }
+
+    .finding-block h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.8rem;
+      text-align: left;
+    }
+
+    .finding-block p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .finding-block strong {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    /* Citation Section */
+    .bibtex-section {
+      margin: 4rem auto 2rem;
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+
+    .bibtex-header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .bibtex-container {
+      position: relative;
+      background: #f7fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 0 auto;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .bibtex-copy-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+    }
+
+    .bibtex-copy-btn:hover {
+      background: #fff;
+      border-color: var(--accent-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bibtex-copy-btn:active {
+      transform: scale(0.95);
+    }
+
+    .bibtex-code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      white-space: pre;
+      margin: 0;
+      padding-right: 4rem;
+      text-align: left;
+    }
+
+    .bibtex-copied {
+      background: var(--accent-color) !important;
+      color: #fff !important;
+      border-color: var(--accent-color) !important;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding: 3rem 1rem;
+      background: rgba(102, 126, 234, 0.03);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-text {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .text-section { padding: 1.5rem; }
+      .section-header { font-size: 1.75rem; }
+      .main-picture-wrapper { margin: 2rem auto; }
+      .main-picture { border-radius: 12px; }
+      .bibtex-header { font-size: 1.3rem; }
+      .bibtex-container { padding: 1rem; }
+      .bibtex-code { font-size: 0.8rem; padding-right: 3.5rem; }
+      .bibtex-copy-btn { top: 0.75rem; right: 0.75rem; padding: 0.4rem 0.6rem; font-size: 0.8rem; }
+      .finding-block { padding: 0 1.5rem; }
+      .news-section { padding: 0 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .text-section { padding: 1rem; }
+      .section-header { font-size: 1.5rem; }
+      .button-wrapper { gap: 0.75rem; }
+      .btn-link { padding: 0.55rem 1.2rem; font-size: 0.9rem; }
+      .main-picture-wrapper { margin: 1.5rem auto; }
+      .main-picture { border-radius: 8px; }
+      .bibtex-header { font-size: 1.2rem; }
+      .bibtex-container { padding: 0.75rem; }
+      .bibtex-code { font-size: 0.75rem; padding-right: 3rem; line-height: 1.5; }
+      .bibtex-copy-btn { top: 0.5rem; right: 0.5rem; padding: 0.35rem 0.5rem; font-size: 0.75rem; }
+      .bibtex-copy-btn span { display: none; }
+      .finding-block { padding: 0 1rem; }
+      .news-section { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+
+    <!-- More Research -->
+    <div class="more-research-container">
+      <a class="more-research-trigger" href="https://thinking-with-video.github.io/" target="_blank" rel="noopener noreferrer">
+        More Research <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <h1>Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning</h1>
+      <div class="venue-badge">ICLR 2026</div>
+      <div class="authors">
+        <span>Jingqi Tong<sup>1,2,*</sup></span>,
+        <span>Jixin Tang<sup>1,*</sup></span>,
+        <span>Hangcheng Li<sup>1,*</sup></span>,
+        <span>Yurong Mou<sup>1,*</sup></span>,
+        <span>Ming Zhang<sup>1</sup></span>,
+        <span>Jun Zhao<sup>1,†</sup></span>,
+        <span>Yanbo Wen<sup>1</sup></span>,
+        <span>Fan Song<sup>1</sup></span>,
+        <span>Jiahao Zhan<sup>1</sup></span>,
+        <span>Yuyang Lu<sup>1</sup></span>,
+        <span>Chaoran Tao<sup>1</sup></span>,
+        <span>Zhiyuan Guo<sup>1</sup></span>,
+        <span>Jizhou Yu<sup>1</sup></span>,
+        <span>Tianhao Cheng<sup>1</sup></span>,
+        <span>Zhiheng Xi<sup>1</sup></span>,
+        <span>Changhao Jiang<sup>1</sup></span>,
+        <span>Zhangyue Yin<sup>1</sup></span>,
+        <span>Yining Zheng<sup>1</sup></span>,
+        <span>Weifeng Ge<sup>1</sup></span>,
+        <span>Guanhua Chen<sup>3</sup></span>,
+        <span>Tao Gui<sup>1,2</sup></span>,
+        <span>Xipeng Qiu<sup>1,2,†</sup></span>,
+        <span>Qi Zhang<sup>1,†</sup></span>,
+        <span>Xuanjing Huang<sup>1</sup></span>
+      </div>
+      <div class="affiliations">
+        <sup>1</sup>Fudan University&nbsp;&nbsp;&nbsp;
+        <sup>2</sup>Shanghai Innovation Institute&nbsp;&nbsp;&nbsp;
+        <sup>3</sup>SUSTech
+      </div>
+      <div class="symbol-note">
+        * Equal contribution&nbsp;&nbsp;&nbsp;† Corresponding authors
+      </div>
+    </header>
+
+    <!-- Buttons -->
+    <div class="button-wrapper">
+      <a class="btn-link" href="https://arxiv.org/abs/2505.13886" target="_blank" rel="noopener noreferrer">
+        <i class="fa-regular fa-file-alt"></i>Paper
+      </a>
+      <a class="btn-link" href="https://arxiv.org/pdf/2505.13886" target="_blank" rel="noopener noreferrer">
+        <i class="fa-regular fa-file-pdf"></i>PDF
+      </a>
+      <a class="btn-link" href="https://github.com/tongjingqi/Game-RL" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>GitHub
+      </a>
+      <a class="btn-link" href="https://huggingface.co/datasets/OpenMOSS-Team/GameQA-140K" target="_blank" rel="noopener noreferrer">
+        <span class="btn-icon">🤗</span>GameQA-140K
+      </a>
+      <a class="btn-link" href="https://huggingface.co/datasets/OpenMOSS-Team/GameQA-text" target="_blank" rel="noopener noreferrer">
+        <span class="btn-icon">🤗</span>GameQA-text
+      </a>
+      <a class="btn-link" href="https://huggingface.co/collections/OpenMOSS-Team/game-rl" target="_blank" rel="noopener noreferrer">
+        <span class="btn-icon">🤗</span>Models
+      </a>
+    </div>
+
+    <!-- Main Overview Image -->
+    <div class="main-picture-wrapper">
+      <img src="assets/categorized_30_games_images.png" alt="30 Categorized Games in GameQA" class="main-picture">
+    </div>
+
+    <!-- News Section -->
+    <h2 class="section-header">News</h2>
+    <div class="news-section">
+      <ul>
+        <li>
+          <span class="news-date">[2026/01]</span>
+          <strong>Shanghai AI Lab</strong> uses our GameQA-140K dataset at scale in the <a href="https://mmfinereason.github.io/" target="_blank">MMFineReason</a> dataset, which accounts for <strong>87.65%</strong> of its "Puzzle/Game" samples.
+        </li>
+        <li>
+          <span class="news-date">[2026/01]</span>
+          <strong>THUML and ByteDance Seed</strong> use our Sokoban code for the synthesis of the Sokoban task samples in <a href="https://thuml.github.io/Reasoning-Visual-World/" target="_blank">VisWorld-Eval</a> (and the training data).
+        </li>
+        <li style="padding-left: 1.5rem;">
+          <span style="position: absolute; left: 0; top: 0.75rem;">🎉</span>
+          <span class="news-date">[2026/01]</span>
+          Our work has been accepted by <strong>ICLR 2026</strong>! 🎉🎉🎉
+        </li>
+        <li>
+          <span class="news-date">[2025/11]</span>
+          <strong>DeepWisdom</strong> uses the maze-like games in our GameQA dataset in the <a href="https://github.com/FoundationAgents/VR-Bench" target="_blank">VR-Bench</a> benchmark, which evaluates video models' reasoning.
+        </li>
+        <li>
+          <span class="news-date">[2025/11]</span>
+          <strong>Shanghai Innovation Institute</strong> uses the games in our GameQA dataset for image editing reasoning tasks ("game-world scenarios"), developing the <a href="https://maplebb.github.io/UniREditBench/" target="_blank">UniREditBench</a> benchmark and the <a href="https://huggingface.co/datasets/maplebb/UniREdit-Data-100K" target="_blank">UniREdit-Data-100K</a> training data.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Abstract -->
+    <div class="text-section">
+      <h2>Abstract</h2>
+      <p>
+        Vision-language reinforcement learning (RL) has primarily focused on narrow domains (e.g. geometry or chart reasoning). This leaves broader training scenarios and resources underexplored, limiting the exploration and learning of Vision Language Models (VLMs) through RL. We find video games inherently provide rich visual elements and mechanics that are easy to verify. To fully leverage the multimodal and verifiable rewards in video games, we propose <strong>Game-RL</strong>, constructing diverse game tasks for RL training to boost VLMs' general reasoning ability. To obtain training data, we propose <strong>Code2Logic</strong>, a novel approach that adapts game code to synthesize reasoning data with unlimited examples and controllable difficulty gradation, thus obtaining the <strong>GameQA</strong> dataset of 30 games and 158 verifiable tasks. Remarkably, RL training solely on GameQA enables multiple VLMs to generalize across 7 diverse out-of-domain vision-language benchmarks, demonstrating the value of Game-RL for enhancing VLMs' general reasoning. Furthermore, game data provides improvements comparable to general multimodal reasoning datasets (e.g. geometry/chart). More importantly, scaling up game diversity or game data volume consistently improves VLMs' generalizable reasoning capabilities. Our findings highlight scaling reinforcement learning in game environments as a promising direction for enhancing generalizable multimodal reasoning in foundation models.
+      </p>
+    </div>
+
+    <!-- Code2Logic Approach -->
+    <h2 class="section-header">Code2Logic Approach</h2>
+    <div class="text-section" style="margin-top: 0; padding-top: 0;">
+      <p>
+        The Code2Logic approach involves three main steps:
+      </p>
+      <p>
+        1. Using LLMs to construct game code of the selected game (<em>Sokoban</em>).
+      </p>
+      <p>
+        2. LLM-assisted design of the task templates including question and analysis templates based on the generated game code. Each task template condenses one type of reasoning pattern in the game.
+      </p>
+      <p>
+        3. Using LLMs to construct a data engine that directly reuses the core game code from the first step, including functions like <code>move</code>.
+      </p>
+      <p>
+        After these main steps, the data engine is executed to fill in the task templates developed in Step 2 and generate data samples.
+      </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/Code2Logic_approach.png" alt="Code2Logic Approach">
+    </div>
+
+    <!-- GameQA Dataset -->
+    <h2 class="section-header">GameQA Dataset</h2>
+    <div class="text-section" style="margin-top: 0; padding-top: 0;">
+      <p>
+        Our GameQA dataset provides diverse verifiable game tasks along with controllable difficulty, extending RL training scenarios for VLMs to the domain of video games.
+      </p>
+      <p>
+        It encompasses <strong>30 different games</strong> classified into <strong>4 categories</strong> based on the core capabilities required to solve game tasks. Four games from different categories and their example data samples are illustrated in the image below. The GameQA data samples are also reasonably graded by difficulty (see <a href="https://huggingface.co/datasets/OpenMOSS-Team/GameQA-140K" target="_blank" style="color: var(--link-color);">🤗 GameQA-140K</a>).
+      </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/4_game_example_samples.png" alt="4 Game Example Samples from GameQA">
+    </div>
+
+    <!-- Key Findings -->
+    <h2 class="section-header">Key Findings</h2>
+
+    <!-- Finding 1 -->
+    <div class="finding-block">
+      <h3>😎 Game-RL leads to generalizable multimodal reasoning improvements</h3>
+      <p>
+        <strong>RL Training solely on game data</strong> (GameQA) enables three VLMs (Qwen2.5-VL, InternVL2.5, InternVL3) to achieve consistent performance improvements across 7 diverse vision reasoning benchmarks, <strong>demonstrating strong out-of-domain generalization</strong>. These results suggest that the models have successfully learned <strong>transferable visual understanding and reasoning abilities</strong> through Game-RL.
+      </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/evaluation_results_on_general_vision_benchmarks.png" alt="Evaluation Results on General Vision Benchmarks">
+    </div>
+
+    <!-- Finding 2 -->
+    <div class="finding-block">
+      <h3>💪 Game data is competitive to geometry datasets</h3>
+      <p>
+        Based on Qwen2.5-VL-7B, we applied the same training method on 5k GameQA samples, 8k samples from MAVIS, 8k Multimodal-Open-R1 samples, 8k MultiMath samples respectively, to conduct comparative training.
+      </p>
+      <p>
+        <strong>The GameQA-trained model is competitive compared to its counterparts trained on geometry or function data</strong>, where general vision benchmarks would be considered in-domain. These results suggest that <strong>GameQA enables stronger out-of-domain generalization</strong>, even when using less data from a mismatched domain.
+      </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/GameQA_generalizes_better.png" alt="GameQA Generalizes Better">
+    </div>
+
+    <!-- Finding 3 -->
+    <div class="finding-block">
+      <h3>📈 Scaling Effects: Game Diversity &amp; Data Volume</h3>
+      <p>
+        <strong>Game Diversity:</strong> Scaling up game diversity (e.g., 4 games → 20 games) makes better generalization, enabling the model to acquire more robust visual understanding and reasoning abilities.
+      </p>
+    </div>
+    <div class="image-wrapper small">
+      <img src="assets/Scaling_Effect_game_diversity.png" alt="Scaling Effect of Game Diversity">
+    </div>
+
+    <div class="finding-block">
+      <p>
+        <strong>Data Volume:</strong> Model's performance score demonstrates an overall upward trend on 7 general vision benchmarks as the amount of training data increases, indicating scaling up training game data volume effectively enhances the VLM's generalizable reasoning abilities.
+      </p>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/Scaling_Effect_data_volume.png" alt="Scaling Effect of Data Volume">
+    </div>
+
+    <!-- BibTeX Section -->
+    <div class="bibtex-section">
+      <h2 class="bibtex-header">Citation</h2>
+      <div class="bibtex-container">
+        <button class="bibtex-copy-btn" id="bibtex-copy-btn" onclick="copyBibtex()">
+          <i class="fa-regular fa-copy"></i>
+          <span id="bibtex-copy-text">Copy</span>
+        </button>
+        <pre class="bibtex-code" id="bibtex-code">@misc{tong2025gamerlsynthesizingmultimodalverifiable,
+      title={Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning}, 
+      author={Jingqi Tong and Jixin Tang and Hangcheng Li and Yurong Mou and Ming Zhang and Jun Zhao and Yanbo Wen and Fan Song and Jiahao Zhan and Yuyang Lu and Chaoran Tao and Zhiyuan Guo and Jizhou Yu and Tianhao Cheng and Zhiheng Xi and Changhao Jiang and Zhangyue Yin and Yining Zheng and Weifeng Ge and Guanhua Chen and Tao Gui and Xipeng Qiu and Qi Zhang and Xuanjing Huang},
+      year={2025},
+      eprint={2505.13886},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.13886}, 
+}</pre>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-text">
+      <p>&copy; 2025 Game-RL Research Team, Fudan University</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyBibtex() {
+      const bibtexCode = document.getElementById('bibtex-code').textContent;
+      const copyBtn = document.getElementById('bibtex-copy-btn');
+      const copyText = document.getElementById('bibtex-copy-text');
+
+      navigator.clipboard.writeText(bibtexCode).then(() => {
+        copyBtn.classList.add('bibtex-copied');
+        copyText.textContent = 'Copied!';
+        setTimeout(() => {
+          copyBtn.classList.remove('bibtex-copied');
+          copyText.textContent = 'Copy';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        const textArea = document.createElement('textarea');
+        textArea.value = bibtexCode;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          copyBtn.classList.add('bibtex-copied');
+          copyText.textContent = 'Copied!';
+          setTimeout(() => {
+            copyBtn.classList.remove('bibtex-copied');
+            copyText.textContent = 'Copy';
+          }, 2000);
+        } catch (e) {
+          console.error('Fallback copy failed:', e);
+        }
+        document.body.removeChild(textArea);
+      });
+    }
+  </script>
+</body>
+</html>
