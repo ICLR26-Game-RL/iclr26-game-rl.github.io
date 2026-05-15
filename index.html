@@ -250,12 +250,16 @@
 
     /* Buttons */
     .button-wrapper {
-      max-width: 1060px;
+      width: max-content;
+      max-width: 100%;
       margin: 0.15rem auto;
       display: flex;
       justify-content: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
+      gap: 0.6rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 0 1rem 0.25rem;
+      box-sizing: border-box;
       animation: fadeIn 1s ease-out 0.6s both;
     }
 
@@ -325,7 +329,7 @@
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 0.75rem;
       box-sizing: border-box;
       background: rgba(15, 23, 42, 0.82);
       cursor: zoom-out;
@@ -337,8 +341,8 @@
 
     .poster-modal img {
       display: block;
-      max-width: min(1200px, 96vw);
-      max-height: 92vh;
+      max-width: min(1800px, 99vw);
+      max-height: 98vh;
       width: auto;
       height: auto;
       border-radius: 8px;
