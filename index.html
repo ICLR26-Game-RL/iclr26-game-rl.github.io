@@ -317,6 +317,35 @@
       transform: scale(1.1);
     }
 
+    /* Poster Modal */
+    .poster-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      background: rgba(15, 23, 42, 0.82);
+      cursor: zoom-out;
+    }
+
+    .poster-modal:target {
+      display: flex;
+    }
+
+    .poster-modal img {
+      display: block;
+      max-width: min(1200px, 96vw);
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      background: #fff;
+    }
+
     /* Text Section */
     .text-section {
       max-width: 1000px;
@@ -701,8 +730,8 @@
       <a class="btn-link" href="https://openreview.net/pdf?id=e4FqU4SyHL" target="_blank" rel="noopener noreferrer">
         <i class="fa-regular fa-file-pdf"></i>PDF
       </a>
-      <a class="btn-link" href="https://iclr.cc/virtual/2026/poster/10008360" target="_blank" rel="noopener noreferrer">
-        <img src="assets/iclr-navbar-logo.svg" alt="ICLR logo" class="btn-icon">ICLR Page
+      <a class="btn-link" href="#iclr-poster">
+        <img src="assets/iclr-navbar-logo.svg" alt="ICLR logo" class="btn-icon">ICLR Poster
       </a>
       <a class="btn-link" href="https://github.com/tongjingqi/Game-RL" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github"></i>GitHub
@@ -720,6 +749,10 @@
         <i class="fa-solid fa-quote-right"></i>Citation
       </a>
     </div>
+
+    <a class="poster-modal" id="iclr-poster" href="#" aria-label="Close ICLR poster preview">
+      <img src="assets/iclr_2026_poster.png" alt="ICLR 2026 poster for Game-RL">
+    </a>
 
     <div class="main-picture-wrapper">
       <img src="assets/game_rl_cover.png" alt="Game-RL cover illustration" class="main-picture">
