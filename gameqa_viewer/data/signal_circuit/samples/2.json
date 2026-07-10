@@ -1,0 +1,143 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "signal-circuit-00003",
+    "question_id": 3,
+    "question_description": "Propagate an input toggle through multiple gates",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "B",
+    "answer_preview": "B",
+    "question_preview": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final g...",
+    "image": "images/circuit_001.png",
+    "state": "states/circuit_001.json",
+    "image_url": "data/signal_circuit/files/images/circuit_001.png",
+    "state_url": "data/signal_circuit/files/states/circuit_001.json",
+    "has_options": true,
+    "question": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final gate.\nToggle input B once and leave all other inputs unchanged. What is OUT?\nA. 0\nB. 1",
+    "analysis": "After toggling B, inputs are {'A': 0, 'B': 1, 'C': 1}. Gate propagation gives G1=1, G2=1, G3=1, so OUT=1. The answer is B.",
+    "options": [
+      "A. 0",
+      "B. 1"
+    ],
+    "state_content": {
+      "game": "signal-circuit",
+      "level": "Easy",
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      },
+      "gates": [
+        {
+          "id": "G1",
+          "op": "XOR",
+          "inputs": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "id": "G2",
+          "op": "AND",
+          "inputs": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "G3",
+          "op": "OR",
+          "inputs": [
+            "G1",
+            "G2"
+          ]
+        }
+      ],
+      "gate_positions": {
+        "G1": [
+          345,
+          185
+        ],
+        "G2": [
+          345,
+          365
+        ],
+        "G3": [
+          540,
+          275
+        ]
+      },
+      "output_gate": "G3",
+      "initial_values": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0
+      },
+      "initial_output": 0,
+      "toggle_input": "B",
+      "toggled_inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "toggled_values": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "G1": 1,
+        "G2": 1,
+        "G3": 1
+      },
+      "toggled_output": 1,
+      "modified_gate": "G3",
+      "replacement_operation": "AND",
+      "modified_values": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "G1": 0,
+        "G2": 0,
+        "G3": 0
+      },
+      "modified_output": 0,
+      "optimization_target": 1,
+      "minimum_input_flips": 1,
+      "one_optimal_input_assignment": {
+        "A": 0,
+        "B": 1,
+        "C": 1
+      },
+      "optimal_values": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "G1": 1,
+        "G2": 1,
+        "G3": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "signal-circuit-00003",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Propagate an input toggle through multiple gates",
+      "image": "images/circuit_001.png",
+      "state": "states/circuit_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final gate.\nToggle input B once and leave all other inputs unchanged. What is OUT?\nA. 0\nB. 1",
+      "answer": "B",
+      "analysis": "After toggling B, inputs are {'A': 0, 'B': 1, 'C': 1}. Gate propagation gives G1=1, G2=1, G3=1, so OUT=1. The answer is B.",
+      "options": [
+        "A. 0",
+        "B. 1"
+      ]
+    }
+  }
+}

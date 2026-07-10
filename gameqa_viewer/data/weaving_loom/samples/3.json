@@ -1,0 +1,195 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "weaving-loom-00004",
+    "question_id": 4,
+    "question_description": "Predict a crossing two shuttle advances ahead",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_001.png",
+    "state": "states/loom_001.json",
+    "image_url": "data/weaving_loom/files/images/loom_001.png",
+    "state_url": "data/weaving_loom/files/states/loom_001.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nAfter adding two more ideal rows, which strand will be on top in column 2 of the second new row?\nA. MISSING\nB. BOTH\nC. WEFT\nD. WARP",
+    "analysis": "The second new row has phase 1 and pattern W H H H W H. Column 2 is H, so the answer is C.",
+    "options": [
+      "A. MISSING",
+      "B. BOTH",
+      "C. WEFT",
+      "D. WARP"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Easy",
+      "rows": 6,
+      "columns": 6,
+      "phase_shift_per_row": 1,
+      "base_pattern": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expected_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "observed_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          null,
+          0,
+          1,
+          0
+        ]
+      ],
+      "damaged_cells": [
+        [
+          5,
+          2
+        ]
+      ],
+      "missing_cell": [
+        5,
+        2
+      ],
+      "query_cell": [
+        1,
+        5
+      ],
+      "highlight_row": 1,
+      "next_ideal_row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "two_rows_ahead": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "future_query_column": 2,
+      "minimum_crossing_repairs": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00004",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Predict a crossing two shuttle advances ahead",
+      "image": "images/loom_001.png",
+      "state": "states/loom_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nAfter adding two more ideal rows, which strand will be on top in column 2 of the second new row?\nA. MISSING\nB. BOTH\nC. WEFT\nD. WARP",
+      "answer": "C",
+      "analysis": "The second new row has phase 1 and pattern W H H H W H. Column 2 is H, so the answer is C.",
+      "options": [
+        "A. MISSING",
+        "B. BOTH",
+        "C. WEFT",
+        "D. WARP"
+      ]
+    }
+  }
+}

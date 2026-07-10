@@ -1,0 +1,120 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "skybridge-3d-00005-1",
+    "question_id": 1,
+    "question_description": "Compare beacon heights on an isometric tower board.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "In Skybridge 3D, each tower top shows its height. What is the correct height order of beacons A, B, and C from lowest to highest? Use '=' for ties. Options: [1...",
+    "image": "images/board_00005.png",
+    "state": "states/board_00005.json",
+    "image_url": "data/skybridge_3d/files/images/board_00005.png",
+    "state_url": "data/skybridge_3d/files/states/board_00005.json",
+    "has_options": true,
+    "question": "In Skybridge 3D, each tower top shows its height. What is the correct height order of beacons A, B, and C from lowest to highest? Use '=' for ties.\nOptions:\n[1] C < A < B\n[2] B < C < A\n[3] B < A < C\n[4] C < A = B\n[5] A < B < C\n[6] C < B < A\n[7] A < C < B",
+    "analysis": "Beacon heights are A=3, B=3, C=1. Sorting these heights gives C < A = B. Therefore choose option 4.",
+    "options": [
+      "C < A < B",
+      "B < C < A",
+      "B < A < C",
+      "C < A = B",
+      "A < B < C",
+      "C < B < A",
+      "A < C < B"
+    ],
+    "state_content": {
+      "game": "skybridge_3d",
+      "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+      "rows": 4,
+      "cols": 4,
+      "heights": [
+        [
+          3,
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          3,
+          3,
+          4
+        ],
+        [
+          3,
+          1,
+          2,
+          2
+        ]
+      ],
+      "robot": [
+        4,
+        4
+      ],
+      "goal": [
+        1,
+        1
+      ],
+      "beacons": {
+        "A": [
+          4,
+          1
+        ],
+        "B": [
+          1,
+          4
+        ],
+        "C": [
+          1,
+          2
+        ]
+      },
+      "ladders": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "seed_index": 5
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "skybridge-3d-00005-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Compare beacon heights on an isometric tower board.",
+      "image": "images/board_00005.png",
+      "state": "states/board_00005.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "In Skybridge 3D, each tower top shows its height. What is the correct height order of beacons A, B, and C from lowest to highest? Use '=' for ties.\nOptions:\n[1] C < A < B\n[2] B < C < A\n[3] B < A < C\n[4] C < A = B\n[5] A < B < C\n[6] C < B < A\n[7] A < C < B",
+      "answer": 4,
+      "analysis": "Beacon heights are A=3, B=3, C=1. Sorting these heights gives C < A = B. Therefore choose option 4.",
+      "options": [
+        "C < A < B",
+        "B < C < A",
+        "B < A < C",
+        "C < A = B",
+        "A < B < C",
+        "C < B < A",
+        "A < C < B"
+      ]
+    }
+  }
+}

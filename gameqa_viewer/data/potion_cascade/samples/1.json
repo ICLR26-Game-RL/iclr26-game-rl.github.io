@@ -1,0 +1,117 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "potion-cascade-00002-2",
+    "question_id": 2,
+    "question_description": "Predict a bottle state after applying operation cards.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Apply the operation cards from left to right. What will be in slot 4 at the end? Options: [1] ember potency 1 [2] ember potency 3 [3] sun potency 1 [4] ember p...",
+    "image": "images/potion_00002.png",
+    "state": "states/potion_00002.json",
+    "image_url": "data/potion_cascade/files/images/potion_00002.png",
+    "state_url": "data/potion_cascade/files/states/potion_00002.json",
+    "has_options": true,
+    "question": "Apply the operation cards from left to right. What will be in slot 4 at the end?\nOptions:\n[1] ember potency 1\n[2] ember potency 3\n[3] sun potency 1\n[4] ember potency 5\n[5] ember potency 4\n[6] ember potency 2\n[7] void potency 4",
+    "analysis": "After card 1 (heat slot 5), slot 4 is void potency 3.\nAfter card 2 (heat slot 4), slot 4 is void potency 4.\nAfter card 3 (heat slot 5), slot 4 is void potency 4.\nAfter card 4 (infuse slot 1), slot 4 is void potency 4.\nThe final state is void potency 4. Therefore choose option 7.",
+    "options": [
+      "ember potency 1",
+      "ember potency 3",
+      "sun potency 1",
+      "ember potency 5",
+      "ember potency 4",
+      "ember potency 2",
+      "void potency 4"
+    ],
+    "state_content": {
+      "game": "potion_cascade",
+      "rules": [
+        "heat: selected bottle potency increases by 1 up to 5.",
+        "cool: selected bottle potency decreases by 1 down to 1.",
+        "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+        "decant: two selected bottles swap positions.",
+        "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+      ],
+      "element_cycle": [
+        "ember",
+        "sun",
+        "leaf",
+        "frost",
+        "moon",
+        "void"
+      ],
+      "bottles": [
+        {
+          "slot": 1,
+          "element": "leaf",
+          "potency": 2
+        },
+        {
+          "slot": 2,
+          "element": "void",
+          "potency": 5
+        },
+        {
+          "slot": 3,
+          "element": "frost",
+          "potency": 2
+        },
+        {
+          "slot": 4,
+          "element": "void",
+          "potency": 3
+        },
+        {
+          "slot": 5,
+          "element": "ember",
+          "potency": 3
+        }
+      ],
+      "operation_cards": [
+        {
+          "op": "heat",
+          "slot": 5
+        },
+        {
+          "op": "heat",
+          "slot": 4
+        },
+        {
+          "op": "heat",
+          "slot": 5
+        },
+        {
+          "op": "infuse",
+          "slot": 1
+        }
+      ],
+      "seed_index": 2
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "potion-cascade-00002-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict a bottle state after applying operation cards.",
+      "image": "images/potion_00002.png",
+      "state": "states/potion_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Apply the operation cards from left to right. What will be in slot 4 at the end?\nOptions:\n[1] ember potency 1\n[2] ember potency 3\n[3] sun potency 1\n[4] ember potency 5\n[5] ember potency 4\n[6] ember potency 2\n[7] void potency 4",
+      "answer": 7,
+      "analysis": "After card 1 (heat slot 5), slot 4 is void potency 3.\nAfter card 2 (heat slot 4), slot 4 is void potency 4.\nAfter card 3 (heat slot 5), slot 4 is void potency 4.\nAfter card 4 (infuse slot 1), slot 4 is void potency 4.\nThe final state is void potency 4. Therefore choose option 7.",
+      "options": [
+        "ember potency 1",
+        "ember potency 3",
+        "sun potency 1",
+        "ember potency 5",
+        "ember potency 4",
+        "ember potency 2",
+        "void potency 4"
+      ]
+    }
+  }
+}

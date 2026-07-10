@@ -1,0 +1,132 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "skybridge-3d-00010-2",
+    "question_id": 2,
+    "question_description": "Predict the robot final coordinate after terrain-constrained moves.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "The robot R moves on adjacent tower tops. It may climb up by at most 1 level unless a ladder connects the two towers; it may descend freely. Starting from R, a...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/skybridge_3d/files/images/board_00010.png",
+    "state_url": "data/skybridge_3d/files/states/board_00010.json",
+    "has_options": true,
+    "question": "The robot R moves on adjacent tower tops. It may climb up by at most 1 level unless a ladder connects the two towers; it may descend freely. Starting from R, after the move sequence right, down, up, up, left, where does the robot end up?\nOptions:\n[1] (1, 1)\n[2] (1, 2)\n[3] (1, 3)\n[4] (2, 3)\n[5] (2, 1)\n[6] (1, 4)\n[7] (2, 4)\n[8] (2, 2)",
+    "analysis": "Move 1 right: moved from (2, 1) to (2, 2) because normal height rule.\nMove 2 down: moved from (2, 2) to (3, 2) because normal height rule.\nMove 3 up: moved from (3, 2) to (2, 2) because normal height rule.\nMove 4 up: moved from (2, 2) to (1, 2) because normal height rule.\nMove 5 left: moved from (1, 2) to (1, 1) because normal height rule.\nFinal coordinate is (1, 1). Therefore choose option 1.",
+    "options": [
+      "(1, 1)",
+      "(1, 2)",
+      "(1, 3)",
+      "(2, 3)",
+      "(2, 1)",
+      "(1, 4)",
+      "(2, 4)",
+      "(2, 2)"
+    ],
+    "state_content": {
+      "game": "skybridge_3d",
+      "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+      "rows": 4,
+      "cols": 4,
+      "heights": [
+        [
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          4,
+          3
+        ],
+        [
+          1,
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          1,
+          3,
+          3
+        ]
+      ],
+      "robot": [
+        2,
+        1
+      ],
+      "goal": [
+        3,
+        1
+      ],
+      "beacons": {
+        "A": [
+          3,
+          2
+        ],
+        "B": [
+          4,
+          1
+        ],
+        "C": [
+          2,
+          3
+        ]
+      },
+      "ladders": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            1
+          ]
+        ]
+      ],
+      "seed_index": 10
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "skybridge-3d-00010-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the robot final coordinate after terrain-constrained moves.",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "The robot R moves on adjacent tower tops. It may climb up by at most 1 level unless a ladder connects the two towers; it may descend freely. Starting from R, after the move sequence right, down, up, up, left, where does the robot end up?\nOptions:\n[1] (1, 1)\n[2] (1, 2)\n[3] (1, 3)\n[4] (2, 3)\n[5] (2, 1)\n[6] (1, 4)\n[7] (2, 4)\n[8] (2, 2)",
+      "answer": 1,
+      "analysis": "Move 1 right: moved from (2, 1) to (2, 2) because normal height rule.\nMove 2 down: moved from (2, 2) to (3, 2) because normal height rule.\nMove 3 up: moved from (3, 2) to (2, 2) because normal height rule.\nMove 4 up: moved from (2, 2) to (1, 2) because normal height rule.\nMove 5 left: moved from (1, 2) to (1, 1) because normal height rule.\nFinal coordinate is (1, 1). Therefore choose option 1.",
+      "options": [
+        "(1, 1)",
+        "(1, 2)",
+        "(1, 3)",
+        "(2, 3)",
+        "(2, 1)",
+        "(1, 4)",
+        "(2, 4)",
+        "(2, 2)"
+      ]
+    }
+  }
+}

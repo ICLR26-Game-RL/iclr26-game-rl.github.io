@@ -1,0 +1,228 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "signal-circuit-00012",
+    "question_id": 2,
+    "question_description": "Count active circuit inputs",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final g...",
+    "image": "images/circuit_003.png",
+    "state": "states/circuit_003.json",
+    "image_url": "data/signal_circuit/files/images/circuit_003.png",
+    "state_url": "data/signal_circuit/files/states/circuit_003.json",
+    "has_options": true,
+    "question": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final gate.\nHow many input nodes currently show value 1?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+    "analysis": "The visible inputs are {'A': 1, 'B': 0, 'C': 1, 'D': 0, 'E': 1}. Their values sum to 3, so the answer is D.",
+    "options": [
+      "A. 2",
+      "B. 4",
+      "C. 5",
+      "D. 3",
+      "E. 0",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "signal-circuit",
+      "level": "Hard",
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 1
+      },
+      "gates": [
+        {
+          "id": "G1",
+          "op": "AND",
+          "inputs": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "id": "G2",
+          "op": "XOR",
+          "inputs": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "id": "G3",
+          "op": "OR",
+          "inputs": [
+            "D",
+            "E"
+          ]
+        },
+        {
+          "id": "G4",
+          "op": "NAND",
+          "inputs": [
+            "G1",
+            "G2"
+          ]
+        },
+        {
+          "id": "G5",
+          "op": "XOR",
+          "inputs": [
+            "G2",
+            "G3"
+          ]
+        },
+        {
+          "id": "G6",
+          "op": "AND",
+          "inputs": [
+            "G4",
+            "G5"
+          ]
+        },
+        {
+          "id": "G7",
+          "op": "NOT",
+          "inputs": [
+            "G6"
+          ]
+        }
+      ],
+      "gate_positions": {
+        "G1": [
+          270,
+          125
+        ],
+        "G2": [
+          270,
+          255
+        ],
+        "G3": [
+          270,
+          425
+        ],
+        "G4": [
+          435,
+          175
+        ],
+        "G5": [
+          435,
+          355
+        ],
+        "G6": [
+          585,
+          265
+        ],
+        "G7": [
+          700,
+          265
+        ]
+      },
+      "output_gate": "G7",
+      "initial_values": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 1,
+        "G1": 0,
+        "G2": 1,
+        "G3": 1,
+        "G4": 1,
+        "G5": 0,
+        "G6": 0,
+        "G7": 1
+      },
+      "initial_output": 1,
+      "toggle_input": "E",
+      "toggled_inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "toggled_values": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "G1": 0,
+        "G2": 1,
+        "G3": 0,
+        "G4": 1,
+        "G5": 1,
+        "G6": 1,
+        "G7": 0
+      },
+      "toggled_output": 0,
+      "modified_gate": "G1",
+      "replacement_operation": "NAND",
+      "modified_values": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 1,
+        "G1": 1,
+        "G2": 1,
+        "G3": 1,
+        "G4": 0,
+        "G5": 0,
+        "G6": 0,
+        "G7": 1
+      },
+      "modified_output": 1,
+      "optimization_target": 0,
+      "minimum_input_flips": 1,
+      "one_optimal_input_assignment": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1
+      },
+      "optimal_values": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 1,
+        "G1": 0,
+        "G2": 0,
+        "G3": 1,
+        "G4": 1,
+        "G5": 1,
+        "G6": 1,
+        "G7": 0
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "signal-circuit-00012",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Count active circuit inputs",
+      "image": "images/circuit_003.png",
+      "state": "states/circuit_003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "The image is a directed combinational circuit. Evaluate gates from left to right using the printed operations; wires carry binary 0 or 1 and OUT is the final gate.\nHow many input nodes currently show value 1?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+      "answer": "D",
+      "analysis": "The visible inputs are {'A': 1, 'B': 0, 'C': 1, 'D': 0, 'E': 1}. Their values sum to 3, so the answer is D.",
+      "options": [
+        "A. 2",
+        "B. 4",
+        "C. 5",
+        "D. 3",
+        "E. 0",
+        "F. 1"
+      ]
+    }
+  }
+}

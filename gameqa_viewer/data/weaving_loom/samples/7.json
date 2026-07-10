@@ -1,0 +1,273 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "weaving-loom-00008",
+    "question_id": 3,
+    "question_description": "Predict the next weaving phase",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_002.png",
+    "state": "states/loom_002.json",
+    "image_url": "data/weaving_loom/files/images/loom_002.png",
+    "state_url": "data/weaving_loom/files/states/loom_002.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 2 position(s). Coordinates are zero-based (row,column).\nIgnoring damaged crossings, what should the next row after the displayed board be, from column 0 to 7?\nA. H W W H W W W W\nB. W H W W H W W W\nC. W W H W W H W W\nD. W W W H W W H W\nE. W H W W W W H W\nF. W W H W W W W H",
+    "analysis": "The base pattern is W H W W W W H W. Row 8 applies a total right shift of 0, giving W H W W W W H W. The answer is E.",
+    "options": [
+      "A. H W W H W W W W",
+      "B. W H W W H W W W",
+      "C. W W H W W H W W",
+      "D. W W W H W W H W",
+      "E. W H W W W W H W",
+      "F. W W H W W W W H"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Medium",
+      "rows": 8,
+      "columns": 8,
+      "phase_shift_per_row": 2,
+      "base_pattern": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "expected_pattern": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "observed_pattern": [
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          null,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "damaged_cells": [
+        [
+          5,
+          6
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "missing_cell": [
+        5,
+        6
+      ],
+      "query_cell": [
+        5,
+        4
+      ],
+      "highlight_row": 5,
+      "next_ideal_row": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "two_rows_ahead": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "future_query_column": 5,
+      "minimum_crossing_repairs": 2
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00008",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Predict the next weaving phase",
+      "image": "images/loom_002.png",
+      "state": "states/loom_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 2 position(s). Coordinates are zero-based (row,column).\nIgnoring damaged crossings, what should the next row after the displayed board be, from column 0 to 7?\nA. H W W H W W W W\nB. W H W W H W W W\nC. W W H W W H W W\nD. W W W H W W H W\nE. W H W W W W H W\nF. W W H W W W W H",
+      "answer": "E",
+      "analysis": "The base pattern is W H W W W W H W. Row 8 applies a total right shift of 0, giving W H W W W W H W. The answer is E.",
+      "options": [
+        "A. H W W H W W W W",
+        "B. W H W W H W W W",
+        "C. W W H W W H W W",
+        "D. W W W H W W H W",
+        "E. W H W W W W H W",
+        "F. W W H W W W W H"
+      ]
+    }
+  }
+}

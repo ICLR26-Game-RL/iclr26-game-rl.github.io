@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "mirror-laser-00003-3",
+    "question_id": 3,
+    "question_description": "Choose a single mirror placement that makes the laser hit a target.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result? Options: [1] place \\ at (2,...",
+    "image": "images/laser_00003.png",
+    "state": "states/laser_00003.json",
+    "image_url": "data/mirror_laser/files/images/laser_00003.png",
+    "state_url": "data/mirror_laser/files/states/laser_00003.json",
+    "has_options": true,
+    "question": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result?\nOptions:\n[1] place \\ at (2, 2)\n[2] place \\ at (1, 5)\n[3] place \\ at (2, 1)\n[4] place \\ at (1, 1)\n[5] place \\ at (1, 3)\n[6] place \\ at (1, 6)",
+    "analysis": "Testing option 3, adding \\ at (2, 1) changes the path as follows:\nCell (1, 1): empty.\nCell (1, 2): hit target B.\nThe beam reaches target B, so choose option 3.",
+    "options": [
+      "place \\ at (2, 2)",
+      "place \\ at (1, 5)",
+      "place \\ at (2, 1)",
+      "place \\ at (1, 1)",
+      "place \\ at (1, 3)",
+      "place \\ at (1, 6)"
+    ],
+    "state_content": {
+      "game": "mirror_laser",
+      "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+      "size": 7,
+      "start": [
+        1,
+        0
+      ],
+      "direction": "right",
+      "mirrors": [
+        {
+          "row": 1,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "type": "\\"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "type": "/"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "type": "/"
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "type": "\\"
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "type": "/"
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "type": "/"
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "type": "/"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "type": "\\"
+        }
+      ],
+      "blocks": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "targets": {
+        "A": [
+          1,
+          7
+        ],
+        "B": [
+          1,
+          2
+        ],
+        "C": [
+          7,
+          6
+        ]
+      },
+      "seed_index": 3
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mirror-laser-00003-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Choose a single mirror placement that makes the laser hit a target.",
+      "image": "images/laser_00003.png",
+      "state": "states/laser_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result?\nOptions:\n[1] place \\ at (2, 2)\n[2] place \\ at (1, 5)\n[3] place \\ at (2, 1)\n[4] place \\ at (1, 1)\n[5] place \\ at (1, 3)\n[6] place \\ at (1, 6)",
+      "answer": 3,
+      "analysis": "Testing option 3, adding \\ at (2, 1) changes the path as follows:\nCell (1, 1): empty.\nCell (1, 2): hit target B.\nThe beam reaches target B, so choose option 3.",
+      "options": [
+        "place \\ at (2, 2)",
+        "place \\ at (1, 5)",
+        "place \\ at (2, 1)",
+        "place \\ at (1, 1)",
+        "place \\ at (1, 3)",
+        "place \\ at (1, 6)"
+      ]
+    }
+  }
+}

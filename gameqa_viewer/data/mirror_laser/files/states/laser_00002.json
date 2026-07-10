@@ -1,0 +1,90 @@
+{
+  "game": "mirror_laser",
+  "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+  "size": 7,
+  "start": [
+    7,
+    0
+  ],
+  "direction": "right",
+  "mirrors": [
+    {
+      "row": 1,
+      "col": 2,
+      "type": "/"
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "type": "/"
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "type": "\\"
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "type": "/"
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "type": "/"
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "type": "\\"
+    },
+    {
+      "row": 4,
+      "col": 3,
+      "type": "/"
+    },
+    {
+      "row": 4,
+      "col": 7,
+      "type": "\\"
+    },
+    {
+      "row": 7,
+      "col": 3,
+      "type": "/"
+    }
+  ],
+  "blocks": [
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      7,
+      2
+    ]
+  ],
+  "targets": {
+    "A": [
+      4,
+      7
+    ],
+    "B": [
+      1,
+      5
+    ],
+    "C": [
+      7,
+      3
+    ]
+  },
+  "seed_index": 2
+}

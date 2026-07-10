@@ -1,0 +1,122 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "garden-irrigation-00001-1",
+    "question_id": 1,
+    "question_description": "Read whether a valve is open or closed.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "What is the current state of valve V3? Options: [1] open [2] closed",
+    "image": "images/garden_00001.png",
+    "state": "states/garden_00001.json",
+    "image_url": "data/garden_irrigation/files/images/garden_00001.png",
+    "state_url": "data/garden_irrigation/files/states/garden_00001.json",
+    "has_options": true,
+    "question": "What is the current state of valve V3?\nOptions:\n[1] open\n[2] closed",
+    "analysis": "Valve V3 is labeled closed in the image. Therefore choose option 2.",
+    "options": [
+      "open",
+      "closed"
+    ],
+    "state_content": {
+      "game": "garden_irrigation",
+      "rules": "Water starts at pump P and follows connected pipes. A pipe segment controlled by a valve carries water only when that valve is open. Water can split at junctions.",
+      "grid_size": [
+        6,
+        5
+      ],
+      "valves": {
+        "V1": false,
+        "V2": true,
+        "V3": false,
+        "V4": false
+      },
+      "toggle_cards": [
+        "V4"
+      ],
+      "target_crop": "A",
+      "crops": {
+        "A": "tomatoes",
+        "B": "carrots",
+        "C": "flowers",
+        "D": "berries"
+      },
+      "nodes": {
+        "P": [
+          5,
+          0
+        ],
+        "N1": [
+          4,
+          0
+        ],
+        "V1": [
+          3,
+          0
+        ],
+        "N2": [
+          3,
+          1
+        ],
+        "A": [
+          3,
+          2
+        ],
+        "V2": [
+          4,
+          2
+        ],
+        "B": [
+          5,
+          3
+        ],
+        "N3": [
+          2,
+          0
+        ],
+        "V3": [
+          1,
+          1
+        ],
+        "C": [
+          0,
+          2
+        ],
+        "N4": [
+          2,
+          2
+        ],
+        "V4": [
+          2,
+          3
+        ],
+        "D": [
+          1,
+          4
+        ]
+      },
+      "seed_index": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "garden-irrigation-00001-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read whether a valve is open or closed.",
+      "image": "images/garden_00001.png",
+      "state": "states/garden_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "What is the current state of valve V3?\nOptions:\n[1] open\n[2] closed",
+      "answer": 2,
+      "analysis": "Valve V3 is labeled closed in the image. Therefore choose option 2.",
+      "options": [
+        "open",
+        "closed"
+      ]
+    }
+  }
+}

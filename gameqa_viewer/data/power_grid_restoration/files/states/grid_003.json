@@ -1,0 +1,183 @@
+{
+  "game": "power-grid-restoration",
+  "level": "Hard",
+  "source_capacity": 10,
+  "loads": [
+    {
+      "id": "L1",
+      "path": [
+        "K1"
+      ],
+      "demand": 2,
+      "priority": 3
+    },
+    {
+      "id": "L2",
+      "path": [
+        "K1",
+        "K2"
+      ],
+      "demand": 3,
+      "priority": 5
+    },
+    {
+      "id": "L3",
+      "path": [
+        "K3"
+      ],
+      "demand": 2,
+      "priority": 4
+    },
+    {
+      "id": "L4",
+      "path": [
+        "K3",
+        "K4"
+      ],
+      "demand": 4,
+      "priority": 7
+    },
+    {
+      "id": "L5",
+      "path": [
+        "K5"
+      ],
+      "demand": 3,
+      "priority": 6
+    },
+    {
+      "id": "L6",
+      "path": [
+        "K5",
+        "K6"
+      ],
+      "demand": 2,
+      "priority": 5
+    }
+  ],
+  "switch_settings": {
+    "K1": true,
+    "K2": false,
+    "K3": false,
+    "K4": true,
+    "K5": true,
+    "K6": true
+  },
+  "current_demand": 7,
+  "current_priority": 14,
+  "current_energized_loads": [
+    "L1",
+    "L5",
+    "L6"
+  ],
+  "query_switch": "K1",
+  "close_query_switch": "K3",
+  "close_query_result": {
+    "relay_tripped": true,
+    "pre_trip_demand": 13,
+    "energized_loads": [],
+    "priority": 0
+  },
+  "toggle_sequence": [
+    "K5",
+    "K3",
+    "K4",
+    "K1"
+  ],
+  "toggle_sequence_trace": [
+    {
+      "step": 1,
+      "toggle": "K5",
+      "settings": {
+        "K1": true,
+        "K2": false,
+        "K3": false,
+        "K4": true,
+        "K5": false,
+        "K6": true
+      },
+      "pre_trip_demand": 2,
+      "loads": [
+        "L1"
+      ],
+      "relay_tripped": false
+    },
+    {
+      "step": 2,
+      "toggle": "K3",
+      "settings": {
+        "K1": true,
+        "K2": false,
+        "K3": true,
+        "K4": true,
+        "K5": false,
+        "K6": true
+      },
+      "pre_trip_demand": 8,
+      "loads": [
+        "L1",
+        "L3",
+        "L4"
+      ],
+      "relay_tripped": false
+    },
+    {
+      "step": 3,
+      "toggle": "K4",
+      "settings": {
+        "K1": true,
+        "K2": false,
+        "K3": true,
+        "K4": false,
+        "K5": false,
+        "K6": true
+      },
+      "pre_trip_demand": 4,
+      "loads": [
+        "L1",
+        "L3"
+      ],
+      "relay_tripped": false
+    },
+    {
+      "step": 4,
+      "toggle": "K1",
+      "settings": {
+        "K1": false,
+        "K2": false,
+        "K3": true,
+        "K4": false,
+        "K5": false,
+        "K6": true
+      },
+      "pre_trip_demand": 2,
+      "loads": [
+        "L3"
+      ],
+      "relay_tripped": false
+    }
+  ],
+  "toggle_sequence_relay_tripped": false,
+  "toggle_sequence_final_demand": 2,
+  "toggle_sequence_final_priority": 4,
+  "toggle_sequence_final_loads": [
+    "L3"
+  ],
+  "optimization_toggle_budget": 3,
+  "maximum_priority": 19,
+  "optimal_toggle_count": 1,
+  "optimal_energized_loads": [
+    "L1",
+    "L2",
+    "L5",
+    "L6"
+  ],
+  "optimal_switch_settings": {
+    "K1": true,
+    "K2": true,
+    "K3": false,
+    "K4": true,
+    "K5": true,
+    "K6": true
+  }
+}

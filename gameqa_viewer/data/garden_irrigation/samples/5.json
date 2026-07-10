@@ -1,0 +1,130 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "garden-irrigation-00006-3",
+    "question_id": 3,
+    "question_description": "Find the minimum valve toggles needed to water a target crop.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "What is the minimum number of valves that must be toggled to water crop A (tomatoes)? Options: [1] 0 [2] 2 [3] 3 [4] 4 [5] 1",
+    "image": "images/garden_00006.png",
+    "state": "states/garden_00006.json",
+    "image_url": "data/garden_irrigation/files/images/garden_00006.png",
+    "state_url": "data/garden_irrigation/files/states/garden_00006.json",
+    "has_options": true,
+    "question": "What is the minimum number of valves that must be toggled to water crop A (tomatoes)?\nOptions:\n[1] 0\n[2] 2\n[3] 3\n[4] 4\n[5] 1",
+    "analysis": "Trying subsets of valves from smallest to largest, toggling ['no valve'] gives valve states {'V1': True, 'V2': False, 'V3': False, 'V4': True} and waters ['A', 'D']. Thus the minimum is 0, so choose option 1.",
+    "options": [
+      "0",
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "state_content": {
+      "game": "garden_irrigation",
+      "rules": "Water starts at pump P and follows connected pipes. A pipe segment controlled by a valve carries water only when that valve is open. Water can split at junctions.",
+      "grid_size": [
+        6,
+        5
+      ],
+      "valves": {
+        "V1": true,
+        "V2": false,
+        "V3": false,
+        "V4": true
+      },
+      "toggle_cards": [
+        "V3",
+        "V4",
+        "V1"
+      ],
+      "target_crop": "A",
+      "crops": {
+        "A": "tomatoes",
+        "B": "carrots",
+        "C": "flowers",
+        "D": "berries"
+      },
+      "nodes": {
+        "P": [
+          5,
+          0
+        ],
+        "N1": [
+          4,
+          0
+        ],
+        "V1": [
+          3,
+          0
+        ],
+        "N2": [
+          3,
+          1
+        ],
+        "A": [
+          3,
+          2
+        ],
+        "V2": [
+          4,
+          2
+        ],
+        "B": [
+          5,
+          3
+        ],
+        "N3": [
+          2,
+          0
+        ],
+        "V3": [
+          1,
+          1
+        ],
+        "C": [
+          0,
+          2
+        ],
+        "N4": [
+          2,
+          2
+        ],
+        "V4": [
+          2,
+          3
+        ],
+        "D": [
+          1,
+          4
+        ]
+      },
+      "seed_index": 6
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "garden-irrigation-00006-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Find the minimum valve toggles needed to water a target crop.",
+      "image": "images/garden_00006.png",
+      "state": "states/garden_00006.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "What is the minimum number of valves that must be toggled to water crop A (tomatoes)?\nOptions:\n[1] 0\n[2] 2\n[3] 3\n[4] 4\n[5] 1",
+      "answer": 1,
+      "analysis": "Trying subsets of valves from smallest to largest, toggling ['no valve'] gives valve states {'V1': True, 'V2': False, 'V3': False, 'V4': True} and waters ['A', 'D']. Thus the minimum is 0, so choose option 1.",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "1"
+      ]
+    }
+  }
+}

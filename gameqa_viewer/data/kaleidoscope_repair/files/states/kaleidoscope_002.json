@@ -1,0 +1,143 @@
+{
+  "game": "kaleidoscope-repair",
+  "level": "Medium",
+  "size": 9,
+  "palette": {
+    "Ruby": "#E84A5F",
+    "Amber": "#F6B73C",
+    "Jade": "#27AE8A",
+    "Sapphire": "#3478D4",
+    "Violet": "#7B61C9",
+    "Coral": "#F27D72"
+  },
+  "board": [
+    [
+      "Amber",
+      "Amber",
+      "Jade",
+      "Amber",
+      "Sapphire",
+      "Ruby",
+      "Violet",
+      "Ruby",
+      "Amber"
+    ],
+    [
+      "Ruby",
+      "Ruby",
+      "Ruby",
+      "Amber",
+      "Jade",
+      "Jade",
+      "Violet",
+      "Ruby",
+      "Amber"
+    ],
+    [
+      "Violet",
+      "Violet",
+      "Sapphire",
+      "Amber",
+      "Ruby",
+      "Violet",
+      "Sapphire",
+      "Ruby",
+      "Jade"
+    ],
+    [
+      "Ruby",
+      "Jade",
+      "Violet",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Amber",
+      "Amber",
+      "Amber"
+    ],
+    [
+      "Sapphire",
+      "Jade",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      null,
+      "Ruby",
+      "Jade",
+      "Sapphire"
+    ],
+    [
+      "Amber",
+      "Amber",
+      "Amber",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Violet",
+      "Jade",
+      "Ruby"
+    ],
+    [
+      "Jade",
+      "Ruby",
+      "Sapphire",
+      "Violet",
+      "Ruby",
+      "Amber",
+      "Sapphire",
+      "Violet",
+      "Violet"
+    ],
+    [
+      "Amber",
+      "Ruby",
+      "Violet",
+      "Jade",
+      "Jade",
+      "Amber",
+      "Ruby",
+      "Ruby",
+      "Ruby"
+    ],
+    [
+      "Amber",
+      "Ruby",
+      "Violet",
+      "Ruby",
+      "Sapphire",
+      "Amber",
+      "Jade",
+      "Amber",
+      "Sapphire"
+    ]
+  ],
+  "missing_cell": [
+    4,
+    5
+  ],
+  "missing_expected_color": "Sapphire",
+  "damaged_cells": [
+    [
+      4,
+      5
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "query_cell": [
+    1,
+    8
+  ],
+  "rotation_query_cell": [
+    8,
+    4
+  ],
+  "rotation_query_destination": [
+    4,
+    0
+  ],
+  "mismatched_orbit_count": 2,
+  "minimum_tile_replacements": 2
+}

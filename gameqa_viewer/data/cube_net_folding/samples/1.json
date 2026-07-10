@@ -1,0 +1,127 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "cube-net-folding-00002",
+    "question_id": 2,
+    "question_description": "Infer opposite faces after folding",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_001.png",
+    "state": "states/cube_net_001.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_001.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_001.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter folding the net, which emblem is opposite face U?\nA. Circle\nB. Sun\nC. Cross\nD. Diamond\nE. Triangle\nF. Bars",
+    "analysis": "Folding the cross-shaped net gives opposite face pairs U-D, F-B, and L-R. Face U is opposite D, whose emblem is Circle. The answer is A.",
+    "options": [
+      "A. Circle",
+      "B. Sun",
+      "C. Cross",
+      "D. Diamond",
+      "E. Triangle",
+      "F. Bars"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Easy",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#F7C948",
+        "D": "#EF5B78",
+        "F": "#7B61FF",
+        "B": "#4D9DE0",
+        "L": "#1FB6A6",
+        "R": "#F28E2B"
+      },
+      "face_emblems": {
+        "U": "Sun",
+        "D": "Circle",
+        "F": "Cross",
+        "B": "Diamond",
+        "L": "Triangle",
+        "R": "Bars"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "south",
+        "south"
+      ],
+      "final_orientation": {
+        "top": "D",
+        "bottom": "U",
+        "front": "B",
+        "back": "F",
+        "left": "L",
+        "right": "R"
+      },
+      "query_face": "U",
+      "opposite_face": "D",
+      "target_orientation": {
+        "top": "B",
+        "front": "U"
+      },
+      "minimum_rolls": 1,
+      "one_optimal_roll_sequence": [
+        "south"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00002",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Infer opposite faces after folding",
+      "image": "images/cube_net_001.png",
+      "state": "states/cube_net_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter folding the net, which emblem is opposite face U?\nA. Circle\nB. Sun\nC. Cross\nD. Diamond\nE. Triangle\nF. Bars",
+      "answer": "A",
+      "analysis": "Folding the cross-shaped net gives opposite face pairs U-D, F-B, and L-R. Face U is opposite D, whose emblem is Circle. The answer is A.",
+      "options": [
+        "A. Circle",
+        "B. Sun",
+        "C. Cross",
+        "D. Diamond",
+        "E. Triangle",
+        "F. Bars"
+      ]
+    }
+  }
+}

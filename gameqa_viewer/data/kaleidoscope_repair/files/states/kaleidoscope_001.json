@@ -1,0 +1,103 @@
+{
+  "game": "kaleidoscope-repair",
+  "level": "Easy",
+  "size": 7,
+  "palette": {
+    "Ruby": "#E84A5F",
+    "Amber": "#F6B73C",
+    "Jade": "#27AE8A",
+    "Sapphire": "#3478D4",
+    "Violet": "#7B61C9",
+    "Coral": "#F27D72"
+  },
+  "board": [
+    [
+      "Violet",
+      "Amber",
+      "Jade",
+      "Coral",
+      "Sapphire",
+      "Sapphire",
+      "Violet"
+    ],
+    [
+      "Sapphire",
+      "Jade",
+      "Jade",
+      "Sapphire",
+      "Coral",
+      "Jade",
+      "Amber"
+    ],
+    [
+      "Sapphire",
+      "Coral",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Jade",
+      "Jade"
+    ],
+    [
+      "Coral",
+      "Sapphire",
+      "Sapphire",
+      "Jade",
+      "Sapphire",
+      null,
+      "Coral"
+    ],
+    [
+      "Jade",
+      "Jade",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Coral",
+      "Sapphire"
+    ],
+    [
+      "Amber",
+      "Jade",
+      "Coral",
+      "Sapphire",
+      "Jade",
+      "Jade",
+      "Sapphire"
+    ],
+    [
+      "Violet",
+      "Sapphire",
+      "Sapphire",
+      "Coral",
+      "Jade",
+      "Amber",
+      "Violet"
+    ]
+  ],
+  "missing_cell": [
+    3,
+    5
+  ],
+  "missing_expected_color": "Sapphire",
+  "damaged_cells": [
+    [
+      3,
+      5
+    ]
+  ],
+  "query_cell": [
+    3,
+    4
+  ],
+  "rotation_query_cell": [
+    4,
+    1
+  ],
+  "rotation_query_destination": [
+    1,
+    2
+  ],
+  "mismatched_orbit_count": 1,
+  "minimum_tile_replacements": 1
+}

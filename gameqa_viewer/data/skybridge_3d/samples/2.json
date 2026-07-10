@@ -1,0 +1,120 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "skybridge-3d-00003-3",
+    "question_id": 3,
+    "question_description": "Find the first blocked move in a command sequence.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: right, left, right, right, right, down. Options: [1] move 3 [2] no...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/skybridge_3d/files/images/board_00003.png",
+    "state_url": "data/skybridge_3d/files/states/board_00003.json",
+    "has_options": true,
+    "question": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: right, left, right, right, right, down.\nOptions:\n[1] move 3\n[2] no move is blocked\n[3] move 1\n[4] move 5\n[5] move 6\n[6] move 4\n[7] move 2",
+    "analysis": "Move 1 right: blocked (outside the board).\nMove 2 left: moved (normal height rule).\nMove 3 right: moved (normal height rule).\nMove 4 right: blocked (outside the board).\nMove 5 right: blocked (outside the board).\nMove 6 down: moved (normal height rule).\nThe first failing command is move 1. Therefore choose option 3.",
+    "options": [
+      "move 3",
+      "no move is blocked",
+      "move 1",
+      "move 5",
+      "move 6",
+      "move 4",
+      "move 2"
+    ],
+    "state_content": {
+      "game": "skybridge_3d",
+      "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+      "rows": 4,
+      "cols": 4,
+      "heights": [
+        [
+          3,
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "robot": [
+        1,
+        4
+      ],
+      "goal": [
+        1,
+        3
+      ],
+      "beacons": {
+        "A": [
+          1,
+          2
+        ],
+        "B": [
+          4,
+          4
+        ],
+        "C": [
+          2,
+          3
+        ]
+      },
+      "ladders": [
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      ],
+      "seed_index": 3
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "skybridge-3d-00003-3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Find the first blocked move in a command sequence.",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: right, left, right, right, right, down.\nOptions:\n[1] move 3\n[2] no move is blocked\n[3] move 1\n[4] move 5\n[5] move 6\n[6] move 4\n[7] move 2",
+      "answer": 3,
+      "analysis": "Move 1 right: blocked (outside the board).\nMove 2 left: moved (normal height rule).\nMove 3 right: moved (normal height rule).\nMove 4 right: blocked (outside the board).\nMove 5 right: blocked (outside the board).\nMove 6 down: moved (normal height rule).\nThe first failing command is move 1. Therefore choose option 3.",
+      "options": [
+        "move 3",
+        "no move is blocked",
+        "move 1",
+        "move 5",
+        "move 6",
+        "move 4",
+        "move 2"
+      ]
+    }
+  }
+}

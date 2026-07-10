@@ -1,0 +1,75 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "factory-sorter-00008-2",
+    "question_id": 2,
+    "question_description": "Predict the final bin for a package under current sensors.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Package P2 is blue and triangle. With the current S1 and S2 sensors, which bin will it reach? Options: [1] color-only bin [2] shape-match bin [3] reject bin",
+    "image": "images/sorter_00008.png",
+    "state": "states/sorter_00008.json",
+    "image_url": "data/factory_sorter/files/images/sorter_00008.png",
+    "state_url": "data/factory_sorter/files/states/sorter_00008.json",
+    "has_options": true,
+    "question": "Package P2 is blue and triangle. With the current S1 and S2 sensors, which bin will it reach?\nOptions:\n[1] color-only bin\n[2] shape-match bin\n[3] reject bin",
+    "analysis": "At S1, compare color blue with sensor red. It does not match and goes to reject. Route: feeder -> S1 -> reject. Final bin is reject bin, so choose option 3.",
+    "options": [
+      "color-only bin",
+      "shape-match bin",
+      "reject bin"
+    ],
+    "state_content": {
+      "game": "factory_sorter",
+      "rules": [
+        "Packages enter S1 first. If package color matches the S1 color sensor, it goes to S2; otherwise it goes to the reject bin.",
+        "At S2, if package shape matches the S2 shape sensor, it goes to the shape-match bin; otherwise it goes to the color-only bin."
+      ],
+      "packages": [
+        {
+          "id": "P1",
+          "color": "yellow",
+          "shape": "square"
+        },
+        {
+          "id": "P2",
+          "color": "blue",
+          "shape": "triangle"
+        },
+        {
+          "id": "P3",
+          "color": "blue",
+          "shape": "circle"
+        }
+      ],
+      "sensors": {
+        "S1_color": "red",
+        "S2_shape": "triangle"
+      },
+      "target_package": "P2",
+      "seed_index": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "factory-sorter-00008-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the final bin for a package under current sensors.",
+      "image": "images/sorter_00008.png",
+      "state": "states/sorter_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Package P2 is blue and triangle. With the current S1 and S2 sensors, which bin will it reach?\nOptions:\n[1] color-only bin\n[2] shape-match bin\n[3] reject bin",
+      "answer": 3,
+      "analysis": "At S1, compare color blue with sensor red. It does not match and goes to reject. Route: feeder -> S1 -> reject. Final bin is reject bin, so choose option 3.",
+      "options": [
+        "color-only bin",
+        "shape-match bin",
+        "reject bin"
+      ]
+    }
+  }
+}

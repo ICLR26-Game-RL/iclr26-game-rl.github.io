@@ -1,0 +1,215 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "alchemy-workshop-00007",
+    "question_id": 2,
+    "question_description": "Match a product to its recipe card",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requireme...",
+    "image": "images/alchemy_002.png",
+    "state": "states/alchemy_002.json",
+    "image_url": "data/alchemy_workshop/files/images/alchemy_002.png",
+    "state_url": "data/alchemy_workshop/files/states/alchemy_002.json",
+    "has_options": true,
+    "question": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requirements are available.\nWhich recipe directly produces MoonDust?\nA. R5\nB. R1\nC. R2\nD. R3\nE. R4",
+    "analysis": "The card R5 lists 1 MoonDust as its product. The answer is A.",
+    "options": [
+      "A. R5",
+      "B. R1",
+      "C. R2",
+      "D. R3",
+      "E. R4"
+    ],
+    "state_content": {
+      "game": "alchemy-workshop",
+      "level": "Medium",
+      "inventory": {
+        "Herb": 2,
+        "Water": 1,
+        "Mushroom": 1,
+        "Crystal": 0,
+        "Essence": 0,
+        "Tonic": 0,
+        "Elixir": 0,
+        "MoonDust": 0,
+        "Phoenix": 0
+      },
+      "recipes": [
+        {
+          "id": "R1",
+          "name": "Verdant Essence",
+          "consume": {
+            "Herb": 1,
+            "Water": 1
+          },
+          "produce": {
+            "Essence": 1
+          }
+        },
+        {
+          "id": "R2",
+          "name": "Amber Tonic",
+          "consume": {
+            "Mushroom": 1,
+            "Water": 1
+          },
+          "produce": {
+            "Tonic": 1
+          }
+        },
+        {
+          "id": "R3",
+          "name": "Crystal Press",
+          "consume": {
+            "Herb": 2
+          },
+          "produce": {
+            "Crystal": 1
+          }
+        },
+        {
+          "id": "R4",
+          "name": "Rose Elixir",
+          "consume": {
+            "Essence": 1,
+            "Crystal": 1
+          },
+          "produce": {
+            "Elixir": 1
+          }
+        },
+        {
+          "id": "R5",
+          "name": "Moon Condenser",
+          "consume": {
+            "Tonic": 1,
+            "Crystal": 1
+          },
+          "produce": {
+            "MoonDust": 1
+          }
+        }
+      ],
+      "query_item": "Herb",
+      "recipe_query_item": "MoonDust",
+      "valid_sequence": [
+        "R2",
+        "R3",
+        "R5"
+      ],
+      "valid_sequence_trace": [
+        {
+          "step": 1,
+          "recipe": "R2",
+          "inventory": {
+            "Herb": 2,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        },
+        {
+          "step": 2,
+          "recipe": "R3",
+          "inventory": {
+            "Herb": 0,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 1,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        },
+        {
+          "step": 3,
+          "recipe": "R5",
+          "inventory": {
+            "Herb": 0,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 0,
+            "Elixir": 0,
+            "MoonDust": 1,
+            "Phoenix": 0
+          }
+        }
+      ],
+      "final_inventory": {
+        "Herb": 0,
+        "Water": 0,
+        "Mushroom": 0,
+        "Crystal": 0,
+        "Essence": 0,
+        "Tonic": 0,
+        "Elixir": 0,
+        "MoonDust": 1,
+        "Phoenix": 0
+      },
+      "final_query_item": "MoonDust",
+      "invalid_sequence": [
+        "R2",
+        "R5"
+      ],
+      "invalid_sequence_first_failure": 2,
+      "invalid_sequence_trace": [
+        {
+          "step": 1,
+          "recipe": "R2",
+          "inventory": {
+            "Herb": 2,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        }
+      ],
+      "optimization_goal": "MoonDust",
+      "minimum_brews": 3,
+      "one_optimal_sequence": [
+        "R2",
+        "R3",
+        "R5"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "alchemy-workshop-00007",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Match a product to its recipe card",
+      "image": "images/alchemy_002.png",
+      "state": "states/alchemy_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requirements are available.\nWhich recipe directly produces MoonDust?\nA. R5\nB. R1\nC. R2\nD. R3\nE. R4",
+      "answer": "A",
+      "analysis": "The card R5 lists 1 MoonDust as its product. The answer is A.",
+      "options": [
+        "A. R5",
+        "B. R1",
+        "C. R2",
+        "D. R3",
+        "E. R4"
+      ]
+    }
+  }
+}

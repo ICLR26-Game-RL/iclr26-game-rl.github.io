@@ -1,0 +1,65 @@
+{
+  "game": "potion_cascade",
+  "rules": [
+    "heat: selected bottle potency increases by 1 up to 5.",
+    "cool: selected bottle potency decreases by 1 down to 1.",
+    "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+    "decant: two selected bottles swap positions.",
+    "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+  ],
+  "element_cycle": [
+    "ember",
+    "sun",
+    "leaf",
+    "frost",
+    "moon",
+    "void"
+  ],
+  "bottles": [
+    {
+      "slot": 1,
+      "element": "frost",
+      "potency": 1
+    },
+    {
+      "slot": 2,
+      "element": "frost",
+      "potency": 1
+    },
+    {
+      "slot": 3,
+      "element": "sun",
+      "potency": 4
+    },
+    {
+      "slot": 4,
+      "element": "ember",
+      "potency": 1
+    },
+    {
+      "slot": 5,
+      "element": "moon",
+      "potency": 5
+    }
+  ],
+  "operation_cards": [
+    {
+      "op": "heat",
+      "slot": 2
+    },
+    {
+      "op": "cool",
+      "slot": 2
+    },
+    {
+      "op": "decant",
+      "slot_a": 1,
+      "slot_b": 5
+    },
+    {
+      "op": "infuse",
+      "slot": 3
+    }
+  ],
+  "seed_index": 4
+}

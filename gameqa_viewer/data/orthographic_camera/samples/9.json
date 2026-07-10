@@ -1,0 +1,136 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "orthographic-camera-00010",
+    "question_id": 5,
+    "question_description": "Minimize quarter-turn rotations to a coordinate",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y...",
+    "image": "images/camera_002.png",
+    "state": "states/camera_002.json",
+    "image_url": "data/orthographic_camera/files/images/camera_002.png",
+    "state_url": "data/orthographic_camera/files/states/camera_002.json",
+    "has_options": true,
+    "question": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y,z) to (4-y,x,z); rotation X+ maps it to (x,4-z,y).\nUsing only Z+ and X+, what is the minimum number of rotations needed to move beacon A to (2, 2, 3)?\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+    "analysis": "Breadth-first search on beacon A's rotation orbit finds ['Z+', 'X+'] with length 2. No state at smaller depth reaches (2, 2, 3). The answer is E.",
+    "options": [
+      "A. 1",
+      "B. 3",
+      "C. 4",
+      "D. 5",
+      "E. 2",
+      "F. 0"
+    ],
+    "state_content": {
+      "game": "orthographic-camera",
+      "level": "Medium",
+      "grid_size": 5,
+      "markers": {
+        "A": [
+          3,
+          2,
+          2
+        ],
+        "B": [
+          3,
+          4,
+          2
+        ],
+        "C": [
+          2,
+          0,
+          2
+        ],
+        "D": [
+          3,
+          4,
+          1
+        ],
+        "E": [
+          1,
+          1,
+          4
+        ]
+      },
+      "marker_colors": {
+        "A": "#FF5C77",
+        "B": "#34C6BE",
+        "C": "#FFC857",
+        "D": "#7B61FF",
+        "E": "#42A5F5"
+      },
+      "front_overlap_pair": [
+        "A",
+        "B"
+      ],
+      "rotation_sequence": [
+        "X+",
+        "X+"
+      ],
+      "rotated_markers": {
+        "A": [
+          3,
+          2,
+          2
+        ],
+        "B": [
+          3,
+          0,
+          2
+        ],
+        "C": [
+          2,
+          4,
+          2
+        ],
+        "D": [
+          3,
+          0,
+          3
+        ],
+        "E": [
+          1,
+          3,
+          0
+        ]
+      },
+      "target_marker": "A",
+      "target_coordinate": [
+        2,
+        2,
+        3
+      ],
+      "minimum_rotations": 2,
+      "one_optimal_sequence": [
+        "Z+",
+        "X+"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "orthographic-camera-00010",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Minimize quarter-turn rotations to a coordinate",
+      "image": "images/camera_002.png",
+      "state": "states/camera_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y,z) to (4-y,x,z); rotation X+ maps it to (x,4-z,y).\nUsing only Z+ and X+, what is the minimum number of rotations needed to move beacon A to (2, 2, 3)?\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+      "answer": "E",
+      "analysis": "Breadth-first search on beacon A's rotation orbit finds ['Z+', 'X+'] with length 2. No state at smaller depth reaches (2, 2, 3). The answer is E.",
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 4",
+        "D. 5",
+        "E. 2",
+        "F. 0"
+      ]
+    }
+  }
+}

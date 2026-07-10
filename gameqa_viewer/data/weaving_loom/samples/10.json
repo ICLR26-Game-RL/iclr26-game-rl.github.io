@@ -1,0 +1,359 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "weaving-loom-00011",
+    "question_id": 1,
+    "question_description": "Identify the top strand at a crossing",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_003.png",
+    "state": "states/loom_003.json",
+    "image_url": "data/weaving_loom/files/images/loom_003.png",
+    "state_url": "data/weaving_loom/files/states/loom_003.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 3 position(s). Coordinates are zero-based (row,column).\nWhich strand is on top at (5,5)?\nA. MISSING\nB. BOTH\nC. WARP\nD. WEFT",
+    "analysis": "At (5,5), the visible vertical band crosses over the horizontal band. The answer is C.",
+    "options": [
+      "A. MISSING",
+      "B. BOTH",
+      "C. WARP",
+      "D. WEFT"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Hard",
+      "rows": 10,
+      "columns": 10,
+      "phase_shift_per_row": 3,
+      "base_pattern": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "expected_pattern": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "observed_pattern": [
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "damaged_cells": [
+        [
+          7,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "missing_cell": [
+        7,
+        4
+      ],
+      "query_cell": [
+        5,
+        5
+      ],
+      "highlight_row": 1,
+      "next_ideal_row": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "two_rows_ahead": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "future_query_column": 4,
+      "minimum_crossing_repairs": 3
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00011",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the top strand at a crossing",
+      "image": "images/loom_003.png",
+      "state": "states/loom_003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 3 position(s). Coordinates are zero-based (row,column).\nWhich strand is on top at (5,5)?\nA. MISSING\nB. BOTH\nC. WARP\nD. WEFT",
+      "answer": "C",
+      "analysis": "At (5,5), the visible vertical band crosses over the horizontal band. The answer is C.",
+      "options": [
+        "A. MISSING",
+        "B. BOTH",
+        "C. WARP",
+        "D. WEFT"
+      ]
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "cube-net-folding-00009",
+    "question_id": 4,
+    "question_description": "Track the front face through a longer roll sequence",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_002.png",
+    "state": "states/cube_net_002.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_002.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_002.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter the roll sequence west, south, west, east, which emblem faces front?\nA. Circle\nB. Diamond\nC. Bars\nD. Triangle\nE. Sun\nF. Cross",
+    "analysis": "Applying every roll to the six-role orientation yields {\"top\": \"B\", \"bottom\": \"F\", \"front\": \"R\", \"back\": \"L\", \"left\": \"U\", \"right\": \"D\"}. The front face is R, so its emblem is Circle. The answer is A.",
+    "options": [
+      "A. Circle",
+      "B. Diamond",
+      "C. Bars",
+      "D. Triangle",
+      "E. Sun",
+      "F. Cross"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Medium",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#4D9DE0",
+        "D": "#F7C948",
+        "F": "#F28E2B",
+        "B": "#EF5B78",
+        "L": "#7B61FF",
+        "R": "#1FB6A6"
+      },
+      "face_emblems": {
+        "U": "Diamond",
+        "D": "Bars",
+        "F": "Triangle",
+        "B": "Sun",
+        "L": "Cross",
+        "R": "Circle"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "west",
+        "south",
+        "west",
+        "east"
+      ],
+      "final_orientation": {
+        "top": "B",
+        "bottom": "F",
+        "front": "R",
+        "back": "L",
+        "left": "U",
+        "right": "D"
+      },
+      "query_face": "L",
+      "opposite_face": "R",
+      "target_orientation": {
+        "top": "F",
+        "front": "U"
+      },
+      "minimum_rolls": 3,
+      "one_optimal_roll_sequence": [
+        "east",
+        "east",
+        "north"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00009",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Track the front face through a longer roll sequence",
+      "image": "images/cube_net_002.png",
+      "state": "states/cube_net_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter the roll sequence west, south, west, east, which emblem faces front?\nA. Circle\nB. Diamond\nC. Bars\nD. Triangle\nE. Sun\nF. Cross",
+      "answer": "A",
+      "analysis": "Applying every roll to the six-role orientation yields {\"top\": \"B\", \"bottom\": \"F\", \"front\": \"R\", \"back\": \"L\", \"left\": \"U\", \"right\": \"D\"}. The front face is R, so its emblem is Circle. The answer is A.",
+      "options": [
+        "A. Circle",
+        "B. Diamond",
+        "C. Bars",
+        "D. Triangle",
+        "E. Sun",
+        "F. Cross"
+      ]
+    }
+  }
+}

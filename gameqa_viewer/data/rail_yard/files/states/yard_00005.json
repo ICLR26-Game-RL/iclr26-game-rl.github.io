@@ -1,0 +1,55 @@
+{
+  "game": "rail_yard",
+  "rules": "The train starts at S. At each switch J1-J4 it follows branch A or B according to the visible switch lever. Fixed track pieces have only branch A. The train stops at the first depot reached.",
+  "switches": {
+    "J1": "A",
+    "J2": "A",
+    "J3": "B",
+    "J4": "A"
+  },
+  "cargo": "gold",
+  "target_depot": "gold depot",
+  "nodes": {
+    "S": [
+      54,
+      240
+    ],
+    "J1": [
+      150,
+      240
+    ],
+    "U1": [
+      230,
+      145
+    ],
+    "J2": [
+      325,
+      145
+    ],
+    "R": [
+      470,
+      80
+    ],
+    "L1": [
+      230,
+      335
+    ],
+    "J3": [
+      325,
+      335
+    ],
+    "B": [
+      470,
+      400
+    ],
+    "J4": [
+      430,
+      240
+    ],
+    "G": [
+      510,
+      240
+    ]
+  },
+  "seed_index": 5
+}

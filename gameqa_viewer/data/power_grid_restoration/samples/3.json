@@ -1,0 +1,157 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "power-grid-restoration-00004",
+    "question_id": 4,
+    "question_description": "Track feeder state and persistent relay trip",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "A load is energized only when every switch on its path from GEN is closed. After each toggle, sum energized demand. If it exceeds generator capacity, the prote...",
+    "image": "images/grid_001.png",
+    "state": "states/grid_001.json",
+    "image_url": "data/power_grid_restoration/files/images/grid_001.png",
+    "state_url": "data/power_grid_restoration/files/states/grid_001.json",
+    "has_options": true,
+    "question": "A load is energized only when every switch on its path from GEN is closed. After each toggle, sum energized demand. If it exceeds generator capacity, the protection relay trips and all loads become de-energized for the rest of that sequence.\nStarting from the image, execute in order: toggle K1, toggle K3. What energized demand remains at the end?\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+    "analysis": "The step trace is [{'step': 1, 'toggle': 'K1', 'settings': {'K1': True, 'K2': False, 'K3': True}, 'pre_trip_demand': 4, 'loads': ['L1', 'L3'], 'relay_tripped': False}, {'step': 2, 'toggle': 'K3', 'settings': {'K1': True, 'K2': False, 'K3': False}, 'pre_trip_demand': 2, 'loads': ['L1'], 'relay_tripped': False}]. The final safe energized demand is 2. The answer is E.",
+    "options": [
+      "A. 1",
+      "B. 3",
+      "C. 4",
+      "D. 5",
+      "E. 2",
+      "F. 0"
+    ],
+    "state_content": {
+      "game": "power-grid-restoration",
+      "level": "Easy",
+      "source_capacity": 4,
+      "loads": [
+        {
+          "id": "L1",
+          "path": [
+            "K1"
+          ],
+          "demand": 2,
+          "priority": 3
+        },
+        {
+          "id": "L2",
+          "path": [
+            "K1",
+            "K2"
+          ],
+          "demand": 3,
+          "priority": 5
+        },
+        {
+          "id": "L3",
+          "path": [
+            "K3"
+          ],
+          "demand": 2,
+          "priority": 4
+        }
+      ],
+      "switch_settings": {
+        "K1": false,
+        "K2": false,
+        "K3": true
+      },
+      "current_demand": 2,
+      "current_priority": 4,
+      "current_energized_loads": [
+        "L3"
+      ],
+      "query_switch": "K3",
+      "close_query_switch": "K1",
+      "close_query_result": {
+        "relay_tripped": false,
+        "pre_trip_demand": 4,
+        "energized_loads": [
+          "L1",
+          "L3"
+        ],
+        "priority": 7
+      },
+      "toggle_sequence": [
+        "K1",
+        "K3"
+      ],
+      "toggle_sequence_trace": [
+        {
+          "step": 1,
+          "toggle": "K1",
+          "settings": {
+            "K1": true,
+            "K2": false,
+            "K3": true
+          },
+          "pre_trip_demand": 4,
+          "loads": [
+            "L1",
+            "L3"
+          ],
+          "relay_tripped": false
+        },
+        {
+          "step": 2,
+          "toggle": "K3",
+          "settings": {
+            "K1": true,
+            "K2": false,
+            "K3": false
+          },
+          "pre_trip_demand": 2,
+          "loads": [
+            "L1"
+          ],
+          "relay_tripped": false
+        }
+      ],
+      "toggle_sequence_relay_tripped": false,
+      "toggle_sequence_final_demand": 2,
+      "toggle_sequence_final_priority": 3,
+      "toggle_sequence_final_loads": [
+        "L1"
+      ],
+      "optimization_toggle_budget": 1,
+      "maximum_priority": 7,
+      "optimal_toggle_count": 1,
+      "optimal_energized_loads": [
+        "L1",
+        "L3"
+      ],
+      "optimal_switch_settings": {
+        "K1": true,
+        "K2": false,
+        "K3": true
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "power-grid-restoration-00004",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Track feeder state and persistent relay trip",
+      "image": "images/grid_001.png",
+      "state": "states/grid_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "A load is energized only when every switch on its path from GEN is closed. After each toggle, sum energized demand. If it exceeds generator capacity, the protection relay trips and all loads become de-energized for the rest of that sequence.\nStarting from the image, execute in order: toggle K1, toggle K3. What energized demand remains at the end?\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+      "answer": "E",
+      "analysis": "The step trace is [{'step': 1, 'toggle': 'K1', 'settings': {'K1': True, 'K2': False, 'K3': True}, 'pre_trip_demand': 4, 'loads': ['L1', 'L3'], 'relay_tripped': False}, {'step': 2, 'toggle': 'K3', 'settings': {'K1': True, 'K2': False, 'K3': False}, 'pre_trip_demand': 2, 'loads': ['L1'], 'relay_tripped': False}]. The final safe energized demand is 2. The answer is E.",
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 4",
+        "D. 5",
+        "E. 2",
+        "F. 0"
+      ]
+    }
+  }
+}

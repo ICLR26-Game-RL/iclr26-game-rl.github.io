@@ -1,0 +1,104 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "rail-yard-00009-3",
+    "question_id": 3,
+    "question_description": "Find the minimum number of switch flips needed for the cargo target.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "The cargo should go to the red depot. What is the minimum number of switch levers that must be flipped before departure? Options: [1] 0 [2] 3 [3] 2 [4] 4 [5] 1",
+    "image": "images/yard_00009.png",
+    "state": "states/yard_00009.json",
+    "image_url": "data/rail_yard/files/images/yard_00009.png",
+    "state_url": "data/rail_yard/files/states/yard_00009.json",
+    "has_options": true,
+    "question": "The cargo should go to the red depot. What is the minimum number of switch levers that must be flipped before departure?\nOptions:\n[1] 0\n[2] 3\n[3] 2\n[4] 4\n[5] 1",
+    "analysis": "Searching all switch settings, the closest target-reaching configuration changes ['no switches']. It routes S as S -> J1 -> U1 -> J2 -> R to red depot. Minimum flips = 0, so choose option 1.",
+    "options": [
+      "0",
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "state_content": {
+      "game": "rail_yard",
+      "rules": "The train starts at S. At each switch J1-J4 it follows branch A or B according to the visible switch lever. Fixed track pieces have only branch A. The train stops at the first depot reached.",
+      "switches": {
+        "J1": "A",
+        "J2": "A",
+        "J3": "A",
+        "J4": "B"
+      },
+      "cargo": "red",
+      "target_depot": "red depot",
+      "nodes": {
+        "S": [
+          54,
+          240
+        ],
+        "J1": [
+          150,
+          240
+        ],
+        "U1": [
+          230,
+          145
+        ],
+        "J2": [
+          325,
+          145
+        ],
+        "R": [
+          470,
+          80
+        ],
+        "L1": [
+          230,
+          335
+        ],
+        "J3": [
+          325,
+          335
+        ],
+        "B": [
+          470,
+          400
+        ],
+        "J4": [
+          430,
+          240
+        ],
+        "G": [
+          510,
+          240
+        ]
+      },
+      "seed_index": 9
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rail-yard-00009-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Find the minimum number of switch flips needed for the cargo target.",
+      "image": "images/yard_00009.png",
+      "state": "states/yard_00009.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "The cargo should go to the red depot. What is the minimum number of switch levers that must be flipped before departure?\nOptions:\n[1] 0\n[2] 3\n[3] 2\n[4] 4\n[5] 1",
+      "answer": 1,
+      "analysis": "Searching all switch settings, the closest target-reaching configuration changes ['no switches']. It routes S as S -> J1 -> U1 -> J2 -> R to red depot. Minimum flips = 0, so choose option 1.",
+      "options": [
+        "0",
+        "3",
+        "2",
+        "4",
+        "1"
+      ]
+    }
+  }
+}

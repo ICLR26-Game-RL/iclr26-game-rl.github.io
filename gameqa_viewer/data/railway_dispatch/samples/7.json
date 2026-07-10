@@ -1,0 +1,243 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "railway-dispatch-00008",
+    "question_id": 3,
+    "question_description": "Track a train through switch commands",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips...",
+    "image": "images/rail_002.png",
+    "state": "states/rail_002.json",
+    "image_url": "data/railway_dispatch/files/images/rail_002.png",
+    "state_url": "data/railway_dispatch/files/states/rail_002.json",
+    "has_options": true,
+    "question": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips that switch; advance moves one station; hold does not move.\nStarting T1 at A, execute these dispatcher commands in order: advance, toggle S1, advance, advance, toggle S2, advance. Where does T1 finish?\nA. D\nB. E\nC. F\nD. A\nE. B\nF. C",
+    "analysis": "The exact command trace is [{'step': 1, 'command': 'advance', 'from': 'A', 'to': 'B', 'switches': {'S1': 1, 'S2': 1}}, {'step': 2, 'command': 'toggle S1', 'from': 'B', 'to': 'B', 'switches': {'S1': 0, 'S2': 1}}, {'step': 3, 'command': 'advance', 'from': 'B', 'to': 'C', 'switches': {'S1': 0, 'S2': 1}}, {'step': 4, 'command': 'advance', 'from': 'C', 'to': 'E', 'switches': {'S1': 0, 'S2': 1}}, {'step': 5, 'command': 'toggle S2', 'from': 'E', 'to': 'E', 'switches': {'S1': 0, 'S2': 0}}, {'step': 6, 'command': 'advance', 'from': 'E', 'to': 'F', 'switches': {'S1': 0, 'S2': 0}}]. T1 finishes at F, so the answer is C.",
+    "options": [
+      "A. D",
+      "B. E",
+      "C. F",
+      "D. A",
+      "E. B",
+      "F. C"
+    ],
+    "state_content": {
+      "game": "railway-dispatch",
+      "level": "Medium",
+      "stations": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "outgoing_tracks": {
+        "A": [
+          "B"
+        ],
+        "B": [
+          "C",
+          "D"
+        ],
+        "C": [
+          "E"
+        ],
+        "D": [
+          "E"
+        ],
+        "E": [
+          "F",
+          "G"
+        ]
+      },
+      "switches": {
+        "S1": {
+          "station": "B",
+          "options": [
+            "C",
+            "D"
+          ]
+        },
+        "S2": {
+          "station": "E",
+          "options": [
+            "F",
+            "G"
+          ]
+        }
+      },
+      "switch_settings": {
+        "S1": 1,
+        "S2": 1
+      },
+      "train_positions": {
+        "T1": "A",
+        "T2": "E"
+      },
+      "query_switch": "S2",
+      "command_sequence": [
+        "advance",
+        "toggle S1",
+        "advance",
+        "advance",
+        "toggle S2",
+        "advance"
+      ],
+      "command_trace": [
+        {
+          "step": 1,
+          "command": "advance",
+          "from": "A",
+          "to": "B",
+          "switches": {
+            "S1": 1,
+            "S2": 1
+          }
+        },
+        {
+          "step": 2,
+          "command": "toggle S1",
+          "from": "B",
+          "to": "B",
+          "switches": {
+            "S1": 0,
+            "S2": 1
+          }
+        },
+        {
+          "step": 3,
+          "command": "advance",
+          "from": "B",
+          "to": "C",
+          "switches": {
+            "S1": 0,
+            "S2": 1
+          }
+        },
+        {
+          "step": 4,
+          "command": "advance",
+          "from": "C",
+          "to": "E",
+          "switches": {
+            "S1": 0,
+            "S2": 1
+          }
+        },
+        {
+          "step": 5,
+          "command": "toggle S2",
+          "from": "E",
+          "to": "E",
+          "switches": {
+            "S1": 0,
+            "S2": 0
+          }
+        },
+        {
+          "step": 6,
+          "command": "advance",
+          "from": "E",
+          "to": "F",
+          "switches": {
+            "S1": 0,
+            "S2": 0
+          }
+        }
+      ],
+      "command_final_station": "F",
+      "command_final_switches": {
+        "S1": 0,
+        "S2": 0
+      },
+      "simultaneous_schedule": [
+        {
+          "T1": "advance",
+          "T2": "advance"
+        },
+        {
+          "T1": "advance",
+          "T2": "hold"
+        },
+        {
+          "T1": "advance",
+          "T2": "hold"
+        }
+      ],
+      "simultaneous_trace": [
+        {
+          "step": 1,
+          "actions": {
+            "T1": "advance",
+            "T2": "advance"
+          },
+          "T1": "B",
+          "T2": "G",
+          "collision": false
+        },
+        {
+          "step": 2,
+          "actions": {
+            "T1": "advance",
+            "T2": "hold"
+          },
+          "T1": "D",
+          "T2": "G",
+          "collision": false
+        },
+        {
+          "step": 3,
+          "actions": {
+            "T1": "advance",
+            "T2": "hold"
+          },
+          "T1": "E",
+          "T2": "G",
+          "collision": false
+        }
+      ],
+      "collision_event": null,
+      "simultaneous_final_positions": {
+        "T1": "E",
+        "T2": "G"
+      },
+      "optimization_goal": "F",
+      "minimum_commands": 5,
+      "one_optimal_command_sequence": [
+        "advance",
+        "advance",
+        "advance",
+        "toggle S2",
+        "advance"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "railway-dispatch-00008",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Track a train through switch commands",
+      "image": "images/rail_002.png",
+      "state": "states/rail_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips that switch; advance moves one station; hold does not move.\nStarting T1 at A, execute these dispatcher commands in order: advance, toggle S1, advance, advance, toggle S2, advance. Where does T1 finish?\nA. D\nB. E\nC. F\nD. A\nE. B\nF. C",
+      "answer": "C",
+      "analysis": "The exact command trace is [{'step': 1, 'command': 'advance', 'from': 'A', 'to': 'B', 'switches': {'S1': 1, 'S2': 1}}, {'step': 2, 'command': 'toggle S1', 'from': 'B', 'to': 'B', 'switches': {'S1': 0, 'S2': 1}}, {'step': 3, 'command': 'advance', 'from': 'B', 'to': 'C', 'switches': {'S1': 0, 'S2': 1}}, {'step': 4, 'command': 'advance', 'from': 'C', 'to': 'E', 'switches': {'S1': 0, 'S2': 1}}, {'step': 5, 'command': 'toggle S2', 'from': 'E', 'to': 'E', 'switches': {'S1': 0, 'S2': 0}}, {'step': 6, 'command': 'advance', 'from': 'E', 'to': 'F', 'switches': {'S1': 0, 'S2': 0}}]. T1 finishes at F, so the answer is C.",
+      "options": [
+        "A. D",
+        "B. E",
+        "C. F",
+        "D. A",
+        "E. B",
+        "F. C"
+      ]
+    }
+  }
+}

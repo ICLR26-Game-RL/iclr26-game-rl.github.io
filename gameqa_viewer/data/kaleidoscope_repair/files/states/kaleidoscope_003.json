@@ -1,0 +1,191 @@
+{
+  "game": "kaleidoscope-repair",
+  "level": "Hard",
+  "size": 11,
+  "palette": {
+    "Ruby": "#E84A5F",
+    "Amber": "#F6B73C",
+    "Jade": "#27AE8A",
+    "Sapphire": "#3478D4",
+    "Violet": "#7B61C9",
+    "Coral": "#F27D72"
+  },
+  "board": [
+    [
+      "Jade",
+      "Sapphire",
+      "Amber",
+      "Amber",
+      "Ruby",
+      "Amber",
+      "Violet",
+      "Jade",
+      "Amber",
+      "Violet",
+      "Jade"
+    ],
+    [
+      "Violet",
+      "Violet",
+      "Coral",
+      "Ruby",
+      "Violet",
+      "Coral",
+      "Jade",
+      "Sapphire",
+      "Sapphire",
+      "Violet",
+      "Sapphire"
+    ],
+    [
+      null,
+      "Sapphire",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Jade",
+      "Amber",
+      "Amber",
+      "Ruby",
+      "Coral",
+      "Amber"
+    ],
+    [
+      "Jade",
+      "Sapphire",
+      "Amber",
+      "Violet",
+      "Ruby",
+      "Ruby",
+      "Ruby",
+      "Violet",
+      "Sapphire",
+      "Ruby",
+      "Amber"
+    ],
+    [
+      "Violet",
+      "Jade",
+      "Amber",
+      "Ruby",
+      "Coral",
+      "Amber",
+      "Coral",
+      "Ruby",
+      "Ruby",
+      "Violet",
+      "Ruby"
+    ],
+    [
+      "Amber",
+      "Coral",
+      "Jade",
+      "Ruby",
+      "Amber",
+      "Violet",
+      "Amber",
+      "Ruby",
+      "Jade",
+      "Coral",
+      "Amber"
+    ],
+    [
+      "Ruby",
+      "Violet",
+      "Ruby",
+      "Ruby",
+      "Coral",
+      "Amber",
+      "Coral",
+      "Sapphire",
+      "Violet",
+      "Jade",
+      "Violet"
+    ],
+    [
+      "Amber",
+      "Ruby",
+      "Sapphire",
+      "Violet",
+      "Ruby",
+      "Ruby",
+      "Ruby",
+      "Violet",
+      "Amber",
+      "Sapphire",
+      "Jade"
+    ],
+    [
+      "Amber",
+      "Coral",
+      "Ruby",
+      "Amber",
+      "Amber",
+      "Jade",
+      "Ruby",
+      "Sapphire",
+      "Ruby",
+      "Sapphire",
+      "Amber"
+    ],
+    [
+      "Sapphire",
+      "Violet",
+      "Sapphire",
+      "Sapphire",
+      "Jade",
+      "Coral",
+      "Violet",
+      "Ruby",
+      "Coral",
+      "Violet",
+      "Violet"
+    ],
+    [
+      "Jade",
+      "Violet",
+      "Amber",
+      "Jade",
+      "Violet",
+      "Amber",
+      "Ruby",
+      "Amber",
+      "Amber",
+      "Sapphire",
+      "Jade"
+    ]
+  ],
+  "missing_cell": [
+    2,
+    0
+  ],
+  "missing_expected_color": "Amber",
+  "damaged_cells": [
+    [
+      2,
+      0
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "query_cell": [
+    1,
+    7
+  ],
+  "rotation_query_cell": [
+    7,
+    1
+  ],
+  "rotation_query_destination": [
+    1,
+    3
+  ],
+  "mismatched_orbit_count": 3,
+  "minimum_tile_replacements": 3
+}

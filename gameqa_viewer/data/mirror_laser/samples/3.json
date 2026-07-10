@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "mirror-laser-00004-1",
+    "question_id": 1,
+    "question_description": "Count mirrors in a specified row.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "How many mirror tiles ('/' or '\\') are in row 6 of the Mirror Laser board? Options: [1] 2 [2] 4 [3] 0 [4] 1 [5] 5 [6] 3",
+    "image": "images/laser_00004.png",
+    "state": "states/laser_00004.json",
+    "image_url": "data/mirror_laser/files/images/laser_00004.png",
+    "state_url": "data/mirror_laser/files/states/laser_00004.json",
+    "has_options": true,
+    "question": "How many mirror tiles ('/' or '\\') are in row 6 of the Mirror Laser board?\nOptions:\n[1] 2\n[2] 4\n[3] 0\n[4] 1\n[5] 5\n[6] 3",
+    "analysis": "Scanning row 6, the mirror cells are [2]. There are 1 mirrors, so choose option 4.",
+    "options": [
+      "2",
+      "4",
+      "0",
+      "1",
+      "5",
+      "3"
+    ],
+    "state_content": {
+      "game": "mirror_laser",
+      "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+      "size": 7,
+      "start": [
+        5,
+        0
+      ],
+      "direction": "right",
+      "mirrors": [
+        {
+          "row": 2,
+          "col": 1,
+          "type": "/"
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "type": "\\"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "type": "/"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "type": "\\"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "type": "/"
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "type": "\\"
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "type": "/"
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "type": "/"
+        }
+      ],
+      "blocks": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "targets": {
+        "A": [
+          2,
+          7
+        ],
+        "B": [
+          1,
+          5
+        ],
+        "C": [
+          7,
+          5
+        ]
+      },
+      "seed_index": 4
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mirror-laser-00004-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count mirrors in a specified row.",
+      "image": "images/laser_00004.png",
+      "state": "states/laser_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "How many mirror tiles ('/' or '\\') are in row 6 of the Mirror Laser board?\nOptions:\n[1] 2\n[2] 4\n[3] 0\n[4] 1\n[5] 5\n[6] 3",
+      "answer": 4,
+      "analysis": "Scanning row 6, the mirror cells are [2]. There are 1 mirrors, so choose option 4.",
+      "options": [
+        "2",
+        "4",
+        "0",
+        "1",
+        "5",
+        "3"
+      ]
+    }
+  }
+}

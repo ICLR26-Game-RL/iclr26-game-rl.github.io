@@ -1458,6 +1458,552 @@
       "image_missing": 0,
       "state_missing": 0,
       "load_error": null
+    },
+    {
+      "id": "factory_sorter",
+      "name": "[GPT-5.5] Factory Sorter",
+      "dataset": "factory_sorter_dataset_example",
+      "data_path": "src/factory_sorter/factory_sorter_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "garden_irrigation",
+      "name": "[GPT-5.5] Garden Irrigation",
+      "dataset": "garden_irrigation_dataset_example",
+      "data_path": "src/garden_irrigation/garden_irrigation_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "mirror_laser",
+      "name": "[GPT-5.5] Mirror Laser",
+      "dataset": "mirror_laser_dataset_example",
+      "data_path": "src/mirror_laser/mirror_laser_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "potion_cascade",
+      "name": "[GPT-5.5] Potion Cascade",
+      "dataset": "potion_cascade_dataset_example",
+      "data_path": "src/potion_cascade/potion_cascade_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "rail_yard",
+      "name": "[GPT-5.5] Rail Yard",
+      "dataset": "rail_yard_dataset_example",
+      "data_path": "src/rail_yard/rail_yard_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "skybridge_3d",
+      "name": "[GPT-5.5] Skybridge 3D",
+      "dataset": "skybridge_3d_dataset_example",
+      "data_path": "src/skybridge_3d/skybridge_3d_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "alchemy_workshop",
+      "name": "[GPT-5.6 Sol] Alchemy Workshop",
+      "dataset": "alchemy_workshop_dataset_example",
+      "data_path": "src/alchemy_workshop/alchemy_workshop_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "cube_net_folding",
+      "name": "[GPT-5.6 Sol] Cube Net Folding",
+      "dataset": "cube_net_folding_dataset_example",
+      "data_path": "src/cube_net_folding/cube_net_folding_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kaleidoscope_repair",
+      "name": "[GPT-5.6 Sol] Kaleidoscope Repair",
+      "dataset": "kaleidoscope_repair_dataset_example",
+      "data_path": "src/kaleidoscope_repair/kaleidoscope_repair_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "orthographic_camera",
+      "name": "[GPT-5.6 Sol] Orthographic Camera",
+      "dataset": "orthographic_camera_dataset_example",
+      "data_path": "src/orthographic_camera/orthographic_camera_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "power_grid_restoration",
+      "name": "[GPT-5.6 Sol] Power Grid Restoration",
+      "dataset": "power_grid_restoration_dataset_example",
+      "data_path": "src/power_grid_restoration/power_grid_restoration_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "railway_dispatch",
+      "name": "[GPT-5.6 Sol] Railway Dispatch",
+      "dataset": "railway_dispatch_dataset_example",
+      "data_path": "src/railway_dispatch/railway_dispatch_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "signal_circuit",
+      "name": "[GPT-5.6 Sol] Signal Circuit",
+      "dataset": "signal_circuit_dataset_example",
+      "data_path": "src/signal_circuit/signal_circuit_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "weaving_loom",
+      "name": "[GPT-5.6 Sol] Weaving Loom",
+      "dataset": "weaving_loom_dataset_example",
+      "data_path": "src/weaving_loom/weaving_loom_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
     }
   ]
 }

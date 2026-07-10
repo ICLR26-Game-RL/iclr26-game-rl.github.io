@@ -1,0 +1,77 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "factory-sorter-00010-1",
+    "question_id": 1,
+    "question_description": "Count packages matching a visible attribute.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "How many packages in the feeder queue have shape square? Options: [1] 1 [2] 2 [3] 0 [4] 3",
+    "image": "images/sorter_00010.png",
+    "state": "states/sorter_00010.json",
+    "image_url": "data/factory_sorter/files/images/sorter_00010.png",
+    "state_url": "data/factory_sorter/files/states/sorter_00010.json",
+    "has_options": true,
+    "question": "How many packages in the feeder queue have shape square?\nOptions:\n[1] 1\n[2] 2\n[3] 0\n[4] 3",
+    "analysis": "The packages are [('P1', 'blue', 'triangle'), ('P2', 'red', 'circle'), ('P3', 'yellow', 'square')]. 1 packages have shape square, so choose option 1.",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "state_content": {
+      "game": "factory_sorter",
+      "rules": [
+        "Packages enter S1 first. If package color matches the S1 color sensor, it goes to S2; otherwise it goes to the reject bin.",
+        "At S2, if package shape matches the S2 shape sensor, it goes to the shape-match bin; otherwise it goes to the color-only bin."
+      ],
+      "packages": [
+        {
+          "id": "P1",
+          "color": "blue",
+          "shape": "triangle"
+        },
+        {
+          "id": "P2",
+          "color": "red",
+          "shape": "circle"
+        },
+        {
+          "id": "P3",
+          "color": "yellow",
+          "shape": "square"
+        }
+      ],
+      "sensors": {
+        "S1_color": "red",
+        "S2_shape": "triangle"
+      },
+      "target_package": "P2",
+      "seed_index": 10
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "factory-sorter-00010-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count packages matching a visible attribute.",
+      "image": "images/sorter_00010.png",
+      "state": "states/sorter_00010.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "How many packages in the feeder queue have shape square?\nOptions:\n[1] 1\n[2] 2\n[3] 0\n[4] 3",
+      "answer": 1,
+      "analysis": "The packages are [('P1', 'blue', 'triangle'), ('P2', 'red', 'circle'), ('P3', 'yellow', 'square')]. 1 packages have shape square, so choose option 1.",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ]
+    }
+  }
+}

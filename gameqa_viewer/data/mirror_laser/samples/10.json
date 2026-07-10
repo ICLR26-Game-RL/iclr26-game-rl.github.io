@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "mirror-laser-00011-2",
+    "question_id": 2,
+    "question_description": "Predict the laser result after following reflections.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "Follow the laser from its start. What is the first terminal result of the beam? Options: [1] exit [2] loop [3] block [4] target B [5] target C [6] target A",
+    "image": "images/laser_00011.png",
+    "state": "states/laser_00011.json",
+    "image_url": "data/mirror_laser/files/images/laser_00011.png",
+    "state_url": "data/mirror_laser/files/states/laser_00011.json",
+    "has_options": true,
+    "question": "Follow the laser from its start. What is the first terminal result of the beam?\nOptions:\n[1] exit\n[2] loop\n[3] block\n[4] target B\n[5] target C\n[6] target A",
+    "analysis": "Cell (1, 1): empty.\nCell (1, 2): mirror \\ turns right to down.\nCell (2, 2): empty.\nCell (3, 2): empty.\nCell (4, 2): empty.\nCell (5, 2): empty.\nCell (6, 2): empty.\nCell (7, 2): hit target C.\nThe terminal result is target C. Therefore choose option 5.",
+    "options": [
+      "exit",
+      "loop",
+      "block",
+      "target B",
+      "target C",
+      "target A"
+    ],
+    "state_content": {
+      "game": "mirror_laser",
+      "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+      "size": 7,
+      "start": [
+        1,
+        0
+      ],
+      "direction": "right",
+      "mirrors": [
+        {
+          "row": 1,
+          "col": 2,
+          "type": "\\"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "type": "\\"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "type": "\\"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "type": "/"
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "type": "\\"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "type": "\\"
+        }
+      ],
+      "blocks": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "targets": {
+        "A": [
+          7,
+          7
+        ],
+        "B": [
+          1,
+          4
+        ],
+        "C": [
+          7,
+          2
+        ]
+      },
+      "seed_index": 11
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mirror-laser-00011-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the laser result after following reflections.",
+      "image": "images/laser_00011.png",
+      "state": "states/laser_00011.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Follow the laser from its start. What is the first terminal result of the beam?\nOptions:\n[1] exit\n[2] loop\n[3] block\n[4] target B\n[5] target C\n[6] target A",
+      "answer": 5,
+      "analysis": "Cell (1, 1): empty.\nCell (1, 2): mirror \\ turns right to down.\nCell (2, 2): empty.\nCell (3, 2): empty.\nCell (4, 2): empty.\nCell (5, 2): empty.\nCell (6, 2): empty.\nCell (7, 2): hit target C.\nThe terminal result is target C. Therefore choose option 5.",
+      "options": [
+        "exit",
+        "loop",
+        "block",
+        "target B",
+        "target C",
+        "target A"
+      ]
+    }
+  }
+}

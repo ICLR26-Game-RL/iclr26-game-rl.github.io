@@ -1,0 +1,81 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "factory-sorter-00012-3",
+    "question_id": 3,
+    "question_description": "Choose one sensor setting to route a package to a target bin.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "You may change exactly one sensor setting before package P3 enters. Which setting sends it to the color-only bin? Options: [1] set S2 shape to triangle [2] set...",
+    "image": "images/sorter_00012.png",
+    "state": "states/sorter_00012.json",
+    "image_url": "data/factory_sorter/files/images/sorter_00012.png",
+    "state_url": "data/factory_sorter/files/states/sorter_00012.json",
+    "has_options": true,
+    "question": "You may change exactly one sensor setting before package P3 enters. Which setting sends it to the color-only bin?\nOptions:\n[1] set S2 shape to triangle\n[2] set S1 color to yellow\n[3] set S2 shape to square\n[4] set S2 shape to circle\n[5] set S1 color to red\n[6] set S1 color to blue",
+    "analysis": "Package P3 is blue square. Applying 'set S1 color to blue' gives sensors {'S1_color': 'blue', 'S2_shape': 'circle'}. The route becomes feeder -> S1 -> S2 -> color and ends at color-only bin. Therefore choose option 6.",
+    "options": [
+      "set S2 shape to triangle",
+      "set S1 color to yellow",
+      "set S2 shape to square",
+      "set S2 shape to circle",
+      "set S1 color to red",
+      "set S1 color to blue"
+    ],
+    "state_content": {
+      "game": "factory_sorter",
+      "rules": [
+        "Packages enter S1 first. If package color matches the S1 color sensor, it goes to S2; otherwise it goes to the reject bin.",
+        "At S2, if package shape matches the S2 shape sensor, it goes to the shape-match bin; otherwise it goes to the color-only bin."
+      ],
+      "packages": [
+        {
+          "id": "P1",
+          "color": "yellow",
+          "shape": "triangle"
+        },
+        {
+          "id": "P2",
+          "color": "blue",
+          "shape": "square"
+        },
+        {
+          "id": "P3",
+          "color": "blue",
+          "shape": "square"
+        }
+      ],
+      "sensors": {
+        "S1_color": "yellow",
+        "S2_shape": "circle"
+      },
+      "target_package": "P3",
+      "seed_index": 12
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "factory-sorter-00012-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Choose one sensor setting to route a package to a target bin.",
+      "image": "images/sorter_00012.png",
+      "state": "states/sorter_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "You may change exactly one sensor setting before package P3 enters. Which setting sends it to the color-only bin?\nOptions:\n[1] set S2 shape to triangle\n[2] set S1 color to yellow\n[3] set S2 shape to square\n[4] set S2 shape to circle\n[5] set S1 color to red\n[6] set S1 color to blue",
+      "answer": 6,
+      "analysis": "Package P3 is blue square. Applying 'set S1 color to blue' gives sensors {'S1_color': 'blue', 'S2_shape': 'circle'}. The route becomes feeder -> S1 -> S2 -> color and ends at color-only bin. Therefore choose option 6.",
+      "options": [
+        "set S2 shape to triangle",
+        "set S1 color to yellow",
+        "set S2 shape to square",
+        "set S2 shape to circle",
+        "set S1 color to red",
+        "set S1 color to blue"
+      ]
+    }
+  }
+}

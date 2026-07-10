@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "potion-cascade-00011-2",
+    "question_id": 2,
+    "question_description": "Predict a bottle state after applying operation cards.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Apply the operation cards from left to right. What will be in slot 2 at the end? Options: [1] ember potency 1 [2] ember potency 4 [3] sun potency 1 [4] frost p...",
+    "image": "images/potion_00011.png",
+    "state": "states/potion_00011.json",
+    "image_url": "data/potion_cascade/files/images/potion_00011.png",
+    "state_url": "data/potion_cascade/files/states/potion_00011.json",
+    "has_options": true,
+    "question": "Apply the operation cards from left to right. What will be in slot 2 at the end?\nOptions:\n[1] ember potency 1\n[2] ember potency 4\n[3] sun potency 1\n[4] frost potency 3\n[5] ember potency 2\n[6] ember potency 5\n[7] ember potency 3",
+    "analysis": "After card 1 (heat slot 2), slot 2 is sun potency 3.\nAfter card 2 (infuse slot 2), slot 2 is leaf potency 3.\nAfter card 3 (heat slot 4), slot 2 is leaf potency 3.\nAfter card 4 (infuse slot 2), slot 2 is frost potency 3.\nAfter card 5 (infuse slot 5), slot 2 is frost potency 3.\nThe final state is frost potency 3. Therefore choose option 4.",
+    "options": [
+      "ember potency 1",
+      "ember potency 4",
+      "sun potency 1",
+      "frost potency 3",
+      "ember potency 2",
+      "ember potency 5",
+      "ember potency 3"
+    ],
+    "state_content": {
+      "game": "potion_cascade",
+      "rules": [
+        "heat: selected bottle potency increases by 1 up to 5.",
+        "cool: selected bottle potency decreases by 1 down to 1.",
+        "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+        "decant: two selected bottles swap positions.",
+        "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+      ],
+      "element_cycle": [
+        "ember",
+        "sun",
+        "leaf",
+        "frost",
+        "moon",
+        "void"
+      ],
+      "bottles": [
+        {
+          "slot": 1,
+          "element": "sun",
+          "potency": 3
+        },
+        {
+          "slot": 2,
+          "element": "sun",
+          "potency": 2
+        },
+        {
+          "slot": 3,
+          "element": "frost",
+          "potency": 1
+        },
+        {
+          "slot": 4,
+          "element": "leaf",
+          "potency": 2
+        },
+        {
+          "slot": 5,
+          "element": "ember",
+          "potency": 5
+        }
+      ],
+      "operation_cards": [
+        {
+          "op": "heat",
+          "slot": 2
+        },
+        {
+          "op": "infuse",
+          "slot": 2
+        },
+        {
+          "op": "heat",
+          "slot": 4
+        },
+        {
+          "op": "infuse",
+          "slot": 2
+        },
+        {
+          "op": "infuse",
+          "slot": 5
+        }
+      ],
+      "seed_index": 11
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "potion-cascade-00011-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict a bottle state after applying operation cards.",
+      "image": "images/potion_00011.png",
+      "state": "states/potion_00011.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Apply the operation cards from left to right. What will be in slot 2 at the end?\nOptions:\n[1] ember potency 1\n[2] ember potency 4\n[3] sun potency 1\n[4] frost potency 3\n[5] ember potency 2\n[6] ember potency 5\n[7] ember potency 3",
+      "answer": 4,
+      "analysis": "After card 1 (heat slot 2), slot 2 is sun potency 3.\nAfter card 2 (infuse slot 2), slot 2 is leaf potency 3.\nAfter card 3 (heat slot 4), slot 2 is leaf potency 3.\nAfter card 4 (infuse slot 2), slot 2 is frost potency 3.\nAfter card 5 (infuse slot 5), slot 2 is frost potency 3.\nThe final state is frost potency 3. Therefore choose option 4.",
+      "options": [
+        "ember potency 1",
+        "ember potency 4",
+        "sun potency 1",
+        "frost potency 3",
+        "ember potency 2",
+        "ember potency 5",
+        "ember potency 3"
+      ]
+    }
+  }
+}

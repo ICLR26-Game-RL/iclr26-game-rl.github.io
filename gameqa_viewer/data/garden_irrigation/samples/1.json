@@ -1,0 +1,130 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "garden-irrigation-00002-2",
+    "question_id": 2,
+    "question_description": "Predict watered crops after toggling listed valves.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Toggle each valve shown in the toggle cards once. Which crop labels will be watered afterward? Options: [1] C [2] B [3] D [4] A [5] none [6] A, C",
+    "image": "images/garden_00002.png",
+    "state": "states/garden_00002.json",
+    "image_url": "data/garden_irrigation/files/images/garden_00002.png",
+    "state_url": "data/garden_irrigation/files/states/garden_00002.json",
+    "has_options": true,
+    "question": "Toggle each valve shown in the toggle cards once. Which crop labels will be watered afterward?\nOptions:\n[1] C\n[2] B\n[3] D\n[4] A\n[5] none\n[6] A, C",
+    "analysis": "Current valves are {'V1': True, 'V2': True, 'V3': True, 'V4': False}. After toggling ['V2'], the valves become {'V1': True, 'V2': False, 'V3': True, 'V4': False}. Water reaches crop labels ['A', 'C']. Therefore choose option 6.",
+    "options": [
+      "C",
+      "B",
+      "D",
+      "A",
+      "none",
+      "A, C"
+    ],
+    "state_content": {
+      "game": "garden_irrigation",
+      "rules": "Water starts at pump P and follows connected pipes. A pipe segment controlled by a valve carries water only when that valve is open. Water can split at junctions.",
+      "grid_size": [
+        6,
+        5
+      ],
+      "valves": {
+        "V1": true,
+        "V2": true,
+        "V3": true,
+        "V4": false
+      },
+      "toggle_cards": [
+        "V2"
+      ],
+      "target_crop": "A",
+      "crops": {
+        "A": "tomatoes",
+        "B": "carrots",
+        "C": "flowers",
+        "D": "berries"
+      },
+      "nodes": {
+        "P": [
+          5,
+          0
+        ],
+        "N1": [
+          4,
+          0
+        ],
+        "V1": [
+          3,
+          0
+        ],
+        "N2": [
+          3,
+          1
+        ],
+        "A": [
+          3,
+          2
+        ],
+        "V2": [
+          4,
+          2
+        ],
+        "B": [
+          5,
+          3
+        ],
+        "N3": [
+          2,
+          0
+        ],
+        "V3": [
+          1,
+          1
+        ],
+        "C": [
+          0,
+          2
+        ],
+        "N4": [
+          2,
+          2
+        ],
+        "V4": [
+          2,
+          3
+        ],
+        "D": [
+          1,
+          4
+        ]
+      },
+      "seed_index": 2
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "garden-irrigation-00002-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict watered crops after toggling listed valves.",
+      "image": "images/garden_00002.png",
+      "state": "states/garden_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Toggle each valve shown in the toggle cards once. Which crop labels will be watered afterward?\nOptions:\n[1] C\n[2] B\n[3] D\n[4] A\n[5] none\n[6] A, C",
+      "answer": 6,
+      "analysis": "Current valves are {'V1': True, 'V2': True, 'V3': True, 'V4': False}. After toggling ['V2'], the valves become {'V1': True, 'V2': False, 'V3': True, 'V4': False}. Water reaches crop labels ['A', 'C']. Therefore choose option 6.",
+      "options": [
+        "C",
+        "B",
+        "D",
+        "A",
+        "none",
+        "A, C"
+      ]
+    }
+  }
+}

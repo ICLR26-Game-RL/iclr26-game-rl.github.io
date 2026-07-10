@@ -1,0 +1,131 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "cube-net-folding-00010",
+    "question_id": 5,
+    "question_description": "Find a minimum roll plan for a target orientation",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_002.png",
+    "state": "states/cube_net_002.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_002.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_002.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhat is the minimum number of rolls needed to put Triangle on top and Diamond in front at the same time?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+    "analysis": "A breadth-first search over the 24 cube orientations finds an optimal sequence ['east', 'east', 'north'] of length 3. No orientation at a smaller depth meets both face constraints. The answer is D.",
+    "options": [
+      "A. 2",
+      "B. 4",
+      "C. 5",
+      "D. 3",
+      "E. 0",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Medium",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#4D9DE0",
+        "D": "#F7C948",
+        "F": "#F28E2B",
+        "B": "#EF5B78",
+        "L": "#7B61FF",
+        "R": "#1FB6A6"
+      },
+      "face_emblems": {
+        "U": "Diamond",
+        "D": "Bars",
+        "F": "Triangle",
+        "B": "Sun",
+        "L": "Cross",
+        "R": "Circle"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "west",
+        "south",
+        "west",
+        "east"
+      ],
+      "final_orientation": {
+        "top": "B",
+        "bottom": "F",
+        "front": "R",
+        "back": "L",
+        "left": "U",
+        "right": "D"
+      },
+      "query_face": "L",
+      "opposite_face": "R",
+      "target_orientation": {
+        "top": "F",
+        "front": "U"
+      },
+      "minimum_rolls": 3,
+      "one_optimal_roll_sequence": [
+        "east",
+        "east",
+        "north"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00010",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Find a minimum roll plan for a target orientation",
+      "image": "images/cube_net_002.png",
+      "state": "states/cube_net_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhat is the minimum number of rolls needed to put Triangle on top and Diamond in front at the same time?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+      "answer": "D",
+      "analysis": "A breadth-first search over the 24 cube orientations finds an optimal sequence ['east', 'east', 'north'] of length 3. No orientation at a smaller depth meets both face constraints. The answer is D.",
+      "options": [
+        "A. 2",
+        "B. 4",
+        "C. 5",
+        "D. 3",
+        "E. 0",
+        "F. 1"
+      ]
+    }
+  }
+}

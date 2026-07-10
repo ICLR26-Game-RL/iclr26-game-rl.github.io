@@ -1,0 +1,125 @@
+{
+  "game": "power-grid-restoration",
+  "level": "Medium",
+  "source_capacity": 7,
+  "loads": [
+    {
+      "id": "L1",
+      "path": [
+        "K1"
+      ],
+      "demand": 2,
+      "priority": 3
+    },
+    {
+      "id": "L2",
+      "path": [
+        "K1",
+        "K2"
+      ],
+      "demand": 3,
+      "priority": 5
+    },
+    {
+      "id": "L3",
+      "path": [
+        "K3"
+      ],
+      "demand": 2,
+      "priority": 4
+    },
+    {
+      "id": "L4",
+      "path": [
+        "K3",
+        "K4"
+      ],
+      "demand": 4,
+      "priority": 7
+    }
+  ],
+  "switch_settings": {
+    "K1": false,
+    "K2": true,
+    "K3": true,
+    "K4": true
+  },
+  "current_demand": 6,
+  "current_priority": 11,
+  "current_energized_loads": [
+    "L3",
+    "L4"
+  ],
+  "query_switch": "K4",
+  "close_query_switch": "K1",
+  "close_query_result": {
+    "relay_tripped": true,
+    "pre_trip_demand": 11,
+    "energized_loads": [],
+    "priority": 0
+  },
+  "toggle_sequence": [
+    "K1",
+    "K3",
+    "K4"
+  ],
+  "toggle_sequence_trace": [
+    {
+      "step": 1,
+      "toggle": "K1",
+      "settings": {
+        "K1": true,
+        "K2": true,
+        "K3": true,
+        "K4": true
+      },
+      "pre_trip_demand": 11,
+      "loads": [],
+      "relay_tripped": true
+    },
+    {
+      "step": 2,
+      "toggle": "K3",
+      "settings": {
+        "K1": true,
+        "K2": true,
+        "K3": false,
+        "K4": true
+      },
+      "pre_trip_demand": 5,
+      "loads": [],
+      "relay_tripped": true
+    },
+    {
+      "step": 3,
+      "toggle": "K4",
+      "settings": {
+        "K1": true,
+        "K2": true,
+        "K3": false,
+        "K4": false
+      },
+      "pre_trip_demand": 5,
+      "loads": [],
+      "relay_tripped": true
+    }
+  ],
+  "toggle_sequence_relay_tripped": true,
+  "toggle_sequence_final_demand": 0,
+  "toggle_sequence_final_priority": 0,
+  "toggle_sequence_final_loads": [],
+  "optimization_toggle_budget": 2,
+  "maximum_priority": 12,
+  "optimal_toggle_count": 2,
+  "optimal_energized_loads": [
+    "L1",
+    "L2",
+    "L3"
+  ],
+  "optimal_switch_settings": {
+    "K1": true,
+    "K2": true,
+    "K3": true,
+    "K4": false
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "kaleidoscope-repair-00002",
+    "question_id": 2,
+    "question_description": "Count broken rotational equivalence classes",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "F",
+    "answer_preview": "F",
+    "question_preview": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? i...",
+    "image": "images/kaleidoscope_001.png",
+    "state": "states/kaleidoscope_001.json",
+    "image_url": "data/kaleidoscope_repair/files/images/kaleidoscope_001.png",
+    "state_url": "data/kaleidoscope_repair/files/states/kaleidoscope_001.json",
+    "has_options": true,
+    "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nHow many rotational orbits are currently inconsistent? All cells related by 90-degree rotations form one orbit.\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+    "analysis": "Partition the board into 90-degree rotation orbits. Exactly 1 orbit(s) contain a missing or differently colored member. The answer is F.",
+    "options": [
+      "A. 0",
+      "B. 2",
+      "C. 3",
+      "D. 4",
+      "E. 5",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "kaleidoscope-repair",
+      "level": "Easy",
+      "size": 7,
+      "palette": {
+        "Ruby": "#E84A5F",
+        "Amber": "#F6B73C",
+        "Jade": "#27AE8A",
+        "Sapphire": "#3478D4",
+        "Violet": "#7B61C9",
+        "Coral": "#F27D72"
+      },
+      "board": [
+        [
+          "Violet",
+          "Amber",
+          "Jade",
+          "Coral",
+          "Sapphire",
+          "Sapphire",
+          "Violet"
+        ],
+        [
+          "Sapphire",
+          "Jade",
+          "Jade",
+          "Sapphire",
+          "Coral",
+          "Jade",
+          "Amber"
+        ],
+        [
+          "Sapphire",
+          "Coral",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Jade",
+          "Jade"
+        ],
+        [
+          "Coral",
+          "Sapphire",
+          "Sapphire",
+          "Jade",
+          "Sapphire",
+          null,
+          "Coral"
+        ],
+        [
+          "Jade",
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Coral",
+          "Sapphire"
+        ],
+        [
+          "Amber",
+          "Jade",
+          "Coral",
+          "Sapphire",
+          "Jade",
+          "Jade",
+          "Sapphire"
+        ],
+        [
+          "Violet",
+          "Sapphire",
+          "Sapphire",
+          "Coral",
+          "Jade",
+          "Amber",
+          "Violet"
+        ]
+      ],
+      "missing_cell": [
+        3,
+        5
+      ],
+      "missing_expected_color": "Sapphire",
+      "damaged_cells": [
+        [
+          3,
+          5
+        ]
+      ],
+      "query_cell": [
+        3,
+        4
+      ],
+      "rotation_query_cell": [
+        4,
+        1
+      ],
+      "rotation_query_destination": [
+        1,
+        2
+      ],
+      "mismatched_orbit_count": 1,
+      "minimum_tile_replacements": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "kaleidoscope-repair-00002",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Count broken rotational equivalence classes",
+      "image": "images/kaleidoscope_001.png",
+      "state": "states/kaleidoscope_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nHow many rotational orbits are currently inconsistent? All cells related by 90-degree rotations form one orbit.\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+      "answer": "F",
+      "analysis": "Partition the board into 90-degree rotation orbits. Exactly 1 orbit(s) contain a missing or differently colored member. The answer is F.",
+      "options": [
+        "A. 0",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5",
+        "F. 1"
+      ]
+    }
+  }
+}

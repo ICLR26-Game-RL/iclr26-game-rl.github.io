@@ -1,0 +1,131 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "cube-net-folding-00008",
+    "question_id": 3,
+    "question_description": "Track the top face through cube rolls",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_002.png",
+    "state": "states/cube_net_002.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_002.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_002.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nThe cube rolls in this order: west, south, west, east. Which emblem finishes on top?\nA. Cross\nB. Circle\nC. Sun\nD. Diamond\nE. Bars\nF. Triangle",
+    "analysis": "Track the orientation after each roll ['west', 'south', 'west', 'east']. The final top face is B, carrying the Sun emblem. The answer is C.",
+    "options": [
+      "A. Cross",
+      "B. Circle",
+      "C. Sun",
+      "D. Diamond",
+      "E. Bars",
+      "F. Triangle"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Medium",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#4D9DE0",
+        "D": "#F7C948",
+        "F": "#F28E2B",
+        "B": "#EF5B78",
+        "L": "#7B61FF",
+        "R": "#1FB6A6"
+      },
+      "face_emblems": {
+        "U": "Diamond",
+        "D": "Bars",
+        "F": "Triangle",
+        "B": "Sun",
+        "L": "Cross",
+        "R": "Circle"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "west",
+        "south",
+        "west",
+        "east"
+      ],
+      "final_orientation": {
+        "top": "B",
+        "bottom": "F",
+        "front": "R",
+        "back": "L",
+        "left": "U",
+        "right": "D"
+      },
+      "query_face": "L",
+      "opposite_face": "R",
+      "target_orientation": {
+        "top": "F",
+        "front": "U"
+      },
+      "minimum_rolls": 3,
+      "one_optimal_roll_sequence": [
+        "east",
+        "east",
+        "north"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00008",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Track the top face through cube rolls",
+      "image": "images/cube_net_002.png",
+      "state": "states/cube_net_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nThe cube rolls in this order: west, south, west, east. Which emblem finishes on top?\nA. Cross\nB. Circle\nC. Sun\nD. Diamond\nE. Bars\nF. Triangle",
+      "answer": "C",
+      "analysis": "Track the orientation after each roll ['west', 'south', 'west', 'east']. The final top face is B, carrying the Sun emblem. The answer is C.",
+      "options": [
+        "A. Cross",
+        "B. Circle",
+        "C. Sun",
+        "D. Diamond",
+        "E. Bars",
+        "F. Triangle"
+      ]
+    }
+  }
+}

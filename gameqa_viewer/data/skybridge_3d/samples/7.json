@@ -1,0 +1,148 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "skybridge-3d-00008-4",
+    "question_id": 4,
+    "question_description": "Compute minimum movement energy from robot to goal with height costs.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Energy cost for a move is 1 plus the number of levels climbed upward; descending costs 1. What is the minimum energy for R to reach G under the Skybridge rules...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/skybridge_3d/files/images/board_00008.png",
+    "state_url": "data/skybridge_3d/files/states/board_00008.json",
+    "has_options": true,
+    "question": "Energy cost for a move is 1 plus the number of levels climbed upward; descending costs 1. What is the minimum energy for R to reach G under the Skybridge rules?\nOptions:\n[1] 3\n[2] 5\n[3] 7\n[4] 2\n[5] 6\n[6] 4",
+    "analysis": "Running shortest-path search over valid tower moves gives path ['up', 'up']. Its total energy is 4. Therefore choose option 6.",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "2",
+      "6",
+      "4"
+    ],
+    "state_content": {
+      "game": "skybridge_3d",
+      "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+      "rows": 4,
+      "cols": 4,
+      "heights": [
+        [
+          2,
+          4,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          4,
+          3
+        ],
+        [
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          3,
+          2
+        ]
+      ],
+      "robot": [
+        3,
+        4
+      ],
+      "goal": [
+        1,
+        4
+      ],
+      "beacons": {
+        "A": [
+          2,
+          4
+        ],
+        "B": [
+          3,
+          3
+        ],
+        "C": [
+          4,
+          2
+        ]
+      },
+      "ladders": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      ],
+      "seed_index": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "skybridge-3d-00008-4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Compute minimum movement energy from robot to goal with height costs.",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "Energy cost for a move is 1 plus the number of levels climbed upward; descending costs 1. What is the minimum energy for R to reach G under the Skybridge rules?\nOptions:\n[1] 3\n[2] 5\n[3] 7\n[4] 2\n[5] 6\n[6] 4",
+      "answer": 6,
+      "analysis": "Running shortest-path search over valid tower moves gives path ['up', 'up']. Its total energy is 4. Therefore choose option 6.",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "2",
+        "6",
+        "4"
+      ]
+    }
+  }
+}

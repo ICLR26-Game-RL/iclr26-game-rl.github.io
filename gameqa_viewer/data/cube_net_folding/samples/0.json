@@ -1,0 +1,127 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "cube-net-folding-00001",
+    "question_id": 1,
+    "question_description": "Read an emblem from the unfolded net",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_001.png",
+    "state": "states/cube_net_001.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_001.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_001.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhich emblem is printed on face U?\nA. Triangle\nB. Bars\nC. Sun\nD. Circle\nE. Cross\nF. Diamond",
+    "analysis": "Locate face U in the unfolded net. Its tile contains the Sun emblem. Therefore the answer is C.",
+    "options": [
+      "A. Triangle",
+      "B. Bars",
+      "C. Sun",
+      "D. Circle",
+      "E. Cross",
+      "F. Diamond"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Easy",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#F7C948",
+        "D": "#EF5B78",
+        "F": "#7B61FF",
+        "B": "#4D9DE0",
+        "L": "#1FB6A6",
+        "R": "#F28E2B"
+      },
+      "face_emblems": {
+        "U": "Sun",
+        "D": "Circle",
+        "F": "Cross",
+        "B": "Diamond",
+        "L": "Triangle",
+        "R": "Bars"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "south",
+        "south"
+      ],
+      "final_orientation": {
+        "top": "D",
+        "bottom": "U",
+        "front": "B",
+        "back": "F",
+        "left": "L",
+        "right": "R"
+      },
+      "query_face": "U",
+      "opposite_face": "D",
+      "target_orientation": {
+        "top": "B",
+        "front": "U"
+      },
+      "minimum_rolls": 1,
+      "one_optimal_roll_sequence": [
+        "south"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00001",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read an emblem from the unfolded net",
+      "image": "images/cube_net_001.png",
+      "state": "states/cube_net_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhich emblem is printed on face U?\nA. Triangle\nB. Bars\nC. Sun\nD. Circle\nE. Cross\nF. Diamond",
+      "answer": "C",
+      "analysis": "Locate face U in the unfolded net. Its tile contains the Sun emblem. Therefore the answer is C.",
+      "options": [
+        "A. Triangle",
+        "B. Bars",
+        "C. Sun",
+        "D. Circle",
+        "E. Cross",
+        "F. Diamond"
+      ]
+    }
+  }
+}

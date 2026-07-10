@@ -1,0 +1,127 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "cube-net-folding-00004",
+    "question_id": 4,
+    "question_description": "Track the front face through a longer roll sequence",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_001.png",
+    "state": "states/cube_net_001.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_001.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_001.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter the roll sequence south, south, which emblem faces front?\nA. Triangle\nB. Bars\nC. Diamond\nD. Sun\nE. Circle\nF. Cross",
+    "analysis": "Applying every roll to the six-role orientation yields {\"top\": \"D\", \"bottom\": \"U\", \"front\": \"B\", \"back\": \"F\", \"left\": \"L\", \"right\": \"R\"}. The front face is B, so its emblem is Diamond. The answer is C.",
+    "options": [
+      "A. Triangle",
+      "B. Bars",
+      "C. Diamond",
+      "D. Sun",
+      "E. Circle",
+      "F. Cross"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Easy",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#F7C948",
+        "D": "#EF5B78",
+        "F": "#7B61FF",
+        "B": "#4D9DE0",
+        "L": "#1FB6A6",
+        "R": "#F28E2B"
+      },
+      "face_emblems": {
+        "U": "Sun",
+        "D": "Circle",
+        "F": "Cross",
+        "B": "Diamond",
+        "L": "Triangle",
+        "R": "Bars"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "south",
+        "south"
+      ],
+      "final_orientation": {
+        "top": "D",
+        "bottom": "U",
+        "front": "B",
+        "back": "F",
+        "left": "L",
+        "right": "R"
+      },
+      "query_face": "U",
+      "opposite_face": "D",
+      "target_orientation": {
+        "top": "B",
+        "front": "U"
+      },
+      "minimum_rolls": 1,
+      "one_optimal_roll_sequence": [
+        "south"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00004",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Track the front face through a longer roll sequence",
+      "image": "images/cube_net_001.png",
+      "state": "states/cube_net_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nAfter the roll sequence south, south, which emblem faces front?\nA. Triangle\nB. Bars\nC. Diamond\nD. Sun\nE. Circle\nF. Cross",
+      "answer": "C",
+      "analysis": "Applying every roll to the six-role orientation yields {\"top\": \"D\", \"bottom\": \"U\", \"front\": \"B\", \"back\": \"F\", \"left\": \"L\", \"right\": \"R\"}. The front face is B, so its emblem is Diamond. The answer is C.",
+      "options": [
+        "A. Triangle",
+        "B. Bars",
+        "C. Diamond",
+        "D. Sun",
+        "E. Circle",
+        "F. Cross"
+      ]
+    }
+  }
+}

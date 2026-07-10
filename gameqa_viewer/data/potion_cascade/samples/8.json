@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "potion-cascade-00009-3",
+    "question_id": 3,
+    "question_description": "Choose the reagent that produces a target cauldron mix.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain void potency 5? Options: [1...",
+    "image": "images/potion_00009.png",
+    "state": "states/potion_00009.json",
+    "image_url": "data/potion_cascade/files/images/potion_00009.png",
+    "state_url": "data/potion_cascade/files/states/potion_00009.json",
+    "has_options": true,
+    "question": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain void potency 5?\nOptions:\n[1] jade ash\n[2] void pepper\n[3] lunar oil\n[4] ruby salt\n[5] plain water\n[6] azure sugar",
+    "analysis": "Without a reagent, the cauldron is ember potency 2. The reagent void pepper shifts the element by 5 and potency sum by 3, producing void potency 5. Therefore choose option 2.",
+    "options": [
+      "jade ash",
+      "void pepper",
+      "lunar oil",
+      "ruby salt",
+      "plain water",
+      "azure sugar"
+    ],
+    "state_content": {
+      "game": "potion_cascade",
+      "rules": [
+        "heat: selected bottle potency increases by 1 up to 5.",
+        "cool: selected bottle potency decreases by 1 down to 1.",
+        "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+        "decant: two selected bottles swap positions.",
+        "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+      ],
+      "element_cycle": [
+        "ember",
+        "sun",
+        "leaf",
+        "frost",
+        "moon",
+        "void"
+      ],
+      "bottles": [
+        {
+          "slot": 1,
+          "element": "ember",
+          "potency": 5
+        },
+        {
+          "slot": 2,
+          "element": "leaf",
+          "potency": 1
+        },
+        {
+          "slot": 3,
+          "element": "moon",
+          "potency": 4
+        },
+        {
+          "slot": 4,
+          "element": "void",
+          "potency": 1
+        },
+        {
+          "slot": 5,
+          "element": "sun",
+          "potency": 5
+        }
+      ],
+      "operation_cards": [
+        {
+          "op": "decant",
+          "slot_a": 3,
+          "slot_b": 2
+        },
+        {
+          "op": "decant",
+          "slot_a": 3,
+          "slot_b": 4
+        },
+        {
+          "op": "cool",
+          "slot": 5
+        },
+        {
+          "op": "heat",
+          "slot": 3
+        },
+        {
+          "op": "infuse",
+          "slot": 3
+        }
+      ],
+      "seed_index": 9
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "potion-cascade-00009-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Choose the reagent that produces a target cauldron mix.",
+      "image": "images/potion_00009.png",
+      "state": "states/potion_00009.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain void potency 5?\nOptions:\n[1] jade ash\n[2] void pepper\n[3] lunar oil\n[4] ruby salt\n[5] plain water\n[6] azure sugar",
+      "answer": 2,
+      "analysis": "Without a reagent, the cauldron is ember potency 2. The reagent void pepper shifts the element by 5 and potency sum by 3, producing void potency 5. Therefore choose option 2.",
+      "options": [
+        "jade ash",
+        "void pepper",
+        "lunar oil",
+        "ruby salt",
+        "plain water",
+        "azure sugar"
+      ]
+    }
+  }
+}

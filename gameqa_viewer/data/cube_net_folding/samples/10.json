@@ -1,0 +1,133 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "cube-net-folding-00011",
+    "question_id": 1,
+    "question_description": "Read an emblem from the unfolded net",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_003.png",
+    "state": "states/cube_net_003.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_003.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_003.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhich emblem is printed on face L?\nA. Bars\nB. Triangle\nC. Diamond\nD. Sun\nE. Cross\nF. Circle",
+    "analysis": "Locate face L in the unfolded net. Its tile contains the Diamond emblem. Therefore the answer is C.",
+    "options": [
+      "A. Bars",
+      "B. Triangle",
+      "C. Diamond",
+      "D. Sun",
+      "E. Cross",
+      "F. Circle"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Hard",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#7B61FF",
+        "D": "#F7C948",
+        "F": "#F28E2B",
+        "B": "#1FB6A6",
+        "L": "#4D9DE0",
+        "R": "#EF5B78"
+      },
+      "face_emblems": {
+        "U": "Sun",
+        "D": "Cross",
+        "F": "Circle",
+        "B": "Bars",
+        "L": "Diamond",
+        "R": "Triangle"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "west",
+        "north",
+        "north",
+        "south",
+        "west",
+        "south"
+      ],
+      "final_orientation": {
+        "top": "R",
+        "bottom": "L",
+        "front": "D",
+        "back": "U",
+        "left": "F",
+        "right": "B"
+      },
+      "query_face": "L",
+      "opposite_face": "R",
+      "target_orientation": {
+        "top": "U",
+        "front": "R"
+      },
+      "minimum_rolls": 3,
+      "one_optimal_roll_sequence": [
+        "north",
+        "west",
+        "south"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00011",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read an emblem from the unfolded net",
+      "image": "images/cube_net_003.png",
+      "state": "states/cube_net_003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhich emblem is printed on face L?\nA. Bars\nB. Triangle\nC. Diamond\nD. Sun\nE. Cross\nF. Circle",
+      "answer": "C",
+      "analysis": "Locate face L in the unfolded net. Its tile contains the Diamond emblem. Therefore the answer is C.",
+      "options": [
+        "A. Bars",
+        "B. Triangle",
+        "C. Diamond",
+        "D. Sun",
+        "E. Cross",
+        "F. Circle"
+      ]
+    }
+  }
+}

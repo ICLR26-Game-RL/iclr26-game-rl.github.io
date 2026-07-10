@@ -1,0 +1,82 @@
+{
+  "game": "cube-net-folding",
+  "level": "Hard",
+  "net_positions": {
+    "U": [
+      1,
+      0
+    ],
+    "L": [
+      0,
+      1
+    ],
+    "F": [
+      1,
+      1
+    ],
+    "R": [
+      2,
+      1
+    ],
+    "B": [
+      3,
+      1
+    ],
+    "D": [
+      1,
+      2
+    ]
+  },
+  "face_colors": {
+    "U": "#7B61FF",
+    "D": "#F7C948",
+    "F": "#F28E2B",
+    "B": "#1FB6A6",
+    "L": "#4D9DE0",
+    "R": "#EF5B78"
+  },
+  "face_emblems": {
+    "U": "Sun",
+    "D": "Cross",
+    "F": "Circle",
+    "B": "Bars",
+    "L": "Diamond",
+    "R": "Triangle"
+  },
+  "initial_orientation": {
+    "top": "U",
+    "bottom": "D",
+    "front": "F",
+    "back": "B",
+    "left": "L",
+    "right": "R"
+  },
+  "roll_sequence": [
+    "west",
+    "north",
+    "north",
+    "south",
+    "west",
+    "south"
+  ],
+  "final_orientation": {
+    "top": "R",
+    "bottom": "L",
+    "front": "D",
+    "back": "U",
+    "left": "F",
+    "right": "B"
+  },
+  "query_face": "L",
+  "opposite_face": "R",
+  "target_orientation": {
+    "top": "U",
+    "front": "R"
+  },
+  "minimum_rolls": 3,
+  "one_optimal_roll_sequence": [
+    "north",
+    "west",
+    "south"
+  ]
+}

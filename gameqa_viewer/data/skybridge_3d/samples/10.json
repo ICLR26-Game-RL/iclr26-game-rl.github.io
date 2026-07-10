@@ -1,0 +1,170 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "skybridge-3d-00011-3",
+    "question_id": 3,
+    "question_description": "Find the first blocked move in a command sequence.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: up, down, up, right, up, right. Options: [1] move 6 [2] move 4 [3]...",
+    "image": "images/board_00011.png",
+    "state": "states/board_00011.json",
+    "image_url": "data/skybridge_3d/files/images/board_00011.png",
+    "state_url": "data/skybridge_3d/files/states/board_00011.json",
+    "has_options": true,
+    "question": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: up, down, up, right, up, right.\nOptions:\n[1] move 6\n[2] move 4\n[3] move 2\n[4] no move is blocked\n[5] move 3\n[6] move 5\n[7] move 1",
+    "analysis": "Move 1 up: moved (ladder edge).\nMove 2 down: moved (normal height rule).\nMove 3 up: moved (ladder edge).\nMove 4 right: moved (normal height rule).\nMove 5 up: blocked (outside the board).\nMove 6 right: moved (normal height rule).\nThe first failing command is move 5. Therefore choose option 6.",
+    "options": [
+      "move 6",
+      "move 4",
+      "move 2",
+      "no move is blocked",
+      "move 3",
+      "move 5",
+      "move 1"
+    ],
+    "state_content": {
+      "game": "skybridge_3d",
+      "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+      "rows": 4,
+      "cols": 4,
+      "heights": [
+        [
+          1,
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          3
+        ]
+      ],
+      "robot": [
+        2,
+        2
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "beacons": {
+        "A": [
+          1,
+          3
+        ],
+        "B": [
+          2,
+          1
+        ],
+        "C": [
+          4,
+          2
+        ]
+      },
+      "ladders": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      ],
+      "seed_index": 11
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "skybridge-3d-00011-3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Find the first blocked move in a command sequence.",
+      "image": "images/board_00011.png",
+      "state": "states/board_00011.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Using the Skybridge 3D movement rules, which command is the first one that fails? Sequence: up, down, up, right, up, right.\nOptions:\n[1] move 6\n[2] move 4\n[3] move 2\n[4] no move is blocked\n[5] move 3\n[6] move 5\n[7] move 1",
+      "answer": 6,
+      "analysis": "Move 1 up: moved (ladder edge).\nMove 2 down: moved (normal height rule).\nMove 3 up: moved (ladder edge).\nMove 4 right: moved (normal height rule).\nMove 5 up: blocked (outside the board).\nMove 6 right: moved (normal height rule).\nThe first failing command is move 5. Therefore choose option 6.",
+      "options": [
+        "move 6",
+        "move 4",
+        "move 2",
+        "no move is blocked",
+        "move 3",
+        "move 5",
+        "move 1"
+      ]
+    }
+  }
+}

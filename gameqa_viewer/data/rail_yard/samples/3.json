@@ -1,0 +1,98 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "rail-yard-00004-1",
+    "question_id": 1,
+    "question_description": "Read the visible lever setting of a switch.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "What branch is switch J3 currently set to? Options: [1] A [2] B",
+    "image": "images/yard_00004.png",
+    "state": "states/yard_00004.json",
+    "image_url": "data/rail_yard/files/images/yard_00004.png",
+    "state_url": "data/rail_yard/files/states/yard_00004.json",
+    "has_options": true,
+    "question": "What branch is switch J3 currently set to?\nOptions:\n[1] A\n[2] B",
+    "analysis": "The lever label inside switch J3 is A. Therefore choose option 1.",
+    "options": [
+      "A",
+      "B"
+    ],
+    "state_content": {
+      "game": "rail_yard",
+      "rules": "The train starts at S. At each switch J1-J4 it follows branch A or B according to the visible switch lever. Fixed track pieces have only branch A. The train stops at the first depot reached.",
+      "switches": {
+        "J1": "B",
+        "J2": "B",
+        "J3": "A",
+        "J4": "B"
+      },
+      "cargo": "red",
+      "target_depot": "red depot",
+      "nodes": {
+        "S": [
+          54,
+          240
+        ],
+        "J1": [
+          150,
+          240
+        ],
+        "U1": [
+          230,
+          145
+        ],
+        "J2": [
+          325,
+          145
+        ],
+        "R": [
+          470,
+          80
+        ],
+        "L1": [
+          230,
+          335
+        ],
+        "J3": [
+          325,
+          335
+        ],
+        "B": [
+          470,
+          400
+        ],
+        "J4": [
+          430,
+          240
+        ],
+        "G": [
+          510,
+          240
+        ]
+      },
+      "seed_index": 4
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rail-yard-00004-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read the visible lever setting of a switch.",
+      "image": "images/yard_00004.png",
+      "state": "states/yard_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "What branch is switch J3 currently set to?\nOptions:\n[1] A\n[2] B",
+      "answer": 1,
+      "analysis": "The lever label inside switch J3 is A. Therefore choose option 1.",
+      "options": [
+        "A",
+        "B"
+      ]
+    }
+  }
+}

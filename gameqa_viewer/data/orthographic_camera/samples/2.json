@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "orthographic-camera-00003",
+    "question_id": 3,
+    "question_description": "Predict a beacon coordinate after rigid rotations",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "F",
+    "answer_preview": "F",
+    "question_preview": "The synchronized front, right, and top panels show labeled beacons in a 4x4x4 coordinate cube. Coordinates are (x,y,z), each from 0 to 3. Rotation Z+ maps (x,y...",
+    "image": "images/camera_001.png",
+    "state": "states/camera_001.json",
+    "image_url": "data/orthographic_camera/files/images/camera_001.png",
+    "state_url": "data/orthographic_camera/files/states/camera_001.json",
+    "has_options": true,
+    "question": "The synchronized front, right, and top panels show labeled beacons in a 4x4x4 coordinate cube. Coordinates are (x,y,z), each from 0 to 3. Rotation Z+ maps (x,y,z) to (3-y,x,z); rotation X+ maps it to (x,3-z,y).\nApply rotations Z+ in order. Where does beacon A finish?\nA. (0, 0, 2)\nB. (2, 0, 0)\nC. (2, 3, 0)\nD. (1, 2, 0)\nE. (0, 3, 0)\nF. (0, 2, 0)",
+    "analysis": "Start beacon A at (2, 3, 0). Applying ['Z+'] successively gives (0, 2, 0). The answer is F.",
+    "options": [
+      "A. (0, 0, 2)",
+      "B. (2, 0, 0)",
+      "C. (2, 3, 0)",
+      "D. (1, 2, 0)",
+      "E. (0, 3, 0)",
+      "F. (0, 2, 0)"
+    ],
+    "state_content": {
+      "game": "orthographic-camera",
+      "level": "Easy",
+      "grid_size": 4,
+      "markers": {
+        "A": [
+          2,
+          3,
+          0
+        ],
+        "B": [
+          2,
+          0,
+          0
+        ],
+        "C": [
+          0,
+          3,
+          1
+        ],
+        "D": [
+          3,
+          1,
+          3
+        ]
+      },
+      "marker_colors": {
+        "A": "#FF5C77",
+        "B": "#34C6BE",
+        "C": "#FFC857",
+        "D": "#7B61FF"
+      },
+      "front_overlap_pair": [
+        "A",
+        "B"
+      ],
+      "rotation_sequence": [
+        "Z+"
+      ],
+      "rotated_markers": {
+        "A": [
+          0,
+          2,
+          0
+        ],
+        "B": [
+          3,
+          2,
+          0
+        ],
+        "C": [
+          0,
+          0,
+          1
+        ],
+        "D": [
+          2,
+          3,
+          3
+        ]
+      },
+      "target_marker": "A",
+      "target_coordinate": [
+        0,
+        3,
+        2
+      ],
+      "minimum_rotations": 2,
+      "one_optimal_sequence": [
+        "Z+",
+        "X+"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "orthographic-camera-00003",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Predict a beacon coordinate after rigid rotations",
+      "image": "images/camera_001.png",
+      "state": "states/camera_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The synchronized front, right, and top panels show labeled beacons in a 4x4x4 coordinate cube. Coordinates are (x,y,z), each from 0 to 3. Rotation Z+ maps (x,y,z) to (3-y,x,z); rotation X+ maps it to (x,3-z,y).\nApply rotations Z+ in order. Where does beacon A finish?\nA. (0, 0, 2)\nB. (2, 0, 0)\nC. (2, 3, 0)\nD. (1, 2, 0)\nE. (0, 3, 0)\nF. (0, 2, 0)",
+      "answer": "F",
+      "analysis": "Start beacon A at (2, 3, 0). Applying ['Z+'] successively gives (0, 2, 0). The answer is F.",
+      "options": [
+        "A. (0, 0, 2)",
+        "B. (2, 0, 0)",
+        "C. (2, 3, 0)",
+        "D. (1, 2, 0)",
+        "E. (0, 3, 0)",
+        "F. (0, 2, 0)"
+      ]
+    }
+  }
+}

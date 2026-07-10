@@ -1,0 +1,199 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "weaving-loom-00005",
+    "question_id": 5,
+    "question_description": "Minimize crossing repairs to restore a phase rule",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "F",
+    "answer_preview": "F",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_001.png",
+    "state": "states/loom_001.json",
+    "image_url": "data/weaving_loom/files/images/loom_001.png",
+    "state_url": "data/weaving_loom/files/states/loom_001.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nWhat is the minimum number of crossing repairs, counting the missing crossing, needed to make every displayed row follow the phase rule?\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+    "analysis": "Generate each ideal row from the base pattern, compare it cell-by-cell with the displayed weave, and count missing or different crossings. There are 1 such crossings, and each requires one independent repair. The answer is F.",
+    "options": [
+      "A. 0",
+      "B. 2",
+      "C. 3",
+      "D. 4",
+      "E. 5",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Easy",
+      "rows": 6,
+      "columns": 6,
+      "phase_shift_per_row": 1,
+      "base_pattern": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expected_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "observed_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          null,
+          0,
+          1,
+          0
+        ]
+      ],
+      "damaged_cells": [
+        [
+          5,
+          2
+        ]
+      ],
+      "missing_cell": [
+        5,
+        2
+      ],
+      "query_cell": [
+        1,
+        5
+      ],
+      "highlight_row": 1,
+      "next_ideal_row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "two_rows_ahead": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "future_query_column": 2,
+      "minimum_crossing_repairs": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00005",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Minimize crossing repairs to restore a phase rule",
+      "image": "images/loom_001.png",
+      "state": "states/loom_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nWhat is the minimum number of crossing repairs, counting the missing crossing, needed to make every displayed row follow the phase rule?\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+      "answer": "F",
+      "analysis": "Generate each ideal row from the base pattern, compare it cell-by-cell with the displayed weave, and count missing or different crossings. There are 1 such crossings, and each requires one independent repair. The answer is F.",
+      "options": [
+        "A. 0",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5",
+        "F. 1"
+      ]
+    }
+  }
+}

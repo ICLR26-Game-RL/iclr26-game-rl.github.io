@@ -1,0 +1,194 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "kaleidoscope-repair-00007",
+    "question_id": 2,
+    "question_description": "Count broken rotational equivalence classes",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? i...",
+    "image": "images/kaleidoscope_002.png",
+    "state": "states/kaleidoscope_002.json",
+    "image_url": "data/kaleidoscope_repair/files/images/kaleidoscope_002.png",
+    "state_url": "data/kaleidoscope_repair/files/states/kaleidoscope_002.json",
+    "has_options": true,
+    "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nHow many rotational orbits are currently inconsistent? All cells related by 90-degree rotations form one orbit.\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+    "analysis": "Partition the board into 90-degree rotation orbits. Exactly 2 orbit(s) contain a missing or differently colored member. The answer is E.",
+    "options": [
+      "A. 1",
+      "B. 3",
+      "C. 4",
+      "D. 5",
+      "E. 2",
+      "F. 0"
+    ],
+    "state_content": {
+      "game": "kaleidoscope-repair",
+      "level": "Medium",
+      "size": 9,
+      "palette": {
+        "Ruby": "#E84A5F",
+        "Amber": "#F6B73C",
+        "Jade": "#27AE8A",
+        "Sapphire": "#3478D4",
+        "Violet": "#7B61C9",
+        "Coral": "#F27D72"
+      },
+      "board": [
+        [
+          "Amber",
+          "Amber",
+          "Jade",
+          "Amber",
+          "Sapphire",
+          "Ruby",
+          "Violet",
+          "Ruby",
+          "Amber"
+        ],
+        [
+          "Ruby",
+          "Ruby",
+          "Ruby",
+          "Amber",
+          "Jade",
+          "Jade",
+          "Violet",
+          "Ruby",
+          "Amber"
+        ],
+        [
+          "Violet",
+          "Violet",
+          "Sapphire",
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Sapphire",
+          "Ruby",
+          "Jade"
+        ],
+        [
+          "Ruby",
+          "Jade",
+          "Violet",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Amber",
+          "Amber",
+          "Amber"
+        ],
+        [
+          "Sapphire",
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          null,
+          "Ruby",
+          "Jade",
+          "Sapphire"
+        ],
+        [
+          "Amber",
+          "Amber",
+          "Amber",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Violet",
+          "Jade",
+          "Ruby"
+        ],
+        [
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Violet",
+          "Ruby",
+          "Amber",
+          "Sapphire",
+          "Violet",
+          "Violet"
+        ],
+        [
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Jade",
+          "Jade",
+          "Amber",
+          "Ruby",
+          "Ruby",
+          "Ruby"
+        ],
+        [
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Ruby",
+          "Sapphire",
+          "Amber",
+          "Jade",
+          "Amber",
+          "Sapphire"
+        ]
+      ],
+      "missing_cell": [
+        4,
+        5
+      ],
+      "missing_expected_color": "Sapphire",
+      "damaged_cells": [
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "query_cell": [
+        1,
+        8
+      ],
+      "rotation_query_cell": [
+        8,
+        4
+      ],
+      "rotation_query_destination": [
+        4,
+        0
+      ],
+      "mismatched_orbit_count": 2,
+      "minimum_tile_replacements": 2
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "kaleidoscope-repair-00007",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Count broken rotational equivalence classes",
+      "image": "images/kaleidoscope_002.png",
+      "state": "states/kaleidoscope_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nHow many rotational orbits are currently inconsistent? All cells related by 90-degree rotations form one orbit.\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+      "answer": "E",
+      "analysis": "Partition the board into 90-degree rotation orbits. Exactly 2 orbit(s) contain a missing or differently colored member. The answer is E.",
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 4",
+        "D. 5",
+        "E. 2",
+        "F. 0"
+      ]
+    }
+  }
+}

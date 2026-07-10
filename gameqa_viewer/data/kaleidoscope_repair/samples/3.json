@@ -1,0 +1,154 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "kaleidoscope-repair-00004",
+    "question_id": 4,
+    "question_description": "Infer the missing jewel from symmetry",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? i...",
+    "image": "images/kaleidoscope_001.png",
+    "state": "states/kaleidoscope_001.json",
+    "image_url": "data/kaleidoscope_repair/files/images/kaleidoscope_001.png",
+    "state_url": "data/kaleidoscope_repair/files/states/kaleidoscope_001.json",
+    "has_options": true,
+    "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhich jewel must replace the ? at (3, 5) to restore its rotational orbit?\nA. Sapphire\nB. Ruby\nC. Amber\nD. Jade\nE. Violet\nF. Coral",
+    "analysis": "The other cells in this orbit are [(5, 3), (3, 1), (1, 3)]. Their intended shared color is Sapphire; therefore the missing cell must also be Sapphire. The answer is A.",
+    "options": [
+      "A. Sapphire",
+      "B. Ruby",
+      "C. Amber",
+      "D. Jade",
+      "E. Violet",
+      "F. Coral"
+    ],
+    "state_content": {
+      "game": "kaleidoscope-repair",
+      "level": "Easy",
+      "size": 7,
+      "palette": {
+        "Ruby": "#E84A5F",
+        "Amber": "#F6B73C",
+        "Jade": "#27AE8A",
+        "Sapphire": "#3478D4",
+        "Violet": "#7B61C9",
+        "Coral": "#F27D72"
+      },
+      "board": [
+        [
+          "Violet",
+          "Amber",
+          "Jade",
+          "Coral",
+          "Sapphire",
+          "Sapphire",
+          "Violet"
+        ],
+        [
+          "Sapphire",
+          "Jade",
+          "Jade",
+          "Sapphire",
+          "Coral",
+          "Jade",
+          "Amber"
+        ],
+        [
+          "Sapphire",
+          "Coral",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Jade",
+          "Jade"
+        ],
+        [
+          "Coral",
+          "Sapphire",
+          "Sapphire",
+          "Jade",
+          "Sapphire",
+          null,
+          "Coral"
+        ],
+        [
+          "Jade",
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Coral",
+          "Sapphire"
+        ],
+        [
+          "Amber",
+          "Jade",
+          "Coral",
+          "Sapphire",
+          "Jade",
+          "Jade",
+          "Sapphire"
+        ],
+        [
+          "Violet",
+          "Sapphire",
+          "Sapphire",
+          "Coral",
+          "Jade",
+          "Amber",
+          "Violet"
+        ]
+      ],
+      "missing_cell": [
+        3,
+        5
+      ],
+      "missing_expected_color": "Sapphire",
+      "damaged_cells": [
+        [
+          3,
+          5
+        ]
+      ],
+      "query_cell": [
+        3,
+        4
+      ],
+      "rotation_query_cell": [
+        4,
+        1
+      ],
+      "rotation_query_destination": [
+        1,
+        2
+      ],
+      "mismatched_orbit_count": 1,
+      "minimum_tile_replacements": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "kaleidoscope-repair-00004",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Infer the missing jewel from symmetry",
+      "image": "images/kaleidoscope_001.png",
+      "state": "states/kaleidoscope_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhich jewel must replace the ? at (3, 5) to restore its rotational orbit?\nA. Sapphire\nB. Ruby\nC. Amber\nD. Jade\nE. Violet\nF. Coral",
+      "answer": "A",
+      "analysis": "The other cells in this orbit are [(5, 3), (3, 1), (1, 3)]. Their intended shared color is Sapphire; therefore the missing cell must also be Sapphire. The answer is A.",
+      "options": [
+        "A. Sapphire",
+        "B. Ruby",
+        "C. Amber",
+        "D. Jade",
+        "E. Violet",
+        "F. Coral"
+      ]
+    }
+  }
+}

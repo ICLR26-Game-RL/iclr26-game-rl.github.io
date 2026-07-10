@@ -1,0 +1,134 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "orthographic-camera-00006",
+    "question_id": 1,
+    "question_description": "Identify the highest 3D beacon",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "B",
+    "answer_preview": "B",
+    "question_preview": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y...",
+    "image": "images/camera_002.png",
+    "state": "states/camera_002.json",
+    "image_url": "data/orthographic_camera/files/images/camera_002.png",
+    "state_url": "data/orthographic_camera/files/states/camera_002.json",
+    "has_options": true,
+    "question": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y,z) to (4-y,x,z); rotation X+ maps it to (x,4-z,y).\nWhich beacon has the greatest z-coordinate?\nA. D\nB. E\nC. A\nD. B\nE. C",
+    "analysis": "Read height from the three views. Beacon E is at (1, 1, 4) and has z=4, greater than every other beacon. The answer is B.",
+    "options": [
+      "A. D",
+      "B. E",
+      "C. A",
+      "D. B",
+      "E. C"
+    ],
+    "state_content": {
+      "game": "orthographic-camera",
+      "level": "Medium",
+      "grid_size": 5,
+      "markers": {
+        "A": [
+          3,
+          2,
+          2
+        ],
+        "B": [
+          3,
+          4,
+          2
+        ],
+        "C": [
+          2,
+          0,
+          2
+        ],
+        "D": [
+          3,
+          4,
+          1
+        ],
+        "E": [
+          1,
+          1,
+          4
+        ]
+      },
+      "marker_colors": {
+        "A": "#FF5C77",
+        "B": "#34C6BE",
+        "C": "#FFC857",
+        "D": "#7B61FF",
+        "E": "#42A5F5"
+      },
+      "front_overlap_pair": [
+        "A",
+        "B"
+      ],
+      "rotation_sequence": [
+        "X+",
+        "X+"
+      ],
+      "rotated_markers": {
+        "A": [
+          3,
+          2,
+          2
+        ],
+        "B": [
+          3,
+          0,
+          2
+        ],
+        "C": [
+          2,
+          4,
+          2
+        ],
+        "D": [
+          3,
+          0,
+          3
+        ],
+        "E": [
+          1,
+          3,
+          0
+        ]
+      },
+      "target_marker": "A",
+      "target_coordinate": [
+        2,
+        2,
+        3
+      ],
+      "minimum_rotations": 2,
+      "one_optimal_sequence": [
+        "Z+",
+        "X+"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "orthographic-camera-00006",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the highest 3D beacon",
+      "image": "images/camera_002.png",
+      "state": "states/camera_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "The synchronized front, right, and top panels show labeled beacons in a 5x5x5 coordinate cube. Coordinates are (x,y,z), each from 0 to 4. Rotation Z+ maps (x,y,z) to (4-y,x,z); rotation X+ maps it to (x,4-z,y).\nWhich beacon has the greatest z-coordinate?\nA. D\nB. E\nC. A\nD. B\nE. C",
+      "answer": "B",
+      "analysis": "Read height from the three views. Beacon E is at (1, 1, 4) and has z=4, greater than every other beacon. The answer is B.",
+      "options": [
+        "A. D",
+        "B. E",
+        "C. A",
+        "D. B",
+        "E. C"
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "potion-cascade-00003-3",
+    "question_id": 3,
+    "question_description": "Choose the reagent that produces a target cauldron mix.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain sun potency 3? Options: [1]...",
+    "image": "images/potion_00003.png",
+    "state": "states/potion_00003.json",
+    "image_url": "data/potion_cascade/files/images/potion_00003.png",
+    "state_url": "data/potion_cascade/files/states/potion_00003.json",
+    "has_options": true,
+    "question": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain sun potency 3?\nOptions:\n[1] void pepper\n[2] plain water\n[3] azure sugar\n[4] jade ash\n[5] lunar oil\n[6] ruby salt",
+    "analysis": "Without a reagent, the cauldron is sun potency 3. The reagent plain water shifts the element by 0 and potency sum by 0, producing sun potency 3. Therefore choose option 2.",
+    "options": [
+      "void pepper",
+      "plain water",
+      "azure sugar",
+      "jade ash",
+      "lunar oil",
+      "ruby salt"
+    ],
+    "state_content": {
+      "game": "potion_cascade",
+      "rules": [
+        "heat: selected bottle potency increases by 1 up to 5.",
+        "cool: selected bottle potency decreases by 1 down to 1.",
+        "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+        "decant: two selected bottles swap positions.",
+        "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+      ],
+      "element_cycle": [
+        "ember",
+        "sun",
+        "leaf",
+        "frost",
+        "moon",
+        "void"
+      ],
+      "bottles": [
+        {
+          "slot": 1,
+          "element": "moon",
+          "potency": 1
+        },
+        {
+          "slot": 2,
+          "element": "sun",
+          "potency": 2
+        },
+        {
+          "slot": 3,
+          "element": "sun",
+          "potency": 4
+        },
+        {
+          "slot": 4,
+          "element": "ember",
+          "potency": 4
+        },
+        {
+          "slot": 5,
+          "element": "sun",
+          "potency": 1
+        }
+      ],
+      "operation_cards": [
+        {
+          "op": "heat",
+          "slot": 4
+        },
+        {
+          "op": "heat",
+          "slot": 4
+        },
+        {
+          "op": "decant",
+          "slot_a": 2,
+          "slot_b": 1
+        },
+        {
+          "op": "cool",
+          "slot": 2
+        },
+        {
+          "op": "cool",
+          "slot": 2
+        }
+      ],
+      "seed_index": 3
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "potion-cascade-00003-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Choose the reagent that produces a target cauldron mix.",
+      "image": "images/potion_00003.png",
+      "state": "states/potion_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Mixing all five bottles gives a cauldron result by cyclic element sum and potency modulo 5. Which reagent should be added to obtain sun potency 3?\nOptions:\n[1] void pepper\n[2] plain water\n[3] azure sugar\n[4] jade ash\n[5] lunar oil\n[6] ruby salt",
+      "answer": 2,
+      "analysis": "Without a reagent, the cauldron is sun potency 3. The reagent plain water shifts the element by 0 and potency sum by 0, producing sun potency 3. Therefore choose option 2.",
+      "options": [
+        "void pepper",
+        "plain water",
+        "azure sugar",
+        "jade ash",
+        "lunar oil",
+        "ruby salt"
+      ]
+    }
+  }
+}

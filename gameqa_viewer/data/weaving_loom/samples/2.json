@@ -1,0 +1,199 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "weaving-loom-00003",
+    "question_id": 3,
+    "question_description": "Predict the next weaving phase",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_001.png",
+    "state": "states/loom_001.json",
+    "image_url": "data/weaving_loom/files/images/loom_001.png",
+    "state_url": "data/weaving_loom/files/states/loom_001.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nIgnoring damaged crossings, what should the next row after the displayed board be, from column 0 to 5?\nA. H W H W H H\nB. H H W H W H\nC. H H H W H W\nD. W H H H W H\nE. H W H H H W\nF. W H W H H H",
+    "analysis": "The base pattern is H H H W H W. Row 6 applies a total right shift of 0, giving H H H W H W. The answer is C.",
+    "options": [
+      "A. H W H W H H",
+      "B. H H W H W H",
+      "C. H H H W H W",
+      "D. W H H H W H",
+      "E. H W H H H W",
+      "F. W H W H H H"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Easy",
+      "rows": 6,
+      "columns": 6,
+      "phase_shift_per_row": 1,
+      "base_pattern": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expected_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "observed_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          null,
+          0,
+          1,
+          0
+        ]
+      ],
+      "damaged_cells": [
+        [
+          5,
+          2
+        ]
+      ],
+      "missing_cell": [
+        5,
+        2
+      ],
+      "query_cell": [
+        1,
+        5
+      ],
+      "highlight_row": 1,
+      "next_ideal_row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "two_rows_ahead": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "future_query_column": 2,
+      "minimum_crossing_repairs": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00003",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Predict the next weaving phase",
+      "image": "images/loom_001.png",
+      "state": "states/loom_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nIgnoring damaged crossings, what should the next row after the displayed board be, from column 0 to 5?\nA. H W H W H H\nB. H H W H W H\nC. H H H W H W\nD. W H H H W H\nE. H W H H H W\nF. W H W H H H",
+      "answer": "C",
+      "analysis": "The base pattern is H H H W H W. Row 6 applies a total right shift of 0, giving H H H W H W. The answer is C.",
+      "options": [
+        "A. H W H W H H",
+        "B. H H W H W H",
+        "C. H H H W H W",
+        "D. W H H H W H",
+        "E. H W H H H W",
+        "F. W H W H H H"
+      ]
+    }
+  }
+}

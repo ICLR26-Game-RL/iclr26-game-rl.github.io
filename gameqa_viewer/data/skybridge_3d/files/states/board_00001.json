@@ -1,0 +1,87 @@
+{
+  "game": "skybridge_3d",
+  "rules": "Move between adjacent towers. Climb up at most 1 level normally; ladder edges allow climbing up 2 levels. Descending is always allowed.",
+  "rows": 4,
+  "cols": 4,
+  "heights": [
+    [
+      4,
+      1,
+      3,
+      2
+    ],
+    [
+      3,
+      3,
+      2,
+      2
+    ],
+    [
+      3,
+      1,
+      3,
+      4
+    ],
+    [
+      3,
+      3,
+      1,
+      3
+    ]
+  ],
+  "robot": [
+    4,
+    3
+  ],
+  "goal": [
+    3,
+    1
+  ],
+  "beacons": {
+    "A": [
+      3,
+      4
+    ],
+    "B": [
+      1,
+      3
+    ],
+    "C": [
+      2,
+      1
+    ]
+  },
+  "ladders": [
+    [
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    [
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ]
+  ],
+  "seed_index": 1
+}

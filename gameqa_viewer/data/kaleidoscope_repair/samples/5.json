@@ -1,0 +1,194 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "kaleidoscope-repair-00006",
+    "question_id": 1,
+    "question_description": "Read a jewel at an exact coordinate",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "F",
+    "answer_preview": "F",
+    "question_preview": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? i...",
+    "image": "images/kaleidoscope_002.png",
+    "state": "states/kaleidoscope_002.json",
+    "image_url": "data/kaleidoscope_repair/files/images/kaleidoscope_002.png",
+    "state_url": "data/kaleidoscope_repair/files/states/kaleidoscope_002.json",
+    "has_options": true,
+    "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhat jewel color is at (1,8)?\nA. Ruby\nB. Jade\nC. Sapphire\nD. Violet\nE. Coral\nF. Amber",
+    "analysis": "Locate row 1, column 8. The tile is Amber, so the answer is F.",
+    "options": [
+      "A. Ruby",
+      "B. Jade",
+      "C. Sapphire",
+      "D. Violet",
+      "E. Coral",
+      "F. Amber"
+    ],
+    "state_content": {
+      "game": "kaleidoscope-repair",
+      "level": "Medium",
+      "size": 9,
+      "palette": {
+        "Ruby": "#E84A5F",
+        "Amber": "#F6B73C",
+        "Jade": "#27AE8A",
+        "Sapphire": "#3478D4",
+        "Violet": "#7B61C9",
+        "Coral": "#F27D72"
+      },
+      "board": [
+        [
+          "Amber",
+          "Amber",
+          "Jade",
+          "Amber",
+          "Sapphire",
+          "Ruby",
+          "Violet",
+          "Ruby",
+          "Amber"
+        ],
+        [
+          "Ruby",
+          "Ruby",
+          "Ruby",
+          "Amber",
+          "Jade",
+          "Jade",
+          "Violet",
+          "Ruby",
+          "Amber"
+        ],
+        [
+          "Violet",
+          "Violet",
+          "Sapphire",
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Sapphire",
+          "Ruby",
+          "Jade"
+        ],
+        [
+          "Ruby",
+          "Jade",
+          "Violet",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Amber",
+          "Amber",
+          "Amber"
+        ],
+        [
+          "Sapphire",
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          null,
+          "Ruby",
+          "Jade",
+          "Sapphire"
+        ],
+        [
+          "Amber",
+          "Amber",
+          "Amber",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Violet",
+          "Jade",
+          "Ruby"
+        ],
+        [
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Violet",
+          "Ruby",
+          "Amber",
+          "Sapphire",
+          "Violet",
+          "Violet"
+        ],
+        [
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Jade",
+          "Jade",
+          "Amber",
+          "Ruby",
+          "Ruby",
+          "Ruby"
+        ],
+        [
+          "Amber",
+          "Ruby",
+          "Violet",
+          "Ruby",
+          "Sapphire",
+          "Amber",
+          "Jade",
+          "Amber",
+          "Sapphire"
+        ]
+      ],
+      "missing_cell": [
+        4,
+        5
+      ],
+      "missing_expected_color": "Sapphire",
+      "damaged_cells": [
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "query_cell": [
+        1,
+        8
+      ],
+      "rotation_query_cell": [
+        8,
+        4
+      ],
+      "rotation_query_destination": [
+        4,
+        0
+      ],
+      "mismatched_orbit_count": 2,
+      "minimum_tile_replacements": 2
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "kaleidoscope-repair-00006",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read a jewel at an exact coordinate",
+      "image": "images/kaleidoscope_002.png",
+      "state": "states/kaleidoscope_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhat jewel color is at (1,8)?\nA. Ruby\nB. Jade\nC. Sapphire\nD. Violet\nE. Coral\nF. Amber",
+      "answer": "F",
+      "analysis": "Locate row 1, column 8. The tile is Amber, so the answer is F.",
+      "options": [
+        "A. Ruby",
+        "B. Jade",
+        "C. Sapphire",
+        "D. Violet",
+        "E. Coral",
+        "F. Amber"
+      ]
+    }
+  }
+}

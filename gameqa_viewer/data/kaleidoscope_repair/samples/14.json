@@ -1,0 +1,242 @@
+{
+  "sample": {
+    "index": 14,
+    "data_id": "kaleidoscope-repair-00015",
+    "question_id": 5,
+    "question_description": "Minimize tile replacements for global symmetry",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? i...",
+    "image": "images/kaleidoscope_003.png",
+    "state": "states/kaleidoscope_003.json",
+    "image_url": "data/kaleidoscope_repair/files/images/kaleidoscope_003.png",
+    "state_url": "data/kaleidoscope_repair/files/states/kaleidoscope_003.json",
+    "has_options": true,
+    "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhat is the minimum number of tile replacements, counting the missing tile, needed to make the whole board rotationally symmetric?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+    "analysis": "For each rotational orbit, keep its most frequent visible color and replace every other or missing member. Summing len(orbit)-max_frequency over all orbits gives 3. The answer is D.",
+    "options": [
+      "A. 2",
+      "B. 4",
+      "C. 5",
+      "D. 3",
+      "E. 0",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "kaleidoscope-repair",
+      "level": "Hard",
+      "size": 11,
+      "palette": {
+        "Ruby": "#E84A5F",
+        "Amber": "#F6B73C",
+        "Jade": "#27AE8A",
+        "Sapphire": "#3478D4",
+        "Violet": "#7B61C9",
+        "Coral": "#F27D72"
+      },
+      "board": [
+        [
+          "Jade",
+          "Sapphire",
+          "Amber",
+          "Amber",
+          "Ruby",
+          "Amber",
+          "Violet",
+          "Jade",
+          "Amber",
+          "Violet",
+          "Jade"
+        ],
+        [
+          "Violet",
+          "Violet",
+          "Coral",
+          "Ruby",
+          "Violet",
+          "Coral",
+          "Jade",
+          "Sapphire",
+          "Sapphire",
+          "Violet",
+          "Sapphire"
+        ],
+        [
+          null,
+          "Sapphire",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Jade",
+          "Amber",
+          "Amber",
+          "Ruby",
+          "Coral",
+          "Amber"
+        ],
+        [
+          "Jade",
+          "Sapphire",
+          "Amber",
+          "Violet",
+          "Ruby",
+          "Ruby",
+          "Ruby",
+          "Violet",
+          "Sapphire",
+          "Ruby",
+          "Amber"
+        ],
+        [
+          "Violet",
+          "Jade",
+          "Amber",
+          "Ruby",
+          "Coral",
+          "Amber",
+          "Coral",
+          "Ruby",
+          "Ruby",
+          "Violet",
+          "Ruby"
+        ],
+        [
+          "Amber",
+          "Coral",
+          "Jade",
+          "Ruby",
+          "Amber",
+          "Violet",
+          "Amber",
+          "Ruby",
+          "Jade",
+          "Coral",
+          "Amber"
+        ],
+        [
+          "Ruby",
+          "Violet",
+          "Ruby",
+          "Ruby",
+          "Coral",
+          "Amber",
+          "Coral",
+          "Sapphire",
+          "Violet",
+          "Jade",
+          "Violet"
+        ],
+        [
+          "Amber",
+          "Ruby",
+          "Sapphire",
+          "Violet",
+          "Ruby",
+          "Ruby",
+          "Ruby",
+          "Violet",
+          "Amber",
+          "Sapphire",
+          "Jade"
+        ],
+        [
+          "Amber",
+          "Coral",
+          "Ruby",
+          "Amber",
+          "Amber",
+          "Jade",
+          "Ruby",
+          "Sapphire",
+          "Ruby",
+          "Sapphire",
+          "Amber"
+        ],
+        [
+          "Sapphire",
+          "Violet",
+          "Sapphire",
+          "Sapphire",
+          "Jade",
+          "Coral",
+          "Violet",
+          "Ruby",
+          "Coral",
+          "Violet",
+          "Violet"
+        ],
+        [
+          "Jade",
+          "Violet",
+          "Amber",
+          "Jade",
+          "Violet",
+          "Amber",
+          "Ruby",
+          "Amber",
+          "Amber",
+          "Sapphire",
+          "Jade"
+        ]
+      ],
+      "missing_cell": [
+        2,
+        0
+      ],
+      "missing_expected_color": "Amber",
+      "damaged_cells": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "query_cell": [
+        1,
+        7
+      ],
+      "rotation_query_cell": [
+        7,
+        1
+      ],
+      "rotation_query_destination": [
+        1,
+        3
+      ],
+      "mismatched_orbit_count": 3,
+      "minimum_tile_replacements": 3
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "kaleidoscope-repair-00015",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Minimize tile replacements for global symmetry",
+      "image": "images/kaleidoscope_003.png",
+      "state": "states/kaleidoscope_003.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "The jewel board should be invariant under every 90-degree clockwise rotation about its center. Coordinates are zero-based (row,column) from the top-left. A ? is a missing tile and must be restored.\nWhat is the minimum number of tile replacements, counting the missing tile, needed to make the whole board rotationally symmetric?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+      "answer": "D",
+      "analysis": "For each rotational orbit, keep its most frequent visible color and replace every other or missing member. Summing len(orbit)-max_frequency over all orbits gives 3. The answer is D.",
+      "options": [
+        "A. 2",
+        "B. 4",
+        "C. 5",
+        "D. 3",
+        "E. 0",
+        "F. 1"
+      ]
+    }
+  }
+}

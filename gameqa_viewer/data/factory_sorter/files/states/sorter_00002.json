@@ -1,0 +1,30 @@
+{
+  "game": "factory_sorter",
+  "rules": [
+    "Packages enter S1 first. If package color matches the S1 color sensor, it goes to S2; otherwise it goes to the reject bin.",
+    "At S2, if package shape matches the S2 shape sensor, it goes to the shape-match bin; otherwise it goes to the color-only bin."
+  ],
+  "packages": [
+    {
+      "id": "P1",
+      "color": "yellow",
+      "shape": "square"
+    },
+    {
+      "id": "P2",
+      "color": "blue",
+      "shape": "triangle"
+    },
+    {
+      "id": "P3",
+      "color": "yellow",
+      "shape": "triangle"
+    }
+  ],
+  "sensors": {
+    "S1_color": "yellow",
+    "S2_shape": "square"
+  },
+  "target_package": "P1",
+  "seed_index": 2
+}

@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "mirror-laser-00005-2",
+    "question_id": 2,
+    "question_description": "Predict the laser result after following reflections.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Follow the laser from its start. What is the first terminal result of the beam? Options: [1] target A [2] target C [3] block [4] exit [5] target B [6] loop",
+    "image": "images/laser_00005.png",
+    "state": "states/laser_00005.json",
+    "image_url": "data/mirror_laser/files/images/laser_00005.png",
+    "state_url": "data/mirror_laser/files/states/laser_00005.json",
+    "has_options": true,
+    "question": "Follow the laser from its start. What is the first terminal result of the beam?\nOptions:\n[1] target A\n[2] target C\n[3] block\n[4] exit\n[5] target B\n[6] loop",
+    "analysis": "Cell (2, 1): empty.\nCell (2, 2): empty.\nCell (2, 3): empty.\nCell (2, 4): empty.\nCell (2, 5): absorbed by block.\nThe terminal result is block. Therefore choose option 3.",
+    "options": [
+      "target A",
+      "target C",
+      "block",
+      "exit",
+      "target B",
+      "loop"
+    ],
+    "state_content": {
+      "game": "mirror_laser",
+      "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+      "size": 7,
+      "start": [
+        2,
+        0
+      ],
+      "direction": "right",
+      "mirrors": [
+        {
+          "row": 1,
+          "col": 1,
+          "type": "\\"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "type": "\\"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "type": "\\"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "type": "/"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "type": "/"
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "type": "\\"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "type": "/"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "type": "\\"
+        }
+      ],
+      "blocks": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "targets": {
+        "A": [
+          7,
+          7
+        ],
+        "B": [
+          1,
+          6
+        ],
+        "C": [
+          7,
+          5
+        ]
+      },
+      "seed_index": 5
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mirror-laser-00005-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the laser result after following reflections.",
+      "image": "images/laser_00005.png",
+      "state": "states/laser_00005.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Follow the laser from its start. What is the first terminal result of the beam?\nOptions:\n[1] target A\n[2] target C\n[3] block\n[4] exit\n[5] target B\n[6] loop",
+      "answer": 3,
+      "analysis": "Cell (2, 1): empty.\nCell (2, 2): empty.\nCell (2, 3): empty.\nCell (2, 4): empty.\nCell (2, 5): absorbed by block.\nThe terminal result is block. Therefore choose option 3.",
+      "options": [
+        "target A",
+        "target C",
+        "block",
+        "exit",
+        "target B",
+        "loop"
+      ]
+    }
+  }
+}

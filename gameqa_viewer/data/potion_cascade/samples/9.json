@@ -1,0 +1,117 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "potion-cascade-00010-1",
+    "question_id": 1,
+    "question_description": "Count bottles of a specified element.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "How many bottles currently contain the moon element? Options: [1] 1 [2] 2 [3] 5 [4] 3 [5] 0 [6] 4",
+    "image": "images/potion_00010.png",
+    "state": "states/potion_00010.json",
+    "image_url": "data/potion_cascade/files/images/potion_00010.png",
+    "state_url": "data/potion_cascade/files/states/potion_00010.json",
+    "has_options": true,
+    "question": "How many bottles currently contain the moon element?\nOptions:\n[1] 1\n[2] 2\n[3] 5\n[4] 3\n[5] 0\n[6] 4",
+    "analysis": "The visible bottle elements are ['ember', 'moon', 'sun', 'frost', 'sun']. The element moon appears 1 times, so choose option 1.",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "3",
+      "0",
+      "4"
+    ],
+    "state_content": {
+      "game": "potion_cascade",
+      "rules": [
+        "heat: selected bottle potency increases by 1 up to 5.",
+        "cool: selected bottle potency decreases by 1 down to 1.",
+        "infuse: selected bottle element advances one step in the cycle ember -> sun -> leaf -> frost -> moon -> void -> ember.",
+        "decant: two selected bottles swap positions.",
+        "A cauldron mix has element equal to the cyclic sum of bottle elements and potency equal to 1 + (sum of potencies mod 5)."
+      ],
+      "element_cycle": [
+        "ember",
+        "sun",
+        "leaf",
+        "frost",
+        "moon",
+        "void"
+      ],
+      "bottles": [
+        {
+          "slot": 1,
+          "element": "ember",
+          "potency": 2
+        },
+        {
+          "slot": 2,
+          "element": "moon",
+          "potency": 2
+        },
+        {
+          "slot": 3,
+          "element": "sun",
+          "potency": 4
+        },
+        {
+          "slot": 4,
+          "element": "frost",
+          "potency": 5
+        },
+        {
+          "slot": 5,
+          "element": "sun",
+          "potency": 2
+        }
+      ],
+      "operation_cards": [
+        {
+          "op": "decant",
+          "slot_a": 1,
+          "slot_b": 3
+        },
+        {
+          "op": "infuse",
+          "slot": 5
+        },
+        {
+          "op": "cool",
+          "slot": 3
+        },
+        {
+          "op": "decant",
+          "slot_a": 4,
+          "slot_b": 1
+        }
+      ],
+      "seed_index": 10
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "potion-cascade-00010-1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count bottles of a specified element.",
+      "image": "images/potion_00010.png",
+      "state": "states/potion_00010.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "How many bottles currently contain the moon element?\nOptions:\n[1] 1\n[2] 2\n[3] 5\n[4] 3\n[5] 0\n[6] 4",
+      "answer": 1,
+      "analysis": "The visible bottle elements are ['ember', 'moon', 'sun', 'frost', 'sun']. The element moon appears 1 times, so choose option 1.",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "3",
+        "0",
+        "4"
+      ]
+    }
+  }
+}

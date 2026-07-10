@@ -1,0 +1,217 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "alchemy-workshop-00010",
+    "question_id": 5,
+    "question_description": "Find a shortest synthesis plan",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requireme...",
+    "image": "images/alchemy_002.png",
+    "state": "states/alchemy_002.json",
+    "image_url": "data/alchemy_workshop/files/images/alchemy_002.png",
+    "state_url": "data/alchemy_workshop/files/states/alchemy_002.json",
+    "has_options": true,
+    "question": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requirements are available.\nWhat is the minimum number of brews needed to obtain at least 1 MoonDust?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+    "analysis": "Breadth-first search over reachable inventory states finds ['R2', 'R3', 'R5'] with 3 brews. No inventory at a smaller depth contains MoonDust. The answer is D.",
+    "options": [
+      "A. 2",
+      "B. 4",
+      "C. 5",
+      "D. 3",
+      "E. 0",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "alchemy-workshop",
+      "level": "Medium",
+      "inventory": {
+        "Herb": 2,
+        "Water": 1,
+        "Mushroom": 1,
+        "Crystal": 0,
+        "Essence": 0,
+        "Tonic": 0,
+        "Elixir": 0,
+        "MoonDust": 0,
+        "Phoenix": 0
+      },
+      "recipes": [
+        {
+          "id": "R1",
+          "name": "Verdant Essence",
+          "consume": {
+            "Herb": 1,
+            "Water": 1
+          },
+          "produce": {
+            "Essence": 1
+          }
+        },
+        {
+          "id": "R2",
+          "name": "Amber Tonic",
+          "consume": {
+            "Mushroom": 1,
+            "Water": 1
+          },
+          "produce": {
+            "Tonic": 1
+          }
+        },
+        {
+          "id": "R3",
+          "name": "Crystal Press",
+          "consume": {
+            "Herb": 2
+          },
+          "produce": {
+            "Crystal": 1
+          }
+        },
+        {
+          "id": "R4",
+          "name": "Rose Elixir",
+          "consume": {
+            "Essence": 1,
+            "Crystal": 1
+          },
+          "produce": {
+            "Elixir": 1
+          }
+        },
+        {
+          "id": "R5",
+          "name": "Moon Condenser",
+          "consume": {
+            "Tonic": 1,
+            "Crystal": 1
+          },
+          "produce": {
+            "MoonDust": 1
+          }
+        }
+      ],
+      "query_item": "Herb",
+      "recipe_query_item": "MoonDust",
+      "valid_sequence": [
+        "R2",
+        "R3",
+        "R5"
+      ],
+      "valid_sequence_trace": [
+        {
+          "step": 1,
+          "recipe": "R2",
+          "inventory": {
+            "Herb": 2,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        },
+        {
+          "step": 2,
+          "recipe": "R3",
+          "inventory": {
+            "Herb": 0,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 1,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        },
+        {
+          "step": 3,
+          "recipe": "R5",
+          "inventory": {
+            "Herb": 0,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 0,
+            "Elixir": 0,
+            "MoonDust": 1,
+            "Phoenix": 0
+          }
+        }
+      ],
+      "final_inventory": {
+        "Herb": 0,
+        "Water": 0,
+        "Mushroom": 0,
+        "Crystal": 0,
+        "Essence": 0,
+        "Tonic": 0,
+        "Elixir": 0,
+        "MoonDust": 1,
+        "Phoenix": 0
+      },
+      "final_query_item": "MoonDust",
+      "invalid_sequence": [
+        "R2",
+        "R5"
+      ],
+      "invalid_sequence_first_failure": 2,
+      "invalid_sequence_trace": [
+        {
+          "step": 1,
+          "recipe": "R2",
+          "inventory": {
+            "Herb": 2,
+            "Water": 0,
+            "Mushroom": 0,
+            "Crystal": 0,
+            "Essence": 0,
+            "Tonic": 1,
+            "Elixir": 0,
+            "MoonDust": 0,
+            "Phoenix": 0
+          }
+        }
+      ],
+      "optimization_goal": "MoonDust",
+      "minimum_brews": 3,
+      "one_optimal_sequence": [
+        "R2",
+        "R3",
+        "R5"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "alchemy-workshop-00010",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Find a shortest synthesis plan",
+      "image": "images/alchemy_002.png",
+      "state": "states/alchemy_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "The shelf shows the current inventory. Brewing a recipe consumes every listed ingredient and adds its product. Recipes may be repeated whenever their requirements are available.\nWhat is the minimum number of brews needed to obtain at least 1 MoonDust?\nA. 2\nB. 4\nC. 5\nD. 3\nE. 0\nF. 1",
+      "answer": "D",
+      "analysis": "Breadth-first search over reachable inventory states finds ['R2', 'R3', 'R5'] with 3 brews. No inventory at a smaller depth contains MoonDust. The answer is D.",
+      "options": [
+        "A. 2",
+        "B. 4",
+        "C. 5",
+        "D. 3",
+        "E. 0",
+        "F. 1"
+      ]
+    }
+  }
+}

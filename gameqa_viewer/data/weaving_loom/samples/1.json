@@ -1,0 +1,199 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "weaving-loom-00002",
+    "question_id": 2,
+    "question_description": "Count over-crossings in a highlighted row",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal ro...",
+    "image": "images/loom_001.png",
+    "state": "states/loom_001.json",
+    "image_url": "data/weaving_loom/files/images/loom_001.png",
+    "state_url": "data/weaving_loom/files/states/loom_001.json",
+    "has_options": true,
+    "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nHow many visible crossings in the yellow-outlined row 1 have WARP on top? Do not count a missing crossing.\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+    "analysis": "Reading row 1 gives [1, 0, 0, 0, 1, 0]. Exactly 2 entries equal W, so the answer is E.",
+    "options": [
+      "A. 1",
+      "B. 3",
+      "C. 4",
+      "D. 5",
+      "E. 2",
+      "F. 0"
+    ],
+    "state_content": {
+      "game": "weaving-loom",
+      "level": "Easy",
+      "rows": 6,
+      "columns": 6,
+      "phase_shift_per_row": 1,
+      "base_pattern": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expected_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "observed_pattern": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          null,
+          0,
+          1,
+          0
+        ]
+      ],
+      "damaged_cells": [
+        [
+          5,
+          2
+        ]
+      ],
+      "missing_cell": [
+        5,
+        2
+      ],
+      "query_cell": [
+        1,
+        5
+      ],
+      "highlight_row": 1,
+      "next_ideal_row": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "two_rows_ahead": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "future_query_column": 2,
+      "minimum_crossing_repairs": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "weaving-loom-00002",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Count over-crossings in a highlighted row",
+      "image": "images/loom_001.png",
+      "state": "states/loom_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "At each crossing, W means the vertical warp strand is on top and H means the horizontal weft is on top. The ideal first row is visible; each following ideal row rotates the previous pattern right by 1 position(s). Coordinates are zero-based (row,column).\nHow many visible crossings in the yellow-outlined row 1 have WARP on top? Do not count a missing crossing.\nA. 1\nB. 3\nC. 4\nD. 5\nE. 2\nF. 0",
+      "answer": "E",
+      "analysis": "Reading row 1 gives [1, 0, 0, 0, 1, 0]. Exactly 2 entries equal W, so the answer is E.",
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 4",
+        "D. 5",
+        "E. 2",
+        "F. 0"
+      ]
+    }
+  }
+}

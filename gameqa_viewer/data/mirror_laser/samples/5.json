@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "mirror-laser-00006-3",
+    "question_id": 3,
+    "question_description": "Choose a single mirror placement that makes the laser hit a target.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result? Options: [1] place \\ at (1,...",
+    "image": "images/laser_00006.png",
+    "state": "states/laser_00006.json",
+    "image_url": "data/mirror_laser/files/images/laser_00006.png",
+    "state_url": "data/mirror_laser/files/states/laser_00006.json",
+    "has_options": true,
+    "question": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result?\nOptions:\n[1] place \\ at (1, 7)\n[2] place \\ at (1, 6)\n[3] place / at (7, 2)\n[4] place / at (1, 5)\n[5] place / at (1, 1)\n[6] place \\ at (1, 4)",
+    "analysis": "Testing option 3, adding / at (7, 2) changes the path as follows:\nCell (7, 1): empty.\nCell (7, 2): mirror / turns right to up.\nCell (6, 2): empty.\nCell (5, 2): empty.\nCell (4, 2): empty.\nCell (3, 2): mirror / turns up to right.\nCell (3, 3): empty.\nCell (3, 4): empty.\nCell (3, 5): empty.\nCell (3, 6): mirror \\ turns right to down.\nCell (4, 6): empty.\nCell (5, 6): empty.\nCell (6, 6): empty.\nCell (7, 6): hit target C.\nThe beam reaches target C, so choose option 3.",
+    "options": [
+      "place \\ at (1, 7)",
+      "place \\ at (1, 6)",
+      "place / at (7, 2)",
+      "place / at (1, 5)",
+      "place / at (1, 1)",
+      "place \\ at (1, 4)"
+    ],
+    "state_content": {
+      "game": "mirror_laser",
+      "rules": "A laser starts outside the grid and travels cell by cell. '/' and '\\' mirrors reflect it; stone blocks absorb it; targets are hit when the beam enters their cell.",
+      "size": 7,
+      "start": [
+        7,
+        0
+      ],
+      "direction": "right",
+      "mirrors": [
+        {
+          "row": 2,
+          "col": 2,
+          "type": "/"
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "type": "\\"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "type": "/"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "type": "\\"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "type": "/"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "type": "\\"
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "type": "/"
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "type": "\\"
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "type": "/"
+        }
+      ],
+      "blocks": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "targets": {
+        "A": [
+          4,
+          7
+        ],
+        "B": [
+          1,
+          3
+        ],
+        "C": [
+          7,
+          6
+        ]
+      },
+      "seed_index": 6
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mirror-laser-00006-3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Choose a single mirror placement that makes the laser hit a target.",
+      "image": "images/laser_00006.png",
+      "state": "states/laser_00006.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "You may add exactly one mirror to an empty cell. Which option makes the laser hit a target instead of its original terminal result?\nOptions:\n[1] place \\ at (1, 7)\n[2] place \\ at (1, 6)\n[3] place / at (7, 2)\n[4] place / at (1, 5)\n[5] place / at (1, 1)\n[6] place \\ at (1, 4)",
+      "answer": 3,
+      "analysis": "Testing option 3, adding / at (7, 2) changes the path as follows:\nCell (7, 1): empty.\nCell (7, 2): mirror / turns right to up.\nCell (6, 2): empty.\nCell (5, 2): empty.\nCell (4, 2): empty.\nCell (3, 2): mirror / turns up to right.\nCell (3, 3): empty.\nCell (3, 4): empty.\nCell (3, 5): empty.\nCell (3, 6): mirror \\ turns right to down.\nCell (4, 6): empty.\nCell (5, 6): empty.\nCell (6, 6): empty.\nCell (7, 6): hit target C.\nThe beam reaches target C, so choose option 3.",
+      "options": [
+        "place \\ at (1, 7)",
+        "place \\ at (1, 6)",
+        "place / at (7, 2)",
+        "place / at (1, 5)",
+        "place / at (1, 1)",
+        "place \\ at (1, 4)"
+      ]
+    }
+  }
+}

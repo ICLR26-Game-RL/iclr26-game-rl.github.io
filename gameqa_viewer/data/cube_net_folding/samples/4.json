@@ -1,0 +1,127 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "cube-net-folding-00005",
+    "question_id": 5,
+    "question_description": "Find a minimum roll plan for a target orientation",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "F",
+    "answer_preview": "F",
+    "question_preview": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that directi...",
+    "image": "images/cube_net_001.png",
+    "state": "states/cube_net_001.json",
+    "image_url": "data/cube_net_folding/files/images/cube_net_001.png",
+    "state_url": "data/cube_net_folding/files/states/cube_net_001.json",
+    "has_options": true,
+    "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhat is the minimum number of rolls needed to put Diamond on top and Sun in front at the same time?\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+    "analysis": "A breadth-first search over the 24 cube orientations finds an optimal sequence ['south'] of length 1. No orientation at a smaller depth meets both face constraints. The answer is F.",
+    "options": [
+      "A. 0",
+      "B. 2",
+      "C. 3",
+      "D. 4",
+      "E. 5",
+      "F. 1"
+    ],
+    "state_content": {
+      "game": "cube-net-folding",
+      "level": "Easy",
+      "net_positions": {
+        "U": [
+          1,
+          0
+        ],
+        "L": [
+          0,
+          1
+        ],
+        "F": [
+          1,
+          1
+        ],
+        "R": [
+          2,
+          1
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "D": [
+          1,
+          2
+        ]
+      },
+      "face_colors": {
+        "U": "#F7C948",
+        "D": "#EF5B78",
+        "F": "#7B61FF",
+        "B": "#4D9DE0",
+        "L": "#1FB6A6",
+        "R": "#F28E2B"
+      },
+      "face_emblems": {
+        "U": "Sun",
+        "D": "Circle",
+        "F": "Cross",
+        "B": "Diamond",
+        "L": "Triangle",
+        "R": "Bars"
+      },
+      "initial_orientation": {
+        "top": "U",
+        "bottom": "D",
+        "front": "F",
+        "back": "B",
+        "left": "L",
+        "right": "R"
+      },
+      "roll_sequence": [
+        "south",
+        "south"
+      ],
+      "final_orientation": {
+        "top": "D",
+        "bottom": "U",
+        "front": "B",
+        "back": "F",
+        "left": "L",
+        "right": "R"
+      },
+      "query_face": "U",
+      "opposite_face": "D",
+      "target_orientation": {
+        "top": "B",
+        "front": "U"
+      },
+      "minimum_rolls": 1,
+      "one_optimal_roll_sequence": [
+        "south"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube-net-folding-00005",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Find a minimum roll plan for a target orientation",
+      "image": "images/cube_net_001.png",
+      "state": "states/cube_net_001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "The image shows a six-face cube net. The cube starts with U on top, F in front, and R on the right. A roll north/east/south/west moves the cube in that direction without twisting.\nWhat is the minimum number of rolls needed to put Diamond on top and Sun in front at the same time?\nA. 0\nB. 2\nC. 3\nD. 4\nE. 5\nF. 1",
+      "answer": "F",
+      "analysis": "A breadth-first search over the 24 cube orientations finds an optimal sequence ['south'] of length 1. No orientation at a smaller depth meets both face constraints. The answer is F.",
+      "options": [
+        "A. 0",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5",
+        "F. 1"
+      ]
+    }
+  }
+}

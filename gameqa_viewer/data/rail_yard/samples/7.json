@@ -1,0 +1,100 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "rail-yard-00008-2",
+    "question_id": 2,
+    "question_description": "Predict the depot reached under current switch settings.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Starting from S, which depot will the train reach with the current switch settings? Options: [1] red depot [2] blue depot [3] gold depot",
+    "image": "images/yard_00008.png",
+    "state": "states/yard_00008.json",
+    "image_url": "data/rail_yard/files/images/yard_00008.png",
+    "state_url": "data/rail_yard/files/states/yard_00008.json",
+    "has_options": true,
+    "question": "Starting from S, which depot will the train reach with the current switch settings?\nOptions:\n[1] red depot\n[2] blue depot\n[3] gold depot",
+    "analysis": "At S, follow branch A to J1.\nAt J1, follow branch A to U1.\nAt U1, follow branch A to J2.\nAt J2, follow branch B to J4.\nAt J4, follow branch A to G.\nThe route is S -> J1 -> U1 -> J2 -> J4 -> G, ending at gold depot. Therefore choose option 3.",
+    "options": [
+      "red depot",
+      "blue depot",
+      "gold depot"
+    ],
+    "state_content": {
+      "game": "rail_yard",
+      "rules": "The train starts at S. At each switch J1-J4 it follows branch A or B according to the visible switch lever. Fixed track pieces have only branch A. The train stops at the first depot reached.",
+      "switches": {
+        "J1": "A",
+        "J2": "B",
+        "J3": "A",
+        "J4": "A"
+      },
+      "cargo": "red",
+      "target_depot": "red depot",
+      "nodes": {
+        "S": [
+          54,
+          240
+        ],
+        "J1": [
+          150,
+          240
+        ],
+        "U1": [
+          230,
+          145
+        ],
+        "J2": [
+          325,
+          145
+        ],
+        "R": [
+          470,
+          80
+        ],
+        "L1": [
+          230,
+          335
+        ],
+        "J3": [
+          325,
+          335
+        ],
+        "B": [
+          470,
+          400
+        ],
+        "J4": [
+          430,
+          240
+        ],
+        "G": [
+          510,
+          240
+        ]
+      },
+      "seed_index": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rail-yard-00008-2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the depot reached under current switch settings.",
+      "image": "images/yard_00008.png",
+      "state": "states/yard_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Starting from S, which depot will the train reach with the current switch settings?\nOptions:\n[1] red depot\n[2] blue depot\n[3] gold depot",
+      "answer": 3,
+      "analysis": "At S, follow branch A to J1.\nAt J1, follow branch A to U1.\nAt U1, follow branch A to J2.\nAt J2, follow branch B to J4.\nAt J4, follow branch A to G.\nThe route is S -> J1 -> U1 -> J2 -> J4 -> G, ending at gold depot. Therefore choose option 3.",
+      "options": [
+        "red depot",
+        "blue depot",
+        "gold depot"
+      ]
+    }
+  }
+}

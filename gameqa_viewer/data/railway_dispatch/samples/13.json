@@ -1,0 +1,309 @@
+{
+  "sample": {
+    "index": 13,
+    "data_id": "railway-dispatch-00014",
+    "question_id": 4,
+    "question_description": "Predict synchronous train conflict",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips...",
+    "image": "images/rail_003.png",
+    "state": "states/rail_003.json",
+    "image_url": "data/railway_dispatch/files/images/rail_003.png",
+    "state_url": "data/railway_dispatch/files/states/rail_003.json",
+    "has_options": true,
+    "question": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips that switch; advance moves one station; hold does not move.\nRun this synchronous schedule using the shown switch settings: step 1: T1 advance, T2 hold; step 2: T1 advance, T2 hold; step 3: T1 advance, T2 hold. What is the outcome?\nA. Collision at step 3 at station E\nB. Collision at step 1\nC. Collision at step 2\nD. Collision at step 3\nE. No collision; T1=E, T2=E\nF. No collision; both trains remain at their starts",
+    "analysis": "Update both trains simultaneously at each step. The trace is [{'step': 1, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'B', 'T2': 'E', 'collision': False}, {'step': 2, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'D', 'T2': 'E', 'collision': False}, {'step': 3, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'E', 'T2': 'E', 'collision': True}]. Therefore the outcome is Collision at step 3 at station E, so the answer is A.",
+    "options": [
+      "A. Collision at step 3 at station E",
+      "B. Collision at step 1",
+      "C. Collision at step 2",
+      "D. Collision at step 3",
+      "E. No collision; T1=E, T2=E",
+      "F. No collision; both trains remain at their starts"
+    ],
+    "state_content": {
+      "game": "railway-dispatch",
+      "level": "Hard",
+      "stations": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "outgoing_tracks": {
+        "A": [
+          "B"
+        ],
+        "B": [
+          "C",
+          "D"
+        ],
+        "C": [
+          "E"
+        ],
+        "D": [
+          "E"
+        ],
+        "E": [
+          "F",
+          "G"
+        ],
+        "F": [
+          "H"
+        ],
+        "G": [
+          "H"
+        ],
+        "H": [
+          "I",
+          "J"
+        ]
+      },
+      "switches": {
+        "S1": {
+          "station": "B",
+          "options": [
+            "C",
+            "D"
+          ]
+        },
+        "S2": {
+          "station": "E",
+          "options": [
+            "F",
+            "G"
+          ]
+        },
+        "S3": {
+          "station": "H",
+          "options": [
+            "I",
+            "J"
+          ]
+        }
+      },
+      "switch_settings": {
+        "S1": 1,
+        "S2": 1,
+        "S3": 0
+      },
+      "train_positions": {
+        "T1": "A",
+        "T2": "E"
+      },
+      "query_switch": "S2",
+      "command_sequence": [
+        "advance",
+        "toggle S1",
+        "advance",
+        "advance",
+        "toggle S2",
+        "advance",
+        "advance",
+        "toggle S3",
+        "advance"
+      ],
+      "command_trace": [
+        {
+          "step": 1,
+          "command": "advance",
+          "from": "A",
+          "to": "B",
+          "switches": {
+            "S1": 1,
+            "S2": 1,
+            "S3": 0
+          }
+        },
+        {
+          "step": 2,
+          "command": "toggle S1",
+          "from": "B",
+          "to": "B",
+          "switches": {
+            "S1": 0,
+            "S2": 1,
+            "S3": 0
+          }
+        },
+        {
+          "step": 3,
+          "command": "advance",
+          "from": "B",
+          "to": "C",
+          "switches": {
+            "S1": 0,
+            "S2": 1,
+            "S3": 0
+          }
+        },
+        {
+          "step": 4,
+          "command": "advance",
+          "from": "C",
+          "to": "E",
+          "switches": {
+            "S1": 0,
+            "S2": 1,
+            "S3": 0
+          }
+        },
+        {
+          "step": 5,
+          "command": "toggle S2",
+          "from": "E",
+          "to": "E",
+          "switches": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        {
+          "step": 6,
+          "command": "advance",
+          "from": "E",
+          "to": "F",
+          "switches": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        {
+          "step": 7,
+          "command": "advance",
+          "from": "F",
+          "to": "H",
+          "switches": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        {
+          "step": 8,
+          "command": "toggle S3",
+          "from": "H",
+          "to": "H",
+          "switches": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 1
+          }
+        },
+        {
+          "step": 9,
+          "command": "advance",
+          "from": "H",
+          "to": "J",
+          "switches": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 1
+          }
+        }
+      ],
+      "command_final_station": "J",
+      "command_final_switches": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 1
+      },
+      "simultaneous_schedule": [
+        {
+          "T1": "advance",
+          "T2": "hold"
+        },
+        {
+          "T1": "advance",
+          "T2": "hold"
+        },
+        {
+          "T1": "advance",
+          "T2": "hold"
+        }
+      ],
+      "simultaneous_trace": [
+        {
+          "step": 1,
+          "actions": {
+            "T1": "advance",
+            "T2": "hold"
+          },
+          "T1": "B",
+          "T2": "E",
+          "collision": false
+        },
+        {
+          "step": 2,
+          "actions": {
+            "T1": "advance",
+            "T2": "hold"
+          },
+          "T1": "D",
+          "T2": "E",
+          "collision": false
+        },
+        {
+          "step": 3,
+          "actions": {
+            "T1": "advance",
+            "T2": "hold"
+          },
+          "T1": "E",
+          "T2": "E",
+          "collision": true
+        }
+      ],
+      "collision_event": "Collision at step 3 at station E",
+      "simultaneous_final_positions": {
+        "T1": "E",
+        "T2": "E"
+      },
+      "optimization_goal": "J",
+      "minimum_commands": 7,
+      "one_optimal_command_sequence": [
+        "advance",
+        "advance",
+        "advance",
+        "advance",
+        "advance",
+        "toggle S3",
+        "advance"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "railway-dispatch-00014",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Predict synchronous train conflict",
+      "image": "images/rail_003.png",
+      "state": "states/rail_003.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "The railway is directed from left to right. At a purple switch station, an advancing train follows the currently selected orange branch. A toggle command flips that switch; advance moves one station; hold does not move.\nRun this synchronous schedule using the shown switch settings: step 1: T1 advance, T2 hold; step 2: T1 advance, T2 hold; step 3: T1 advance, T2 hold. What is the outcome?\nA. Collision at step 3 at station E\nB. Collision at step 1\nC. Collision at step 2\nD. Collision at step 3\nE. No collision; T1=E, T2=E\nF. No collision; both trains remain at their starts",
+      "answer": "A",
+      "analysis": "Update both trains simultaneously at each step. The trace is [{'step': 1, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'B', 'T2': 'E', 'collision': False}, {'step': 2, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'D', 'T2': 'E', 'collision': False}, {'step': 3, 'actions': {'T1': 'advance', 'T2': 'hold'}, 'T1': 'E', 'T2': 'E', 'collision': True}]. Therefore the outcome is Collision at step 3 at station E, so the answer is A.",
+      "options": [
+        "A. Collision at step 3 at station E",
+        "B. Collision at step 1",
+        "C. Collision at step 2",
+        "D. Collision at step 3",
+        "E. No collision; T1=E, T2=E",
+        "F. No collision; both trains remain at their starts"
+      ]
+    }
+  }
+}
