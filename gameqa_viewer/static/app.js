@@ -50,6 +50,8 @@ const els = {
 const QA_LEVEL_ORDER = { easy: 0, medium: 1, hard: 2 };
 const HIGHLIGHT_LIMIT = 300000; // skip syntax highlighting for very large JSON
 const DATA_BASE = "data/";
+const IMAGE_PRELOAD_RADIUS = 3;
+const imagePreloadCache = new Map();
 
 async function getJson(url) {
   const response = await fetch(url);
@@ -58,6 +60,60 @@ async function getJson(url) {
     throw new Error(payload.error || `Request failed: ${url}`);
   }
   return payload;
+}
+
+function preloadImage(url) {
+  if (!url) return Promise.resolve(null);
+  const cached = imagePreloadCache.get(url);
+  if (cached) return cached.promise;
+
+  const image = new Image();
+  image.decoding = "async";
+  const entry = {
+    image,
+    loaded: false,
+    error: false,
+    promise: null,
+  };
+  entry.promise = new Promise((resolve) => {
+    image.onload = () => {
+      entry.loaded = true;
+      resolve(image);
+    };
+    image.onerror = () => {
+      entry.error = true;
+      resolve(null);
+    };
+  });
+  imagePreloadCache.set(url, entry);
+  image.src = url;
+  return entry.promise;
+}
+
+function runWhenIdle(callback) {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(callback, { timeout: 1200 });
+  } else {
+    setTimeout(callback, 80);
+  }
+}
+
+function preloadNearbyImages() {
+  if (!state.filtered.length) return;
+  const position = state.filtered.findIndex((sample) => sample.index === state.selectedIndex);
+  if (position < 0) return;
+
+  const nearby = [];
+  for (let offset = -IMAGE_PRELOAD_RADIUS; offset <= IMAGE_PRELOAD_RADIUS; offset += 1) {
+    if (offset === 0) continue;
+    const sample = state.filtered[position + offset];
+    if (sample?.image_url) nearby.push(sample.image_url);
+  }
+  runWhenIdle(() => {
+    for (const url of nearby) {
+      preloadImage(url);
+    }
+  });
 }
 
 function escapeHtml(value) {
@@ -293,6 +349,8 @@ function renderSampleList() {
         </div>
       `;
       button.addEventListener("click", () => selectSample(sample.index));
+      button.addEventListener("mouseenter", () => preloadImage(sample.image_url));
+      button.addEventListener("focus", () => preloadImage(sample.image_url));
       return button;
     }),
   );
@@ -325,6 +383,7 @@ async function selectSample(index) {
   }
   renderDetail(payload.sample);
   renderSampleList();
+  preloadNearbyImages();
 
   const url = new URL(location.href);
   url.searchParams.set("game", state.game.id);
@@ -338,6 +397,7 @@ function renderDetail(sample) {
   els.sampleTitle.textContent = sample.question_description || `Question ${sample.question_id ?? sample.index}`;
 
   if (sample.image_url) {
+    preloadImage(sample.image_url);
     els.sampleImage.src = sample.image_url;
     els.sampleImage.alt = `${state.game.name} ${sample.image || "sample image"}`;
     els.sampleImage.hidden = false;
