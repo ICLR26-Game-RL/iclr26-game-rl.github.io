@@ -1,0 +1,1463 @@
+{
+  "games": [
+    {
+      "id": "2d_turing_machine",
+      "name": "2D Turing Machine",
+      "dataset": "2d_turing_machine_dataset_example",
+      "data_path": "src/2d_turing_machine/2d_turing_machine_dataset_example/data.json",
+      "count": 8,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction"
+      ],
+      "qa_levels": [
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "3d_maze",
+      "name": "3D Maze",
+      "dataset": "3d_maze_dataset_example",
+      "data_path": "src/3d_maze/3d_maze_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "3DReconstruction",
+      "name": "3D Reconstruction",
+      "dataset": "reconstruction_dataset_example",
+      "data_path": "src/3DReconstruction/reconstruction_dataset_example/data.json",
+      "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "balance_scale",
+      "name": "Balance Scale",
+      "dataset": "balance_scale_dataset_example",
+      "data_path": "src/balance_scale/balance_scale_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "chess_ranger",
+      "name": "Chess Ranger",
+      "dataset": "chess_ranger_dataset_example",
+      "data_path": "src/chess_ranger/chess_ranger_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "city_skyline",
+      "name": "City Skyline",
+      "dataset": "city_skyline_dataset_example",
+      "data_path": "src/city_skyline/city_skyline_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "dice_path",
+      "name": "Dice Path",
+      "dataset": "dice_path_dataset_example",
+      "data_path": "src/dice_path/dice_path_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "freecell",
+      "name": "Freecell",
+      "dataset": "freecell_dataset_example",
+      "data_path": "src/freecell/freecell_dataset_example/data.json",
+      "count": 9,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "gear_train",
+      "name": "Gear Train",
+      "dataset": "gear_train_dataset_example",
+      "data_path": "src/gear_train/gear_train_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "hue",
+      "name": "Hue",
+      "dataset": "hue_dataset_example",
+      "data_path": "src/hue/hue_dataset_example/data.json",
+      "count": 10,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "jewel2",
+      "name": "Jewel2",
+      "dataset": "jewel2_dataset_example",
+      "data_path": "src/jewel2/jewel2_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "klondike",
+      "name": "Klondike",
+      "dataset": "klondike_dataset_example",
+      "data_path": "src/klondike/klondike_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "langton_ant",
+      "name": "Langton Ant",
+      "dataset": "langton_ant_dataset_example",
+      "data_path": "src/langton_ant/langton_ant_dataset_example/data.json",
+      "count": 9,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "lifegame",
+      "name": "Lifegame",
+      "dataset": "lifegame_dataset_example",
+      "data_path": "src/lifegame/lifegame_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "logic_circuit",
+      "name": "Logic Circuit",
+      "dataset": "logic_circuit_dataset_example",
+      "data_path": "src/logic_circuit/logic_circuit_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "maze",
+      "name": "Maze",
+      "dataset": "maze_dataset_example",
+      "data_path": "src/maze/maze_dataset_example/data.json",
+      "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "dataset": "minecraft_dataset_example",
+      "data_path": "src/minecraft/minecraft_dataset_example/data.json",
+      "count": 30,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper",
+      "dataset": "minesweeper_dataset_example",
+      "data_path": "src/minesweeper/minesweeper_dataset_example/data.json",
+      "count": 180,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "pacman",
+      "name": "Pacman",
+      "dataset": "pacman_dataset_example",
+      "data_path": "src/pacman/pacman_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "pipeworks",
+      "name": "Pipeworks",
+      "dataset": "pipeworks_dataset_example",
+      "data_path": "src/pipeworks/pipeworks_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "PyramidChess",
+      "name": "Pyramid Chess",
+      "dataset": "pyramidchess_dataset_example",
+      "data_path": "src/PyramidChess/pyramidchess_dataset_example/data.json",
+      "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "rhythm_game",
+      "name": "Rhythm Game",
+      "dataset": "rhythm_game_dataset_example",
+      "data_path": "src/rhythm_game/rhythm_game_dataset_example/data.json",
+      "count": 21,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "rubiks_cube",
+      "name": "Rubiks Cube",
+      "dataset": "rubiks_cube_dataset_example",
+      "data_path": "src/rubiks_cube/rubiks_cube_dataset_example/data.json",
+      "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "slide_2048",
+      "name": "Slide 2048",
+      "dataset": "slide_2048_dataset_example",
+      "data_path": "src/slide_2048/slide_2048_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "snake",
+      "name": "Snake",
+      "dataset": "snake_dataset_example",
+      "data_path": "src/snake/snake_dataset_example/data.json",
+      "count": 10,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "sokoban",
+      "name": "Sokoban",
+      "dataset": "sokoban_dataset_example",
+      "data_path": "src/sokoban/sokoban_dataset_example/data.json",
+      "count": 14,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "space_invaders",
+      "name": "Space Invaders",
+      "dataset": "space_invaders_dataset_example",
+      "data_path": "src/space_invaders/space_invaders_dataset_example/data.json",
+      "count": 100,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "spider_solitaire",
+      "name": "Spider Solitaire",
+      "dataset": "spider_solitaire_dataset_example",
+      "data_path": "src/spider_solitaire/spider_solitaire_dataset_example/data.json",
+      "count": 30,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "star-battle",
+      "name": "Star Battle",
+      "dataset": "star-battle_dataset_example",
+      "data_path": "src/star-battle/star-battle_dataset_example/data.json",
+      "count": 12,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "sudoku",
+      "name": "Sudoku",
+      "dataset": "sudoku_dataset_example",
+      "data_path": "src/sudoku/sudoku_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tangram",
+      "name": "Tangram",
+      "dataset": "tengram_dataset_example",
+      "data_path": "src/tangram/tengram_dataset_example/data.json",
+      "count": 15,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tents",
+      "name": "Tents",
+      "dataset": "tents_dataset_example",
+      "data_path": "src/tents/tents_dataset_example/data.json",
+      "count": 21,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "dataset": "tetris_dataset_example",
+      "data_path": "src/tetris/tetris_dataset_example/data.json",
+      "count": 32,
+      "keys": [
+        "Options",
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tictactoe",
+      "name": "TicTacToe",
+      "dataset": "tictactoe_dataset_example",
+      "data_path": "src/tictactoe/tictactoe_dataset_example/data.json",
+      "count": 30,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tower_of_hanoi",
+      "name": "Tower Of Hanoi",
+      "dataset": "tower_of_hanoi_dataset_example",
+      "data_path": "src/tower_of_hanoi/tower_of_hanoi_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "ultra_tictactoe",
+      "name": "Ultra TicTacToe",
+      "dataset": "ultra_tictactoe_dataset_example",
+      "data_path": "src/ultra_tictactoe/ultra_tictactoe_dataset_example/data.json",
+      "count": 21,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "word_search",
+      "name": "Word Search",
+      "dataset": "word_search_dataset_example",
+      "data_path": "src/word_search/word_search_dataset_example/data.json",
+      "count": 8,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "zuma",
+      "name": "Zuma",
+      "dataset": "zuma_dataset_example",
+      "data_path": "src/zuma/zuma_dataset_example/data.json",
+      "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    }
+  ]
+}

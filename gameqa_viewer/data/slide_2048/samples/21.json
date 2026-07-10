@@ -1,0 +1,67 @@
+{
+  "sample": {
+    "index": 21,
+    "data_id": "slide_2048-00022-q3",
+    "question_id": 3,
+    "question_description": "Compute the total score gained by a given two-move sequence.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "32",
+    "answer_preview": "32",
+    "question_preview": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is writ...",
+    "image": "images/board_00022.png",
+    "state": "states/board_00022.json",
+    "image_url": "data/slide_2048/files/images/board_00022.png",
+    "state_url": "data/slide_2048/files/states/board_00022.json",
+    "has_options": false,
+    "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nThe player presses DOWN and then RIGHT. Merging two tiles scores points equal to the merged tile's value; the total score starts at 0. What is the total score gained by these two moves? Answer with a single number.",
+    "analysis": "Initial board: row 0: [32, 2, 8, -]; row 1: [64, 4, 64, -]; row 2: [-, 16, -, -]; row 3: [8, 16, 2, 16].\nMove 1 - DOWN: sliding every line toward the down wall gives row 0: [-, -, -, -]; row 1: [32, 2, 8, -]; row 2: [64, 4, 64, -]; row 3: [8, 32, 2, 16]. Merges this move score 32 point(s).\nMove 2 - RIGHT: sliding every line toward the right wall gives row 0: [-, -, -, -]; row 1: [-, 32, 2, 8]; row 2: [-, 64, 4, 64]; row 3: [8, 32, 2, 16]. Merges this move score 0 point(s).\nTotal score gained: 32 + 0 = 32.\nSo the answer is 32.",
+    "options": null,
+    "state_content": {
+      "grid_size": 4,
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "grid": [
+        [
+          32,
+          2,
+          8,
+          0
+        ],
+        [
+          64,
+          4,
+          64,
+          0
+        ],
+        [
+          0,
+          16,
+          0,
+          0
+        ],
+        [
+          8,
+          16,
+          2,
+          16
+        ]
+      ],
+      "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "slide_2048-00022-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Compute the total score gained by a given two-move sequence.",
+      "image": "images/board_00022.png",
+      "state": "states/board_00022.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nThe player presses DOWN and then RIGHT. Merging two tiles scores points equal to the merged tile's value; the total score starts at 0. What is the total score gained by these two moves? Answer with a single number.",
+      "answer": "32",
+      "analysis": "Initial board: row 0: [32, 2, 8, -]; row 1: [64, 4, 64, -]; row 2: [-, 16, -, -]; row 3: [8, 16, 2, 16].\nMove 1 - DOWN: sliding every line toward the down wall gives row 0: [-, -, -, -]; row 1: [32, 2, 8, -]; row 2: [64, 4, 64, -]; row 3: [8, 32, 2, 16]. Merges this move score 32 point(s).\nMove 2 - RIGHT: sliding every line toward the right wall gives row 0: [-, -, -, -]; row 1: [-, 32, 2, 8]; row 2: [-, 64, 4, 64]; row 3: [8, 32, 2, 16]. Merges this move score 0 point(s).\nTotal score gained: 32 + 0 = 32.\nSo the answer is 32."
+    }
+  }
+}

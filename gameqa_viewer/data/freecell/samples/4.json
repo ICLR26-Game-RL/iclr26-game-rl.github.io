@@ -1,0 +1,127 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "free_cell-valid_move-Medium-00001",
+    "question_id": 2,
+    "question_description": "Given the current game state, identify which of the following moves is valid according to FreeCell rules.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "In this FreeCell game: we have 6 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5]We have 4 freecell on the left top, and their indexes are 0,1,2,...",
+    "image": "images/state_analysis_Medium_00001.png",
+    "state": "states/state_analysis_Medium_00001.json",
+    "image_url": "data/freecell/files/images/state_analysis_Medium_00001.png",
+    "state_url": "data/freecell/files/states/state_analysis_Medium_00001.json",
+    "has_options": true,
+    "question": "In this FreeCell game:\nwe have 6 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards must be moved according to specific rules:\n1. Cards in cascade piles must be stacked in descending order with alternating colors\n2. Only one card can be moved at a time (unless using free cells)\n3. Foundation piles must be built up by suit from Ace to King\n4. Free cells can hold only one card each\n\nWhich of the following moves is valid in the current game state?the options are as follows:\n1.Move (Spade,7) from FreeCell 3 to Foundation Diamond\n2.Move (Diamond,13) from Cascade 0 to FreeCell 1\n3.Move (Diamond,1) from Cascade 4 to FreeCell 0\n4.Move (Diamond,4) from FreeCell 2 to Cascade 5\n",
+    "analysis": "Let's analyze each option in detail:\n\nOption 1: Move (Spade,7) from FreeCell 3 to Foundation Diamond\n• Moving card: 7 of Spade (black)\n• From: FreeCell 3\n• To: Foundation Diamond\nThis is an INVALID move because:\nFree Cell 3 doesn't hold the card (Spade,7)\n- The foundation pile is empty but the card (7 of Spade) is not an Ace\n- Foundation piles must start with Ace\n\nOption 2: Move (Diamond,13) from Cascade 0 to FreeCell 1\n• Moving card: 13 of Diamond (red)\n• From: Cascade 0\n• To: FreeCell 1\nThis is an INVALID move because:\ncard (Diamond,13) is not the top card of Cascade  pile 0\n\nOption 3: Move (Diamond,1) from Cascade 4 to FreeCell 0\n• Moving card: 1 of Diamond (red)\n• From: Cascade 4\n• To: FreeCell 0\nThis is the CORRECT move because:\n- Free Cell 0 is empty\n- Any single card can be moved to an empty free cell\n- The 1 of Diamond is a single card move\n\nOption 4: Move (Diamond,4) from FreeCell 2 to Cascade 5\n• Moving card: 4 of Diamond (red)\n• From: FreeCell 2\n• To: Cascade 5\nThis is an INVALID move because:\nFree Cell 2 doesn't hold the card (Diamond,4)\n- Top card of destination pile: 2 of Heart (red)\n- Attempting to move: 4 of Diamond (red)\n- This violates cascade rules:\n  * Colors must alternate (both are red)\n  * Values must descend (difference is not 1)\n\n",
+    "options": [
+      "Move (Spade,7) from FreeCell 3 to Foundation Diamond",
+      "Move (Diamond,13) from Cascade 0 to FreeCell 1",
+      "Move (Diamond,1) from Cascade 4 to FreeCell 0",
+      "Move (Diamond,4) from FreeCell 2 to Cascade 5"
+    ],
+    "state_content": {
+      "cascade_piles": [
+        [
+          "6 ♥",
+          "J ♦",
+          "10 ♦",
+          "J ♣",
+          "2 ♠",
+          "6 ♦",
+          "8 ♠",
+          "Q ♠",
+          "4 ♦"
+        ],
+        [
+          "4 ♥",
+          "8 ♣",
+          "7 ♣",
+          "6 ♠",
+          "J ♥",
+          "K ♦",
+          "5 ♣",
+          "5 ♥",
+          "9 ♠"
+        ],
+        [
+          "K ♣",
+          "8 ♦",
+          "5 ♦",
+          "6 ♣",
+          "A ♠",
+          "Q ♥",
+          "K ♠",
+          "A ♥",
+          "2 ♦"
+        ],
+        [
+          "4 ♠",
+          "2 ♣",
+          "4 ♣",
+          "3 ♦",
+          "5 ♠",
+          "K ♥",
+          "10 ♥",
+          "7 ♥",
+          "7 ♦"
+        ],
+        [
+          "Q ♣",
+          "7 ♠",
+          "10 ♠",
+          "Q ♦",
+          "A ♣",
+          "3 ♣",
+          "10 ♣",
+          "A ♦"
+        ],
+        [
+          "J ♠",
+          "9 ♦",
+          "9 ♣",
+          "9 ♥",
+          "3 ♥",
+          "8 ♥",
+          "3 ♠",
+          "2 ♥"
+        ]
+      ],
+      "free_cells": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "foundation_piles": {
+        "HEARTS": null,
+        "DIAMONDS": null,
+        "CLUBS": null,
+        "SPADES": null
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "free_cell-valid_move-Medium-00001",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Given the current game state, identify which of the following moves is valid according to FreeCell rules.",
+      "image": "images/state_analysis_Medium_00001.png",
+      "state": "states/state_analysis_Medium_00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "In this FreeCell game:\nwe have 6 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards must be moved according to specific rules:\n1. Cards in cascade piles must be stacked in descending order with alternating colors\n2. Only one card can be moved at a time (unless using free cells)\n3. Foundation piles must be built up by suit from Ace to King\n4. Free cells can hold only one card each\n\nWhich of the following moves is valid in the current game state?the options are as follows:\n1.Move (Spade,7) from FreeCell 3 to Foundation Diamond\n2.Move (Diamond,13) from Cascade 0 to FreeCell 1\n3.Move (Diamond,1) from Cascade 4 to FreeCell 0\n4.Move (Diamond,4) from FreeCell 2 to Cascade 5\n",
+      "answer": 3,
+      "analysis": "Let's analyze each option in detail:\n\nOption 1: Move (Spade,7) from FreeCell 3 to Foundation Diamond\n• Moving card: 7 of Spade (black)\n• From: FreeCell 3\n• To: Foundation Diamond\nThis is an INVALID move because:\nFree Cell 3 doesn't hold the card (Spade,7)\n- The foundation pile is empty but the card (7 of Spade) is not an Ace\n- Foundation piles must start with Ace\n\nOption 2: Move (Diamond,13) from Cascade 0 to FreeCell 1\n• Moving card: 13 of Diamond (red)\n• From: Cascade 0\n• To: FreeCell 1\nThis is an INVALID move because:\ncard (Diamond,13) is not the top card of Cascade  pile 0\n\nOption 3: Move (Diamond,1) from Cascade 4 to FreeCell 0\n• Moving card: 1 of Diamond (red)\n• From: Cascade 4\n• To: FreeCell 0\nThis is the CORRECT move because:\n- Free Cell 0 is empty\n- Any single card can be moved to an empty free cell\n- The 1 of Diamond is a single card move\n\nOption 4: Move (Diamond,4) from FreeCell 2 to Cascade 5\n• Moving card: 4 of Diamond (red)\n• From: FreeCell 2\n• To: Cascade 5\nThis is an INVALID move because:\nFree Cell 2 doesn't hold the card (Diamond,4)\n- Top card of destination pile: 2 of Heart (red)\n- Attempting to move: 4 of Diamond (red)\n- This violates cascade rules:\n  * Colors must alternate (both are red)\n  * Values must descend (difference is not 1)\n\n",
+      "options": [
+        "Move (Spade,7) from FreeCell 3 to Foundation Diamond",
+        "Move (Diamond,13) from Cascade 0 to FreeCell 1",
+        "Move (Diamond,1) from Cascade 4 to FreeCell 0",
+        "Move (Diamond,4) from FreeCell 2 to Cascade 5"
+      ]
+    }
+  }
+}

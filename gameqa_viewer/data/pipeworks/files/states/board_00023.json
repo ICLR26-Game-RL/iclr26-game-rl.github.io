@@ -1,0 +1,302 @@
+{
+  "grid_size": {
+    "rows": 6,
+    "cols": 6
+  },
+  "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+  "tiles": [
+    [
+      {
+        "type": "WN",
+        "openings": [
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "SWN",
+        "openings": [
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "SWN",
+        "openings": [
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EW",
+        "openings": [
+          "E",
+          "W"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "ESW",
+        "openings": [
+          "E",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NE",
+        "openings": [
+          "E",
+          "N"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "WN",
+        "openings": [
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "SWN",
+        "openings": [
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "WN",
+        "openings": [
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "NE",
+        "openings": [
+          "E",
+          "N"
+        ]
+      },
+      {
+        "type": "EW",
+        "openings": [
+          "E",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      }
+    ],
+    [
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "SWN",
+        "openings": [
+          "N",
+          "S",
+          "W"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      }
+    ]
+  ],
+  "pump": {
+    "side": "S",
+    "index": 3,
+    "feeds_tile": [
+      5,
+      3
+    ]
+  },
+  "outlets": {
+    "A": {
+      "side": "S",
+      "index": 2,
+      "touches_tile": [
+        5,
+        2
+      ]
+    },
+    "B": {
+      "side": "S",
+      "index": 0,
+      "touches_tile": [
+        5,
+        0
+      ]
+    },
+    "C": {
+      "side": "E",
+      "index": 3,
+      "touches_tile": [
+        3,
+        5
+      ]
+    }
+  }
+}

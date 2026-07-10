@@ -1,0 +1,41 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "minecraft-00009-cube_count",
+    "question_id": 2,
+    "question_description": "Ask how many cubes are there in total.",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 30,
+    "answer_preview": "30",
+    "question_preview": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. T...",
+    "image": "images/00009.png",
+    "state": "states/00009.json",
+    "image_url": "data/minecraft/files/images/00009.png",
+    "state_url": "data/minecraft/files/states/00009.json",
+    "has_options": false,
+    "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nHow many cubes are there in total in the scene?",
+    "analysis": "From the scene we can easily see that the cubes form a big cuboid. Looking at the top of it, we know that the length and the width are 3 and 5 respectively. Besides, we can see that the height is 2. Therefore, the total number of cubes is 3 x 5 x 2 = 30. The answer is 30.",
+    "options": null,
+    "state_content": {
+      "x_blocks": 3,
+      "y_blocks": 2,
+      "z_blocks": 5
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minecraft-00009-cube_count",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Ask how many cubes are there in total.",
+      "image": "images/00009.png",
+      "state": "states/00009.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nHow many cubes are there in total in the scene?",
+      "answer": 30,
+      "analysis": "From the scene we can easily see that the cubes form a big cuboid. Looking at the top of it, we know that the length and the width are 3 and 5 respectively. Besides, we can see that the height is 2. Therefore, the total number of cubes is 3 x 5 x 2 = 30. The answer is 30."
+    }
+  }
+}

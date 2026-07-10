@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 53,
+    "data_id": "space_invaders-mcq-00004",
+    "question_id": 4,
+    "question_description": "Ask the number of enemies with a specific color",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00001.png",
+    "state": "states/space_invaders_00001.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00001.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00001.json",
+    "has_options": true,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many blue enemies are there in total? Give the number of the correct option.\nOptions:\n1: 1\n2: 2\n3: 3\n4: 4\n5: 5\n6: 6\n7: 7\n8: 8",
+    "analysis": "- On row 4, there are 4 blue enemies.\n\nTherefore, there is 4 blue enemy in total. The option number is 4.",
+    "options": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "state_content": {
+      "enemy_rows": 3,
+      "enemy_cols": 5,
+      "enemy_area_rows": 5,
+      "total_cols": 9,
+      "ship_col": 3,
+      "enemies": [
+        {
+          "x": 3,
+          "y": 1,
+          "color": "purple"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "color": "green"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "color": "green"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "color": "green"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-mcq-00004",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "Ask the number of enemies with a specific color",
+      "image": "images/space_invaders_00001.png",
+      "state": "states/space_invaders_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many blue enemies are there in total? Give the number of the correct option.\nOptions:\n1: 1\n2: 2\n3: 3\n4: 4\n5: 5\n6: 6\n7: 7\n8: 8",
+      "answer": 4,
+      "analysis": "- On row 4, there are 4 blue enemies.\n\nTherefore, there is 4 blue enemy in total. The option number is 4.",
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  }
+}

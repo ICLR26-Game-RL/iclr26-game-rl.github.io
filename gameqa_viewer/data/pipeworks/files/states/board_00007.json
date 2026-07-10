@@ -1,0 +1,167 @@
+{
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+  "tiles": [
+    [
+      {
+        "type": "ESW",
+        "openings": [
+          "E",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "EW",
+        "openings": [
+          "E",
+          "W"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      }
+    ],
+    [
+      {
+        "type": "NE",
+        "openings": [
+          "E",
+          "N"
+        ]
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "WN",
+        "openings": [
+          "N",
+          "W"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "ESW",
+        "openings": [
+          "E",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      }
+    ]
+  ],
+  "pump": {
+    "side": "S",
+    "index": 1,
+    "feeds_tile": [
+      3,
+      1
+    ]
+  },
+  "outlets": {
+    "A": {
+      "side": "E",
+      "index": 3,
+      "touches_tile": [
+        3,
+        3
+      ]
+    },
+    "B": {
+      "side": "E",
+      "index": 1,
+      "touches_tile": [
+        1,
+        3
+      ]
+    },
+    "C": {
+      "side": "S",
+      "index": 2,
+      "touches_tile": [
+        3,
+        2
+      ]
+    }
+  }
+}

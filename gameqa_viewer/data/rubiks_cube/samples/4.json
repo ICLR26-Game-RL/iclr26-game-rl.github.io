@@ -1,0 +1,338 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "rubiks_cube-data-00001-00005",
+    "question_id": 5,
+    "question_description": "Count specific colors on a face",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degr...",
+    "image": "images/cube_00001.png",
+    "state": "states/cube_00001.json",
+    "image_url": "data/rubiks_cube/files/images/cube_00001.png",
+    "state_url": "data/rubiks_cube/files/states/cube_00001.json",
+    "has_options": true,
+    "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation. How many red squares are there on the Left face?\nOptions: [1] 5, [2] 6, [3] 7, [4] 2, [5] 1, [6] 0, [7] 4, [8] 3",
+    "analysis": "Analysis of Left face:\n\nCurrent state of each position:\nPosition (0,0): orange\nPosition (0,1): orange\nPosition (0,2): red\nPosition (1,0): orange\nPosition (1,1): orange\nPosition (1,2): red\nPosition (2,0): orange\nPosition (2,1): orange\nPosition (2,2): red\n\nInitial state analysis of Left face:\n- Position (0,2) is red\n- Position (1,2) is red\n- Position (2,2) is red\n\nTotal count: 3 red squares on the Left face,So the answer is 3. The option number is 8.",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "2",
+      "1",
+      "0",
+      "4",
+      "3"
+    ],
+    "state_content": {
+      "faces": {
+        "U": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "D": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "L": [
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        "R": [
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ]
+        ],
+        "F": [
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "B": [
+          [
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5
+          ]
+        ]
+      },
+      "colors": [
+        "yellow",
+        "white",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ],
+      "move_history": [
+        "F'",
+        "F'"
+      ],
+      "face_states": {
+        "U": {
+          "colors": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ]
+          ],
+          "dominant_color": "yellow",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 6,
+            "white": 3
+          }
+        },
+        "D": {
+          "colors": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ]
+          ],
+          "dominant_color": "white",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 3,
+            "white": 6
+          }
+        },
+        "L": {
+          "colors": [
+            [
+              "orange",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "red"
+            ]
+          ],
+          "dominant_color": "orange",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "orange": 6,
+            "red": 3
+          }
+        },
+        "R": {
+          "colors": [
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ]
+          ],
+          "dominant_color": "red",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "orange": 3,
+            "red": 6
+          }
+        },
+        "F": {
+          "colors": [
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ],
+          "dominant_color": "blue",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "blue": 9
+          }
+        },
+        "B": {
+          "colors": [
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ],
+          "dominant_color": "green",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "green": 9
+          }
+        }
+      },
+      "is_solved": false,
+      "symbols": {
+        "yellow": 0,
+        "white": 1,
+        "orange": 2,
+        "red": 3,
+        "blue": 4,
+        "green": 5
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rubiks_cube-data-00001-00005",
+      "image": "images/cube_00001.png",
+      "state": "states/cube_00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 5,
+      "question_description": "Count specific colors on a face",
+      "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation. How many red squares are there on the Left face?\nOptions: [1] 5, [2] 6, [3] 7, [4] 2, [5] 1, [6] 0, [7] 4, [8] 3",
+      "answer": 8,
+      "analysis": "Analysis of Left face:\n\nCurrent state of each position:\nPosition (0,0): orange\nPosition (0,1): orange\nPosition (0,2): red\nPosition (1,0): orange\nPosition (1,1): orange\nPosition (1,2): red\nPosition (2,0): orange\nPosition (2,1): orange\nPosition (2,2): red\n\nInitial state analysis of Left face:\n- Position (0,2) is red\n- Position (1,2) is red\n- Position (2,2) is red\n\nTotal count: 3 red squares on the Left face,So the answer is 3. The option number is 8.",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "2",
+        "1",
+        "0",
+        "4",
+        "3"
+      ]
+    }
+  }
+}

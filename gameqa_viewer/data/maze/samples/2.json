@@ -1,0 +1,164 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "maze_00000_06",
+    "question_id": 6,
+    "question_description": "The position after moving.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "B",
+    "answer_preview": "B",
+    "question_preview": "**Rules:** 1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory. 2. The red circle represents...",
+    "image": "images/image_00000.png",
+    "state": "states/state_00000.json",
+    "image_url": "data/maze/files/images/image_00000.png",
+    "state_url": "data/maze/files/states/state_00000.json",
+    "has_options": true,
+    "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** What are the coordinates of player after moving down?\n\n**Options:**\nA. (4, 6)\nB. (5, 5)\nC. (3, 5)\nD. (4, 4)\nE. (4, 5)",
+    "analysis": "Observe the screen, the position of player is (4,5). After moving down, the player is in (5, 5). Therefore, the right option is B",
+    "options": [
+      "A. (4, 6)",
+      "B. (5, 5)",
+      "C. (3, 5)",
+      "D. (4, 4)",
+      "E. (4, 5)"
+    ],
+    "state_content": {
+      "maze": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "size": [
+        9,
+        9
+      ],
+      "playerPosition": [
+        4,
+        5
+      ],
+      "endPosition": [
+        7,
+        7
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "maze_00000_06",
+      "qa_type": "State Prediction",
+      "question_id": 6,
+      "question_description": "The position after moving.",
+      "image": "images/image_00000.png",
+      "state": "states/state_00000.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** What are the coordinates of player after moving down?\n\n**Options:**\nA. (4, 6)\nB. (5, 5)\nC. (3, 5)\nD. (4, 4)\nE. (4, 5)",
+      "answer": "B",
+      "options": [
+        "A. (4, 6)",
+        "B. (5, 5)",
+        "C. (3, 5)",
+        "D. (4, 4)",
+        "E. (4, 5)"
+      ],
+      "analysis": "Observe the screen, the position of player is (4,5). After moving down, the player is in (5, 5). Therefore, the right option is B"
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "langton-mcq-00005",
+    "question_id": 2,
+    "question_description": "Predict the ant's position and direction after several steps",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant f...",
+    "image": "images/board_002.png",
+    "state": "states/board_002.json",
+    "image_url": "data/langton_ant/files/images/board_002.png",
+    "state_url": "data/langton_ant/files/states/board_002.json",
+    "has_options": true,
+    "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nAfter 6 steps, what will be the ant's position and direction?\n\nAnswer using one of the following options with its corresponding letter:\nA: Position (8, 8), facing down\nB: Position (8, 5), facing down\nC: Position (7, 4), facing up\nD: Position (8, 3), facing right\nE: Position (8, 3), facing left\nF: Position (2, 4), facing right\nG: Position (7, 7), facing left\nH: Position (5, 2), facing right",
+    "analysis": "Initial state: The ant is at (0, 4) facing right\nLet's follow the ant's movement step by step:\nStep 1: Ant is on a black cell at (0, 4), facing right. It turns left, changes the cell to white, moves forward to (8, 4), now facing up\nStep 2: Ant is on a white cell at (8, 4), facing up. It turns right, changes the cell to black, moves forward to (8, 5), now facing right\nStep 3: Ant is on a white cell at (8, 5), facing right. It turns right, changes the cell to black, moves forward to (0, 5), now facing down\nStep 4: Ant is on a white cell at (0, 5), facing down. It turns right, changes the cell to black, moves forward to (0, 4), now facing left\nStep 5: Ant is on a white cell at (0, 4), facing left. It turns right, changes the cell to black, moves forward to (8, 4), now facing up\nStep 6: Ant is on a black cell at (8, 4), facing up. It turns left, changes the cell to white, moves forward to (8, 3), now facing left\n\nFinal state: The ant is at (8, 3) facing left",
+    "options": [
+      "Position (8, 8), facing down",
+      "Position (8, 5), facing down",
+      "Position (7, 4), facing up",
+      "Position (8, 3), facing right",
+      "Position (8, 3), facing left",
+      "Position (2, 4), facing right",
+      "Position (7, 7), facing left",
+      "Position (5, 2), facing right"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ant": {
+        "x": 0,
+        "y": 4,
+        "direction": "right"
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "langton-mcq-00005",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the ant's position and direction after several steps",
+      "image": "images/board_002.png",
+      "state": "states/board_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nAfter 6 steps, what will be the ant's position and direction?\n\nAnswer using one of the following options with its corresponding letter:\nA: Position (8, 8), facing down\nB: Position (8, 5), facing down\nC: Position (7, 4), facing up\nD: Position (8, 3), facing right\nE: Position (8, 3), facing left\nF: Position (2, 4), facing right\nG: Position (7, 7), facing left\nH: Position (5, 2), facing right",
+      "answer": "E",
+      "analysis": "Initial state: The ant is at (0, 4) facing right\nLet's follow the ant's movement step by step:\nStep 1: Ant is on a black cell at (0, 4), facing right. It turns left, changes the cell to white, moves forward to (8, 4), now facing up\nStep 2: Ant is on a white cell at (8, 4), facing up. It turns right, changes the cell to black, moves forward to (8, 5), now facing right\nStep 3: Ant is on a white cell at (8, 5), facing right. It turns right, changes the cell to black, moves forward to (0, 5), now facing down\nStep 4: Ant is on a white cell at (0, 5), facing down. It turns right, changes the cell to black, moves forward to (0, 4), now facing left\nStep 5: Ant is on a white cell at (0, 4), facing left. It turns right, changes the cell to black, moves forward to (8, 4), now facing up\nStep 6: Ant is on a black cell at (8, 4), facing up. It turns left, changes the cell to white, moves forward to (8, 3), now facing left\n\nFinal state: The ant is at (8, 3) facing left",
+      "options": [
+        "Position (8, 8), facing down",
+        "Position (8, 5), facing down",
+        "Position (7, 4), facing up",
+        "Position (8, 3), facing right",
+        "Position (8, 3), facing left",
+        "Position (2, 4), facing right",
+        "Position (7, 7), facing left",
+        "Position (5, 2), facing right"
+      ]
+    }
+  }
+}

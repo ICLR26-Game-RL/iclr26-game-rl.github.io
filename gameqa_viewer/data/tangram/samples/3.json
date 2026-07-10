@@ -1,0 +1,189 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "tengram-mcq-00003-piece_count",
+    "question_id": 1,
+    "question_description": "piece_count",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00003.png",
+    "state": "states/tengram-mcq-00003.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00003.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00003.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. Some pieces have been removed and are shown below the main board.\n\nQuestion:\nHow many pieces are currently on the main board?\n\nOptions:\n1: 0\n2: 6\n3: 1\n4: 4\n5: 2\n6: 7\n7: 5\n8: 3",
+    "analysis": "Let's analyze the puzzle state:\n\nPieces currently on the board:\nPiece 1 (vivid blue) around position (3, 1); Piece 4 (vivid bright red) around position (7, 5); Piece 5 (purple) around position (2, 3)\n\nRemoved pieces:\nPiece 3; Piece 2\n\nBy counting the unique non-zero numbers on the main board, we can see there are 3 pieces remaining. Therefore, the answer is Option 8.",
+    "options": [
+      "0",
+      "6",
+      "1",
+      "4",
+      "2",
+      "7",
+      "5",
+      "3"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          0,
+          0,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          4
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "seeds": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "removed_pieces": [
+        3,
+        2
+      ],
+      "config": {
+        "grid_size": 9,
+        "num_seeds": 5,
+        "num_pieces_to_remove": 2
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00003-piece_count",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "piece_count",
+      "image": "images/tengram-mcq-00003.png",
+      "state": "states/tengram-mcq-00003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. Some pieces have been removed and are shown below the main board.\n\nQuestion:\nHow many pieces are currently on the main board?\n\nOptions:\n1: 0\n2: 6\n3: 1\n4: 4\n5: 2\n6: 7\n7: 5\n8: 3",
+      "answer": 8,
+      "analysis": "Let's analyze the puzzle state:\n\nPieces currently on the board:\nPiece 1 (vivid blue) around position (3, 1); Piece 4 (vivid bright red) around position (7, 5); Piece 5 (purple) around position (2, 3)\n\nRemoved pieces:\nPiece 3; Piece 2\n\nBy counting the unique non-zero numbers on the main board, we can see there are 3 pieces remaining. Therefore, the answer is Option 8.",
+      "options": [
+        "0",
+        "6",
+        "1",
+        "4",
+        "2",
+        "7",
+        "5",
+        "3"
+      ]
+    }
+  }
+}

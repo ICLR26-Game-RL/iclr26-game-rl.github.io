@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "chess-ranger-007-count_piece_question",
+    "question_id": 2,
+    "question_description": "Asking how many pieces of a specific type are on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "0",
+    "answer_preview": "0",
+    "question_preview": "How many Pawns are on the board?",
+    "image": "images/board_007.png",
+    "state": "states/board_007.json",
+    "image_url": "data/chess_ranger/files/images/board_007.png",
+    "state_url": "data/chess_ranger/files/states/board_007.json",
+    "has_options": false,
+    "question": "How many Pawns are on the board?",
+    "analysis": "The current board situation is:Knight at b5.King at c3.King at e2.Rook at a1.Bishop at d1.There's no Pawn on the board. So the number of Pawn is 0",
+    "options": null,
+    "state_content": {
+      "pieces": 5,
+      "mine_board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "N",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          "K",
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          "K",
+          0,
+          0,
+          0
+        ],
+        [
+          "R",
+          0,
+          0,
+          "B",
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-007-count_piece_question",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Asking how many pieces of a specific type are on the board",
+      "image": "images/board_007.png",
+      "state": "states/board_007.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "How many Pawns are on the board?",
+      "answer": "0",
+      "analysis": "The current board situation is:Knight at b5.King at c3.King at e2.Rook at a1.Bishop at d1.There's no Pawn on the board. So the number of Pawn is 0"
+    }
+  }
+}

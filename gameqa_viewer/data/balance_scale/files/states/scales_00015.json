@@ -1,0 +1,78 @@
+{
+  "fruits": [
+    "apple",
+    "banana",
+    "orange",
+    "pear"
+  ],
+  "hidden_weights_kg": {
+    "apple": 3,
+    "banana": 6,
+    "orange": 4,
+    "pear": 2
+  },
+  "scales": [
+    {
+      "index": 1,
+      "kind": "kg",
+      "left_pan": {
+        "banana": 1,
+        "orange": 1
+      },
+      "right_pan": {},
+      "iron_weight_kg": 10,
+      "balanced": true
+    },
+    {
+      "index": 2,
+      "kind": "equation",
+      "left_pan": {
+        "apple": 2
+      },
+      "right_pan": {
+        "pear": 3
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 3,
+      "kind": "equation",
+      "left_pan": {
+        "apple": 2
+      },
+      "right_pan": {
+        "banana": 1
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 4,
+      "kind": "equation",
+      "left_pan": {
+        "apple": 4
+      },
+      "right_pan": {
+        "orange": 3
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 5,
+      "kind": "tilted",
+      "left_pan": {
+        "apple": 2,
+        "pear": 1,
+        "orange": 1
+      },
+      "right_pan": {
+        "apple": 2
+      },
+      "iron_weight_kg": null,
+      "balanced": false
+    }
+  ],
+  "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+}

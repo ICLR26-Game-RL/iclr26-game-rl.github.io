@@ -1,0 +1,81 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "pyramidchess-mcq-00000-TargetPerception",
+    "question_id": 0,
+    "question_description": "Choose a random coordinate and ask what status is the cooradinate",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Pyramid Chess Rules: 0.Game Board: The game board is square and comes in various sizes: 3x3, 4x4, or 5x5. On an nxn board, there are n levels (0 to n-1). At ea...",
+    "image": "images/board_00000.png",
+    "state": "states/board_00000.json",
+    "image_url": "data/PyramidChess/files/images/board_00000.png",
+    "state_url": "data/PyramidChess/files/states/board_00000.json",
+    "has_options": true,
+    "question": "Pyramid Chess Rules:\n0.Game Board:\nThe game board is square and comes in various sizes: 3x3, 4x4, or 5x5. On an nxn board, there are n levels (0 to n-1). At each level k, the x and y coordinates range from 0 to n-1-k, resulting in (n-k)**2 slots per level. The slots in the lower levels act as the base for the slots in the upper levels. Slots at level 0 have no base, while slots at level j (j!=0) with coordinates (m,n) are supported by four base slots (m,n),(m+1,n),(m,n+1),(m+1,n+1) from level j-1.\n1.Players and Initial Setup:\nThe game is played between two players, designated as PLAYER_0 and PLAYER_1, each using balls of a distinct color from their color pool, blue balls for PLAYER_0 and red balls for PLAYER_1. Players take turns placing their balls on a square game board. The number of balls available to each player depends on the size of the board: on a 3x3 board, each player has 7 balls; on a 4x4 board, each has 15 balls; and on a 5x5 board, PLAYER_0 (the first player to place a ball) has 28 balls, while PLAYER_1 has 27 balls.\n2.Placing Balls and Creating New Slots:\nAt the start of the game, the lowest level of the board (Level 0) is completely open and balls can be placed in any available slot on this level(since there is no base for slots in level 0, slots in level 0 have full base). After a ball is placed in a slot, that slot is no longer available for placing another ball. A ball can only be placed on the upper level if it is supported by a fully completed 2x2 block of balls on the level directly beneath, which means all the base of the slot is full(there is a ball in each of these slots).\n3.Take-back mechnism:\nIf a player places a ball that completes a 2x2 block of the same color (all four balls belonging to that player), they may return up to two balls from the block to their color pool. A ball can only be removed if it does not have another ball directly above it, as removing a \"base\" ball would collapse the pyramid. Returning a ball reopens the slot it occupied, allowing it to be used for future placements, but the rule requiring a full 2x2 block as a base for placing balls on upper levels still applies.\n4.Winning the Game:\nThe game ends when one player successfully places the last ball on top of the pyramid. The player who place the ball on the top of the pyramid wins.\n\nQuestion: What is the status of the ball on Level 14, which has coordinate ([2, 0])?\nOptions:\n1. PLAYER_0\n2. PLAYER_1\n3. Empty\n4. Index out of bound\n",
+    "analysis": "From the image provided, we can recognize that the board is a 3x3 board.The coordinate [2, 0] in level 14 is outside the bounds of the level shown in the image (the z-axis only spans from 0 to 2). Therefore, the status is Index out of bound.",
+    "options": [
+      "PLAYER_0",
+      "PLAYER_1",
+      "Empty",
+      "Index out of bound"
+    ],
+    "state_content": {
+      "0": [
+        [
+          "P1",
+          "P0",
+          "P1"
+        ],
+        [
+          "P1",
+          "P1",
+          "P0"
+        ],
+        [
+          "P1",
+          "P0",
+          "P0"
+        ]
+      ],
+      "1": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "P0",
+          "--"
+        ]
+      ],
+      "2": [
+        [
+          "--"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "pyramidchess-mcq-00000-TargetPerception",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "Choose a random coordinate and ask what status is the cooradinate",
+      "image": "images/board_00000.png",
+      "state": "states/board_00000.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Pyramid Chess Rules:\n0.Game Board:\nThe game board is square and comes in various sizes: 3x3, 4x4, or 5x5. On an nxn board, there are n levels (0 to n-1). At each level k, the x and y coordinates range from 0 to n-1-k, resulting in (n-k)**2 slots per level. The slots in the lower levels act as the base for the slots in the upper levels. Slots at level 0 have no base, while slots at level j (j!=0) with coordinates (m,n) are supported by four base slots (m,n),(m+1,n),(m,n+1),(m+1,n+1) from level j-1.\n1.Players and Initial Setup:\nThe game is played between two players, designated as PLAYER_0 and PLAYER_1, each using balls of a distinct color from their color pool, blue balls for PLAYER_0 and red balls for PLAYER_1. Players take turns placing their balls on a square game board. The number of balls available to each player depends on the size of the board: on a 3x3 board, each player has 7 balls; on a 4x4 board, each has 15 balls; and on a 5x5 board, PLAYER_0 (the first player to place a ball) has 28 balls, while PLAYER_1 has 27 balls.\n2.Placing Balls and Creating New Slots:\nAt the start of the game, the lowest level of the board (Level 0) is completely open and balls can be placed in any available slot on this level(since there is no base for slots in level 0, slots in level 0 have full base). After a ball is placed in a slot, that slot is no longer available for placing another ball. A ball can only be placed on the upper level if it is supported by a fully completed 2x2 block of balls on the level directly beneath, which means all the base of the slot is full(there is a ball in each of these slots).\n3.Take-back mechnism:\nIf a player places a ball that completes a 2x2 block of the same color (all four balls belonging to that player), they may return up to two balls from the block to their color pool. A ball can only be removed if it does not have another ball directly above it, as removing a \"base\" ball would collapse the pyramid. Returning a ball reopens the slot it occupied, allowing it to be used for future placements, but the rule requiring a full 2x2 block as a base for placing balls on upper levels still applies.\n4.Winning the Game:\nThe game ends when one player successfully places the last ball on top of the pyramid. The player who place the ball on the top of the pyramid wins.\n\nQuestion: What is the status of the ball on Level 14, which has coordinate ([2, 0])?\nOptions:\n1. PLAYER_0\n2. PLAYER_1\n3. Empty\n4. Index out of bound\n",
+      "answer": 4,
+      "analysis": "From the image provided, we can recognize that the board is a 3x3 board.The coordinate [2, 0] in level 14 is outside the bounds of the level shown in the image (the z-axis only spans from 0 to 2). Therefore, the status is Index out of bound.",
+      "options": [
+        "PLAYER_0",
+        "PLAYER_1",
+        "Empty",
+        "Index out of bound"
+      ]
+    }
+  }
+}

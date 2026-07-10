@@ -1,0 +1,192 @@
+{
+  "sample": {
+    "index": 102,
+    "data_id": "minesweeper-train-00018-0",
+    "question_id": 0,
+    "question_description": "Count flagged cells",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board. The numbers on the board indicate how many...",
+    "image": "images/board_00018.png",
+    "state": "states/board_00018.json",
+    "image_url": "data/minesweeper/files/images/board_00018.png",
+    "state_url": "data/minesweeper/files/states/board_00018.json",
+    "has_options": false,
+    "question": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** How many mines are currently flagged?",
+    "analysis": "In the current game board, the number of cells that are flagged as mines (marked as F) is 3. These F-marked cells represent the locations that the player has deduced or guessed to be mines, so the count of these flagged cells gives us the total number of flagged mines.",
+    "options": null,
+    "state_content": {
+      "rows": 6,
+      "cols": 6,
+      "mines": 8,
+      "mine_board": [
+        [
+          0,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          1,
+          "M",
+          3,
+          "M",
+          "M"
+        ],
+        [
+          1,
+          2,
+          3,
+          "M",
+          4,
+          2
+        ],
+        [
+          "M",
+          2,
+          3,
+          "M",
+          2,
+          0
+        ],
+        [
+          2,
+          "M",
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          "M"
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          true,
+          true,
+          false
+        ]
+      ],
+      "flagged": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "first_click": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minesweeper-train-00018-0",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "Count flagged cells",
+      "image": "images/board_00018.png",
+      "state": "states/board_00018.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** How many mines are currently flagged?",
+      "answer": 3,
+      "analysis": "In the current game board, the number of cells that are flagged as mines (marked as F) is 3. These F-marked cells represent the locations that the player has deduced or guessed to be mines, so the count of these flagged cells gives us the total number of flagged mines."
+    }
+  }
+}

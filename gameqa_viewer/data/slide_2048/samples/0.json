@@ -1,0 +1,58 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "slide_2048-00001-q1",
+    "question_id": 1,
+    "question_description": "Read the value of the tile at a given cell (0 if empty).",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "0",
+    "answer_preview": "0",
+    "question_preview": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is writ...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/slide_2048/files/images/board_00001.png",
+    "state_url": "data/slide_2048/files/states/board_00001.json",
+    "has_options": false,
+    "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nWhat is the value of the tile at cell (1, 2)? If the cell is empty, answer 0.",
+    "analysis": "Reading the board: row 0: [4, 8, -]; row 1: [2, 4, -]; row 2: [16, -, 16].\nThe cell at row 1, column 2 is empty, so the value is 0.\nSo the answer is 0.",
+    "options": null,
+    "state_content": {
+      "grid_size": 3,
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "grid": [
+        [
+          4,
+          8,
+          0
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          16,
+          0,
+          16
+        ]
+      ],
+      "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "slide_2048-00001-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read the value of the tile at a given cell (0 if empty).",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nWhat is the value of the tile at cell (1, 2)? If the cell is empty, answer 0.",
+      "answer": "0",
+      "analysis": "Reading the board: row 0: [4, 8, -]; row 1: [2, 4, -]; row 2: [16, -, 16].\nThe cell at row 1, column 2 is empty, so the value is 0.\nSo the answer is 0."
+    }
+  }
+}

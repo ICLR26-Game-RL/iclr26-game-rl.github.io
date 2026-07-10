@@ -1,0 +1,123 @@
+{
+  "sample": {
+    "index": 13,
+    "data_id": "sokoban-data-00003-00006",
+    "question_id": 6,
+    "question_description": "Find the optimal sequence of moves to reach a specific position",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are m...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/sokoban/files/images/board_00003.png",
+    "state_url": "data/sokoban/files/states/board_00003.json",
+    "has_options": true,
+    "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.Treat the boxes as walls,What is the shortest sequence of moves for human to move himself from position (3, 3) to position (3, 2)?\n\nOptions:\n[1] Right → Up → Left\n[2] Left → Down → Up\n[3] Left → Right\n[4] Left\n[5] Up → Down\n[6] Up\n[7] Down\n[8] Up → Left",
+    "analysis": "- Player position: (3, 3)\n- Boxes positions: (2, 2)\n- Target positions: (2, 1)\nStart position: (3, 3)\nEnd position: (3, 2)\nOptimal move sequence: Left\n\nSo the answer is Left. The option number is 4. ",
+    "options": [
+      "Right → Up → Left",
+      "Left → Down → Up",
+      "Left → Right",
+      "Left",
+      "Up → Down",
+      "Up",
+      "Down",
+      "Up → Left"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "grid_size": {
+        "width": 5,
+        "height": 5
+      },
+      "player": {
+        "x": 3,
+        "y": 3
+      },
+      "boxes": [
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "targets": [
+        {
+          "x": 1,
+          "y": 2
+        }
+      ],
+      "symbols": {
+        "empty": 0,
+        "wall": 1,
+        "box": 2,
+        "target": 3,
+        "box_on_target": 4,
+        "player": 5,
+        "player_on_target": 6
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "sokoban-data-00003-00006",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 6,
+      "question_description": "Find the optimal sequence of moves to reach a specific position",
+      "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.Treat the boxes as walls,What is the shortest sequence of moves for human to move himself from position (3, 3) to position (3, 2)?\n\nOptions:\n[1] Right → Up → Left\n[2] Left → Down → Up\n[3] Left → Right\n[4] Left\n[5] Up → Down\n[6] Up\n[7] Down\n[8] Up → Left",
+      "answer": 4,
+      "analysis": "- Player position: (3, 3)\n- Boxes positions: (2, 2)\n- Target positions: (2, 1)\nStart position: (3, 3)\nEnd position: (3, 2)\nOptimal move sequence: Left\n\nSo the answer is Left. The option number is 4. ",
+      "options": [
+        "Right → Up → Left",
+        "Left → Down → Up",
+        "Left → Right",
+        "Left",
+        "Up → Down",
+        "Up",
+        "Down",
+        "Up → Left"
+      ]
+    }
+  }
+}

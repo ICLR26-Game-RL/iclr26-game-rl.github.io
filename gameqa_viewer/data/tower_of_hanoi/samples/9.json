@@ -1,0 +1,52 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "tower_of_hanoi-00010-q1",
+    "question_id": 1,
+    "question_description": "Count the disks currently on a given peg.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "1",
+    "answer_preview": "1",
+    "question_preview": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1...",
+    "image": "images/hanoi_00010.png",
+    "state": "states/hanoi_00010.json",
+    "image_url": "data/tower_of_hanoi/files/images/hanoi_00010.png",
+    "state_url": "data/tower_of_hanoi/files/states/hanoi_00010.json",
+    "has_options": false,
+    "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nHow many disks are currently on peg C? Answer with a single number.",
+    "analysis": "Read the picture: peg A: disks [3, 2, 1] (bottom to top); peg B: empty; peg C: disks [4] (bottom to top).\nPeg C holds disks [4], which is 1 disk(s).\nSo the answer is 1.",
+    "options": null,
+    "state_content": {
+      "num_disks": 4,
+      "pegs": {
+        "A": [
+          3,
+          2,
+          1
+        ],
+        "B": [],
+        "C": [
+          4
+        ]
+      },
+      "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+      "goal_note": "strategy questions target gathering all disks on peg C"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-00010-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count the disks currently on a given peg.",
+      "image": "images/hanoi_00010.png",
+      "state": "states/hanoi_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nHow many disks are currently on peg C? Answer with a single number.",
+      "answer": "1",
+      "analysis": "Read the picture: peg A: disks [3, 2, 1] (bottom to top); peg B: empty; peg C: disks [4] (bottom to top).\nPeg C holds disks [4], which is 1 disk(s).\nSo the answer is 1."
+    }
+  }
+}

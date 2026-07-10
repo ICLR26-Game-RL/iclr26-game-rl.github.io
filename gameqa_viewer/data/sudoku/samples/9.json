@@ -1,0 +1,71 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "sudoku-00010",
+    "question_id": 4,
+    "question_description": "Count regions with empty cells exceeding threshold",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "3",
+    "answer_preview": "3",
+    "question_preview": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/sudoku/files/images/board_00010.png",
+    "state_url": "data/sudoku/files/states/board_00010.json",
+    "has_options": false,
+    "question": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are allowed to have duplicate colours.You should fill the empty cells on the board with following 4 colors: red, green, blue, magenta.In this Sudoku board, the row coordinates are 1-4 from top to bottom, and the column coordinates are 1-4 from left to right.How many cols have more than 1 empty cells?",
+    "analysis": "Col analysis: col 1 have 3 empty cells in positions 1, 2, 3; col 2 have 2 empty cells in positions 1, 4; col 3 have 1 empty cells in positions 2; col 4 have 2 empty cells in positions 1, 4. Total 3 col(s) have more than 1 empty cells.So the answer is ",
+    "options": null,
+    "state_content": {
+      "size": 4,
+      "board": [
+        [
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          2,
+          4
+        ],
+        [
+          4,
+          0,
+          1,
+          0
+        ]
+      ],
+      "colors": [
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FF00FF"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "sudoku-00010",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "Count regions with empty cells exceeding threshold",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are allowed to have duplicate colours.You should fill the empty cells on the board with following 4 colors: red, green, blue, magenta.In this Sudoku board, the row coordinates are 1-4 from top to bottom, and the column coordinates are 1-4 from left to right.How many cols have more than 1 empty cells?",
+      "answer": "3",
+      "analysis": "Col analysis: col 1 have 3 empty cells in positions 1, 2, 3; col 2 have 2 empty cells in positions 1, 4; col 3 have 1 empty cells in positions 2; col 4 have 2 empty cells in positions 1, 4. Total 3 col(s) have more than 1 empty cells.So the answer is "
+    }
+  }
+}

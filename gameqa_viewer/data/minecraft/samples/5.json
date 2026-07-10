@@ -1,0 +1,63 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "minecraft-00006-scenery_recog",
+    "question_id": 1,
+    "question_description": "Ask to recognize the sceneries in the scene.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. T...",
+    "image": "images/00006.png",
+    "state": "states/00006.json",
+    "image_url": "data/minecraft/files/images/00006.png",
+    "state_url": "data/minecraft/files/states/00006.json",
+    "has_options": true,
+    "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThe scene contains several sceneries. Sceneries can be:\n1. Bricks\n2. Gold Ore (embedded with gold-colored stone)\n3. Diamond Ore (embedded with blue-green stone)\n4. TNT (like dynamite, a red block labeled \"TNT\")\n5. Pumpkin (a yellow block resembling a pumpkin)\n6. Ladder (not a block, but a wooden ladder attached to blocks, similar to those in \"Minecraft\")\n7. River (beneath ground level, blue, spanning the screen. Specifically, rivers are sometimes presented in clearly bounded grids to allow players to discern the river's width)\n8. Lava (beneath ground level, consisting of orange and yellow)\n\nPlease select the option that correctly describes the sceneries contained in the image.\nOptions:\n1: Gold Ore, Ladder, Lava, TNT\n2: Diamond Ore, Gold Ore, Ladder, Lava\n3: Ladder, Lava, River, TNT\n4: Brick, Gold Ore, Ladder, TNT\n5: Brick, Diamond Ore, Gold Ore, Pumpkin\n6: Gold Ore, Lava, Pumpkin, Tree\n7: Diamond Ore, Ladder, Pumpkin, Tree\n8: Brick, Diamond Ore, Gold Ore, Ladder",
+    "analysis": "Looking carefully at the scene, we can see:\n- block embedded with gold-colored stone, which is gold ore\n- red block resembling dynamite\n- red-colored bricks\n- wooden ladder attached to block(s)\n\nTo sum up, the scene contains gold ore, TNT, brick and ladder. Therefore, the correct option number is 4.",
+    "options": [
+      "Gold Ore, Ladder, Lava, TNT",
+      "Diamond Ore, Gold Ore, Ladder, Lava",
+      "Ladder, Lava, River, TNT",
+      "Brick, Gold Ore, Ladder, TNT",
+      "Brick, Diamond Ore, Gold Ore, Pumpkin",
+      "Gold Ore, Lava, Pumpkin, Tree",
+      "Diamond Ore, Ladder, Pumpkin, Tree",
+      "Brick, Diamond Ore, Gold Ore, Ladder"
+    ],
+    "state_content": {
+      "sceneries": [
+        "gold ore",
+        "TNT",
+        "brick",
+        "ladder"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minecraft-00006-scenery_recog",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Ask to recognize the sceneries in the scene.",
+      "image": "images/00006.png",
+      "state": "states/00006.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThe scene contains several sceneries. Sceneries can be:\n1. Bricks\n2. Gold Ore (embedded with gold-colored stone)\n3. Diamond Ore (embedded with blue-green stone)\n4. TNT (like dynamite, a red block labeled \"TNT\")\n5. Pumpkin (a yellow block resembling a pumpkin)\n6. Ladder (not a block, but a wooden ladder attached to blocks, similar to those in \"Minecraft\")\n7. River (beneath ground level, blue, spanning the screen. Specifically, rivers are sometimes presented in clearly bounded grids to allow players to discern the river's width)\n8. Lava (beneath ground level, consisting of orange and yellow)\n\nPlease select the option that correctly describes the sceneries contained in the image.\nOptions:\n1: Gold Ore, Ladder, Lava, TNT\n2: Diamond Ore, Gold Ore, Ladder, Lava\n3: Ladder, Lava, River, TNT\n4: Brick, Gold Ore, Ladder, TNT\n5: Brick, Diamond Ore, Gold Ore, Pumpkin\n6: Gold Ore, Lava, Pumpkin, Tree\n7: Diamond Ore, Ladder, Pumpkin, Tree\n8: Brick, Diamond Ore, Gold Ore, Ladder",
+      "answer": 4,
+      "analysis": "Looking carefully at the scene, we can see:\n- block embedded with gold-colored stone, which is gold ore\n- red block resembling dynamite\n- red-colored bricks\n- wooden ladder attached to block(s)\n\nTo sum up, the scene contains gold ore, TNT, brick and ladder. Therefore, the correct option number is 4.",
+      "options": [
+        "Gold Ore, Ladder, Lava, TNT",
+        "Diamond Ore, Gold Ore, Ladder, Lava",
+        "Ladder, Lava, River, TNT",
+        "Brick, Gold Ore, Ladder, TNT",
+        "Brick, Diamond Ore, Gold Ore, Pumpkin",
+        "Gold Ore, Lava, Pumpkin, Tree",
+        "Diamond Ore, Ladder, Pumpkin, Tree",
+        "Brick, Diamond Ore, Gold Ore, Ladder"
+      ]
+    }
+  }
+}

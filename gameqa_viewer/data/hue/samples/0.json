@@ -1,0 +1,317 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "color-mcq-00001-color_description",
+    "question_id": 1,
+    "question_description": "color_description",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Rules: 1. Colors change gradually along rows or columns. 2. A gradient transitions between two colors. 3. Each row or column can have its own independent gradi...",
+    "image": "images/color-mcq-00001.png",
+    "state": "states/color-mcq-00001.json",
+    "image_url": "data/hue/files/images/color-mcq-00001.png",
+    "state_url": "data/hue/files/states/color-mcq-00001.json",
+    "has_options": true,
+    "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat color is the cell at row 1, column 6?\n\nOptions:\n1: green\n2: white\n3: vivid red\n4: pale bright green\n5: bright cyan\n6: cyan\n7: bright orange\n8: dark green",
+    "analysis": "The cell at position (1, 6) is pale bright green. So the answer is Option 4.",
+    "options": [
+      "green",
+      "white",
+      "vivid red",
+      "pale bright green",
+      "bright cyan",
+      "cyan",
+      "bright orange",
+      "dark green"
+    ],
+    "state_content": {
+      "board": [
+        [
+          [
+            169,
+            234,
+            68
+          ],
+          [
+            115,
+            68,
+            222
+          ],
+          [
+            131,
+            108,
+            204
+          ],
+          [
+            148,
+            148,
+            187
+          ],
+          [
+            165,
+            188,
+            170
+          ],
+          [
+            182,
+            229,
+            153
+          ]
+        ],
+        [
+          [
+            182,
+            182,
+            110
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            136,
+            121,
+            207
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            195,
+            130,
+            152
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            142,
+            135,
+            211
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            208,
+            78,
+            194
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            148,
+            149,
+            215
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            222,
+            27,
+            236
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            154,
+            163,
+            219
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            136,
+            208,
+            213
+          ],
+          [
+            160,
+            177,
+            223
+          ],
+          [
+            184,
+            146,
+            234
+          ],
+          [
+            209,
+            116,
+            245
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "removed_positions": [],
+      "removed_colors": [],
+      "extra_options": [],
+      "cell_labels": {},
+      "gradient_info": [
+        {
+          "type": "row",
+          "index": 5,
+          "direction": null,
+          "start_color": [
+            136,
+            208,
+            213
+          ],
+          "end_color": [
+            209,
+            116,
+            245
+          ]
+        },
+        {
+          "type": "row",
+          "index": 0,
+          "direction": null,
+          "start_color": [
+            115,
+            68,
+            222
+          ],
+          "end_color": [
+            182,
+            229,
+            153
+          ]
+        },
+        {
+          "type": "column",
+          "index": 2,
+          "direction": null,
+          "start_color": [
+            131,
+            108,
+            204
+          ],
+          "end_color": [
+            160,
+            177,
+            223
+          ]
+        },
+        {
+          "type": "column",
+          "index": 0,
+          "direction": null,
+          "start_color": [
+            169,
+            234,
+            68
+          ],
+          "end_color": [
+            222,
+            27,
+            236
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat color is the cell at row 1, column 6?\n\nOptions:\n1: green\n2: white\n3: vivid red\n4: pale bright green\n5: bright cyan\n6: cyan\n7: bright orange\n8: dark green",
+      "answer": 4,
+      "options": [
+        "green",
+        "white",
+        "vivid red",
+        "pale bright green",
+        "bright cyan",
+        "cyan",
+        "bright orange",
+        "dark green"
+      ],
+      "qa_type": "Target Perception",
+      "analysis": "The cell at position (1, 6) is pale bright green. So the answer is Option 4.",
+      "data_id": "color-mcq-00001-color_description",
+      "question_id": 1,
+      "question_description": "color_description",
+      "image": "images/color-mcq-00001.png",
+      "state": "states/color-mcq-00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy"
+    }
+  }
+}

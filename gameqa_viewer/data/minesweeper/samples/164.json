@@ -1,0 +1,120 @@
+{
+  "sample": {
+    "index": 164,
+    "data_id": "minesweeper-train-00028-2",
+    "question_id": 2,
+    "question_description": "Count revealed cells",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 11,
+    "answer_preview": "11",
+    "question_preview": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board. The numbers on the board indicate how many...",
+    "image": "images/board_00028.png",
+    "state": "states/board_00028.json",
+    "image_url": "data/minesweeper/files/images/board_00028.png",
+    "state_url": "data/minesweeper/files/states/board_00028.json",
+    "has_options": false,
+    "question": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** How many cells have been revealed?",
+    "analysis": "On the current game board, the number of cells that have been revealed is the cells whose background color is white. And the total number is 11. Each revealed cell indicates that the player has confirmed it is safe and has explored the surrounding area. Thus, this count represents the total number of revealed cells.",
+    "options": null,
+    "state_content": {
+      "rows": 4,
+      "cols": 4,
+      "mines": 3,
+      "mine_board": [
+        [
+          "M",
+          "M",
+          1,
+          0
+        ],
+        [
+          3,
+          3,
+          1,
+          0
+        ],
+        [
+          "M",
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ]
+      ],
+      "flagged": [
+        [
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "first_click": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minesweeper-train-00028-2",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Count revealed cells",
+      "image": "images/board_00028.png",
+      "state": "states/board_00028.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** How many cells have been revealed?",
+      "answer": 11,
+      "analysis": "On the current game board, the number of cells that have been revealed is the cells whose background color is white. And the total number is 11. Each revealed cell indicates that the player has confirmed it is safe and has explored the surrounding area. Thus, this count represents the total number of revealed cells."
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "balance_scale-00007-q4",
+    "question_id": 4,
+    "question_description": "Choose the single fruit to move from the heavier pan to the lighter pan to balance the tilted scale.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always...",
+    "image": "images/scales_00007.png",
+    "state": "states/scales_00007.json",
+    "image_url": "data/balance_scale/files/images/scales_00007.png",
+    "state_url": "data/balance_scale/files/states/scales_00007.json",
+    "has_options": true,
+    "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nLook at the tilted scale (Scale 2): its left pan hangs lower, so that side is heavier. You may move EXACTLY ONE fruit from the left (heavier) pan over to the right pan. Which move makes the scale balance exactly?\n\nOptions:\n[1] Move one banana to the right pan\n[2] Move one orange to the right pan\n[3] No single fruit move can balance this scale",
+    "analysis": "First deduce every fruit's weight from the balanced scales:\nScale 3 balances 4 apples against 2 bananas. In units of one apple, the left pan weighs 4 x apple = 4 apple(s), so 2 banana(s) = 4 apple(s), giving 1 banana = 2 apple(s).\nScale 1 balances 2 apples + 3 bananas against 2 oranges. In units of one apple, the left pan weighs 2 x apple + 3 x banana = 8 apple(s), so 2 orange(s) = 8 apple(s), giving 1 orange = 4 apple(s).\nScale 4 balances 1 apple + 2 oranges against a 27 kg iron weight. In units of one apple the left pan weighs 1 x 1 + 2 x 4 = 9 apple(s), so 9 x weight(apple) = 27 kg, giving weight(apple) = 3 kg.\nSo the weights are: apple = 3 kg, banana = 6 kg, orange = 12 kg.\nOn Scale 2, the left pan (4 bananas + 1 orange) weighs 36 kg and the right pan (2 oranges) weighs 24 kg; the difference is 12 kg. Moving a fruit of weight w changes the difference by 2w, so we need 2w = 12, i.e. w = 6 kg.\nMoving one banana (6 kg): heavier pan becomes 36 - 6 = 30 kg, lighter pan becomes 24 + 6 = 30 kg -> balances.\nMoving one orange (12 kg): heavier pan becomes 36 - 12 = 24 kg, lighter pan becomes 24 + 12 = 36 kg -> gives 24 kg vs 36 kg - still unbalanced.\nOnly moving one banana works. The option number is 1.",
+    "options": [
+      "Move one banana to the right pan",
+      "Move one orange to the right pan",
+      "No single fruit move can balance this scale"
+    ],
+    "state_content": {
+      "fruits": [
+        "apple",
+        "banana",
+        "orange"
+      ],
+      "hidden_weights_kg": {
+        "apple": 3,
+        "banana": 6,
+        "orange": 12
+      },
+      "scales": [
+        {
+          "index": 1,
+          "kind": "equation",
+          "left_pan": {
+            "banana": 3,
+            "apple": 2
+          },
+          "right_pan": {
+            "orange": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 2,
+          "kind": "tilted",
+          "left_pan": {
+            "banana": 4,
+            "orange": 1
+          },
+          "right_pan": {
+            "orange": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": false
+        },
+        {
+          "index": 3,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 4
+          },
+          "right_pan": {
+            "banana": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 4,
+          "kind": "kg",
+          "left_pan": {
+            "orange": 2,
+            "apple": 1
+          },
+          "right_pan": {},
+          "iron_weight_kg": 27,
+          "balanced": true
+        }
+      ],
+      "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "balance_scale-00007-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Choose the single fruit to move from the heavier pan to the lighter pan to balance the tilted scale.",
+      "image": "images/scales_00007.png",
+      "state": "states/scales_00007.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nLook at the tilted scale (Scale 2): its left pan hangs lower, so that side is heavier. You may move EXACTLY ONE fruit from the left (heavier) pan over to the right pan. Which move makes the scale balance exactly?\n\nOptions:\n[1] Move one banana to the right pan\n[2] Move one orange to the right pan\n[3] No single fruit move can balance this scale",
+      "answer": 1,
+      "analysis": "First deduce every fruit's weight from the balanced scales:\nScale 3 balances 4 apples against 2 bananas. In units of one apple, the left pan weighs 4 x apple = 4 apple(s), so 2 banana(s) = 4 apple(s), giving 1 banana = 2 apple(s).\nScale 1 balances 2 apples + 3 bananas against 2 oranges. In units of one apple, the left pan weighs 2 x apple + 3 x banana = 8 apple(s), so 2 orange(s) = 8 apple(s), giving 1 orange = 4 apple(s).\nScale 4 balances 1 apple + 2 oranges against a 27 kg iron weight. In units of one apple the left pan weighs 1 x 1 + 2 x 4 = 9 apple(s), so 9 x weight(apple) = 27 kg, giving weight(apple) = 3 kg.\nSo the weights are: apple = 3 kg, banana = 6 kg, orange = 12 kg.\nOn Scale 2, the left pan (4 bananas + 1 orange) weighs 36 kg and the right pan (2 oranges) weighs 24 kg; the difference is 12 kg. Moving a fruit of weight w changes the difference by 2w, so we need 2w = 12, i.e. w = 6 kg.\nMoving one banana (6 kg): heavier pan becomes 36 - 6 = 30 kg, lighter pan becomes 24 + 6 = 30 kg -> balances.\nMoving one orange (12 kg): heavier pan becomes 36 - 12 = 24 kg, lighter pan becomes 24 + 12 = 36 kg -> gives 24 kg vs 36 kg - still unbalanced.\nOnly moving one banana works. The option number is 1.",
+      "options": [
+        "Move one banana to the right pan",
+        "Move one orange to the right pan",
+        "No single fruit move can balance this scale"
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "sample": {
+    "index": 20,
+    "data_id": "dice_path-00021-q3",
+    "question_id": 3,
+    "question_description": "Read the highlighted route from the image and predict the top face of the die when it reaches the goal.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "4",
+    "answer_preview": "4",
+    "question_preview": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die...",
+    "image": "images/board_00021.png",
+    "state": "states/board_00021.json",
+    "image_url": "data/dice_path/files/images/board_00021.png",
+    "state_url": "data/dice_path/files/states/board_00021.json",
+    "has_options": false,
+    "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nAn orange trail with arrows is drawn on the board. It marks the exact route the die will roll, one cell per roll, starting at the die's current cell and ending at the goal flag. What number is on the top face of the die when it reaches the goal? Answer with a single number.",
+    "analysis": "Reading the trail from the image, the route is: (5, 4) -> (4, 4) -> (3, 4) -> (2, 4) -> (2, 3) -> (1, 3) -> (1, 2).\nConverted to roll directions: up (north), up (north), up (north), left (west), up (north), left (west).\nInitial faces: top = 2, south = 4, east = 1 (hidden: north = 3, west = 6, bottom = 5).\nRoll 1 - up (north): the die moves from (5, 4) to (4, 4); rolling up (north) rotates the die about its east-west axis, so top 2->4, north 3->2, east 1->1.\nRoll 2 - up (north): the die moves from (4, 4) to (3, 4); rolling up (north) rotates the die about its east-west axis, so top 4->5, north 2->4, east 1->1.\nRoll 3 - up (north): the die moves from (3, 4) to (2, 4); rolling up (north) rotates the die about its east-west axis, so top 5->3, north 4->5, east 1->1.\nRoll 4 - left (west): the die moves from (2, 4) to (2, 3); rolling left (west) rotates the die about its north-south axis, so top 3->1, north 5->5, east 1->4.\nRoll 5 - up (north): the die moves from (2, 3) to (1, 3); rolling up (north) rotates the die about its east-west axis, so top 1->2, north 5->1, east 4->4.\nRoll 6 - left (west): the die moves from (1, 3) to (1, 2); rolling left (west) rotates the die about its north-south axis, so top 2->4, north 1->1, east 4->5.\nThe die reaches the goal (1, 2) with top face 4.\nSo the answer is 4.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 6,
+        "cols": 6
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "blocked_cells": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "die_cell": [
+        5,
+        4
+      ],
+      "goal_cell": [
+        1,
+        2
+      ],
+      "die_faces": {
+        "top": 2,
+        "north": 3,
+        "east": 1,
+        "bottom": 5,
+        "south": 4,
+        "west": 6
+      },
+      "rule": "standard die, opposite faces sum to 7; visible faces in the image are top, south, east",
+      "highlighted_route": [
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_path-00021-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Read the highlighted route from the image and predict the top face of the die when it reaches the goal.",
+      "image": "images/board_00021.png",
+      "state": "states/board_00021.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nAn orange trail with arrows is drawn on the board. It marks the exact route the die will roll, one cell per roll, starting at the die's current cell and ending at the goal flag. What number is on the top face of the die when it reaches the goal? Answer with a single number.",
+      "answer": "4",
+      "analysis": "Reading the trail from the image, the route is: (5, 4) -> (4, 4) -> (3, 4) -> (2, 4) -> (2, 3) -> (1, 3) -> (1, 2).\nConverted to roll directions: up (north), up (north), up (north), left (west), up (north), left (west).\nInitial faces: top = 2, south = 4, east = 1 (hidden: north = 3, west = 6, bottom = 5).\nRoll 1 - up (north): the die moves from (5, 4) to (4, 4); rolling up (north) rotates the die about its east-west axis, so top 2->4, north 3->2, east 1->1.\nRoll 2 - up (north): the die moves from (4, 4) to (3, 4); rolling up (north) rotates the die about its east-west axis, so top 4->5, north 2->4, east 1->1.\nRoll 3 - up (north): the die moves from (3, 4) to (2, 4); rolling up (north) rotates the die about its east-west axis, so top 5->3, north 4->5, east 1->1.\nRoll 4 - left (west): the die moves from (2, 4) to (2, 3); rolling left (west) rotates the die about its north-south axis, so top 3->1, north 5->5, east 1->4.\nRoll 5 - up (north): the die moves from (2, 3) to (1, 3); rolling up (north) rotates the die about its east-west axis, so top 1->2, north 5->1, east 4->4.\nRoll 6 - left (west): the die moves from (1, 3) to (1, 2); rolling left (west) rotates the die about its north-south axis, so top 2->4, north 1->1, east 4->5.\nThe die reaches the goal (1, 2) with top face 4.\nSo the answer is 4."
+    }
+  }
+}

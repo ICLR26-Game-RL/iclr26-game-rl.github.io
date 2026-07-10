@@ -1,0 +1,93 @@
+{
+  "fruits": [
+    "apple",
+    "banana",
+    "orange",
+    "pear",
+    "grape"
+  ],
+  "hidden_weights_kg": {
+    "apple": 3,
+    "banana": 12,
+    "orange": 4,
+    "pear": 6,
+    "grape": 8
+  },
+  "scales": [
+    {
+      "index": 1,
+      "kind": "equation",
+      "left_pan": {
+        "apple": 2
+      },
+      "right_pan": {
+        "pear": 1
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 2,
+      "kind": "equation",
+      "left_pan": {
+        "apple": 4
+      },
+      "right_pan": {
+        "banana": 1
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 3,
+      "kind": "tilted",
+      "left_pan": {
+        "apple": 1,
+        "banana": 2
+      },
+      "right_pan": {
+        "apple": 3,
+        "grape": 1,
+        "orange": 1
+      },
+      "iron_weight_kg": null,
+      "balanced": false
+    },
+    {
+      "index": 4,
+      "kind": "equation",
+      "left_pan": {
+        "banana": 1
+      },
+      "right_pan": {
+        "orange": 3
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    },
+    {
+      "index": 5,
+      "kind": "kg",
+      "left_pan": {
+        "pear": 2,
+        "orange": 2
+      },
+      "right_pan": {},
+      "iron_weight_kg": 20,
+      "balanced": true
+    },
+    {
+      "index": 6,
+      "kind": "equation",
+      "left_pan": {
+        "orange": 2
+      },
+      "right_pan": {
+        "grape": 1
+      },
+      "iron_weight_kg": null,
+      "balanced": true
+    }
+  ],
+  "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+}

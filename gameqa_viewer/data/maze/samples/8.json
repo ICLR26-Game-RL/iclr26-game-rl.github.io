@@ -1,0 +1,208 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "maze_00001_06",
+    "question_id": 6,
+    "question_description": "The position after moving.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "**Rules:** 1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory. 2. The red circle represents...",
+    "image": "images/image_00001.png",
+    "state": "states/state_00001.json",
+    "image_url": "data/maze/files/images/image_00001.png",
+    "state_url": "data/maze/files/states/state_00001.json",
+    "has_options": true,
+    "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** What are the coordinates of player after moving left?\n\n**Options:**\nA. (10, 9)\nB. (9, 9)\nC. (9, 10)\nD. (9, 8)\nE. (8, 9)",
+    "analysis": "Observe the screen, the position of player is (9,9). After moving left, the player is in (9, 8). Therefore, the right option is D",
+    "options": [
+      "A. (10, 9)",
+      "B. (9, 9)",
+      "C. (9, 10)",
+      "D. (9, 8)",
+      "E. (8, 9)"
+    ],
+    "state_content": {
+      "maze": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "playerPosition": [
+        9,
+        9
+      ],
+      "endPosition": [
+        3,
+        1
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "maze_00001_06",
+      "qa_type": "State Prediction",
+      "question_id": 6,
+      "question_description": "The position after moving.",
+      "image": "images/image_00001.png",
+      "state": "states/state_00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** What are the coordinates of player after moving left?\n\n**Options:**\nA. (10, 9)\nB. (9, 9)\nC. (9, 10)\nD. (9, 8)\nE. (8, 9)",
+      "answer": "D",
+      "options": [
+        "A. (10, 9)",
+        "B. (9, 9)",
+        "C. (9, 10)",
+        "D. (9, 8)",
+        "E. (8, 9)"
+      ],
+      "analysis": "Observe the screen, the position of player is (9,9). After moving left, the player is in (9, 8). Therefore, the right option is D"
+    }
+  }
+}

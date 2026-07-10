@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "word-mcq-00001",
+    "question_id": 2,
+    "question_description": "word_direction",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Rules: 1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left. 2. Starting from position (row 2, column...",
+    "image": "images/word-mcq-00001.png",
+    "state": "states/word-mcq-00001.json",
+    "image_url": "data/word_search/files/images/word-mcq-00001.png",
+    "state_url": "data/word_search/files/states/word-mcq-00001.json",
+    "has_options": true,
+    "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 2, column 5), in which direction can you find the word 'HALVAHS'?\n\nOptions:\n1: diagonal-left-up\n2: diagonal-left-down\n3: up\n4: left\n5: right\n6: down\n7: diagonal-right-up\n8: diagonal-right-down",
+    "analysis": "Let's analyze the word 'HALVAHS' starting from position (row 2, column 5):\n\n1. Starting position contains 'H'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (2, 6): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Second letter 'A' found at (3, 5)\n   - Complete sequence:    Sequence found: H → A → L → V → A → H → S\n   ✓ Valid word 'HALVAHS' found in down direction!\n\nChecking diagonal-right-down direction:\n   - Position (3, 6): Expected 'A', found 'J'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (1, 6): Expected 'A', found 'J'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (3, 4): Expected 'A', found 'U'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Position (1, 4): Expected 'A', found 'D'\n   × This direction does not contain the complete word\n\nChecking up direction:\n   - Position (1, 5): Expected 'A', found 'C'\n   × This direction does not contain the complete word\n\nChecking left direction:\n   - Position (2, 4): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: down\n\nTherefore, the answer is Option 6: down",
+    "options": [
+      "diagonal-left-up",
+      "diagonal-left-down",
+      "up",
+      "left",
+      "right",
+      "down",
+      "diagonal-right-up",
+      "diagonal-right-down"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "D",
+          "T",
+          "O",
+          "D",
+          "C",
+          "J",
+          "C",
+          "C"
+        ],
+        [
+          "U",
+          "L",
+          "V",
+          "G",
+          "H",
+          "G",
+          "A",
+          "G"
+        ],
+        [
+          "Z",
+          "A",
+          "F",
+          "U",
+          "A",
+          "J",
+          "M",
+          "I"
+        ],
+        [
+          "P",
+          "K",
+          "X",
+          "K",
+          "L",
+          "R",
+          "W",
+          "T"
+        ],
+        [
+          "O",
+          "E",
+          "P",
+          "V",
+          "V",
+          "C",
+          "D",
+          "K"
+        ],
+        [
+          "G",
+          "P",
+          "G",
+          "Y",
+          "A",
+          "M",
+          "C",
+          "J"
+        ],
+        [
+          "F",
+          "N",
+          "S",
+          "E",
+          "H",
+          "J",
+          "J",
+          "Z"
+        ],
+        [
+          "T",
+          "R",
+          "Y",
+          "O",
+          "S",
+          "K",
+          "C",
+          "X"
+        ]
+      ],
+      "size": 8,
+      "question_type": "word_direction"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00001",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "word_direction",
+      "image": "images/word-mcq-00001.png",
+      "state": "states/word-mcq-00001.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 2, column 5), in which direction can you find the word 'HALVAHS'?\n\nOptions:\n1: diagonal-left-up\n2: diagonal-left-down\n3: up\n4: left\n5: right\n6: down\n7: diagonal-right-up\n8: diagonal-right-down",
+      "answer": 6,
+      "analysis": "Let's analyze the word 'HALVAHS' starting from position (row 2, column 5):\n\n1. Starting position contains 'H'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (2, 6): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Second letter 'A' found at (3, 5)\n   - Complete sequence:    Sequence found: H → A → L → V → A → H → S\n   ✓ Valid word 'HALVAHS' found in down direction!\n\nChecking diagonal-right-down direction:\n   - Position (3, 6): Expected 'A', found 'J'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (1, 6): Expected 'A', found 'J'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (3, 4): Expected 'A', found 'U'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Position (1, 4): Expected 'A', found 'D'\n   × This direction does not contain the complete word\n\nChecking up direction:\n   - Position (1, 5): Expected 'A', found 'C'\n   × This direction does not contain the complete word\n\nChecking left direction:\n   - Position (2, 4): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: down\n\nTherefore, the answer is Option 6: down",
+      "options": [
+        "diagonal-left-up",
+        "diagonal-left-down",
+        "up",
+        "left",
+        "right",
+        "down",
+        "diagonal-right-up",
+        "diagonal-right-down"
+      ]
+    }
+  }
+}

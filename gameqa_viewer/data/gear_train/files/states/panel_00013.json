@@ -1,0 +1,79 @@
+{
+  "gears": [
+    {
+      "label": "D",
+      "teeth": 12,
+      "center": [
+        325.3,
+        238.8
+      ],
+      "pitch_radius": 40.8
+    },
+    {
+      "label": "E",
+      "teeth": 16,
+      "center": [
+        250.3,
+        297.5
+      ],
+      "pitch_radius": 54.4
+    },
+    {
+      "label": "C",
+      "teeth": 16,
+      "center": [
+        199.3,
+        201.4
+      ],
+      "pitch_radius": 54.4
+    },
+    {
+      "label": "F",
+      "teeth": 20,
+      "center": [
+        362.7,
+        136.7
+      ],
+      "pitch_radius": 68.0
+    },
+    {
+      "label": "B",
+      "teeth": 10,
+      "center": [
+        461.1,
+        109.9
+      ],
+      "pitch_radius": 34.0
+    },
+    {
+      "label": "A",
+      "teeth": 10,
+      "center": [
+        400.3,
+        417.3
+      ],
+      "pitch_radius": 34.0
+    }
+  ],
+  "meshing_pairs": [
+    [
+      "B",
+      "F"
+    ],
+    [
+      "C",
+      "E"
+    ],
+    [
+      "D",
+      "E"
+    ],
+    [
+      "D",
+      "F"
+    ]
+  ],
+  "driver": "F",
+  "driver_direction": "clockwise",
+  "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+}

@@ -1,0 +1,122 @@
+{
+  "sample": {
+    "index": 14,
+    "data_id": "tetris-00009-empty-cells",
+    "question_id": 0,
+    "question_description": "empty cells in row",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Rules: 1. The image shows a standard Tetris grid with 8 rows and 8 columns. 2. The top row of the grid is labeled as Row 0 according to the coordinates. 3. Row...",
+    "image": "images/tetris-00009.png",
+    "state": "states/tetris-00009.json",
+    "image_url": "data/tetris/files/images/tetris-00009.png",
+    "state_url": "data/tetris/files/states/tetris-00009.json",
+    "has_options": false,
+    "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. The top row of the grid is labeled as Row 0 according to the coordinates.\n3. Row coordinates increment from top to bottom in the grid from 0 to 7.\n4. In the image, empty cells are painted white and a cell is painted grey if in previous moves a tetromino was placed here. Besides, a cell is painted red if a falling active tetromino is here\n\n\nQuestion:\nHow many empty cells are there in Row 0 of the grid?\n",
+    "analysis": "In Row 0, cells at [(0, 0), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7)] are white.\nSo the answer is 6.",
+    "options": null,
+    "state_content": {
+      "grid": [
+        [
+          0.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "rows": 8,
+      "cols": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tetris-00009-empty-cells",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "empty cells in row",
+      "image": "images/tetris-00009.png",
+      "state": "states/tetris-00009.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. The top row of the grid is labeled as Row 0 according to the coordinates.\n3. Row coordinates increment from top to bottom in the grid from 0 to 7.\n4. In the image, empty cells are painted white and a cell is painted grey if in previous moves a tetromino was placed here. Besides, a cell is painted red if a falling active tetromino is here\n\n\nQuestion:\nHow many empty cells are there in Row 0 of the grid?\n",
+      "answer": 6,
+      "analysis": "In Row 0, cells at [(0, 0), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7)] are white.\nSo the answer is 6."
+    }
+  }
+}

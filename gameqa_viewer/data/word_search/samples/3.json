@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "word-mcq-00004",
+    "question_id": 1,
+    "question_description": "letter_count",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Rules: 1. The grid contains uppercase letters. 2. Count all occurrences of the specified letter. Question: How many times does the letter 'D' appear in the gri...",
+    "image": "images/word-mcq-00004.png",
+    "state": "states/word-mcq-00004.json",
+    "image_url": "data/word_search/files/images/word-mcq-00004.png",
+    "state_url": "data/word_search/files/states/word-mcq-00004.json",
+    "has_options": true,
+    "question": "Rules:\n1. The grid contains uppercase letters.\n2. Count all occurrences of the specified letter.\n\nQuestion:\nHow many times does the letter 'D' appear in the grid?\n\nOptions:\n1: 2\n2: 1\n3: 5\n4: 3\n5: 4\n6: 7\n7: 9\n8: 6",
+    "analysis": "Let's find all occurrences of letter 'D' by scanning the grid row by row:\n- Found at row 4, column 3\n\nAfter scanning the entire grid, letter 'D' appears 1 times in total. Therefore, the answer is Option 2.",
+    "options": [
+      2,
+      1,
+      5,
+      3,
+      4,
+      7,
+      9,
+      6
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "W",
+          "L",
+          "H",
+          "U",
+          "A",
+          "U",
+          "W"
+        ],
+        [
+          "E",
+          "N",
+          "L",
+          "H",
+          "O",
+          "M",
+          "F"
+        ],
+        [
+          "J",
+          "L",
+          "P",
+          "A",
+          "B",
+          "B",
+          "U"
+        ],
+        [
+          "W",
+          "C",
+          "D",
+          "A",
+          "J",
+          "Z",
+          "R"
+        ],
+        [
+          "M",
+          "W",
+          "P",
+          "I",
+          "P",
+          "C",
+          "E"
+        ],
+        [
+          "M",
+          "X",
+          "K",
+          "W",
+          "Q",
+          "E",
+          "W"
+        ],
+        [
+          "T",
+          "P",
+          "N",
+          "X",
+          "R",
+          "O",
+          "S"
+        ]
+      ],
+      "size": 7,
+      "question_type": "letter_count"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00004",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "letter_count",
+      "image": "images/word-mcq-00004.png",
+      "state": "states/word-mcq-00004.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. The grid contains uppercase letters.\n2. Count all occurrences of the specified letter.\n\nQuestion:\nHow many times does the letter 'D' appear in the grid?\n\nOptions:\n1: 2\n2: 1\n3: 5\n4: 3\n5: 4\n6: 7\n7: 9\n8: 6",
+      "answer": 2,
+      "analysis": "Let's find all occurrences of letter 'D' by scanning the grid row by row:\n- Found at row 4, column 3\n\nAfter scanning the entire grid, letter 'D' appears 1 times in total. Therefore, the answer is Option 2.",
+      "options": [
+        2,
+        1,
+        5,
+        3,
+        4,
+        7,
+        9,
+        6
+      ]
+    }
+  }
+}

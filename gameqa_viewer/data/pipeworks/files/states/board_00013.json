@@ -1,0 +1,232 @@
+{
+  "grid_size": {
+    "rows": 5,
+    "cols": 5
+  },
+  "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+  "tiles": [
+    [
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "SW",
+        "openings": [
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "EMPTY",
+        "openings": []
+      },
+      {
+        "type": "NE",
+        "openings": [
+          "E",
+          "N"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "NES",
+        "openings": [
+          "E",
+          "N",
+          "S"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "NE",
+        "openings": [
+          "E",
+          "N"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "ESW",
+        "openings": [
+          "E",
+          "S",
+          "W"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "EW",
+        "openings": [
+          "E",
+          "W"
+        ]
+      },
+      {
+        "type": "EW",
+        "openings": [
+          "E",
+          "W"
+        ]
+      },
+      {
+        "type": "NESW",
+        "openings": [
+          "E",
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      }
+    ],
+    [
+      {
+        "type": "SWN",
+        "openings": [
+          "N",
+          "S",
+          "W"
+        ]
+      },
+      {
+        "type": "ES",
+        "openings": [
+          "E",
+          "S"
+        ]
+      },
+      {
+        "type": "WNE",
+        "openings": [
+          "E",
+          "N",
+          "W"
+        ]
+      },
+      {
+        "type": "NS",
+        "openings": [
+          "N",
+          "S"
+        ]
+      },
+      {
+        "type": "WN",
+        "openings": [
+          "N",
+          "W"
+        ]
+      }
+    ]
+  ],
+  "pump": {
+    "side": "S",
+    "index": 3,
+    "feeds_tile": [
+      4,
+      3
+    ]
+  },
+  "outlets": {
+    "A": {
+      "side": "S",
+      "index": 4,
+      "touches_tile": [
+        4,
+        4
+      ]
+    },
+    "B": {
+      "side": "E",
+      "index": 4,
+      "touches_tile": [
+        4,
+        4
+      ]
+    },
+    "C": {
+      "side": "E",
+      "index": 2,
+      "touches_tile": [
+        2,
+        4
+      ]
+    }
+  }
+}

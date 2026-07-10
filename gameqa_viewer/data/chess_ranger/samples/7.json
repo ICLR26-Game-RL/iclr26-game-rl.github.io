@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "chess-ranger-008-find_pieces",
+    "question_id": 3,
+    "question_description": "Asking the location of a single piece of a specific type",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "f1",
+    "answer_preview": "f1",
+    "question_preview": "Where is the Pawn on the board?",
+    "image": "images/board_008.png",
+    "state": "states/board_008.json",
+    "image_url": "data/chess_ranger/files/images/board_008.png",
+    "state_url": "data/chess_ranger/files/states/board_008.json",
+    "has_options": false,
+    "question": "Where is the Pawn on the board?",
+    "analysis": "The current board situation is:Rook at a8.Rook at a6.Queen at b2.Rook at e2.Pawn at f1.There is exactly one Pawn on the board, located at position: f1.",
+    "options": null,
+    "state_content": {
+      "pieces": 5,
+      "mine_board": [
+        [
+          "R",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "R",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "Q",
+          0,
+          0,
+          "R",
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          "P",
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-008-find_pieces",
+      "qa_type": "Target Perception",
+      "question_id": 3,
+      "question_description": "Asking the location of a single piece of a specific type",
+      "image": "images/board_008.png",
+      "state": "states/board_008.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Where is the Pawn on the board?",
+      "answer": "f1",
+      "analysis": "The current board situation is:Rook at a8.Rook at a6.Queen at b2.Rook at e2.Pawn at f1.There is exactly one Pawn on the board, located at position: f1."
+    }
+  }
+}

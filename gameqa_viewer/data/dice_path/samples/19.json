@@ -1,0 +1,86 @@
+{
+  "sample": {
+    "index": 19,
+    "data_id": "dice_path-00020-q2",
+    "question_id": 2,
+    "question_description": "Predict the top face of the die after a sequence of rolls given in the question (rolls into rocks or off the board fail).",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die...",
+    "image": "images/board_00020.png",
+    "state": "states/board_00020.json",
+    "image_url": "data/dice_path/files/images/board_00020.png",
+    "state_url": "data/dice_path/files/states/board_00020.json",
+    "has_options": false,
+    "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die starts on cell (4, 0) with the faces shown in the image. It attempts the following rolls in order: down (south), up (north), right (east), left (west), up (north), up (north). Remember that a roll that would leave the board or hit a rock fails and changes nothing. What number is on the top face of the die after the whole sequence? Answer with a single number.",
+    "analysis": "Initial state: the die is at (4, 0) with top = 5, south = 4, east = 6 (hidden faces: north = 3, west = 1, bottom = 2).\nRoll 1 - down (south): the die moves from (4, 0) to (5, 0); rolling down (south) rotates the die about its east-west axis, so top 5->3, north 3->2, east 6->6.\nRoll 2 - up (north): the die moves from (5, 0) to (4, 0); rolling up (north) rotates the die about its east-west axis, so top 3->5, north 2->3, east 6->6.\nRoll 3 - right (east): FAILED - the target cell (4, 1) is blocked by a rock, so the die stays at (4, 0) with unchanged faces (top = 5).\nRoll 4 - left (west): FAILED - the target cell (4, -1) is outside the board, so the die stays at (4, 0) with unchanged faces (top = 5).\nRoll 5 - up (north): the die moves from (4, 0) to (3, 0); rolling up (north) rotates the die about its east-west axis, so top 5->4, north 3->5, east 6->6.\nRoll 6 - up (north): the die moves from (3, 0) to (2, 0); rolling up (north) rotates the die about its east-west axis, so top 4->2, north 5->4, east 6->6.\nAfter all rolls the die rests at (2, 0) with top face 2.\nSo the answer is 2.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 6,
+        "cols": 6
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "blocked_cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "die_cell": [
+        4,
+        0
+      ],
+      "goal_cell": [
+        1,
+        4
+      ],
+      "die_faces": {
+        "top": 5,
+        "north": 3,
+        "east": 6,
+        "bottom": 2,
+        "south": 4,
+        "west": 1
+      },
+      "rule": "standard die, opposite faces sum to 7; visible faces in the image are top, south, east"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_path-00020-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the top face of the die after a sequence of rolls given in the question (rolls into rocks or off the board fail).",
+      "image": "images/board_00020.png",
+      "state": "states/board_00020.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die starts on cell (4, 0) with the faces shown in the image. It attempts the following rolls in order: down (south), up (north), right (east), left (west), up (north), up (north). Remember that a roll that would leave the board or hit a rock fails and changes nothing. What number is on the top face of the die after the whole sequence? Answer with a single number.",
+      "answer": "2",
+      "analysis": "Initial state: the die is at (4, 0) with top = 5, south = 4, east = 6 (hidden faces: north = 3, west = 1, bottom = 2).\nRoll 1 - down (south): the die moves from (4, 0) to (5, 0); rolling down (south) rotates the die about its east-west axis, so top 5->3, north 3->2, east 6->6.\nRoll 2 - up (north): the die moves from (5, 0) to (4, 0); rolling up (north) rotates the die about its east-west axis, so top 3->5, north 2->3, east 6->6.\nRoll 3 - right (east): FAILED - the target cell (4, 1) is blocked by a rock, so the die stays at (4, 0) with unchanged faces (top = 5).\nRoll 4 - left (west): FAILED - the target cell (4, -1) is outside the board, so the die stays at (4, 0) with unchanged faces (top = 5).\nRoll 5 - up (north): the die moves from (4, 0) to (3, 0); rolling up (north) rotates the die about its east-west axis, so top 5->4, north 3->5, east 6->6.\nRoll 6 - up (north): the die moves from (3, 0) to (2, 0); rolling up (north) rotates the die about its east-west axis, so top 4->2, north 5->4, east 6->6.\nAfter all rolls the die rests at (2, 0) with top face 2.\nSo the answer is 2."
+    }
+  }
+}

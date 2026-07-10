@@ -1,0 +1,96 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "word-mcq-00006",
+    "question_id": 0,
+    "question_description": "cell_letter",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. The grid contains uppercase letters. 2. Row and column indexes begin from 1 at the top-left corner. Question: What letter is at row 1, column 4? Opti...",
+    "image": "images/word-mcq-00006.png",
+    "state": "states/word-mcq-00006.json",
+    "image_url": "data/word_search/files/images/word-mcq-00006.png",
+    "state_url": "data/word_search/files/states/word-mcq-00006.json",
+    "has_options": true,
+    "question": "Rules:\n1. The grid contains uppercase letters.\n2. Row and column indexes begin from 1 at the top-left corner.\n\nQuestion:\nWhat letter is at row 1, column 4?\n\nOptions:\n1: C\n2: U\n3: X\n4: M\n5: Y\n6: I\n7: T\n8: J",
+    "analysis": "The letter at position (1, 4) is J. So the answer is Option 8.",
+    "options": [
+      "C",
+      "U",
+      "X",
+      "M",
+      "Y",
+      "I",
+      "T",
+      "J"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "B",
+          "M",
+          "H",
+          "J",
+          "X"
+        ],
+        [
+          "Z",
+          "C",
+          "C",
+          "P",
+          "H"
+        ],
+        [
+          "A",
+          "I",
+          "X",
+          "T",
+          "N"
+        ],
+        [
+          "F",
+          "J",
+          "G",
+          "O",
+          "O"
+        ],
+        [
+          "W",
+          "O",
+          "Q",
+          "M",
+          "P"
+        ]
+      ],
+      "size": 5,
+      "question_type": "cell_letter"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00006",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "cell_letter",
+      "image": "images/word-mcq-00006.png",
+      "state": "states/word-mcq-00006.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Rules:\n1. The grid contains uppercase letters.\n2. Row and column indexes begin from 1 at the top-left corner.\n\nQuestion:\nWhat letter is at row 1, column 4?\n\nOptions:\n1: C\n2: U\n3: X\n4: M\n5: Y\n6: I\n7: T\n8: J",
+      "answer": 8,
+      "analysis": "The letter at position (1, 4) is J. So the answer is Option 8.",
+      "options": [
+        "C",
+        "U",
+        "X",
+        "M",
+        "Y",
+        "I",
+        "T",
+        "J"
+      ]
+    }
+  }
+}

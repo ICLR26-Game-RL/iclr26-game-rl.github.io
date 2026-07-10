@@ -1,0 +1,461 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "color-mcq-00004-color_description",
+    "question_id": 1,
+    "question_description": "color_description",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Rules: 1. Colors change gradually along rows or columns. 2. A gradient transitions between two colors. 3. Each row or column can have its own independent gradi...",
+    "image": "images/color-mcq-00004.png",
+    "state": "states/color-mcq-00004.json",
+    "image_url": "data/hue/files/images/color-mcq-00004.png",
+    "state_url": "data/hue/files/states/color-mcq-00004.json",
+    "has_options": true,
+    "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat color is the cell at row 6, column 2?\n\nOptions:\n1: bright red\n2: bright indigo\n3: pale bright red\n4: cyan\n5: vivid bright indigo\n6: vivid red\n7: yellow\n8: vivid yellow",
+    "analysis": "The cell at position (6, 2) is cyan. So the answer is Option 4.",
+    "options": [
+      "bright red",
+      "bright indigo",
+      "pale bright red",
+      "cyan",
+      "vivid bright indigo",
+      "vivid red",
+      "yellow",
+      "vivid yellow"
+    ],
+    "state_content": {
+      "board": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            122,
+            24,
+            166
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            17,
+            46,
+            3
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            226,
+            222,
+            40
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            103,
+            59,
+            165
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            43,
+            40,
+            8
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            226,
+            187,
+            62
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            85,
+            94,
+            165
+          ],
+          [
+            77,
+            64,
+            89
+          ],
+          [
+            69,
+            34,
+            13
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            227,
+            153,
+            84
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            67,
+            130,
+            165
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            95,
+            29,
+            18
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            227,
+            119,
+            106
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            49,
+            165,
+            164
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            121,
+            23,
+            23
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            228,
+            85,
+            128
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            31,
+            200,
+            164
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            147,
+            17,
+            28
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            228,
+            51,
+            150
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            236,
+            164
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            174,
+            12,
+            34
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            229,
+            17,
+            172
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "removed_positions": [],
+      "removed_colors": [],
+      "extra_options": [],
+      "cell_labels": {},
+      "gradient_info": [
+        {
+          "type": "column",
+          "index": 1,
+          "direction": null,
+          "start_color": [
+            122,
+            24,
+            166
+          ],
+          "end_color": [
+            13,
+            236,
+            164
+          ]
+        },
+        {
+          "type": "column",
+          "index": 3,
+          "direction": null,
+          "start_color": [
+            17,
+            46,
+            3
+          ],
+          "end_color": [
+            174,
+            12,
+            34
+          ]
+        },
+        {
+          "type": "row",
+          "index": 3,
+          "direction": null,
+          "start_color": [
+            85,
+            94,
+            165
+          ],
+          "end_color": [
+            69,
+            34,
+            13
+          ]
+        },
+        {
+          "type": "column",
+          "index": 5,
+          "direction": null,
+          "start_color": [
+            226,
+            222,
+            40
+          ],
+          "end_color": [
+            229,
+            17,
+            172
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat color is the cell at row 6, column 2?\n\nOptions:\n1: bright red\n2: bright indigo\n3: pale bright red\n4: cyan\n5: vivid bright indigo\n6: vivid red\n7: yellow\n8: vivid yellow",
+      "answer": 4,
+      "options": [
+        "bright red",
+        "bright indigo",
+        "pale bright red",
+        "cyan",
+        "vivid bright indigo",
+        "vivid red",
+        "yellow",
+        "vivid yellow"
+      ],
+      "qa_type": "Target Perception",
+      "analysis": "The cell at position (6, 2) is cyan. So the answer is Option 4.",
+      "data_id": "color-mcq-00004-color_description",
+      "question_id": 1,
+      "question_description": "color_description",
+      "image": "images/color-mcq-00004.png",
+      "state": "states/color-mcq-00004.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy"
+    }
+  }
+}

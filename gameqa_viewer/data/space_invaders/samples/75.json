@@ -1,0 +1,134 @@
+{
+  "sample": {
+    "index": 75,
+    "data_id": "space_invaders-mcq-00026",
+    "question_id": 1,
+    "question_description": "Ask the number of enemies in a column",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00004.png",
+    "state": "states/space_invaders_00004.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00004.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00004.json",
+    "has_options": true,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are on column 7? Give the number of the correct option.\nOptions:\n1: 0\n2: 1\n3: 2\n4: 3\n5: 4\n6: 5\n7: 6\n8: 7",
+    "analysis": "It can be seen from the image that on column 7, enemies are present on rows 1 and 2. So the number is 2. The option number is 3.",
+    "options": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "state_content": {
+      "enemy_rows": 4,
+      "enemy_cols": 6,
+      "enemy_area_rows": 6,
+      "total_cols": 10,
+      "ship_col": 1,
+      "enemies": [
+        {
+          "x": 1,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "color": "green"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-mcq-00026",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Ask the number of enemies in a column",
+      "image": "images/space_invaders_00004.png",
+      "state": "states/space_invaders_00004.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are on column 7? Give the number of the correct option.\nOptions:\n1: 0\n2: 1\n3: 2\n4: 3\n5: 4\n6: 5\n7: 6\n8: 7",
+      "answer": 3,
+      "analysis": "It can be seen from the image that on column 7, enemies are present on rows 1 and 2. So the number is 2. The option number is 3.",
+      "options": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  }
+}

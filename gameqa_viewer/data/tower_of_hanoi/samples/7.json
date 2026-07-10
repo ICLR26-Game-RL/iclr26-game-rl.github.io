@@ -1,0 +1,66 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "tower_of_hanoi-00008-q4",
+    "question_id": 4,
+    "question_description": "Choose the unique first move that starts a fewest-moves solution to gather all disks on peg C.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1...",
+    "image": "images/hanoi_00008.png",
+    "state": "states/hanoi_00008.json",
+    "image_url": "data/tower_of_hanoi/files/images/hanoi_00008.png",
+    "state_url": "data/tower_of_hanoi/files/states/hanoi_00008.json",
+    "has_options": true,
+    "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nYou want to gather all 3 disks on peg C in as few moves as possible. Starting from the position in the image, which move should you make FIRST? Exactly one of the moves below starts an optimal solution.\n\nOptions:\n[1] A->B\n[2] A->C\n[3] B->A\n[4] B->C\n[5] C->A\n[6] C->B",
+    "analysis": "Initial position: peg A: disks [3, 1] (bottom to top); peg B: empty; peg C: disks [2] (bottom to top). A breadth-first search shows the optimum from here is 6 moves.\nEvaluate every possible first move:\nA->B: legal; after it, the remaining optimum is 7 moves, total 1 + 7 = 8.\nA->C: legal; after it, the remaining optimum is 7 moves, total 1 + 7 = 8.\nB->A: illegal (peg B is empty).\nB->C: illegal (peg B is empty).\nC->A: illegal (disk 2 would land on the smaller disk 1).\nC->B: legal; after it, the remaining optimum is 5 moves, total 1 + 5 = 6. <- optimal\nOnly C->B keeps the total at 6 moves, so it is the unique optimal first move. The option number is 6.",
+    "options": [
+      "A->B",
+      "A->C",
+      "B->A",
+      "B->C",
+      "C->A",
+      "C->B"
+    ],
+    "state_content": {
+      "num_disks": 3,
+      "pegs": {
+        "A": [
+          3,
+          1
+        ],
+        "B": [],
+        "C": [
+          2
+        ]
+      },
+      "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+      "goal_note": "strategy questions target gathering all disks on peg C"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-00008-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Choose the unique first move that starts a fewest-moves solution to gather all disks on peg C.",
+      "image": "images/hanoi_00008.png",
+      "state": "states/hanoi_00008.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nYou want to gather all 3 disks on peg C in as few moves as possible. Starting from the position in the image, which move should you make FIRST? Exactly one of the moves below starts an optimal solution.\n\nOptions:\n[1] A->B\n[2] A->C\n[3] B->A\n[4] B->C\n[5] C->A\n[6] C->B",
+      "answer": 6,
+      "analysis": "Initial position: peg A: disks [3, 1] (bottom to top); peg B: empty; peg C: disks [2] (bottom to top). A breadth-first search shows the optimum from here is 6 moves.\nEvaluate every possible first move:\nA->B: legal; after it, the remaining optimum is 7 moves, total 1 + 7 = 8.\nA->C: legal; after it, the remaining optimum is 7 moves, total 1 + 7 = 8.\nB->A: illegal (peg B is empty).\nB->C: illegal (peg B is empty).\nC->A: illegal (disk 2 would land on the smaller disk 1).\nC->B: legal; after it, the remaining optimum is 5 moves, total 1 + 5 = 6. <- optimal\nOnly C->B keeps the total at 6 moves, so it is the unique optimal first move. The option number is 6.",
+      "options": [
+        "A->B",
+        "A->C",
+        "B->A",
+        "B->C",
+        "C->A",
+        "C->B"
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "sample": {
+    "index": 21,
+    "data_id": "tictactoe-mcq-8-StateInfo",
+    "question_id": 1,
+    "question_description": "Questions about the current state of a specific block of the board.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, on...",
+    "image": "images/board_8.png",
+    "state": "states/board_8.json",
+    "image_url": "data/tictactoe/files/images/board_8.png",
+    "state_url": "data/tictactoe/files/states/board_8.json",
+    "has_options": true,
+    "question": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, one using **O** (the red block) and the other using **X** (the blue block). In each game, player **O** starts first. The objective is to be the first to get three of your marks in a row (horizontally, vertically, or diagonally). If all nine squares are filled without either player achieving this, the game ends in a draw. Notice: the current player to make a move should be inferred from the number of pieces for each players on the board. When inferring the optimal move, if optimal move can be inferred by some rules, choose the optimal move. Otherwise, choose the first move. (The order of choices is (0, 0), (0, 1), (0, 2), (1, 0), ..., (2, 2), choose the first move that is not occupied)\n\nQuestion: What is the color of the block at (1, 1)? \n\nOptions: ['A.red', 'B.blue', 'C.white']",
+    "analysis": "The current board is [['O', ' ', ' '], [' ', 'O', 'X'], [' ', ' ', ' ']]. The block at (1, 1) is \"O\", and the color matching \"O\" is red, so the block at (1, 1) is red.",
+    "options": [
+      "A.red",
+      "B.blue",
+      "C.white"
+    ],
+    "state_content": {
+      "board": [
+        [
+          "O",
+          " ",
+          " "
+        ],
+        [
+          " ",
+          "O",
+          "X"
+        ],
+        [
+          " ",
+          " ",
+          " "
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tictactoe-mcq-8-StateInfo",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Questions about the current state of a specific block of the board.",
+      "image": "images/board_8.png",
+      "state": "states/board_8.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, one using **O** (the red block) and the other using **X** (the blue block). In each game, player **O** starts first. The objective is to be the first to get three of your marks in a row (horizontally, vertically, or diagonally). If all nine squares are filled without either player achieving this, the game ends in a draw. Notice: the current player to make a move should be inferred from the number of pieces for each players on the board. When inferring the optimal move, if optimal move can be inferred by some rules, choose the optimal move. Otherwise, choose the first move. (The order of choices is (0, 0), (0, 1), (0, 2), (1, 0), ..., (2, 2), choose the first move that is not occupied)\n\nQuestion: What is the color of the block at (1, 1)? \n\nOptions: ['A.red', 'B.blue', 'C.white']",
+      "answer": "A",
+      "analysis": "The current board is [['O', ' ', ' '], [' ', 'O', 'X'], [' ', ' ', ' ']]. The block at (1, 1) is \"O\", and the color matching \"O\" is red, so the block at (1, 1) is red.",
+      "options": [
+        "A.red",
+        "B.blue",
+        "C.white"
+      ]
+    }
+  }
+}

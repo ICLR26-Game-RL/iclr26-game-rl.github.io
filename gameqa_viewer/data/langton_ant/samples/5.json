@@ -1,0 +1,144 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "langton-fill-00006",
+    "question_id": 3,
+    "question_description": "Count how many times a specific cell changes its color",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "1",
+    "answer_preview": "1",
+    "question_preview": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant f...",
+    "image": "images/board_002.png",
+    "state": "states/board_002.json",
+    "image_url": "data/langton_ant/files/images/board_002.png",
+    "state_url": "data/langton_ant/files/states/board_002.json",
+    "has_options": false,
+    "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nAfter 10 steps, how many times did the cell at position (0, 5) change its color? Answer with a number.",
+    "analysis": "Initial state: The ant is at (0, 4) facing right\nTarget cell (0, 5) starts as white\nLet's follow the ant's movement step by step:\nStep 1: Ant is on a black cell at (0, 4), facing right. It turns left, changes the cell to white, moves forward to (8, 4), now facing up. Target cell (0, 5) remains white (no change)\nStep 2: Ant is on a white cell at (8, 4), facing up. It turns right, changes the cell to black, moves forward to (8, 5), now facing right. Target cell (0, 5) remains white (no change)\nStep 3: Ant is on a white cell at (8, 5), facing right. It turns right, changes the cell to black, moves forward to (0, 5), now facing down. Target cell (0, 5) remains white (no change)\nStep 4: Ant is on a white cell at (0, 5), facing down. It turns right, changes the cell to black, moves forward to (0, 4), now facing left. Target cell (0, 5) is visited and changes from white to black (change #1)\nStep 5: Ant is on a white cell at (0, 4), facing left. It turns right, changes the cell to black, moves forward to (8, 4), now facing up. Target cell (0, 5) remains black (no change)\nStep 6: Ant is on a black cell at (8, 4), facing up. It turns left, changes the cell to white, moves forward to (8, 3), now facing left. Target cell (0, 5) remains black (no change)\nStep 7: Ant is on a white cell at (8, 3), facing left. It turns right, changes the cell to black, moves forward to (7, 3), now facing up. Target cell (0, 5) remains black (no change)\nStep 8: Ant is on a white cell at (7, 3), facing up. It turns right, changes the cell to black, moves forward to (7, 4), now facing right. Target cell (0, 5) remains black (no change)\nStep 9: Ant is on a white cell at (7, 4), facing right. It turns right, changes the cell to black, moves forward to (8, 4), now facing down. Target cell (0, 5) remains black (no change)\nStep 10: Ant is on a white cell at (8, 4), facing down. It turns right, changes the cell to black, moves forward to (8, 3), now facing left. Target cell (0, 5) remains black (no change)\n\nFinal state: The ant is at (8, 3) facing left\nTarget cell (0, 5) changed color 1 time",
+    "options": null,
+    "state_content": {
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ant": {
+        "x": 0,
+        "y": 4,
+        "direction": "right"
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "langton-fill-00006",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Count how many times a specific cell changes its color",
+      "image": "images/board_002.png",
+      "state": "states/board_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nAfter 10 steps, how many times did the cell at position (0, 5) change its color? Answer with a number.",
+      "answer": "1",
+      "analysis": "Initial state: The ant is at (0, 4) facing right\nTarget cell (0, 5) starts as white\nLet's follow the ant's movement step by step:\nStep 1: Ant is on a black cell at (0, 4), facing right. It turns left, changes the cell to white, moves forward to (8, 4), now facing up. Target cell (0, 5) remains white (no change)\nStep 2: Ant is on a white cell at (8, 4), facing up. It turns right, changes the cell to black, moves forward to (8, 5), now facing right. Target cell (0, 5) remains white (no change)\nStep 3: Ant is on a white cell at (8, 5), facing right. It turns right, changes the cell to black, moves forward to (0, 5), now facing down. Target cell (0, 5) remains white (no change)\nStep 4: Ant is on a white cell at (0, 5), facing down. It turns right, changes the cell to black, moves forward to (0, 4), now facing left. Target cell (0, 5) is visited and changes from white to black (change #1)\nStep 5: Ant is on a white cell at (0, 4), facing left. It turns right, changes the cell to black, moves forward to (8, 4), now facing up. Target cell (0, 5) remains black (no change)\nStep 6: Ant is on a black cell at (8, 4), facing up. It turns left, changes the cell to white, moves forward to (8, 3), now facing left. Target cell (0, 5) remains black (no change)\nStep 7: Ant is on a white cell at (8, 3), facing left. It turns right, changes the cell to black, moves forward to (7, 3), now facing up. Target cell (0, 5) remains black (no change)\nStep 8: Ant is on a white cell at (7, 3), facing up. It turns right, changes the cell to black, moves forward to (7, 4), now facing right. Target cell (0, 5) remains black (no change)\nStep 9: Ant is on a white cell at (7, 4), facing right. It turns right, changes the cell to black, moves forward to (8, 4), now facing down. Target cell (0, 5) remains black (no change)\nStep 10: Ant is on a white cell at (8, 4), facing down. It turns right, changes the cell to black, moves forward to (8, 3), now facing left. Target cell (0, 5) remains black (no change)\n\nFinal state: The ant is at (8, 3) facing left\nTarget cell (0, 5) changed color 1 time"
+    }
+  }
+}

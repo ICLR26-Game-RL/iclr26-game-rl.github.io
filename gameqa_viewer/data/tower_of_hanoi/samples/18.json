@@ -1,0 +1,54 @@
+{
+  "sample": {
+    "index": 18,
+    "data_id": "tower_of_hanoi-00019-q2",
+    "question_id": 2,
+    "question_description": "Track a disk through a sequence of moves in which illegal moves are skipped.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "B",
+    "answer_preview": "B",
+    "question_preview": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1...",
+    "image": "images/hanoi_00019.png",
+    "state": "states/hanoi_00019.json",
+    "image_url": "data/tower_of_hanoi/files/images/hanoi_00019.png",
+    "state_url": "data/tower_of_hanoi/files/states/hanoi_00019.json",
+    "has_options": false,
+    "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nStarting from the position in the image, the following moves are attempted one by one: A->A, C->A, C->C, C->B, B->B. An ILLEGAL move (from an empty peg, onto a smaller disk, or onto the same peg) is skipped and changes nothing. After the whole sequence, on which peg is disk 2? Answer with the peg letter.",
+    "analysis": "Initial position: peg A: disks [1] (bottom to top); peg B: disks [5, 4, 2] (bottom to top); peg C: disks [3] (bottom to top).\nMove 1 (A->A): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nMove 2 (C->A): ILLEGAL - disk 3 cannot rest on the smaller disk 1; the move is skipped and nothing changes.\nMove 3 (C->C): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nMove 4 (C->B): ILLEGAL - disk 3 cannot rest on the smaller disk 2; the move is skipped and nothing changes.\nMove 5 (B->B): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nFinal position: peg A: disks [1] (bottom to top); peg B: disks [5, 4, 2] (bottom to top); peg C: disks [3] (bottom to top).\nDisk 2 ends on peg B.\nSo the answer is B.",
+    "options": null,
+    "state_content": {
+      "num_disks": 5,
+      "pegs": {
+        "A": [
+          1
+        ],
+        "B": [
+          5,
+          4,
+          2
+        ],
+        "C": [
+          3
+        ]
+      },
+      "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+      "goal_note": "strategy questions target gathering all disks on peg C"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-00019-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Track a disk through a sequence of moves in which illegal moves are skipped.",
+      "image": "images/hanoi_00019.png",
+      "state": "states/hanoi_00019.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nStarting from the position in the image, the following moves are attempted one by one: A->A, C->A, C->C, C->B, B->B. An ILLEGAL move (from an empty peg, onto a smaller disk, or onto the same peg) is skipped and changes nothing. After the whole sequence, on which peg is disk 2? Answer with the peg letter.",
+      "answer": "B",
+      "analysis": "Initial position: peg A: disks [1] (bottom to top); peg B: disks [5, 4, 2] (bottom to top); peg C: disks [3] (bottom to top).\nMove 1 (A->A): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nMove 2 (C->A): ILLEGAL - disk 3 cannot rest on the smaller disk 1; the move is skipped and nothing changes.\nMove 3 (C->C): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nMove 4 (C->B): ILLEGAL - disk 3 cannot rest on the smaller disk 2; the move is skipped and nothing changes.\nMove 5 (B->B): ILLEGAL - source and target are the same peg; the move is skipped and nothing changes.\nFinal position: peg A: disks [1] (bottom to top); peg B: disks [5, 4, 2] (bottom to top); peg C: disks [3] (bottom to top).\nDisk 2 ends on peg B.\nSo the answer is B."
+    }
+  }
+}

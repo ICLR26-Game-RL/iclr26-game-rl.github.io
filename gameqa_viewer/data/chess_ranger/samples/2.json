@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "chess-ranger-003-find_pieces",
+    "question_id": 3,
+    "question_description": "Asking the location of a single piece of a specific type",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "d5",
+    "answer_preview": "d5",
+    "question_preview": "Where is the Bishop on the board?",
+    "image": "images/board_003.png",
+    "state": "states/board_003.json",
+    "image_url": "data/chess_ranger/files/images/board_003.png",
+    "state_url": "data/chess_ranger/files/states/board_003.json",
+    "has_options": false,
+    "question": "Where is the Bishop on the board?",
+    "analysis": "The current board situation is:Queen at a8.Queen at h6.Bishop at d5.Queen at d2.There is exactly one Bishop on the board, located at position: d5.",
+    "options": null,
+    "state_content": {
+      "pieces": 4,
+      "mine_board": [
+        [
+          "Q",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          "Q"
+        ],
+        [
+          0,
+          0,
+          0,
+          "B",
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          "Q",
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-003-find_pieces",
+      "qa_type": "Target Perception",
+      "question_id": 3,
+      "question_description": "Asking the location of a single piece of a specific type",
+      "image": "images/board_003.png",
+      "state": "states/board_003.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Where is the Bishop on the board?",
+      "answer": "d5",
+      "analysis": "The current board situation is:Queen at a8.Queen at h6.Bishop at d5.Queen at d2.There is exactly one Bishop on the board, located at position: d5."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "lifegame-mcq-00007-stability",
+    "question_id": 4,
+    "question_description": "Questions about predicting steps needed to reach stability",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "G",
+    "answer_preview": "G",
+    "question_preview": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). Each cell interacts with its eight neigh...",
+    "image": "images/board_007.png",
+    "state": "states/board_007.json",
+    "image_url": "data/lifegame/files/images/board_007.png",
+    "state_url": "data/lifegame/files/states/board_007.json",
+    "has_options": true,
+    "question": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). \n\nEach cell interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent. For a cell at position (r,c), its neighbors are:\n- (r-1,c-1)  (r-1,c)  (r-1,c+1)   [above row]\n- (r,c-1)     (r,c)    (r,c+1)     [same row]\n- (r+1,c-1)  (r+1,c)  (r+1,c+1)   [below row]\n\nRegion boundaries wrap around to the opposite side:\n- A cell at the top edge connects to cells at the bottom edge\n- A cell at the left edge connects to cells at the right edge\n- Corner cells connect to the diagonally opposite corner\nFor example, in a 3x3 region:\n- Cell (0,0)'s top neighbor is (2,0)\n- Cell (0,0)'s left neighbor is (0,2)\n- Cell (0,0)'s top-left neighbor is (2,2)\n\nThe game evolves in discrete steps according to these rules:\n1. Any live cell with fewer than two live neighbors dies (underpopulation)\n2. Any live cell with two or three live neighbors lives on to the next generation\n3. Any live cell with more than three live neighbors dies (overpopulation)\n4. Any dead cell with exactly three live neighbors becomes alive (reproduction)\n\nIn the image, black squares represent live cells, white squares represent dead cells, and the grid lines help visualize the cell boundaries. \n\nIn this grid, we use (row, col) coordinates where:\n- row increases from top to bottom (0 at top)\n- col increases from left to right (0 at left)\nFor example, the top-left cell is at (0, 0), and the cell below it is at (1, 0).\n\nConsider the 3x3 region starting at cell (2,0).\n\nWhen analyzing this region's stability:\n• We treat it as an independent Game of Life system\n• The region is stable when either:\n  - All cells maintain their current states, or\n  - The cells form a repeating pattern\nHow many iterations will it take for this region to reach a stable state?\n\nOptions:\nA: 8\nB: 6\nC: 5\nD: 3\nE: 2\nF: 4\nG: 1\nH: 7",
+    "analysis": "Local Region Stability Analysis:\n\nStep 0 - Initial State('1' stands for living cell and '0' stands for dead cell):\n   0 1 2\n0: [0] [1] [0]\n1: [0] [0] [1]\n2: [0] [0] [0]\n\nTarget 3x3 Region (starting at (2,0),'1' stands for living cell and '0' stands for dead cell):\n0 0 0\n0 1 0\n0 0 1\n\n==================================================\n\nStep 1:\n\nGlobal Evolution Changes:\n\nCell at global position (0,1):\n- Changed from alive to dead\n- Reason: underpopulation (fewer than 2 live neighbors)\n\nCell at global position (1,2):\n- Changed from alive to dead\n- Reason: underpopulation (fewer than 2 live neighbors)\n\nAfter global evolution:\n   0 1 2\n0: [0] [0] [0]\n1: [0] [0] [0]\n2: [0] [0] [0]\n\nLocal Stability Analysis (treating the region as an independent Game of Life):\n\nThe region has reached stability!\nWhen treated as an independent 3x3 Game of Life:\n\nCell at local position (0,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (0,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (0,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nThe option is G.",
+    "options": [
+      "A: 8",
+      "B: 6",
+      "C: 5",
+      "D: 3",
+      "E: 2",
+      "F: 4",
+      "G: 1",
+      "H: 7"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lifegame-mcq-00007-stability",
+      "qa_type": "State Prediction",
+      "qa_level": "Hard",
+      "question_id": 4,
+      "question_description": "Questions about predicting steps needed to reach stability",
+      "plot_level": "Easy",
+      "question": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). \n\nEach cell interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent. For a cell at position (r,c), its neighbors are:\n- (r-1,c-1)  (r-1,c)  (r-1,c+1)   [above row]\n- (r,c-1)     (r,c)    (r,c+1)     [same row]\n- (r+1,c-1)  (r+1,c)  (r+1,c+1)   [below row]\n\nRegion boundaries wrap around to the opposite side:\n- A cell at the top edge connects to cells at the bottom edge\n- A cell at the left edge connects to cells at the right edge\n- Corner cells connect to the diagonally opposite corner\nFor example, in a 3x3 region:\n- Cell (0,0)'s top neighbor is (2,0)\n- Cell (0,0)'s left neighbor is (0,2)\n- Cell (0,0)'s top-left neighbor is (2,2)\n\nThe game evolves in discrete steps according to these rules:\n1. Any live cell with fewer than two live neighbors dies (underpopulation)\n2. Any live cell with two or three live neighbors lives on to the next generation\n3. Any live cell with more than three live neighbors dies (overpopulation)\n4. Any dead cell with exactly three live neighbors becomes alive (reproduction)\n\nIn the image, black squares represent live cells, white squares represent dead cells, and the grid lines help visualize the cell boundaries. \n\nIn this grid, we use (row, col) coordinates where:\n- row increases from top to bottom (0 at top)\n- col increases from left to right (0 at left)\nFor example, the top-left cell is at (0, 0), and the cell below it is at (1, 0).\n\nConsider the 3x3 region starting at cell (2,0).\n\nWhen analyzing this region's stability:\n• We treat it as an independent Game of Life system\n• The region is stable when either:\n  - All cells maintain their current states, or\n  - The cells form a repeating pattern\nHow many iterations will it take for this region to reach a stable state?\n\nOptions:\nA: 8\nB: 6\nC: 5\nD: 3\nE: 2\nF: 4\nG: 1\nH: 7",
+      "answer": "G",
+      "analysis": "Local Region Stability Analysis:\n\nStep 0 - Initial State('1' stands for living cell and '0' stands for dead cell):\n   0 1 2\n0: [0] [1] [0]\n1: [0] [0] [1]\n2: [0] [0] [0]\n\nTarget 3x3 Region (starting at (2,0),'1' stands for living cell and '0' stands for dead cell):\n0 0 0\n0 1 0\n0 0 1\n\n==================================================\n\nStep 1:\n\nGlobal Evolution Changes:\n\nCell at global position (0,1):\n- Changed from alive to dead\n- Reason: underpopulation (fewer than 2 live neighbors)\n\nCell at global position (1,2):\n- Changed from alive to dead\n- Reason: underpopulation (fewer than 2 live neighbors)\n\nAfter global evolution:\n   0 1 2\n0: [0] [0] [0]\n1: [0] [0] [0]\n2: [0] [0] [0]\n\nLocal Stability Analysis (treating the region as an independent Game of Life):\n\nThe region has reached stability!\nWhen treated as an independent 3x3 Game of Life:\n\nCell at local position (0,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (0,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (0,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (1,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,0):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,1):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nCell at local position (2,2):\n- Currently dead\n- Has 0 live neighbors:\n- Will remain dead (does not have exactly 3 live neighbors)\n\nThe option is G.",
+      "options": [
+        "A: 8",
+        "B: 6",
+        "C: 5",
+        "D: 3",
+        "E: 2",
+        "F: 4",
+        "G: 1",
+        "H: 7"
+      ],
+      "image": "images/board_007.png",
+      "state": "states/board_007.json"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "sokoban-data-00001-00004",
+    "question_id": 4,
+    "question_description": "Identify the current position of the player on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are m...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/sokoban/files/images/board_00001.png",
+    "state_url": "data/sokoban/files/states/board_00001.json",
+    "has_options": true,
+    "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.What is the current position of the player (row, column)?\nOptions:\n[1] (1, 4)\n[2] (3, 4)\n[3] (2, 1)\n[4] (6, 5)\n[5] (1, 1)\n[6] (4, 2)\n[7] (4, 4)\n[8] (3, 5)",
+    "analysis": "- Player position: (6, 5)\n- Boxes positions: (3, 3)\n- Target positions: (4, 1)\nThe player is currently at position (6, 5).\n\nSo the answer is (6, 5). The option number is 4.",
+    "options": [
+      "(1, 4)",
+      "(3, 4)",
+      "(2, 1)",
+      "(6, 5)",
+      "(1, 1)",
+      "(4, 2)",
+      "(4, 4)",
+      "(3, 5)"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "grid_size": {
+        "width": 8,
+        "height": 8
+      },
+      "player": {
+        "x": 5,
+        "y": 6
+      },
+      "boxes": [
+        {
+          "x": 3,
+          "y": 3
+        }
+      ],
+      "targets": [
+        {
+          "x": 1,
+          "y": 4
+        }
+      ],
+      "symbols": {
+        "empty": 0,
+        "wall": 1,
+        "box": 2,
+        "target": 3,
+        "box_on_target": 4,
+        "player": 5,
+        "player_on_target": 6
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "sokoban-data-00001-00004",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "Identify the current position of the player on the board",
+      "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.What is the current position of the player (row, column)?\nOptions:\n[1] (1, 4)\n[2] (3, 4)\n[3] (2, 1)\n[4] (6, 5)\n[5] (1, 1)\n[6] (4, 2)\n[7] (4, 4)\n[8] (3, 5)",
+      "answer": 4,
+      "analysis": "- Player position: (6, 5)\n- Boxes positions: (3, 3)\n- Target positions: (4, 1)\nThe player is currently at position (6, 5).\n\nSo the answer is (6, 5). The option number is 4.",
+      "options": [
+        "(1, 4)",
+        "(3, 4)",
+        "(2, 1)",
+        "(6, 5)",
+        "(1, 1)",
+        "(4, 2)",
+        "(4, 4)",
+        "(3, 5)"
+      ]
+    }
+  }
+}

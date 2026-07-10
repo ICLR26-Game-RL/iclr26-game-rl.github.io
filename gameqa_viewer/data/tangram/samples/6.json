@@ -1,0 +1,186 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "tengram-mcq-00006-piece_area",
+    "question_id": 3,
+    "question_description": "piece_area",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00006.png",
+    "state": "states/tengram-mcq-00006.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00006.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00006.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. A piece's area is the number of cells it contains.\n\nQuestion:\nWhat is the area (number of cells) of Piece 1?\n\nOptions:\n1: 11\n2: 12\n3: 14\n4: 17\n5: 18\n6: 19\n7: 20\n8: 21",
+    "analysis": "Let's analyze Piece 1 (vivid blue) row by row:\n\nThe piece spans from row 0 to 5 (height of 6):\n\nRow 0: 2 cells from column 0 to 1 (Running sum: 2)\nRow 1: 2 cells from column 0 to 1 (Running sum: 4)\nRow 2: 3 cells from column 0 to 2 (Running sum: 7)\nRow 3: 4 cells from column 0 to 3 (Running sum: 11)\nRow 4: 4 cells from column 0 to 3 (Running sum: 15)\nRow 5: 2 cells from column 0 to 1 (Running sum: 17)\n\nAdding up all the cells: 2 + 2 + 3 + 4 + 4 + 2 = 17 cells\nTherefore, the answer is Option 4.",
+    "options": [
+      "11",
+      "12",
+      "14",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "seeds": [
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "removed_pieces": [
+        3,
+        4,
+        2
+      ],
+      "config": {
+        "grid_size": 9,
+        "num_seeds": 4,
+        "num_pieces_to_remove": 3
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00006-piece_area",
+      "qa_type": "Target Perception",
+      "question_id": 3,
+      "question_description": "piece_area",
+      "image": "images/tengram-mcq-00006.png",
+      "state": "states/tengram-mcq-00006.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. A piece's area is the number of cells it contains.\n\nQuestion:\nWhat is the area (number of cells) of Piece 1?\n\nOptions:\n1: 11\n2: 12\n3: 14\n4: 17\n5: 18\n6: 19\n7: 20\n8: 21",
+      "answer": 4,
+      "analysis": "Let's analyze Piece 1 (vivid blue) row by row:\n\nThe piece spans from row 0 to 5 (height of 6):\n\nRow 0: 2 cells from column 0 to 1 (Running sum: 2)\nRow 1: 2 cells from column 0 to 1 (Running sum: 4)\nRow 2: 3 cells from column 0 to 2 (Running sum: 7)\nRow 3: 4 cells from column 0 to 3 (Running sum: 11)\nRow 4: 4 cells from column 0 to 3 (Running sum: 15)\nRow 5: 2 cells from column 0 to 1 (Running sum: 17)\n\nAdding up all the cells: 2 + 2 + 3 + 4 + 4 + 2 = 17 cells\nTherefore, the answer is Option 4.",
+      "options": [
+        "11",
+        "12",
+        "14",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ]
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "sample": {
+    "index": 13,
+    "data_id": "pipeworks-00014-q3",
+    "question_id": 3,
+    "question_description": "Count how many grid tiles become filled with water when the pump runs.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "5",
+    "answer_preview": "5",
+    "question_preview": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so...",
+    "image": "images/board_00014.png",
+    "state": "states/board_00014.json",
+    "image_url": "data/pipeworks/files/images/board_00014.png",
+    "state_url": "data/pipeworks/files/states/board_00014.json",
+    "has_options": false,
+    "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the right edge of the board and feeds tile (0, 4); outlet A sits below the bottom edge, touching tile (4, 0); outlet B sits right of the right edge, touching tile (2, 4); outlet C sits below the bottom edge, touching tile (4, 4).\nWhen the pump is switched on, how many tiles of the grid end up filled with water? Answer with a single number.",
+    "analysis": "Trace the water flow step by step:\nWater enters at tile (0, 4) through its east opening (a T-junction pipe (openings: north-east-south)).\nFrom (0, 4) water flows south into (1, 4) (a cross pipe (openings: north-east-south-west)).\nFrom (1, 4) water flows south into (2, 4) (a T-junction pipe (openings: north-east-south)).\nFrom (2, 4) water flows south into (3, 4) (a straight pipe (openings: north-south)).\nFrom (3, 4) water flows south into (4, 4) (a straight pipe (openings: north-south)).\nTile (2, 4) is wet and has a east opening on the board edge, so outlet B receives water.\nTile (4, 4) is wet and has a south opening on the board edge, so outlet C receives water.\nThe filled tiles, in filling order, are: (0, 4), (1, 4), (2, 4), (3, 4), (4, 4).\nCounting them gives 5 tiles.\nSo the answer is 5.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 5,
+        "cols": 5
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "tiles": [
+        [
+          {
+            "type": "SW",
+            "openings": [
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "NES",
+            "openings": [
+              "E",
+              "N",
+              "S"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "NESW",
+            "openings": [
+              "E",
+              "N",
+              "S",
+              "W"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "WNE",
+            "openings": [
+              "E",
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "SW",
+            "openings": [
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NES",
+            "openings": [
+              "E",
+              "N",
+              "S"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "WNE",
+            "openings": [
+              "E",
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "WNE",
+            "openings": [
+              "E",
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          }
+        ]
+      ],
+      "pump": {
+        "side": "E",
+        "index": 0,
+        "feeds_tile": [
+          0,
+          4
+        ]
+      },
+      "outlets": {
+        "A": {
+          "side": "S",
+          "index": 0,
+          "touches_tile": [
+            4,
+            0
+          ]
+        },
+        "B": {
+          "side": "E",
+          "index": 2,
+          "touches_tile": [
+            2,
+            4
+          ]
+        },
+        "C": {
+          "side": "S",
+          "index": 4,
+          "touches_tile": [
+            4,
+            4
+          ]
+        }
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "pipeworks-00014-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Count how many grid tiles become filled with water when the pump runs.",
+      "image": "images/board_00014.png",
+      "state": "states/board_00014.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the right edge of the board and feeds tile (0, 4); outlet A sits below the bottom edge, touching tile (4, 0); outlet B sits right of the right edge, touching tile (2, 4); outlet C sits below the bottom edge, touching tile (4, 4).\nWhen the pump is switched on, how many tiles of the grid end up filled with water? Answer with a single number.",
+      "answer": "5",
+      "analysis": "Trace the water flow step by step:\nWater enters at tile (0, 4) through its east opening (a T-junction pipe (openings: north-east-south)).\nFrom (0, 4) water flows south into (1, 4) (a cross pipe (openings: north-east-south-west)).\nFrom (1, 4) water flows south into (2, 4) (a T-junction pipe (openings: north-east-south)).\nFrom (2, 4) water flows south into (3, 4) (a straight pipe (openings: north-south)).\nFrom (3, 4) water flows south into (4, 4) (a straight pipe (openings: north-south)).\nTile (2, 4) is wet and has a east opening on the board edge, so outlet B receives water.\nTile (4, 4) is wet and has a south opening on the board edge, so outlet C receives water.\nThe filled tiles, in filling order, are: (0, 4), (1, 4), (2, 4), (3, 4), (4, 4).\nCounting them gives 5 tiles.\nSo the answer is 5."
+    }
+  }
+}

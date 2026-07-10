@@ -1,0 +1,45 @@
+{
+  "sample": {
+    "index": 15,
+    "data_id": "minecraft-00016-cross_river",
+    "question_id": 3,
+    "question_description": "Ask the minimum number of blocks needed to cross the river.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. T...",
+    "image": "images/00016.png",
+    "state": "states/00016.json",
+    "image_url": "data/minecraft/files/images/00016.png",
+    "state_url": "data/minecraft/files/states/00016.json",
+    "has_options": false,
+    "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThere is a river in the scene, and the player's position is marked in red. The player needs to cross the river. Note that the river is presented in clearly bounded grid forms to allow players to discern the river's width. Suppose the player cannot wade directly through the water nor can they make a horizontal jump to cross the river directly.\n\nQuestion: If the player wants to cross the river, what is the minimum number of blocks they need to consume?",
+    "analysis": "Based on the rules, the player can build a bridge on the river by placing blocks in it. To have the minimum number of blocks, the bridge should just be vertical to the river bank and the answer is the width of the river. We can see the width of the river is 4. Therefore, the answer is 4.",
+    "options": null,
+    "state_content": {
+      "river_direction": "z",
+      "river_width": 4,
+      "player_position": [
+        -4,
+        -1,
+        0
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minecraft-00016-cross_river",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Ask the minimum number of blocks needed to cross the river.",
+      "image": "images/00016.png",
+      "state": "states/00016.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThere is a river in the scene, and the player's position is marked in red. The player needs to cross the river. Note that the river is presented in clearly bounded grid forms to allow players to discern the river's width. Suppose the player cannot wade directly through the water nor can they make a horizontal jump to cross the river directly.\n\nQuestion: If the player wants to cross the river, what is the minimum number of blocks they need to consume?",
+      "answer": 4,
+      "analysis": "Based on the rules, the player can build a bridge on the river by placing blocks in it. To have the minimum number of blocks, the bridge should just be vertical to the river bank and the answer is the width of the river. We can see the width of the river is 4. Therefore, the answer is 4."
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "city_skyline-00004-q2",
+    "question_id": 2,
+    "question_description": "Find the lot with the unique tallest building in a given row/column.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "(1, 2)",
+    "answer_preview": "(1, 2)",
+    "question_preview": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left co...",
+    "image": "images/city_00004.png",
+    "state": "states/city_00004.json",
+    "image_url": "data/city_skyline/files/images/city_00004.png",
+    "state_url": "data/city_skyline/files/states/city_00004.json",
+    "has_options": false,
+    "question": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left corner giving the top view of the same block: its rows r0, r1, ... run top to bottom (r0 is the northernmost row) and its columns c0, c1, ... left to right (c0 is the westernmost column); a lot is written (row, column). The height map shows each lot's exact number of floors ('P' = park, height 0), and matching labels also appear on the front edges of the 3D block. The compass gives the directions in the 3D view: north points toward the upper-right edge of the block, west toward the upper-left. Each building's roof also carries a white chip stating its floor count, and every floor shows one row of windows per wall. An observer standing far away at street level looks along one row or column: a building is VISIBLE to them if and only if it is strictly taller than every building closer to the observer in that same line (parks never block anything). Equal height means hidden.\n\nConsider only column c2. Which lot holds the single tallest building of that line? Answer with the coordinate in the form (row, column).",
+    "analysis": "The lots of column c2 and their heights are: (0, 2) height 2, (1, 2) height 4, (2, 2) height 1.\nThe maximum height is 4, reached only at (1, 2).\nSo the answer is (1, 2).",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 3,
+        "cols": 3
+      },
+      "coordinate_system": "(row, col); r0 is the northernmost row, c0 the westernmost column",
+      "heights": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "legend": "0 = park; otherwise number of floors",
+      "visibility_rule": "a building is visible from a direction iff strictly taller than every building nearer the observer in the same line"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "city_skyline-00004-q2",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Find the lot with the unique tallest building in a given row/column.",
+      "image": "images/city_00004.png",
+      "state": "states/city_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left corner giving the top view of the same block: its rows r0, r1, ... run top to bottom (r0 is the northernmost row) and its columns c0, c1, ... left to right (c0 is the westernmost column); a lot is written (row, column). The height map shows each lot's exact number of floors ('P' = park, height 0), and matching labels also appear on the front edges of the 3D block. The compass gives the directions in the 3D view: north points toward the upper-right edge of the block, west toward the upper-left. Each building's roof also carries a white chip stating its floor count, and every floor shows one row of windows per wall. An observer standing far away at street level looks along one row or column: a building is VISIBLE to them if and only if it is strictly taller than every building closer to the observer in that same line (parks never block anything). Equal height means hidden.\n\nConsider only column c2. Which lot holds the single tallest building of that line? Answer with the coordinate in the form (row, column).",
+      "answer": "(1, 2)",
+      "analysis": "The lots of column c2 and their heights are: (0, 2) height 2, (1, 2) height 4, (2, 2) height 1.\nThe maximum height is 4, reached only at (1, 2).\nSo the answer is (1, 2)."
+    }
+  }
+}

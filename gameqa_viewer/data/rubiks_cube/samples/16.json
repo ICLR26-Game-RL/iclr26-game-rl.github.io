@@ -1,0 +1,338 @@
+{
+  "sample": {
+    "index": 16,
+    "data_id": "rubiks_cube-data-00004-00004",
+    "question_id": 4,
+    "question_description": "Determine optimal move sequence to solve the cube",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degr...",
+    "image": "images/cube_00004.png",
+    "state": "states/cube_00004.json",
+    "image_url": "data/rubiks_cube/files/images/cube_00004.png",
+    "state_url": "data/rubiks_cube/files/states/cube_00004.json",
+    "has_options": true,
+    "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.How many moves are needed to solve the entire cube?Options: [1] 1, [2] 5, [3] 9, [4] 2, [5] 6, [6] 11, [7] 4, [8] 8",
+    "analysis": "Step 1: Search Process\n\nTried F: Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried F': Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nAt depth 1, tried 12 moves. Best improvement was 0 matching cells. Selected 2 moves for further exploration.\nTried F: Changed total matching cells from 42 to 54. This move improved U, D, L, R. State looks promising, will explore further.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried F': Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nAt depth 2, tried 22 moves. Best improvement was 12 matching cells. Selected 2 moves for further exploration.\n\nStep 2: Based on analysis, the solution requires the following sequence: rotate F, rotate FSo the answer is 2. The option number is 4.",
+    "options": [
+      "1",
+      "5",
+      "9",
+      "2",
+      "6",
+      "11",
+      "4",
+      "8"
+    ],
+    "state_content": {
+      "faces": {
+        "U": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "D": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "L": [
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            2,
+            3
+          ]
+        ],
+        "R": [
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ]
+        ],
+        "F": [
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "B": [
+          [
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5
+          ]
+        ]
+      },
+      "colors": [
+        "yellow",
+        "white",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ],
+      "move_history": [
+        "F",
+        "F"
+      ],
+      "face_states": {
+        "U": {
+          "colors": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ]
+          ],
+          "dominant_color": "yellow",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 6,
+            "white": 3
+          }
+        },
+        "D": {
+          "colors": [
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ],
+            [
+              "white",
+              "white",
+              "white"
+            ]
+          ],
+          "dominant_color": "white",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 3,
+            "white": 6
+          }
+        },
+        "L": {
+          "colors": [
+            [
+              "orange",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "red"
+            ],
+            [
+              "orange",
+              "orange",
+              "red"
+            ]
+          ],
+          "dominant_color": "orange",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "orange": 6,
+            "red": 3
+          }
+        },
+        "R": {
+          "colors": [
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ],
+            [
+              "orange",
+              "red",
+              "red"
+            ]
+          ],
+          "dominant_color": "red",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "orange": 3,
+            "red": 6
+          }
+        },
+        "F": {
+          "colors": [
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ],
+          "dominant_color": "blue",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "blue": 9
+          }
+        },
+        "B": {
+          "colors": [
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ],
+            [
+              "green",
+              "green",
+              "green"
+            ]
+          ],
+          "dominant_color": "green",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "green": 9
+          }
+        }
+      },
+      "is_solved": false,
+      "symbols": {
+        "yellow": 0,
+        "white": 1,
+        "orange": 2,
+        "red": 3,
+        "blue": 4,
+        "green": 5
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rubiks_cube-data-00004-00004",
+      "image": "images/cube_00004.png",
+      "state": "states/cube_00004.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Determine optimal move sequence to solve the cube",
+      "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.How many moves are needed to solve the entire cube?Options: [1] 1, [2] 5, [3] 9, [4] 2, [5] 6, [6] 11, [7] 4, [8] 8",
+      "answer": 4,
+      "analysis": "Step 1: Search Process\n\nTried F: Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried F': Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nAt depth 1, tried 12 moves. Best improvement was 0 matching cells. Selected 2 moves for further exploration.\nTried F: Changed total matching cells from 42 to 54. This move improved U, D, L, R. State looks promising, will explore further.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried F': Changed total matching cells from 42 to 42. This move had no immediate effect. State looks promising, will explore further.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nTried B: Move worsened U, D, L, R. Backtracking to try different move.\nTried L: Move worsened U, D, F, B. Backtracking to try different move.\nTried R: Move worsened U, D, F, B. Backtracking to try different move.\nTried U: Move worsened L, R, F, B. Backtracking to try different move.\nTried D: Move worsened L, R, F, B. Backtracking to try different move.\nTried B': Move worsened U, D, L, R. Backtracking to try different move.\nTried L': Move worsened U, D, F, B. Backtracking to try different move.\nTried R': Move worsened U, D, F, B. Backtracking to try different move.\nTried U': Move worsened L, R, F, B. Backtracking to try different move.\nTried D': Move worsened L, R, F, B. Backtracking to try different move.\nAt depth 2, tried 22 moves. Best improvement was 12 matching cells. Selected 2 moves for further exploration.\n\nStep 2: Based on analysis, the solution requires the following sequence: rotate F, rotate FSo the answer is 2. The option number is 4.",
+      "options": [
+        "1",
+        "5",
+        "9",
+        "2",
+        "6",
+        "11",
+        "4",
+        "8"
+      ]
+    }
+  }
+}

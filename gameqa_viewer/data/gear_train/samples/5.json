@@ -1,0 +1,93 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "gear_train-00006-q3",
+    "question_id": 3,
+    "question_description": "Compute how many turns a gear completes from the driver's turns using the teeth ratio along the meshing chain.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00006.png",
+    "state": "states/panel_00006.json",
+    "image_url": "data/gear_train/files/images/panel_00006.png",
+    "state_url": "data/gear_train/files/states/panel_00006.json",
+    "has_options": false,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear B completes exactly 2 full turn(s). How many full turns does gear D complete in the same time? Answer with a single number.",
+    "analysis": "The meshing path from gear B to gear D is B -> A -> C -> D.\nGears B (10T) and A (16T) are meshed, so 10 x turns_B = 16 x turns_A.\nGears A (16T) and C (10T) are meshed, so 16 x turns_A = 10 x turns_C.\nGears C (10T) and D (10T) are meshed, so 10 x turns_C = 10 x turns_D.\nMultiplying these relations along the chain, the intermediate gears cancel out, leaving 10 x turns_B = 10 x turns_D.\nturns_D = 10 x 2 / 10 = 20 / 10 = 2.\nSo the answer is 2.",
+    "options": null,
+    "state_content": {
+      "gears": [
+        {
+          "label": "A",
+          "teeth": 16,
+          "center": [
+            340.6,
+            275.3
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "B",
+          "teeth": 10,
+          "center": [
+            352.6,
+            362.9
+          ],
+          "pitch_radius": 34.0
+        },
+        {
+          "label": "C",
+          "teeth": 10,
+          "center": [
+            340.1,
+            186.9
+          ],
+          "pitch_radius": 34.0
+        },
+        {
+          "label": "D",
+          "teeth": 10,
+          "center": [
+            279.0,
+            157.1
+          ],
+          "pitch_radius": 34.0
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "driver": "B",
+      "driver_direction": "clockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00006-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Compute how many turns a gear completes from the driver's turns using the teeth ratio along the meshing chain.",
+      "image": "images/panel_00006.png",
+      "state": "states/panel_00006.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear B completes exactly 2 full turn(s). How many full turns does gear D complete in the same time? Answer with a single number.",
+      "answer": "2",
+      "analysis": "The meshing path from gear B to gear D is B -> A -> C -> D.\nGears B (10T) and A (16T) are meshed, so 10 x turns_B = 16 x turns_A.\nGears A (16T) and C (10T) are meshed, so 16 x turns_A = 10 x turns_C.\nGears C (10T) and D (10T) are meshed, so 10 x turns_C = 10 x turns_D.\nMultiplying these relations along the chain, the intermediate gears cancel out, leaving 10 x turns_B = 10 x turns_D.\nturns_D = 10 x 2 / 10 = 20 / 10 = 2.\nSo the answer is 2."
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "tents-fill-00002-possible-tent-positions",
+    "question_id": 5,
+    "question_description": "Given the tree positions and considering only that tents cannot be placed on tree cells and must be horizontally or vertically adjacent to at least one tree, how many positions in the entire grid are available to place tents (including those already occupied by tents)?",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "28",
+    "answer_preview": "28",
+    "question_preview": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, an...",
+    "image": "images/00002.png",
+    "state": "states/00002.json",
+    "image_url": "data/tents/files/images/00002.png",
+    "state_url": "data/tents/files/states/00002.json",
+    "has_options": false,
+    "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the tree positions and considering only that tents cannot be placed on tree cells and must be horizontally or vertically adjacent to at least one tree, how many positions in the entire grid are available to place tents (including both positions that are currently occupied by tents and positions that are currently empty)?",
+    "analysis": "**Step-by-step reasoning:**\n1. Find all the trees in the grid: (0, 7), (6, 2), (8, 8), (3, 4), (9, 3), (8, 1), (9, 9), (1, 4), (7, 3), (5, 2).\n2. For each tree, check its adjacent horizontal and vertical positions (up, down, left, right). List the positions that are within the grid bounds and are not already occupied by trees:\nTree at (0, 7) has the following one or more valid positions around it: (0, 8), (0, 6), (1, 7).\nTree at (6, 2) has the following one or more valid positions around it: (6, 3), (6, 1), (7, 2).\nTree at (8, 8) has the following one or more valid positions around it: (8, 9), (8, 7), (7, 8), (9, 8).\nTree at (3, 4) has the following one or more valid positions around it: (3, 5), (3, 3), (2, 4), (4, 4).\nTree at (9, 3) has the following one or more valid positions around it: (9, 4), (9, 2), (8, 3).\nTree at (8, 1) has the following one or more valid positions around it: (8, 2), (8, 0), (7, 1), (9, 1).\nTree at (9, 9) has the following one or more valid positions around it: (9, 8), (8, 9).\nTree at (1, 4) has the following one or more valid positions around it: (1, 5), (1, 3), (0, 4), (2, 4).\nTree at (7, 3) has the following one or more valid positions around it: (7, 4), (7, 2), (6, 3), (8, 3).\nTree at (5, 2) has the following one or more valid positions around it: (5, 3), (5, 1), (4, 2).\n\n3. Aggregate the valid positions where tents can be placed and remove duplicates. The valid positions are: (0, 4), (0, 6), (0, 8), (1, 3), (1, 5), (1, 7), (2, 4), (3, 3), (3, 5), (4, 2), (4, 4), (5, 1), (5, 3), (6, 1), (6, 3), (7, 1), (7, 2), (7, 4), (7, 8), (8, 0), (8, 2), (8, 3), (8, 7), (8, 9), (9, 1), (9, 2), (9, 4), (9, 8).\n4. The correct answer is the total number of valid positions, which is 28.",
+    "options": null,
+    "state_content": {
+      "size": [
+        10,
+        10
+      ],
+      "tree_positions": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "tent_positions": [
+        [
+          7,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "removed_tents": [
+        [
+          0,
+          4
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          3
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tents-fill-00002-possible-tent-positions",
+      "qa_type": "State Prediction",
+      "question_id": 5,
+      "question_description": "Given the tree positions and considering only that tents cannot be placed on tree cells and must be horizontally or vertically adjacent to at least one tree, how many positions in the entire grid are available to place tents (including those already occupied by tents)?",
+      "image": "images/00002.png",
+      "state": "states/00002.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the tree positions and considering only that tents cannot be placed on tree cells and must be horizontally or vertically adjacent to at least one tree, how many positions in the entire grid are available to place tents (including both positions that are currently occupied by tents and positions that are currently empty)?",
+      "answer": "28",
+      "analysis": "**Step-by-step reasoning:**\n1. Find all the trees in the grid: (0, 7), (6, 2), (8, 8), (3, 4), (9, 3), (8, 1), (9, 9), (1, 4), (7, 3), (5, 2).\n2. For each tree, check its adjacent horizontal and vertical positions (up, down, left, right). List the positions that are within the grid bounds and are not already occupied by trees:\nTree at (0, 7) has the following one or more valid positions around it: (0, 8), (0, 6), (1, 7).\nTree at (6, 2) has the following one or more valid positions around it: (6, 3), (6, 1), (7, 2).\nTree at (8, 8) has the following one or more valid positions around it: (8, 9), (8, 7), (7, 8), (9, 8).\nTree at (3, 4) has the following one or more valid positions around it: (3, 5), (3, 3), (2, 4), (4, 4).\nTree at (9, 3) has the following one or more valid positions around it: (9, 4), (9, 2), (8, 3).\nTree at (8, 1) has the following one or more valid positions around it: (8, 2), (8, 0), (7, 1), (9, 1).\nTree at (9, 9) has the following one or more valid positions around it: (9, 8), (8, 9).\nTree at (1, 4) has the following one or more valid positions around it: (1, 5), (1, 3), (0, 4), (2, 4).\nTree at (7, 3) has the following one or more valid positions around it: (7, 4), (7, 2), (6, 3), (8, 3).\nTree at (5, 2) has the following one or more valid positions around it: (5, 3), (5, 1), (4, 2).\n\n3. Aggregate the valid positions where tents can be placed and remove duplicates. The valid positions are: (0, 4), (0, 6), (0, 8), (1, 3), (1, 5), (1, 7), (2, 4), (3, 3), (3, 5), (4, 2), (4, 4), (5, 1), (5, 3), (6, 1), (6, 3), (7, 1), (7, 2), (7, 4), (7, 8), (8, 0), (8, 2), (8, 3), (8, 7), (8, 9), (9, 1), (9, 2), (9, 4), (9, 8).\n4. The correct answer is the total number of valid positions, which is 28."
+    }
+  }
+}

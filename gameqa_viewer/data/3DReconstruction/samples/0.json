@@ -1,0 +1,85 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "reconstruction_00001",
+    "question_id": 0,
+    "question_description": "Count the total number of voxels in the given 3D structure.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "This is a state in a 3D reconstruction game. Given: - A 3x3x3 grid structure containing voxels - A image containing the voxel structure and its target projecti...",
+    "image": "images/reconstruction_00001.png",
+    "state": "states/reconstruction_00001.json",
+    "image_url": "data/3DReconstruction/files/images/reconstruction_00001.png",
+    "state_url": "data/3DReconstruction/files/states/reconstruction_00001.json",
+    "has_options": false,
+    "question": "This is a state in a 3D reconstruction game.\n\nGiven:\n- A 3x3x3 grid structure containing voxels\n- A image containing the voxel structure and its target projections (possibly not the projections of the given structure)\n  (Note: The projections shown in the image are not relevant for this question)\n\nGame Rules:\n1. Grid Space: The game is played on a 3x3x3 cube grid.\n2. Coordinates: Position (x,y,z) ranges from 1 to 3, with (1,1,1) at front-left-bottom.\n3. Position Rule: Each position can contain at most one voxel.\n4. Connectivity: All voxels must be connected face-to-face.\n\nQuestion:\nHow many voxels are there in the given structure?\n\nPlease answer with a number.",
+    "analysis": "The structure contains voxels at the following positions: (2,3,1), (3,3,1). By counting these positions, we can see there are 2 voxels in total. Therefore the answer is 2.",
+    "options": null,
+    "state_content": {
+      "voxel_positions": [
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ]
+      ],
+      "target_yz_projection": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "target_xz_projection": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "remaining_voxels": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "reconstruction_00001",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "Count the total number of voxels in the given 3D structure.",
+      "image": "images/reconstruction_00001.png",
+      "state": "states/reconstruction_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "This is a state in a 3D reconstruction game.\n\nGiven:\n- A 3x3x3 grid structure containing voxels\n- A image containing the voxel structure and its target projections (possibly not the projections of the given structure)\n  (Note: The projections shown in the image are not relevant for this question)\n\nGame Rules:\n1. Grid Space: The game is played on a 3x3x3 cube grid.\n2. Coordinates: Position (x,y,z) ranges from 1 to 3, with (1,1,1) at front-left-bottom.\n3. Position Rule: Each position can contain at most one voxel.\n4. Connectivity: All voxels must be connected face-to-face.\n\nQuestion:\nHow many voxels are there in the given structure?\n\nPlease answer with a number.",
+      "answer": "2",
+      "analysis": "The structure contains voxels at the following positions: (2,3,1), (3,3,1). By counting these positions, we can see there are 2 voxels in total. Therefore the answer is 2."
+    }
+  }
+}

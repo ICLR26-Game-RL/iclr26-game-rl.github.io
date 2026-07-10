@@ -1,0 +1,351 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "color-mcq-00010-color_matching",
+    "question_id": 0,
+    "question_description": "color_matching",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Rules: 1. Colors change gradually along rows or columns. 2. A gradient transitions between two colors. 3. Each row or column can have its own independent gradi...",
+    "image": "images/color-mcq-00010.png",
+    "state": "states/color-mcq-00010.json",
+    "image_url": "data/hue/files/images/color-mcq-00010.png",
+    "state_url": "data/hue/files/states/color-mcq-00010.json",
+    "has_options": true,
+    "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhich color should be put in cell C?\n\nOptions:\nColors are numbered from 1 to 6 in the palette below",
+    "analysis": "We need to find the correct color for cell C at position (4, 4)\n\nLet's analyze the color patterns around this cell:\n- Looking horizontally, we see a pattern transitioning from pale yellow to light gray\n\nLet's look at our color options:\nOption 1 is light gray\nOption 2 is pale green\nOption 3 is bright cyan\nOption 4 is black\nOption 5 is pale indigo\nOption 6 is pale orange\n\nBased on the pattern, we should use light gray (Option 1)",
+    "options": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "state_content": {
+      "board": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            83,
+            134,
+            61
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            165,
+            115,
+            124
+          ],
+          [
+            206,
+            105,
+            156
+          ],
+          [
+            247,
+            96,
+            188
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            152,
+            171,
+            118
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            203,
+            217,
+            234
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            129,
+            148,
+            175
+          ],
+          [
+            127,
+            177,
+            199
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            123,
+            236,
+            247
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "removed_positions": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "removed_colors": [
+        [
+          169,
+          186,
+          156
+        ],
+        [
+          125,
+          206,
+          223
+        ],
+        [
+          186,
+          201,
+          195
+        ],
+        [
+          132,
+          119,
+          152
+        ],
+        [
+          124,
+          124,
+          92
+        ]
+      ],
+      "extra_options": [],
+      "cell_labels": {
+        "(3, 2)": "A",
+        "(5, 3)": "B",
+        "(3, 3)": "C",
+        "(5, 0)": "D",
+        "(1, 2)": "E"
+      },
+      "gradient_info": [
+        {
+          "type": "row",
+          "index": 3,
+          "direction": null,
+          "start_color": [
+            152,
+            171,
+            118
+          ],
+          "end_color": [
+            203,
+            217,
+            234
+          ]
+        },
+        {
+          "type": "row",
+          "index": 5,
+          "direction": null,
+          "start_color": [
+            132,
+            119,
+            152
+          ],
+          "end_color": [
+            123,
+            236,
+            247
+          ]
+        },
+        {
+          "type": "row",
+          "index": 1,
+          "direction": null,
+          "start_color": [
+            83,
+            134,
+            61
+          ],
+          "end_color": [
+            247,
+            96,
+            188
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhich color should be put in cell C?\n\nOptions:\nColors are numbered from 1 to 6 in the palette below",
+      "answer": 1,
+      "options": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "qa_type": "State Prediction",
+      "analysis": "We need to find the correct color for cell C at position (4, 4)\n\nLet's analyze the color patterns around this cell:\n- Looking horizontally, we see a pattern transitioning from pale yellow to light gray\n\nLet's look at our color options:\nOption 1 is light gray\nOption 2 is pale green\nOption 3 is bright cyan\nOption 4 is black\nOption 5 is pale indigo\nOption 6 is pale orange\n\nBased on the pattern, we should use light gray (Option 1)",
+      "data_id": "color-mcq-00010-color_matching",
+      "question_id": 0,
+      "question_description": "color_matching",
+      "image": "images/color-mcq-00010.png",
+      "state": "states/color-mcq-00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard"
+    }
+  }
+}

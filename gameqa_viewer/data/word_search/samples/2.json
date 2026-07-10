@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "word-mcq-00003",
+    "question_id": 2,
+    "question_description": "word_direction",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Rules: 1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left. 2. Starting from position (row 6, column...",
+    "image": "images/word-mcq-00003.png",
+    "state": "states/word-mcq-00003.json",
+    "image_url": "data/word_search/files/images/word-mcq-00003.png",
+    "state_url": "data/word_search/files/states/word-mcq-00003.json",
+    "has_options": true,
+    "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 6, column 6), in which direction can you find the word 'GRUNTH'?\n\nOptions:\n1: diagonal-right-up\n2: diagonal-right-down\n3: diagonal-left-up\n4: down\n5: up\n6: right\n7: diagonal-left-down\n8: left",
+    "analysis": "Let's analyze the word 'GRUNTH' starting from position (row 6, column 6):\n\n1. Starting position contains 'G'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (6, 7): Expected 'R', found 'P'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Position (7, 6): Expected 'R', found 'P'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-down direction:\n   - Position (7, 7): Expected 'R', found 'T'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (5, 7): Expected 'R', found 'M'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (7, 5): Expected 'R', found 'T'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Second letter 'R' found at (5, 5)\n   - Complete sequence:    Sequence found: G → R → U → N → T → H\n   ✓ Valid word 'GRUNTH' found in diagonal-left-up direction!\n\nChecking up direction:\n   - Position (5, 6): Expected 'R', found 'W'\n   × This direction does not contain the complete word\n\nChecking left direction:\n   - Position (6, 5): Expected 'R', found 'S'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: diagonal-left-up\n\nTherefore, the answer is Option 3: diagonal-left-up",
+    "options": [
+      "diagonal-right-up",
+      "diagonal-right-down",
+      "diagonal-left-up",
+      "down",
+      "up",
+      "right",
+      "diagonal-left-down",
+      "left"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "H",
+          "C",
+          "V",
+          "N",
+          "Q",
+          "J",
+          "P"
+        ],
+        [
+          "B",
+          "T",
+          "P",
+          "C",
+          "T",
+          "B",
+          "Z"
+        ],
+        [
+          "V",
+          "J",
+          "N",
+          "Z",
+          "O",
+          "Y",
+          "Z"
+        ],
+        [
+          "J",
+          "F",
+          "V",
+          "U",
+          "L",
+          "C",
+          "R"
+        ],
+        [
+          "L",
+          "U",
+          "C",
+          "H",
+          "R",
+          "W",
+          "M"
+        ],
+        [
+          "M",
+          "D",
+          "C",
+          "E",
+          "S",
+          "G",
+          "P"
+        ],
+        [
+          "V",
+          "O",
+          "H",
+          "D",
+          "T",
+          "P",
+          "T"
+        ]
+      ],
+      "size": 7,
+      "question_type": "word_direction"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00003",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "word_direction",
+      "image": "images/word-mcq-00003.png",
+      "state": "states/word-mcq-00003.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 6, column 6), in which direction can you find the word 'GRUNTH'?\n\nOptions:\n1: diagonal-right-up\n2: diagonal-right-down\n3: diagonal-left-up\n4: down\n5: up\n6: right\n7: diagonal-left-down\n8: left",
+      "answer": 3,
+      "analysis": "Let's analyze the word 'GRUNTH' starting from position (row 6, column 6):\n\n1. Starting position contains 'G'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (6, 7): Expected 'R', found 'P'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Position (7, 6): Expected 'R', found 'P'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-down direction:\n   - Position (7, 7): Expected 'R', found 'T'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (5, 7): Expected 'R', found 'M'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (7, 5): Expected 'R', found 'T'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Second letter 'R' found at (5, 5)\n   - Complete sequence:    Sequence found: G → R → U → N → T → H\n   ✓ Valid word 'GRUNTH' found in diagonal-left-up direction!\n\nChecking up direction:\n   - Position (5, 6): Expected 'R', found 'W'\n   × This direction does not contain the complete word\n\nChecking left direction:\n   - Position (6, 5): Expected 'R', found 'S'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: diagonal-left-up\n\nTherefore, the answer is Option 3: diagonal-left-up",
+      "options": [
+        "diagonal-right-up",
+        "diagonal-right-down",
+        "diagonal-left-up",
+        "down",
+        "up",
+        "right",
+        "diagonal-left-down",
+        "left"
+      ]
+    }
+  }
+}

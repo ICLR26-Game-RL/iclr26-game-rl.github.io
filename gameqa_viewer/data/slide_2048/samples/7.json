@@ -1,0 +1,58 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "slide_2048-00008-q4",
+    "question_id": 4,
+    "question_description": "Find the maximum total merge score achievable with exactly two moves.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "96",
+    "answer_preview": "96",
+    "question_preview": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is writ...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/slide_2048/files/images/board_00008.png",
+    "state_url": "data/slide_2048/files/states/board_00008.json",
+    "has_options": false,
+    "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nMerging two tiles scores points equal to the merged tile's value; the score starts at 0. The player will make EXACTLY TWO moves (any directions; a move that does not change the board is not allowed). What is the maximum total score the player can gain with two moves? Answer with a single number.",
+    "analysis": "Initial board: row 0: [-, -, 32]; row 1: [-, 16, 4]; row 2: [64, 16, 2].\nTry every valid two-move sequence and add up the merge scores:\nDOWN then LEFT: 32 + 0 = 32 points.\nDOWN then UP: 32 + 0 = 32 points.\nLEFT then RIGHT: 0 + 0 = 0 points.\nLEFT then UP: 0 + 0 = 0 points.\nUP then DOWN: 32 + 0 = 32 points.\nUP then LEFT: 32 + 64 = 96 points.  <- best\nUP then RIGHT: 32 + 64 = 96 points.\nThe best plan is UP then LEFT:\nAfter UP the board is row 0: [64, 32, 32]; row 1: [-, -, 4]; row 2: [-, -, 2] (gaining 32).\nAfter LEFT the board is row 0: [64, 64, -]; row 1: [4, -, -]; row 2: [2, -, -] (gaining 64).\nMaximum total score: 96.\nSo the answer is 96.",
+    "options": null,
+    "state_content": {
+      "grid_size": 3,
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "grid": [
+        [
+          0,
+          0,
+          32
+        ],
+        [
+          0,
+          16,
+          4
+        ],
+        [
+          64,
+          16,
+          2
+        ]
+      ],
+      "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "slide_2048-00008-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Find the maximum total merge score achievable with exactly two moves.",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nMerging two tiles scores points equal to the merged tile's value; the score starts at 0. The player will make EXACTLY TWO moves (any directions; a move that does not change the board is not allowed). What is the maximum total score the player can gain with two moves? Answer with a single number.",
+      "answer": "96",
+      "analysis": "Initial board: row 0: [-, -, 32]; row 1: [-, 16, 4]; row 2: [64, 16, 2].\nTry every valid two-move sequence and add up the merge scores:\nDOWN then LEFT: 32 + 0 = 32 points.\nDOWN then UP: 32 + 0 = 32 points.\nLEFT then RIGHT: 0 + 0 = 0 points.\nLEFT then UP: 0 + 0 = 0 points.\nUP then DOWN: 32 + 0 = 32 points.\nUP then LEFT: 32 + 64 = 96 points.  <- best\nUP then RIGHT: 32 + 64 = 96 points.\nThe best plan is UP then LEFT:\nAfter UP the board is row 0: [64, 32, 32]; row 1: [-, -, 4]; row 2: [-, -, 2] (gaining 32).\nAfter LEFT the board is row 0: [64, 64, -]; row 1: [4, -, -]; row 2: [2, -, -] (gaining 64).\nMaximum total score: 96.\nSo the answer is 96."
+    }
+  }
+}

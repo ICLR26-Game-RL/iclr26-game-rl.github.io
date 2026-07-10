@@ -1,0 +1,160 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "snake-1-head_pos",
+    "question_id": 0,
+    "question_description": "Where is the head of the snake?",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "(5, 5)",
+    "answer_preview": "(5, 5)",
+    "question_preview": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in...",
+    "image": "images/snake_1.png",
+    "state": "states/snake_1.json",
+    "image_url": "data/snake/files/images/snake_1.png",
+    "state_url": "data/snake/files/states/snake_1.json",
+    "has_options": false,
+    "question": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in the grid represent the matrix format, where x is the row index and y is the column index. The origin (0,0) is in the the upper left of the grid. You need to control the snake that moves across the grid. Each step it can move up, down, right or left. The game ends if the snake head hits the bound of the grid or its own body. Where is the head of the snake?",
+    "analysis": "The head is the yellow block, and the yellow block is at (5, 5). Thus, the answer is (5, 5).",
+    "options": null,
+    "state_content": {
+      "map": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "snake-1-head_pos",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "Where is the head of the snake?",
+      "image": "images/snake_1.png",
+      "state": "states/snake_1.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in the grid represent the matrix format, where x is the row index and y is the column index. The origin (0,0) is in the the upper left of the grid. You need to control the snake that moves across the grid. Each step it can move up, down, right or left. The game ends if the snake head hits the bound of the grid or its own body. Where is the head of the snake?",
+      "answer": "(5, 5)",
+      "analysis": "The head is the yellow block, and the yellow block is at (5, 5). Thus, the answer is (5, 5)."
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "sample": {
+    "index": 52,
+    "data_id": "klondike-mcq-018-002",
+    "question_id": 2,
+    "question_description": "A deadlock question about the current state of Klondike Solitaire",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": "7",
+    "answer_preview": "7",
+    "question_preview": "The given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinc...",
+    "image": "images/board_018_002.png",
+    "state": "states/board_018_002.json",
+    "image_url": "data/klondike/files/images/board_018_002.png",
+    "state_url": "data/klondike/files/states/board_018_002.json",
+    "has_options": true,
+    "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\n\nA deadlock occurs in Klondike Solitaire when the player reaches a state where no more effective moves can be made. To be more specific, certain moves are not considered deadlocks:\n- **Draw Pile**: Drawing a new card from the draw pile can always break a deadlock.\n- **Waste Pile**: Moving a card from the waste pile to the tableau or foundation can break a deadlock.\n- **Foundation Pile**: Moving a card to the foundation pile can always break a deadlock.\n- **Tableau Pile**: A move within the tableau pile can break a deadlock only if it relocates a card to another tableau pile while revealing a hidden card or create an empty tableau pile where a King can be placed.\nIf none of these moves are possible, the game is in a deadlock state.\n\nAnalyze the current game state and select the most appropriate reason for why the game is or is not in a deadlock.\nChoose the correct option and give the analysis.\nOptions:\n1. Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n2. Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n3. Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n4. Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n5. Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is in a deadlock.\n6. Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n7. Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n8. Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+    "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: diamond 1, with a visible card underneath\nTab2: club 1, with a visible card underneath\nTab3: spade 9, with a visible card underneath\nTab4: heart 4, with a visible card underneath\nTab5: diamond 6, with a hidden card underneath\nTab6: diamond 2, with a visible card underneath\nTab7: heart 11, with a hidden card underneath\n\n**Foundation Piles:**\n- Foundation 1: spade 1\n- Foundation 2: heart 1\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** Empty\n\n**Draw Pile:** Not empty\n\nAnalyzing possible moves in priority order:\n\n1. Draw Pile and Waste Pile Check: Not both empty\n\n2. Cards to Foundation Check:\n- Tab1: diamond 1 → Foundation 4\n- Tab2: club 1 → Foundation 4\n\n3. Effective Tableau Pile Move Check: No tableau pile move can reveal a hidden card or empty a tableau pile.\n\nSo the answer is option 7: Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+    "options": [
+      "Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is in a deadlock.",
+      "Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock."
+    ],
+    "state_content": {
+      "draw": [
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>"
+      ],
+      "dump": [],
+      "piles": [
+        [
+          "spade 1"
+        ],
+        [
+          "heart 1"
+        ],
+        [],
+        []
+      ],
+      "tableau": [
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "spade 8",
+          "diamond 7",
+          "spade 6",
+          "diamond 5",
+          "club 4",
+          "heart 3",
+          "spade 2",
+          "diamond 1"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "club 3",
+          "heart 2",
+          "club 1"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "heart 12",
+          "spade 11",
+          "heart 10",
+          "spade 9"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "diamond 8",
+          "club 7",
+          "heart 6",
+          "spade 5",
+          "heart 4"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "diamond 6"
+        ],
+        [
+          "spade 3",
+          "diamond 2"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "heart 11"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "klondike-mcq-018-002",
+      "question_id": 2,
+      "question_description": "A deadlock question about the current state of Klondike Solitaire",
+      "image": "images/board_018_002.png",
+      "state": "states/board_018_002.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\n\nA deadlock occurs in Klondike Solitaire when the player reaches a state where no more effective moves can be made. To be more specific, certain moves are not considered deadlocks:\n- **Draw Pile**: Drawing a new card from the draw pile can always break a deadlock.\n- **Waste Pile**: Moving a card from the waste pile to the tableau or foundation can break a deadlock.\n- **Foundation Pile**: Moving a card to the foundation pile can always break a deadlock.\n- **Tableau Pile**: A move within the tableau pile can break a deadlock only if it relocates a card to another tableau pile while revealing a hidden card or create an empty tableau pile where a King can be placed.\nIf none of these moves are possible, the game is in a deadlock state.\n\nAnalyze the current game state and select the most appropriate reason for why the game is or is not in a deadlock.\nChoose the correct option and give the analysis.\nOptions:\n1. Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n2. Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n3. Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n4. Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n5. Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is in a deadlock.\n6. Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n7. Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.\n8. Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "answer": "7",
+      "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: diamond 1, with a visible card underneath\nTab2: club 1, with a visible card underneath\nTab3: spade 9, with a visible card underneath\nTab4: heart 4, with a visible card underneath\nTab5: diamond 6, with a hidden card underneath\nTab6: diamond 2, with a visible card underneath\nTab7: heart 11, with a hidden card underneath\n\n**Foundation Piles:**\n- Foundation 1: spade 1\n- Foundation 2: heart 1\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** Empty\n\n**Draw Pile:** Not empty\n\nAnalyzing possible moves in priority order:\n\n1. Draw Pile and Waste Pile Check: Not both empty\n\n2. Cards to Foundation Check:\n- Tab1: diamond 1 → Foundation 4\n- Tab2: club 1 → Foundation 4\n\n3. Effective Tableau Pile Move Check: No tableau pile move can reveal a hidden card or empty a tableau pile.\n\nSo the answer is option 7: Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+      "options": [
+        "Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND Some tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is in a deadlock.",
+        "Draw pile and waste pile are NOT both empty AND No cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are NOT both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock.",
+        "Draw pile and waste pile are both empty AND Existing cards can be moved to foundation piles AND No tableau pile move can reveal a hidden card or empty a tableau pile, so the game is NOT in a deadlock."
+      ]
+    }
+  }
+}

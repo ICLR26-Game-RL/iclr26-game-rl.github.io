@@ -1,0 +1,105 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "space_invaders-fill-00005",
+    "question_id": 5,
+    "question_description": "Ask the points gained by shooting once where the ship is",
+    "qa_type": "State Prediction",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 10,
+    "answer_preview": "10",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00001.png",
+    "state": "states/space_invaders_00001.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00001.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00001.json",
+    "has_options": false,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nIf the ship shoots at the current position, how many points will the player get? ",
+    "analysis": "As can be seen from the image, the ship is on column 3. And The enemy closest to the ship on this column is on row 5, which is green. Therefore, the player will get 10 points if the ship shoots at the current position. ",
+    "options": null,
+    "state_content": {
+      "enemy_rows": 3,
+      "enemy_cols": 5,
+      "enemy_area_rows": 5,
+      "total_cols": 9,
+      "ship_col": 3,
+      "enemies": [
+        {
+          "x": 3,
+          "y": 1,
+          "color": "purple"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "color": "green"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "color": "green"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "color": "purple"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "color": "green"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-fill-00005",
+      "qa_type": "State Prediction",
+      "question_id": 5,
+      "question_description": "Ask the points gained by shooting once where the ship is",
+      "image": "images/space_invaders_00001.png",
+      "state": "states/space_invaders_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nIf the ship shoots at the current position, how many points will the player get? ",
+      "answer": 10,
+      "analysis": "As can be seen from the image, the ship is on column 3. And The enemy closest to the ship on this column is on row 5, which is green. Therefore, the player will get 10 points if the ship shoots at the current position. "
+    }
+  }
+}

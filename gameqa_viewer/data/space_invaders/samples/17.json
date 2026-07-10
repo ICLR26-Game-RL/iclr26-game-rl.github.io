@@ -1,0 +1,100 @@
+{
+  "sample": {
+    "index": 17,
+    "data_id": "space_invaders-fill-00018",
+    "question_id": 9,
+    "question_description": "Ask the maximum points gained by shooting twice",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 50,
+    "answer_preview": "50",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00002.png",
+    "state": "states/space_invaders_00002.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00002.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00002.json",
+    "has_options": false,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, and the enemies keep on moving right.\nWhat is the maximum number of points the player can at the end of time interval t+1?",
+    "analysis": "According to the rules and the question, the ship can shoot twice. Besides, since the ship can move to any column, the movement of the enemies does not really matter, and we just need to consider shooting twice in the current scene.\nFurthermore, there's two cases: the ship can shoot twice on the same column or on different columns. Let's consider these two cases one by one.\nCase 1. The ship shoots twice on the same column. Two lowermost enemies on one column can be destroyed. Check the columns one by one:\n- Column 1: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 2: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 3: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 4: The lowermost enemy is on row 5, which is blue and worth 20 points. The second lowermost enemy is on row 4, which is purple and worth 30 points. 50 points can be gained.\n- Column 5: There is no enemy.\n- Column 6: There is no enemy.\n\nSo in this case, the maximum number of points the player can get is 50.\n\nCase 2. The ship shoots twice on different columns. Two lowermost enemies on two different columns can be destroyed. Check the columns one by one:\n- Column 1: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 2: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 3: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 4: The lowermost enemy is on row 5, which is blue and worth 20 points.\n- Column 5: There is no enemy.\n- Column 6: There is no enemy.\n\nThe highest two scores are 20 and 10. So 20 + 10 = 30 points can be gained.\n\nSince 50 > 30, the maximum number of points the player can get is 50. ",
+    "options": null,
+    "state_content": {
+      "enemy_rows": 3,
+      "enemy_cols": 4,
+      "enemy_area_rows": 6,
+      "total_cols": 6,
+      "ship_col": 1,
+      "enemies": [
+        {
+          "x": 4,
+          "y": 1,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "color": "blue"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-fill-00018",
+      "qa_type": "Strategy Optimization",
+      "question_id": 9,
+      "question_description": "Ask the maximum points gained by shooting twice",
+      "image": "images/space_invaders_00002.png",
+      "state": "states/space_invaders_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, and the enemies keep on moving right.\nWhat is the maximum number of points the player can at the end of time interval t+1?",
+      "answer": 50,
+      "analysis": "According to the rules and the question, the ship can shoot twice. Besides, since the ship can move to any column, the movement of the enemies does not really matter, and we just need to consider shooting twice in the current scene.\nFurthermore, there's two cases: the ship can shoot twice on the same column or on different columns. Let's consider these two cases one by one.\nCase 1. The ship shoots twice on the same column. Two lowermost enemies on one column can be destroyed. Check the columns one by one:\n- Column 1: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 2: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 3: The lowermost enemy is on row 6, which is green and worth 10 points. The second lowermost enemy is on row 5, which is blue and worth 20 points. 30 points can be gained.\n- Column 4: The lowermost enemy is on row 5, which is blue and worth 20 points. The second lowermost enemy is on row 4, which is purple and worth 30 points. 50 points can be gained.\n- Column 5: There is no enemy.\n- Column 6: There is no enemy.\n\nSo in this case, the maximum number of points the player can get is 50.\n\nCase 2. The ship shoots twice on different columns. Two lowermost enemies on two different columns can be destroyed. Check the columns one by one:\n- Column 1: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 2: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 3: The lowermost enemy is on row 6, which is green and worth 10 points.\n- Column 4: The lowermost enemy is on row 5, which is blue and worth 20 points.\n- Column 5: There is no enemy.\n- Column 6: There is no enemy.\n\nThe highest two scores are 20 and 10. So 20 + 10 = 30 points can be gained.\n\nSince 50 > 30, the maximum number of points the player can get is 50. "
+    }
+  }
+}

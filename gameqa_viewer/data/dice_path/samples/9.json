@@ -1,0 +1,78 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "dice_path-00010-q1",
+    "question_id": 1,
+    "question_description": "Identify the number on a hidden face (bottom/north/west) of the die using the opposite-faces-sum-to-7 rule.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/dice_path/files/images/board_00010.png",
+    "state_url": "data/dice_path/files/states/board_00010.json",
+    "has_options": false,
+    "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die currently sits on cell (4, 2). Using the three visible faces and the opposite-faces rule, determine which number is on the bottom face of the die. Answer with a single number.",
+    "analysis": "From the image, the visible faces of the die are: top = 5, south = 1, east = 4.\nOn a standard die, opposite faces sum to 7. The bottom face is opposite the top face, and the top face shows 5.\nTherefore the bottom face is 7 - 5 = 2.\nSo the answer is 2.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 5,
+        "cols": 5
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "blocked_cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "die_cell": [
+        4,
+        2
+      ],
+      "goal_cell": [
+        0,
+        3
+      ],
+      "die_faces": {
+        "top": 5,
+        "north": 6,
+        "east": 4,
+        "bottom": 2,
+        "south": 1,
+        "west": 3
+      },
+      "rule": "standard die, opposite faces sum to 7; visible faces in the image are top, south, east"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_path-00010-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the number on a hidden face (bottom/north/west) of the die using the opposite-faces-sum-to-7 rule.",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die currently sits on cell (4, 2). Using the three visible faces and the opposite-faces rule, determine which number is on the bottom face of the die. Answer with a single number.",
+      "answer": "2",
+      "analysis": "From the image, the visible faces of the die are: top = 5, south = 1, east = 4.\nOn a standard die, opposite faces sum to 7. The bottom face is opposite the top face, and the top face shows 5.\nTherefore the bottom face is 7 - 5 = 2.\nSo the answer is 2."
+    }
+  }
+}

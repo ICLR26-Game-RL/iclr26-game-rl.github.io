@@ -1,0 +1,119 @@
+{
+  "sample": {
+    "index": 15,
+    "data_id": "gear_train-00016-q4",
+    "question_id": 4,
+    "question_description": "Decide whether a gear train containing a closed loop spins or jams, and if it spins, give the direction of a target gear.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00016.png",
+    "state": "states/panel_00016.json",
+    "image_url": "data/gear_train/files/images/panel_00016.png",
+    "state_url": "data/gear_train/files/states/panel_00016.json",
+    "has_options": true,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nIn this panel some gears form a closed loop. The driver gear E tries to spin counterclockwise. What happens?\n\nOptions:\n[1] The train spins freely and gear D turns clockwise\n[2] The train spins freely and gear D turns counterclockwise\n[3] The whole train is jammed - no gear can spin",
+    "analysis": "All meshing pairs are: A-B, A-C, A-E, B-C, C-D.\nGears B-C-A form a closed loop of 3 gears.\nGoing around a loop, each mesh must reverse the spin direction: cw, ccw, cw, ... After going all the way around a loop of 3 gears (an odd number), the first gear would be required to spin both clockwise and counterclockwise at once, which is impossible. Therefore the loop locks and the whole connected train jams.\nSo the answer is: the whole train is jammed. The option number is 3.",
+    "options": [
+      "The train spins freely and gear D turns clockwise",
+      "The train spins freely and gear D turns counterclockwise",
+      "The whole train is jammed - no gear can spin"
+    ],
+    "state_content": {
+      "gears": [
+        {
+          "label": "A",
+          "teeth": 20,
+          "center": [
+            219.0,
+            267.0
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "C",
+          "teeth": 20,
+          "center": [
+            355.0,
+            267.0
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "B",
+          "teeth": 20,
+          "center": [
+            287.0,
+            149.3
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "D",
+          "teeth": 16,
+          "center": [
+            455.9,
+            197.8
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "E",
+          "teeth": 16,
+          "center": [
+            184.1,
+            384.3
+          ],
+          "pitch_radius": 54.4
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "E"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "driver": "E",
+      "driver_direction": "counterclockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00016-q4",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Decide whether a gear train containing a closed loop spins or jams, and if it spins, give the direction of a target gear.",
+      "image": "images/panel_00016.png",
+      "state": "states/panel_00016.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nIn this panel some gears form a closed loop. The driver gear E tries to spin counterclockwise. What happens?\n\nOptions:\n[1] The train spins freely and gear D turns clockwise\n[2] The train spins freely and gear D turns counterclockwise\n[3] The whole train is jammed - no gear can spin",
+      "answer": 3,
+      "analysis": "All meshing pairs are: A-B, A-C, A-E, B-C, C-D.\nGears B-C-A form a closed loop of 3 gears.\nGoing around a loop, each mesh must reverse the spin direction: cw, ccw, cw, ... After going all the way around a loop of 3 gears (an odd number), the first gear would be required to spin both clockwise and counterclockwise at once, which is impossible. Therefore the loop locks and the whole connected train jams.\nSo the answer is: the whole train is jammed. The option number is 3.",
+      "options": [
+        "The train spins freely and gear D turns clockwise",
+        "The train spins freely and gear D turns counterclockwise",
+        "The whole train is jammed - no gear can spin"
+      ]
+    }
+  }
+}

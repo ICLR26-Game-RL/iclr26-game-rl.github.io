@@ -1,0 +1,52 @@
+{
+  "sample": {
+    "index": 13,
+    "data_id": "tower_of_hanoi-00014-q3",
+    "question_id": 3,
+    "question_description": "Compute the minimum number of moves to gather all disks on peg C from the shown position.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "9",
+    "answer_preview": "9",
+    "question_preview": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1...",
+    "image": "images/hanoi_00014.png",
+    "state": "states/hanoi_00014.json",
+    "image_url": "data/tower_of_hanoi/files/images/hanoi_00014.png",
+    "state_url": "data/tower_of_hanoi/files/states/hanoi_00014.json",
+    "has_options": false,
+    "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nStarting from the position in the image, what is the minimum number of moves needed to gather all 4 disks on peg C (in proper size order)? Answer with a single number.",
+    "analysis": "Initial position: peg A: disks [4, 1] (bottom to top); peg B: disks [3, 2] (bottom to top); peg C: empty.\nAn exhaustive breadth-first search over all reachable positions shows the optimum is 9 moves. One optimal sequence:\nMove 1: A->B (disk 1) -> peg A: disks [4] (bottom to top); peg B: disks [3, 2, 1] (bottom to top); peg C: empty.\nMove 2: A->C (disk 4) -> peg A: empty; peg B: disks [3, 2, 1] (bottom to top); peg C: disks [4] (bottom to top).\nMove 3: B->C (disk 1) -> peg A: empty; peg B: disks [3, 2] (bottom to top); peg C: disks [4, 1] (bottom to top).\nMove 4: B->A (disk 2) -> peg A: disks [2] (bottom to top); peg B: disks [3] (bottom to top); peg C: disks [4, 1] (bottom to top).\nMove 5: C->A (disk 1) -> peg A: disks [2, 1] (bottom to top); peg B: disks [3] (bottom to top); peg C: disks [4] (bottom to top).\nMove 6: B->C (disk 3) -> peg A: disks [2, 1] (bottom to top); peg B: empty; peg C: disks [4, 3] (bottom to top).\nMove 7: A->B (disk 1) -> peg A: disks [2] (bottom to top); peg B: disks [1] (bottom to top); peg C: disks [4, 3] (bottom to top).\nMove 8: A->C (disk 2) -> peg A: empty; peg B: disks [1] (bottom to top); peg C: disks [4, 3, 2] (bottom to top).\nMove 9: B->C (disk 1) -> peg A: empty; peg B: empty; peg C: disks [4, 3, 2, 1] (bottom to top).\nAll disks are now on peg C, and the search guarantees no shorter solution exists.\nSo the answer is 9.",
+    "options": null,
+    "state_content": {
+      "num_disks": 4,
+      "pegs": {
+        "A": [
+          4,
+          1
+        ],
+        "B": [
+          3,
+          2
+        ],
+        "C": []
+      },
+      "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+      "goal_note": "strategy questions target gathering all disks on peg C"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-00014-q3",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "Compute the minimum number of moves to gather all disks on peg C from the shown position.",
+      "image": "images/hanoi_00014.png",
+      "state": "states/hanoi_00014.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nStarting from the position in the image, what is the minimum number of moves needed to gather all 4 disks on peg C (in proper size order)? Answer with a single number.",
+      "answer": "9",
+      "analysis": "Initial position: peg A: disks [4, 1] (bottom to top); peg B: disks [3, 2] (bottom to top); peg C: empty.\nAn exhaustive breadth-first search over all reachable positions shows the optimum is 9 moves. One optimal sequence:\nMove 1: A->B (disk 1) -> peg A: disks [4] (bottom to top); peg B: disks [3, 2, 1] (bottom to top); peg C: empty.\nMove 2: A->C (disk 4) -> peg A: empty; peg B: disks [3, 2, 1] (bottom to top); peg C: disks [4] (bottom to top).\nMove 3: B->C (disk 1) -> peg A: empty; peg B: disks [3, 2] (bottom to top); peg C: disks [4, 1] (bottom to top).\nMove 4: B->A (disk 2) -> peg A: disks [2] (bottom to top); peg B: disks [3] (bottom to top); peg C: disks [4, 1] (bottom to top).\nMove 5: C->A (disk 1) -> peg A: disks [2, 1] (bottom to top); peg B: disks [3] (bottom to top); peg C: disks [4] (bottom to top).\nMove 6: B->C (disk 3) -> peg A: disks [2, 1] (bottom to top); peg B: empty; peg C: disks [4, 3] (bottom to top).\nMove 7: A->B (disk 1) -> peg A: disks [2] (bottom to top); peg B: disks [1] (bottom to top); peg C: disks [4, 3] (bottom to top).\nMove 8: A->C (disk 2) -> peg A: empty; peg B: disks [1] (bottom to top); peg C: disks [4, 3, 2] (bottom to top).\nMove 9: B->C (disk 1) -> peg A: empty; peg B: empty; peg C: disks [4, 3, 2, 1] (bottom to top).\nAll disks are now on peg C, and the search guarantees no shorter solution exists.\nSo the answer is 9."
+    }
+  }
+}

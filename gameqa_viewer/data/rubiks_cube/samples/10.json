@@ -1,0 +1,337 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "rubiks_cube-data-00003-00003",
+    "question_id": 3,
+    "question_description": "Find the sequence of moves between two cube states",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degr...",
+    "image": "images/cube_00003.png",
+    "state": "states/cube_00003.json",
+    "image_url": "data/rubiks_cube/files/images/cube_00003.png",
+    "state_url": "data/rubiks_cube/files/states/cube_00003.json",
+    "has_options": true,
+    "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.How many moves are needed to solve the Front face face?Options: [1] 5, [2] 1, [3] 2, [4] 8, [5] 7, [6] 6, [7] 9, [8] 4",
+    "analysis": "Analysis of Front face:\n\nCurrent state of each position:\nPosition (0,0): blue\nPosition (0,1): blue\nPosition (0,2): white\nPosition (1,0): blue\nPosition (1,1): blue\nPosition (1,2): white\nPosition (2,0): blue\nPosition (2,1): blue\nPosition (2,2): white\n\nBased on observation, rotating R will solve the Front face.So the answer is 1. The option number is 2.",
+    "options": [
+      "5",
+      "1",
+      "2",
+      "8",
+      "7",
+      "6",
+      "9",
+      "4"
+    ],
+    "state_content": {
+      "faces": {
+        "U": [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            4
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            5
+          ]
+        ],
+        "L": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "R": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ],
+        "F": [
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            4,
+            4,
+            1
+          ]
+        ],
+        "B": [
+          [
+            0,
+            5,
+            5
+          ],
+          [
+            0,
+            5,
+            5
+          ],
+          [
+            0,
+            5,
+            5
+          ]
+        ]
+      },
+      "colors": [
+        "yellow",
+        "white",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ],
+      "move_history": [
+        "R'"
+      ],
+      "face_states": {
+        "U": {
+          "colors": [
+            [
+              "yellow",
+              "yellow",
+              "blue"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "blue"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "blue"
+            ]
+          ],
+          "dominant_color": "yellow",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 6,
+            "blue": 3
+          }
+        },
+        "D": {
+          "colors": [
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "white",
+              "white",
+              "green"
+            ],
+            [
+              "white",
+              "white",
+              "green"
+            ]
+          ],
+          "dominant_color": "white",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "white": 6,
+            "green": 3
+          }
+        },
+        "L": {
+          "colors": [
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ]
+          ],
+          "dominant_color": "orange",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "orange": 9
+          }
+        },
+        "R": {
+          "colors": [
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ],
+            [
+              "red",
+              "red",
+              "red"
+            ]
+          ],
+          "dominant_color": "red",
+          "is_solved": true,
+          "matching_stickers": 9,
+          "color_counts": {
+            "red": 9
+          }
+        },
+        "F": {
+          "colors": [
+            [
+              "blue",
+              "blue",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "white"
+            ],
+            [
+              "blue",
+              "blue",
+              "white"
+            ]
+          ],
+          "dominant_color": "blue",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "blue": 6,
+            "white": 3
+          }
+        },
+        "B": {
+          "colors": [
+            [
+              "yellow",
+              "green",
+              "green"
+            ],
+            [
+              "yellow",
+              "green",
+              "green"
+            ],
+            [
+              "yellow",
+              "green",
+              "green"
+            ]
+          ],
+          "dominant_color": "green",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "yellow": 3,
+            "green": 6
+          }
+        }
+      },
+      "is_solved": false,
+      "symbols": {
+        "yellow": 0,
+        "white": 1,
+        "orange": 2,
+        "red": 3,
+        "blue": 4,
+        "green": 5
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rubiks_cube-data-00003-00003",
+      "image": "images/cube_00003.png",
+      "state": "states/cube_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Find the sequence of moves between two cube states",
+      "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.How many moves are needed to solve the Front face face?Options: [1] 5, [2] 1, [3] 2, [4] 8, [5] 7, [6] 6, [7] 9, [8] 4",
+      "answer": 2,
+      "analysis": "Analysis of Front face:\n\nCurrent state of each position:\nPosition (0,0): blue\nPosition (0,1): blue\nPosition (0,2): white\nPosition (1,0): blue\nPosition (1,1): blue\nPosition (1,2): white\nPosition (2,0): blue\nPosition (2,1): blue\nPosition (2,2): white\n\nBased on observation, rotating R will solve the Front face.So the answer is 1. The option number is 2.",
+      "options": [
+        "5",
+        "1",
+        "2",
+        "8",
+        "7",
+        "6",
+        "9",
+        "4"
+      ]
+    }
+  }
+}

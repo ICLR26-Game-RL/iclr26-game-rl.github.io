@@ -1,0 +1,163 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "langton-mcq-00004",
+    "question_id": 1,
+    "question_description": "Identify the current position and direction of the ant",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "B",
+    "answer_preview": "B",
+    "question_preview": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant f...",
+    "image": "images/board_002.png",
+    "state": "states/board_002.json",
+    "image_url": "data/langton_ant/files/images/board_002.png",
+    "state_url": "data/langton_ant/files/states/board_002.json",
+    "has_options": true,
+    "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nWhat is the current position and direction of the ant in the image?\n\nAnswer using one of the following options with its corresponding letter:\nA: Position (6, 1), facing right\nB: Position (0, 4), facing right\nC: Position (7, 7), facing up\nD: Position (4, 1), facing right\nE: Position (7, 1), facing left\nF: Position (2, 7), facing left\nG: Position (3, 5), facing left\nH: Position (6, 0), facing down",
+    "analysis": "Step-by-step analysis:\n1. Look at the red arrow in the image which represents the ant\n2. The arrow's position indicates the ant is at coordinates (0, 4)\n3. The arrow's direction shows the ant is facing right\nTherefore, the ant's current position is (0, 4) and it's facing right.",
+    "options": [
+      "Position (6, 1), facing right",
+      "Position (0, 4), facing right",
+      "Position (7, 7), facing up",
+      "Position (4, 1), facing right",
+      "Position (7, 1), facing left",
+      "Position (2, 7), facing left",
+      "Position (3, 5), facing left",
+      "Position (6, 0), facing down"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ant": {
+        "x": 0,
+        "y": 4,
+        "direction": "right"
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "langton-mcq-00004",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the current position and direction of the ant",
+      "image": "images/board_002.png",
+      "state": "states/board_002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "In Langton's Ant, we have a grid where each cell is either white or black. A red arrow represents an ant, showing its current position and direction. The ant follows these simple rules:\n1. If the ant is on a white cell, it turns right 90 degrees, changes the cell to black, and moves forward one step\n2. If the ant is on a black cell, it turns left 90 degrees, changes the cell to white, and moves forward one step\n3. If the ant would move off the grid, it wraps around to the opposite side (using modulo with grid size)\nThe coordinates system: The top-left cell is (0,0), with x increasing downward and y increasing rightward.\n\nWhat is the current position and direction of the ant in the image?\n\nAnswer using one of the following options with its corresponding letter:\nA: Position (6, 1), facing right\nB: Position (0, 4), facing right\nC: Position (7, 7), facing up\nD: Position (4, 1), facing right\nE: Position (7, 1), facing left\nF: Position (2, 7), facing left\nG: Position (3, 5), facing left\nH: Position (6, 0), facing down",
+      "answer": "B",
+      "analysis": "Step-by-step analysis:\n1. Look at the red arrow in the image which represents the ant\n2. The arrow's position indicates the ant is at coordinates (0, 4)\n3. The arrow's direction shows the ant is facing right\nTherefore, the ant's current position is (0, 4) and it's facing right.",
+      "options": [
+        "Position (6, 1), facing right",
+        "Position (0, 4), facing right",
+        "Position (7, 7), facing up",
+        "Position (4, 1), facing right",
+        "Position (7, 1), facing left",
+        "Position (2, 7), facing left",
+        "Position (3, 5), facing left",
+        "Position (6, 0), facing down"
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "word-mcq-00008",
+    "question_id": 1,
+    "question_description": "letter_count",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. The grid contains uppercase letters. 2. Count all occurrences of the specified letter. Question: How many times does the letter 'H' appear in the gri...",
+    "image": "images/word-mcq-00008.png",
+    "state": "states/word-mcq-00008.json",
+    "image_url": "data/word_search/files/images/word-mcq-00008.png",
+    "state_url": "data/word_search/files/states/word-mcq-00008.json",
+    "has_options": true,
+    "question": "Rules:\n1. The grid contains uppercase letters.\n2. Count all occurrences of the specified letter.\n\nQuestion:\nHow many times does the letter 'H' appear in the grid?\n\nOptions:\n1: 14\n2: 5\n3: 2\n4: 13\n5: 3\n6: 1\n7: 8\n8: 0",
+    "analysis": "Let's find all occurrences of letter 'H' by scanning the grid row by row:\n\nAfter scanning the entire grid, letter 'H' appears 0 times in total. Therefore, the answer is Option 8.",
+    "options": [
+      14,
+      5,
+      2,
+      13,
+      3,
+      1,
+      8,
+      0
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "T",
+          "O",
+          "Z",
+          "X",
+          "D",
+          "T",
+          "N"
+        ],
+        [
+          "B",
+          "R",
+          "U",
+          "I",
+          "J",
+          "P",
+          "Z"
+        ],
+        [
+          "Y",
+          "K",
+          "S",
+          "G",
+          "Z",
+          "Q",
+          "O"
+        ],
+        [
+          "O",
+          "Z",
+          "B",
+          "X",
+          "B",
+          "A",
+          "S"
+        ],
+        [
+          "X",
+          "X",
+          "M",
+          "V",
+          "T",
+          "R",
+          "S"
+        ],
+        [
+          "R",
+          "L",
+          "W",
+          "P",
+          "Q",
+          "R",
+          "P"
+        ],
+        [
+          "S",
+          "C",
+          "D",
+          "W",
+          "C",
+          "X",
+          "T"
+        ]
+      ],
+      "size": 7,
+      "question_type": "letter_count"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00008",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "letter_count",
+      "image": "images/word-mcq-00008.png",
+      "state": "states/word-mcq-00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. The grid contains uppercase letters.\n2. Count all occurrences of the specified letter.\n\nQuestion:\nHow many times does the letter 'H' appear in the grid?\n\nOptions:\n1: 14\n2: 5\n3: 2\n4: 13\n5: 3\n6: 1\n7: 8\n8: 0",
+      "answer": 8,
+      "analysis": "Let's find all occurrences of letter 'H' by scanning the grid row by row:\n\nAfter scanning the entire grid, letter 'H' appears 0 times in total. Therefore, the answer is Option 8.",
+      "options": [
+        14,
+        5,
+        2,
+        13,
+        3,
+        1,
+        8,
+        0
+      ]
+    }
+  }
+}

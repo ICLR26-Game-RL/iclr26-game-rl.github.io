@@ -1,0 +1,383 @@
+{
+  "sample": {
+    "index": 12,
+    "data_id": "rhythm_game-data-00002-00013",
+    "question_id": 6,
+    "question_description": "Find choosing which column to click can get the highest score.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "5",
+    "answer_preview": "5",
+    "question_preview": "Now I'll give you a picture, which shows a screenshot of a rhythm game, in which there are operation blocks of various colors. In this game, the operation bloc...",
+    "image": "images/board_00002.png",
+    "state": "states/board_00002.json",
+    "image_url": "data/rhythm_game/files/images/board_00002.png",
+    "state_url": "data/rhythm_game/files/states/board_00002.json",
+    "has_options": true,
+    "question": "Now I'll give you a picture, which shows a screenshot of a rhythm game, in which there are operation blocks of various colors. In this game, the operation blocks will fall at a speed of 1 cell/second. At the same time, you can select a column to place your finger (you cannot move your finger after selecting it), and click the operation blocks in the column that fall to the first row to score points (of course, you can also choose not to click any column, which will not affect the falling of the operation blocks). \nFor the operation blocks, we divide them into 3 categories, including Click blocks, Reverse blocks, and Snake blocks, as follows: \n1. Click blocks are yellow, occupy 1 cell, and you can get 10 points by clicking them. \n2. Reverse blocks are green, occupy 1 cell, and you can get 15 points by clicking them. It should be noted that after you click the Reverse block, the entire game situation will **reverse left and right**, but your finger position **will not** change accordingly. \n3. A Snake block occupies 2 or more consecutive cells in a column, and its first cell (called Snake Head block) is pink, its last cell (called Snake Tail block) is grey, and the middle cells (called Snake Body blocks, if any) are blue. Only when you click on **all cells** occupied by the snake block can you score points. The score is related to the length $l$ (including the head and tail) of the snake block. The specific score is $l \\cdot (2l + 7)$. \nNow I will give you a question about the game. Please extract information from the picture I give you, think carefully, reason and answer: Which column(s) should I choose to click to get the highest final score? Options: 1. 1 2. 2 3. 3 4. 4 5. 5 6. 6",
+    "analysis": "If we choose column 1, we will click Click at (1, 1) -> Snake Head at (2, 1) -> Click at (5, 1) -> Click at (6, 1) -> Snake Head at (7, 1) -> Click at (11, 1) -> Click at (13, 1). The final point is 149.\nIf we choose column 2, we will click Snake Head at (1, 2) -> Click at (4, 2) -> Snake Head at (7, 2) -> Snake Head at (9, 2) -> Reverse at (13, 2) -> Reverse at (15, 5). The final point is 140.\nIf we choose column 3, we will click Reverse at (1, 3) -> Reverse at (2, 4) -> Snake Head at (4, 3) -> Reverse at (8, 3) -> Click at (9, 4) -> Click at (10, 4) -> Reverse at (11, 4) -> Click at (12, 3). The final point is 112.\nIf we choose column 4, we will click Click at (1, 4) -> Reverse at (2, 4) -> Snake Head at (4, 3) -> Reverse at (8, 3) -> Click at (9, 4) -> Click at (10, 4) -> Reverse at (11, 4) -> Click at (12, 3). The final point is 107.\nIf we choose column 5, we will click Snake Head at (1, 5) -> Click at (5, 5) -> Click at (6, 5) -> Snake Head at (7, 5) -> Click at (10, 5) -> Reverse at (11, 5) -> Reverse at (13, 2) -> Reverse at (15, 5). The final point is 174.\nIf we choose column 6, we will click Snake Head at (1, 6) -> Click at (5, 6) -> Reverse at (6, 6) -> Snake Head at (7, 1) -> Click at (11, 1) -> Click at (13, 1). The final point is 144.\nWe can see that when choosing column(s) 5, the final point is the highest, being 174. So, the answer is 5",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "state_content": {
+      "rows": 15,
+      "cols": 6,
+      "blocked_cell_num": 65,
+      "block_info": [
+        {
+          "row": 7,
+          "col": 1,
+          "color": "pink"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "color": "blue"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "color": "blue"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "color": "grey"
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "color": "pink"
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "color": "blue"
+        },
+        {
+          "row": 9,
+          "col": 5,
+          "color": "grey"
+        },
+        {
+          "row": 9,
+          "col": 3,
+          "color": "pink"
+        },
+        {
+          "row": 10,
+          "col": 3,
+          "color": "grey"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "color": "pink"
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "color": "grey"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "color": "pink"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "color": "blue"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "color": "grey"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "color": "pink"
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "color": "grey"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "color": "pink"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "color": "blue"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "color": "grey"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "color": "pink"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "color": "blue"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "color": "grey"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "color": "pink"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "color": "blue"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "color": "blue"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "color": "grey"
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "color": "pink"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "color": "blue"
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "color": "grey"
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "color": "pink"
+        },
+        {
+          "row": 9,
+          "col": 6,
+          "color": "grey"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "color": "yellow"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 13,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 12,
+          "col": 6,
+          "color": "yellow"
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 11,
+          "col": 6,
+          "color": "yellow"
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 14,
+          "col": 6,
+          "color": "yellow"
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "color": "yellow"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "color": "yellow"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "color": "yellow"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "color": "yellow"
+        },
+        {
+          "row": 10,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 10,
+          "col": 5,
+          "color": "yellow"
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "color": "yellow"
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "color": "yellow"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "color": "yellow"
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "color": "yellow"
+        },
+        {
+          "row": 12,
+          "col": 3,
+          "color": "yellow"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "color": "yellow"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "color": "yellow"
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "color": "green"
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "color": "green"
+        },
+        {
+          "row": 15,
+          "col": 5,
+          "color": "green"
+        },
+        {
+          "row": 13,
+          "col": 6,
+          "color": "green"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "color": "green"
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "color": "green"
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "color": "green"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "color": "green"
+        },
+        {
+          "row": 13,
+          "col": 2,
+          "color": "green"
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "color": "green"
+        },
+        {
+          "row": 11,
+          "col": 5,
+          "color": "green"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "color": "green"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rhythm_game-data-00002-00013",
+      "image": "images/board_00002.png",
+      "state": "states/board_00002.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 6,
+      "question_description": "Find choosing which column to click can get the highest score.",
+      "question": "Now I'll give you a picture, which shows a screenshot of a rhythm game, in which there are operation blocks of various colors. In this game, the operation blocks will fall at a speed of 1 cell/second. At the same time, you can select a column to place your finger (you cannot move your finger after selecting it), and click the operation blocks in the column that fall to the first row to score points (of course, you can also choose not to click any column, which will not affect the falling of the operation blocks). \nFor the operation blocks, we divide them into 3 categories, including Click blocks, Reverse blocks, and Snake blocks, as follows: \n1. Click blocks are yellow, occupy 1 cell, and you can get 10 points by clicking them. \n2. Reverse blocks are green, occupy 1 cell, and you can get 15 points by clicking them. It should be noted that after you click the Reverse block, the entire game situation will **reverse left and right**, but your finger position **will not** change accordingly. \n3. A Snake block occupies 2 or more consecutive cells in a column, and its first cell (called Snake Head block) is pink, its last cell (called Snake Tail block) is grey, and the middle cells (called Snake Body blocks, if any) are blue. Only when you click on **all cells** occupied by the snake block can you score points. The score is related to the length $l$ (including the head and tail) of the snake block. The specific score is $l \\cdot (2l + 7)$. \nNow I will give you a question about the game. Please extract information from the picture I give you, think carefully, reason and answer: Which column(s) should I choose to click to get the highest final score? Options: 1. 1 2. 2 3. 3 4. 4 5. 5 6. 6",
+      "answer": "5",
+      "analysis": "If we choose column 1, we will click Click at (1, 1) -> Snake Head at (2, 1) -> Click at (5, 1) -> Click at (6, 1) -> Snake Head at (7, 1) -> Click at (11, 1) -> Click at (13, 1). The final point is 149.\nIf we choose column 2, we will click Snake Head at (1, 2) -> Click at (4, 2) -> Snake Head at (7, 2) -> Snake Head at (9, 2) -> Reverse at (13, 2) -> Reverse at (15, 5). The final point is 140.\nIf we choose column 3, we will click Reverse at (1, 3) -> Reverse at (2, 4) -> Snake Head at (4, 3) -> Reverse at (8, 3) -> Click at (9, 4) -> Click at (10, 4) -> Reverse at (11, 4) -> Click at (12, 3). The final point is 112.\nIf we choose column 4, we will click Click at (1, 4) -> Reverse at (2, 4) -> Snake Head at (4, 3) -> Reverse at (8, 3) -> Click at (9, 4) -> Click at (10, 4) -> Reverse at (11, 4) -> Click at (12, 3). The final point is 107.\nIf we choose column 5, we will click Snake Head at (1, 5) -> Click at (5, 5) -> Click at (6, 5) -> Snake Head at (7, 5) -> Click at (10, 5) -> Reverse at (11, 5) -> Reverse at (13, 2) -> Reverse at (15, 5). The final point is 174.\nIf we choose column 6, we will click Snake Head at (1, 6) -> Click at (5, 6) -> Reverse at (6, 6) -> Snake Head at (7, 1) -> Click at (11, 1) -> Click at (13, 1). The final point is 144.\nWe can see that when choosing column(s) 5, the final point is the highest, being 174. So, the answer is 5",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  }
+}

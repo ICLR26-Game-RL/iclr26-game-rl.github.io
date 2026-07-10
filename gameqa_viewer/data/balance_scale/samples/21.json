@@ -1,0 +1,133 @@
+{
+  "sample": {
+    "index": 21,
+    "data_id": "balance_scale-00022-q3",
+    "question_id": 3,
+    "question_description": "Deduce the absolute weight (kg) of a fruit by combining the fruit-ratio scales with the iron-weight scale.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "3",
+    "answer_preview": "3",
+    "question_preview": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always...",
+    "image": "images/scales_00022.png",
+    "state": "states/scales_00022.json",
+    "image_url": "data/balance_scale/files/images/scales_00022.png",
+    "state_url": "data/balance_scale/files/states/scales_00022.json",
+    "has_options": false,
+    "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nUsing the balanced scales (including the one with the labeled iron weight), determine the exact weight of one pear in kg. Answer with a single number.",
+    "analysis": "Step-by-step deduction:\nScale 4 balances 4 apples against 2 bananas. In units of one apple, the left pan weighs 4 x apple = 4 apple(s), so 2 banana(s) = 4 apple(s), giving 1 banana = 2 apple(s).\nScale 2 balances 4 apples + 4 bananas against 2 oranges. In units of one apple, the left pan weighs 4 x apple + 4 x banana = 12 apple(s), so 2 orange(s) = 12 apple(s), giving 1 orange = 6 apple(s).\nScale 5 balances 1 apple + 1 banana against 2 pears. In units of one apple, the left pan weighs 1 x apple + 1 x banana = 3 apple(s), so 2 pear(s) = 3 apple(s), giving 1 pear = 3/2 apple(s).\nScale 3 balances 1 apple + 1 banana + 1 orange + 2 pears against 3 grapes. In units of one apple, the left pan weighs 1 x apple + 1 x banana + 1 x orange + 2 x pear = 12 apple(s), so 3 grape(s) = 12 apple(s), giving 1 grape = 4 apple(s).\nScale 6 balances 1 orange against a 12 kg iron weight. In units of one apple the left pan weighs 1 x 6 = 6 apple(s), so 6 x weight(apple) = 12 kg, giving weight(apple) = 2 kg.\nSo one apple weighs 2 kg, and one pear weighs 3/2 x 2 = 3 kg.\nSo the answer is 3.",
+    "options": null,
+    "state_content": {
+      "fruits": [
+        "apple",
+        "banana",
+        "orange",
+        "pear",
+        "grape"
+      ],
+      "hidden_weights_kg": {
+        "apple": 2,
+        "banana": 4,
+        "orange": 12,
+        "pear": 3,
+        "grape": 8
+      },
+      "scales": [
+        {
+          "index": 1,
+          "kind": "tilted",
+          "left_pan": {
+            "orange": 3,
+            "apple": 1
+          },
+          "right_pan": {
+            "banana": 1,
+            "pear": 2,
+            "apple": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": false
+        },
+        {
+          "index": 2,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 4,
+            "banana": 4
+          },
+          "right_pan": {
+            "orange": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 3,
+          "kind": "equation",
+          "left_pan": {
+            "orange": 1,
+            "apple": 1,
+            "banana": 1,
+            "pear": 2
+          },
+          "right_pan": {
+            "grape": 3
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 4,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 4
+          },
+          "right_pan": {
+            "banana": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 5,
+          "kind": "equation",
+          "left_pan": {
+            "banana": 1,
+            "apple": 1
+          },
+          "right_pan": {
+            "pear": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 6,
+          "kind": "kg",
+          "left_pan": {
+            "orange": 1
+          },
+          "right_pan": {},
+          "iron_weight_kg": 12,
+          "balanced": true
+        }
+      ],
+      "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "balance_scale-00022-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Deduce the absolute weight (kg) of a fruit by combining the fruit-ratio scales with the iron-weight scale.",
+      "image": "images/scales_00022.png",
+      "state": "states/scales_00022.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nUsing the balanced scales (including the one with the labeled iron weight), determine the exact weight of one pear in kg. Answer with a single number.",
+      "answer": "3",
+      "analysis": "Step-by-step deduction:\nScale 4 balances 4 apples against 2 bananas. In units of one apple, the left pan weighs 4 x apple = 4 apple(s), so 2 banana(s) = 4 apple(s), giving 1 banana = 2 apple(s).\nScale 2 balances 4 apples + 4 bananas against 2 oranges. In units of one apple, the left pan weighs 4 x apple + 4 x banana = 12 apple(s), so 2 orange(s) = 12 apple(s), giving 1 orange = 6 apple(s).\nScale 5 balances 1 apple + 1 banana against 2 pears. In units of one apple, the left pan weighs 1 x apple + 1 x banana = 3 apple(s), so 2 pear(s) = 3 apple(s), giving 1 pear = 3/2 apple(s).\nScale 3 balances 1 apple + 1 banana + 1 orange + 2 pears against 3 grapes. In units of one apple, the left pan weighs 1 x apple + 1 x banana + 1 x orange + 2 x pear = 12 apple(s), so 3 grape(s) = 12 apple(s), giving 1 grape = 4 apple(s).\nScale 6 balances 1 orange against a 12 kg iron weight. In units of one apple the left pan weighs 1 x 6 = 6 apple(s), so 6 x weight(apple) = 12 kg, giving weight(apple) = 2 kg.\nSo one apple weighs 2 kg, and one pear weighs 3/2 x 2 = 3 kg.\nSo the answer is 3."
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "maze_00000_02",
+    "question_id": 2,
+    "question_description": "Ask the position of goal within the maze.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "**Rules:** 1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory. 2. The red circle represents...",
+    "image": "images/image_00000.png",
+    "state": "states/state_00000.json",
+    "image_url": "data/maze/files/images/image_00000.png",
+    "state_url": "data/maze/files/states/state_00000.json",
+    "has_options": true,
+    "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Which of the following are the coordinates of the goal?\"\n\n**Optoins:**\nA. (7, 7)\nB. (7, 8)\nC. (6, 7)\nD. (7, 6)\nE. (8, 7)",
+    "analysis": "Take a look at the game screen, the green block represents the goal.\nThe coordinates of goal are (7, 7), so the right option is A",
+    "options": [
+      "A. (7, 7)",
+      "B. (7, 8)",
+      "C. (6, 7)",
+      "D. (7, 6)",
+      "E. (8, 7)"
+    ],
+    "state_content": {
+      "maze": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "size": [
+        9,
+        9
+      ],
+      "playerPosition": [
+        4,
+        5
+      ],
+      "endPosition": [
+        7,
+        7
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "maze_00000_02",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Ask the position of goal within the maze.",
+      "image": "images/image_00000.png",
+      "state": "states/state_00000.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Which of the following are the coordinates of the goal?\"\n\n**Optoins:**\nA. (7, 7)\nB. (7, 8)\nC. (6, 7)\nD. (7, 6)\nE. (8, 7)",
+      "answer": "A",
+      "options": [
+        "A. (7, 7)",
+        "B. (7, 8)",
+        "C. (6, 7)",
+        "D. (7, 6)",
+        "E. (8, 7)"
+      ],
+      "analysis": "Take a look at the game screen, the green block represents the goal.\nThe coordinates of goal are (7, 7), so the right option is A"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "slide_2048-00004-q2",
+    "question_id": 2,
+    "question_description": "Predict the contents of one row/column after a single slide-and-merge move.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is writ...",
+    "image": "images/board_00004.png",
+    "state": "states/board_00004.json",
+    "image_url": "data/slide_2048/files/images/board_00004.png",
+    "state_url": "data/slide_2048/files/states/board_00004.json",
+    "has_options": true,
+    "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nThe player presses DOWN once. What does column 1 look like after the move? Each option lists the cells of column 1 read top to bottom ('-' means empty).\n\nOptions:\n[1] [2, 2, -]\n[2] [-, 2, 2]\n[3] [4, -, -]\n[4] [16, -, 4]\n[5] [-, -, 4]\n[6] [-, -, 32]\n[7] [-, 8, 4]\n[8] [-, 16, 4]",
+    "analysis": "Before the move, column 1 (read top to bottom) is [-, 2, 2]. Pressing DOWN slides these tiles toward the bottom wall.\nNon-empty tiles in sliding order: [2, 2]. Two adjacent 2s merge into 4 (+4 points).\nSo after the move column 1 is [-, -, 4], matching option [5].\nThe option number is 5.",
+    "options": [
+      "[2, 2, -]",
+      "[-, 2, 2]",
+      "[4, -, -]",
+      "[16, -, 4]",
+      "[-, -, 4]",
+      "[-, -, 32]",
+      "[-, 8, 4]",
+      "[-, 16, 4]"
+    ],
+    "state_content": {
+      "grid_size": 3,
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "grid": [
+        [
+          32,
+          0,
+          0
+        ],
+        [
+          8,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          32
+        ]
+      ],
+      "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "slide_2048-00004-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the contents of one row/column after a single slide-and-merge move.",
+      "image": "images/board_00004.png",
+      "state": "states/board_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nThe player presses DOWN once. What does column 1 look like after the move? Each option lists the cells of column 1 read top to bottom ('-' means empty).\n\nOptions:\n[1] [2, 2, -]\n[2] [-, 2, 2]\n[3] [4, -, -]\n[4] [16, -, 4]\n[5] [-, -, 4]\n[6] [-, -, 32]\n[7] [-, 8, 4]\n[8] [-, 16, 4]",
+      "answer": 5,
+      "analysis": "Before the move, column 1 (read top to bottom) is [-, 2, 2]. Pressing DOWN slides these tiles toward the bottom wall.\nNon-empty tiles in sliding order: [2, 2]. Two adjacent 2s merge into 4 (+4 points).\nSo after the move column 1 is [-, -, 4], matching option [5].\nThe option number is 5.",
+      "options": [
+        "[2, 2, -]",
+        "[-, 2, 2]",
+        "[4, -, -]",
+        "[16, -, 4]",
+        "[-, -, 4]",
+        "[-, -, 32]",
+        "[-, 8, 4]",
+        "[-, 16, 4]"
+      ]
+    }
+  }
+}

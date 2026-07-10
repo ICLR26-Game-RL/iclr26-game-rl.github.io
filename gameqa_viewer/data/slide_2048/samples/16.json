@@ -1,0 +1,67 @@
+{
+  "sample": {
+    "index": 16,
+    "data_id": "slide_2048-00017-q1",
+    "question_id": 1,
+    "question_description": "Count the tiles holding a given value.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is writ...",
+    "image": "images/board_00017.png",
+    "state": "states/board_00017.json",
+    "image_url": "data/slide_2048/files/images/board_00017.png",
+    "state_url": "data/slide_2048/files/states/board_00017.json",
+    "has_options": false,
+    "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nHow many tiles with the value 2 are on the board? Answer with a single number.",
+    "analysis": "Reading the board: row 0: [64, 16, 16, 64]; row 1: [-, 8, -, 16]; row 2: [-, -, 8, 4]; row 3: [2, -, 4, 2].\nThe 2 tiles are at: (3, 0), (3, 3).\nThat is 2 tile(s). So the answer is 2.",
+    "options": null,
+    "state_content": {
+      "grid_size": 4,
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "grid": [
+        [
+          64,
+          16,
+          16,
+          64
+        ],
+        [
+          0,
+          8,
+          0,
+          16
+        ],
+        [
+          0,
+          0,
+          8,
+          4
+        ],
+        [
+          2,
+          0,
+          4,
+          2
+        ]
+      ],
+      "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "slide_2048-00017-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count the tiles holding a given value.",
+      "image": "images/board_00017.png",
+      "state": "states/board_00017.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "2048 Slide is a sliding-merge puzzle on a square grid. Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). One move slides ALL tiles as far as possible in the chosen direction (left, right, up or down). When two tiles with the SAME number collide during the slide, they merge into one tile whose value is their sum; the pair closest to the destination wall merges first, a freshly merged tile cannot merge again in the same move, and merging scores points equal to the new tile's value. In this variant NO new tile appears after a move, so the board changes only by sliding and merging.\n\nHow many tiles with the value 2 are on the board? Answer with a single number.",
+      "answer": "2",
+      "analysis": "Reading the board: row 0: [64, 16, 16, 64]; row 1: [-, 8, -, 16]; row 2: [-, -, 8, 4]; row 3: [2, -, 4, 2].\nThe 2 tiles are at: (3, 0), (3, 3).\nThat is 2 tile(s). So the answer is 2."
+    }
+  }
+}

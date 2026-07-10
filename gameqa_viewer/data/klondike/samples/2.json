@@ -1,0 +1,135 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "klondike-mcq-001-003",
+    "question_id": 3,
+    "question_description": "A move_effectiveness question about the current state of Klondike Solitaire",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "The given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinc...",
+    "image": "images/board_001_003.png",
+    "state": "states/board_001_003.json",
+    "image_url": "data/klondike/files/images/board_001_003.png",
+    "state_url": "data/klondike/files/states/board_001_003.json",
+    "has_options": true,
+    "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\n\nIn the game of Klondike Solitaire, making effective moves is crucial to successfully completing the game. An effective move is one that maximizes the number of cards that can be moved to the Foundation Piles or can reveal hidden cards in tableau piles, stock pile or waste pile. This involves strategic planning and considering the current game state to make the best move possible.\nWhich of the following moves is both valid and effective? A move is effective if it either reveals a hidden card, enables a foundation move, or creates an empty tableau spot.\nChoose the correct option and give the analysis.\nOptions:\n1. Move from Tab2 to Tab5\n2. Move from Tab2 to Foundation 4\n3. Move from Tab3 to Tab4\n4. Move from Tab6 to Tab7\n5. Move from Tab1 to Tab3\n6. Move from Tab1 to Tab7\n7. Move from Tab4 to Tab7\n8. None of these moves are both valid and effective",
+    "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: heart 1, with a visible card underneath\nTab2: spade 1, with a visible card underneath\nTab3: diamond 7, with a visible card underneath\nTab4: spade 11, with a hidden card underneath\nTab5: heart 3, with a hidden card underneath\nTab6: club 4, with a hidden card underneath\nTab7: club 9, with a hidden card underneath\n\n**Foundation Piles:**\n- Foundation 1: club 3\n- Foundation 2: Empty\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** Empty\n\n**Draw Pile:** Not empty\n\nAnalysis of move options:\n\nOption 1: Move from Tab2 to Tab5 - The move is invalid because the source card's value (1) is not one less than the target card's value (3)\n\nOption 2: Move from Tab2 to Foundation 4 - Valid and effective because it moves spade 1 to foundation\n\nOption 3: Move from Tab3 to Tab4 - The move is invalid because the source card's value (7) is not one less than the target card's value (11)\n\nOption 4: Move from Tab6 to Tab7 - The move is invalid because both cards are black (cards must alternate colors)\n\nOption 5: Move from Tab1 to Tab3 - The move is invalid because both cards are red (cards must alternate colors)\n\nOption 6: Move from Tab1 to Tab7 - The move is invalid because the source card's value (1) is not one less than the target card's value (9)\n\nOption 7: Move from Tab4 to Tab7 - The move is invalid because both cards are black (cards must alternate colors)\n\nOption 8: Incorrect - there is at least one valid and effective move\n\n\nCorrect answer is option 2 because Move from Tab2 to Foundation 4 is both valid and effective",
+    "options": [
+      "Move from Tab2 to Tab5",
+      "Move from Tab2 to Foundation 4",
+      "Move from Tab3 to Tab4",
+      "Move from Tab6 to Tab7",
+      "Move from Tab1 to Tab3",
+      "Move from Tab1 to Tab7",
+      "Move from Tab4 to Tab7",
+      "None of these moves are both valid and effective"
+    ],
+    "state_content": {
+      "draw": [
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>"
+      ],
+      "dump": [],
+      "piles": [
+        [
+          "club 1",
+          "club 2",
+          "club 3"
+        ],
+        [],
+        [],
+        []
+      ],
+      "tableau": [
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "diamond 3",
+          "spade 2",
+          "heart 1"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "club 11",
+          "diamond 10",
+          "spade 9",
+          "heart 8",
+          "club 7",
+          "diamond 6",
+          "spade 5",
+          "diamond 4",
+          "spade 3",
+          "diamond 2",
+          "spade 1"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "heart 9",
+          "club 8",
+          "diamond 7"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "spade 11"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "heart 3"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "club 4"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "club 9"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "klondike-mcq-001-003",
+      "question_id": 3,
+      "question_description": "A move_effectiveness question about the current state of Klondike Solitaire",
+      "image": "images/board_001_003.png",
+      "state": "states/board_001_003.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\n\nIn the game of Klondike Solitaire, making effective moves is crucial to successfully completing the game. An effective move is one that maximizes the number of cards that can be moved to the Foundation Piles or can reveal hidden cards in tableau piles, stock pile or waste pile. This involves strategic planning and considering the current game state to make the best move possible.\nWhich of the following moves is both valid and effective? A move is effective if it either reveals a hidden card, enables a foundation move, or creates an empty tableau spot.\nChoose the correct option and give the analysis.\nOptions:\n1. Move from Tab2 to Tab5\n2. Move from Tab2 to Foundation 4\n3. Move from Tab3 to Tab4\n4. Move from Tab6 to Tab7\n5. Move from Tab1 to Tab3\n6. Move from Tab1 to Tab7\n7. Move from Tab4 to Tab7\n8. None of these moves are both valid and effective",
+      "answer": "2",
+      "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: heart 1, with a visible card underneath\nTab2: spade 1, with a visible card underneath\nTab3: diamond 7, with a visible card underneath\nTab4: spade 11, with a hidden card underneath\nTab5: heart 3, with a hidden card underneath\nTab6: club 4, with a hidden card underneath\nTab7: club 9, with a hidden card underneath\n\n**Foundation Piles:**\n- Foundation 1: club 3\n- Foundation 2: Empty\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** Empty\n\n**Draw Pile:** Not empty\n\nAnalysis of move options:\n\nOption 1: Move from Tab2 to Tab5 - The move is invalid because the source card's value (1) is not one less than the target card's value (3)\n\nOption 2: Move from Tab2 to Foundation 4 - Valid and effective because it moves spade 1 to foundation\n\nOption 3: Move from Tab3 to Tab4 - The move is invalid because the source card's value (7) is not one less than the target card's value (11)\n\nOption 4: Move from Tab6 to Tab7 - The move is invalid because both cards are black (cards must alternate colors)\n\nOption 5: Move from Tab1 to Tab3 - The move is invalid because both cards are red (cards must alternate colors)\n\nOption 6: Move from Tab1 to Tab7 - The move is invalid because the source card's value (1) is not one less than the target card's value (9)\n\nOption 7: Move from Tab4 to Tab7 - The move is invalid because both cards are black (cards must alternate colors)\n\nOption 8: Incorrect - there is at least one valid and effective move\n\n\nCorrect answer is option 2 because Move from Tab2 to Foundation 4 is both valid and effective",
+      "options": [
+        "Move from Tab2 to Tab5",
+        "Move from Tab2 to Foundation 4",
+        "Move from Tab3 to Tab4",
+        "Move from Tab6 to Tab7",
+        "Move from Tab1 to Tab3",
+        "Move from Tab1 to Tab7",
+        "Move from Tab4 to Tab7",
+        "None of these moves are both valid and effective"
+      ]
+    }
+  }
+}

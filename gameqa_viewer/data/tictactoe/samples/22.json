@@ -1,0 +1,74 @@
+{
+  "sample": {
+    "index": 22,
+    "data_id": "tictactoe-mcq-8-StrategyOptimization",
+    "question_id": 2,
+    "question_description": "Questions about the optimal strategy to take a move of the current player of the board.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "H",
+    "answer_preview": "H",
+    "question_preview": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, on...",
+    "image": "images/board_8.png",
+    "state": "states/board_8.json",
+    "image_url": "data/tictactoe/files/images/board_8.png",
+    "state_url": "data/tictactoe/files/states/board_8.json",
+    "has_options": true,
+    "question": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, one using **O** (the red block) and the other using **X** (the blue block). In each game, player **O** starts first. The objective is to be the first to get three of your marks in a row (horizontally, vertically, or diagonally). If all nine squares are filled without either player achieving this, the game ends in a draw. Notice: the current player to make a move should be inferred from the number of pieces for each players on the board. When inferring the optimal move, if optimal move can be inferred by some rules, choose the optimal move. Otherwise, choose the first move. (The order of choices is (0, 0), (0, 1), (0, 2), (1, 0), ..., (2, 2), choose the first move that is not occupied)\n\nQuestion: What is the optimal move for the current player? If no move exists, choose the answer \"None\".\n\nOptions: ['A.None', 'B.(0, 0)', 'C.(0, 1)', 'D.(0, 2)', 'E.(1, 0)', 'F.(1, 1)', 'G.(1, 2)', 'H.(2, 0) or (2, 1) or (2, 2)']",
+    "analysis": "The current board is [['O', ' ', ' '], [' ', 'O', 'X'], [' ', ' ', ' ']]. Since the player \"O\" plays first in each game, if the count of \"O\" is the same as \"X\", the current player is \"O\". Otherwise, the current player is \"X\". The count of \"O\" is 2 and the count of \"X\" is 1, so the player now is X. Current player is X, opponent is O. Must block opponent O's winning threat on Top-left to bottom-right diagonal, so player X should choose position (2, 2).",
+    "options": [
+      "A.None",
+      "B.(0, 0)",
+      "C.(0, 1)",
+      "D.(0, 2)",
+      "E.(1, 0)",
+      "F.(1, 1)",
+      "G.(1, 2)",
+      "H.(2, 0) or (2, 1) or (2, 2)"
+    ],
+    "state_content": {
+      "board": [
+        [
+          "O",
+          " ",
+          " "
+        ],
+        [
+          " ",
+          "O",
+          "X"
+        ],
+        [
+          " ",
+          " ",
+          " "
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tictactoe-mcq-8-StrategyOptimization",
+      "qa_type": "Strategy Optimization",
+      "question_id": 2,
+      "question_description": "Questions about the optimal strategy to take a move of the current player of the board.",
+      "image": "images/board_8.png",
+      "state": "states/board_8.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Principles: Tic-Tac-Toe is a classic two-player game played on a 3x3 grid, (row, col) from (0, 0) to (2, 2). Players take turns marking a space in the grid, one using **O** (the red block) and the other using **X** (the blue block). In each game, player **O** starts first. The objective is to be the first to get three of your marks in a row (horizontally, vertically, or diagonally). If all nine squares are filled without either player achieving this, the game ends in a draw. Notice: the current player to make a move should be inferred from the number of pieces for each players on the board. When inferring the optimal move, if optimal move can be inferred by some rules, choose the optimal move. Otherwise, choose the first move. (The order of choices is (0, 0), (0, 1), (0, 2), (1, 0), ..., (2, 2), choose the first move that is not occupied)\n\nQuestion: What is the optimal move for the current player? If no move exists, choose the answer \"None\".\n\nOptions: ['A.None', 'B.(0, 0)', 'C.(0, 1)', 'D.(0, 2)', 'E.(1, 0)', 'F.(1, 1)', 'G.(1, 2)', 'H.(2, 0) or (2, 1) or (2, 2)']",
+      "answer": "H",
+      "analysis": "The current board is [['O', ' ', ' '], [' ', 'O', 'X'], [' ', ' ', ' ']]. Since the player \"O\" plays first in each game, if the count of \"O\" is the same as \"X\", the current player is \"O\". Otherwise, the current player is \"X\". The count of \"O\" is 2 and the count of \"X\" is 1, so the player now is X. Current player is X, opponent is O. Must block opponent O's winning threat on Top-left to bottom-right diagonal, so player X should choose position (2, 2).",
+      "options": [
+        "A.None",
+        "B.(0, 0)",
+        "C.(0, 1)",
+        "D.(0, 2)",
+        "E.(1, 0)",
+        "F.(1, 1)",
+        "G.(1, 2)",
+        "H.(2, 0) or (2, 1) or (2, 2)"
+      ]
+    }
+  }
+}

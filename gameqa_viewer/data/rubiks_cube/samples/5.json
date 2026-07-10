@@ -1,0 +1,349 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "rubiks_cube-data-00002-00001",
+    "question_id": 1,
+    "question_description": "Identify colors on specific positions",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degr...",
+    "image": "images/cube_00002.png",
+    "state": "states/cube_00002.json",
+    "image_url": "data/rubiks_cube/files/images/cube_00002.png",
+    "state_url": "data/rubiks_cube/files/states/cube_00002.json",
+    "has_options": true,
+    "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.What color is at position (0, 1) on the Upper face face?Options: [1] yellow, [2] cyan, [3] orange, [4] blue, [5] magenta, [6] brown, [7] red, [8] white",
+    "analysis": "Analysis of Upper face:\n\nCurrent state of each position:\nPosition (0,0): green\nPosition (0,1): red\nPosition (0,2): red\nPosition (1,0): green\nPosition (1,1): yellow\nPosition (1,2): yellow\nPosition (2,0): green\nPosition (2,1): yellow\nPosition (2,2): yellow\n\n Based on the cube's state and the given coordinates (0, 1) on the Upper face face, we can observe that this position contains red. So the answer is red. The option number is 7.",
+    "options": [
+      "yellow",
+      "cyan",
+      "orange",
+      "blue",
+      "magenta",
+      "brown",
+      "red",
+      "white"
+    ],
+    "state_content": {
+      "faces": {
+        "U": [
+          [
+            5,
+            3,
+            3
+          ],
+          [
+            5,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            0
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "L": [
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            4
+          ]
+        ],
+        "R": [
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            5,
+            5,
+            2
+          ]
+        ],
+        "F": [
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            0,
+            4,
+            4
+          ],
+          [
+            3,
+            3,
+            1
+          ]
+        ],
+        "B": [
+          [
+            5,
+            5,
+            1
+          ],
+          [
+            5,
+            5,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "colors": [
+        "yellow",
+        "white",
+        "orange",
+        "red",
+        "blue",
+        "green"
+      ],
+      "move_history": [
+        "B",
+        "L'",
+        "D'"
+      ],
+      "face_states": {
+        "U": {
+          "colors": [
+            [
+              "green",
+              "red",
+              "red"
+            ],
+            [
+              "green",
+              "yellow",
+              "yellow"
+            ],
+            [
+              "green",
+              "yellow",
+              "yellow"
+            ]
+          ],
+          "dominant_color": "yellow",
+          "is_solved": false,
+          "matching_stickers": 4,
+          "color_counts": {
+            "green": 3,
+            "red": 2,
+            "yellow": 4
+          }
+        },
+        "D": {
+          "colors": [
+            [
+              "white",
+              "white",
+              "orange"
+            ],
+            [
+              "white",
+              "white",
+              "orange"
+            ],
+            [
+              "blue",
+              "blue",
+              "blue"
+            ]
+          ],
+          "dominant_color": "white",
+          "is_solved": false,
+          "matching_stickers": 4,
+          "color_counts": {
+            "white": 4,
+            "orange": 2,
+            "blue": 3
+          }
+        },
+        "L": {
+          "colors": [
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "orange",
+              "orange",
+              "orange"
+            ],
+            [
+              "yellow",
+              "blue",
+              "blue"
+            ]
+          ],
+          "dominant_color": "orange",
+          "is_solved": false,
+          "matching_stickers": 6,
+          "color_counts": {
+            "orange": 6,
+            "yellow": 1,
+            "blue": 2
+          }
+        },
+        "R": {
+          "colors": [
+            [
+              "red",
+              "red",
+              "white"
+            ],
+            [
+              "red",
+              "red",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "orange"
+            ]
+          ],
+          "dominant_color": "red",
+          "is_solved": false,
+          "matching_stickers": 4,
+          "color_counts": {
+            "red": 4,
+            "white": 2,
+            "green": 2,
+            "orange": 1
+          }
+        },
+        "F": {
+          "colors": [
+            [
+              "red",
+              "blue",
+              "blue"
+            ],
+            [
+              "yellow",
+              "blue",
+              "blue"
+            ],
+            [
+              "red",
+              "red",
+              "white"
+            ]
+          ],
+          "dominant_color": "blue",
+          "is_solved": false,
+          "matching_stickers": 4,
+          "color_counts": {
+            "red": 3,
+            "blue": 4,
+            "yellow": 1,
+            "white": 1
+          }
+        },
+        "B": {
+          "colors": [
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "green",
+              "green",
+              "white"
+            ],
+            [
+              "yellow",
+              "yellow",
+              "yellow"
+            ]
+          ],
+          "dominant_color": "green",
+          "is_solved": false,
+          "matching_stickers": 4,
+          "color_counts": {
+            "green": 4,
+            "white": 2,
+            "yellow": 3
+          }
+        }
+      },
+      "is_solved": false,
+      "symbols": {
+        "yellow": 0,
+        "white": 1,
+        "orange": 2,
+        "red": 3,
+        "blue": 4,
+        "green": 5
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "rubiks_cube-data-00002-00001",
+      "image": "images/cube_00002.png",
+      "state": "states/cube_00002.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify colors on specific positions",
+      "question": "Rules: As shown in the figure, the Rubik's cube consists of both 3D views and an unfolded view. The 3D views show the cube from two angles: left-tilted 30 degrees looking down, and right-tilted ,30 degrees looking up. The cube has six faces: Upper (U), Down (D), Left (L), Right (R), Front (F), and Back (B). Each face can be rotated clockwise or counterclockwise.And for each face, the coordinates are determined based on the unfolded view: column number increases from left to right (0,1,2) and row number increases from bottom to top (0,1,2). Legend shown in the bottom left corner.Handedness issues in the 3D views can be ignored.An uppercase letter indicates which face to rotate ('F' for Front, 'B' for Back, 'L' for Left, 'R' for Right, 'U' for Upper, 'D' for Down), with a prime symbol (') denoting counterclockwise rotation and no prime symbol denoting clockwise rotation.What color is at position (0, 1) on the Upper face face?Options: [1] yellow, [2] cyan, [3] orange, [4] blue, [5] magenta, [6] brown, [7] red, [8] white",
+      "answer": 7,
+      "analysis": "Analysis of Upper face:\n\nCurrent state of each position:\nPosition (0,0): green\nPosition (0,1): red\nPosition (0,2): red\nPosition (1,0): green\nPosition (1,1): yellow\nPosition (1,2): yellow\nPosition (2,0): green\nPosition (2,1): yellow\nPosition (2,2): yellow\n\n Based on the cube's state and the given coordinates (0, 1) on the Upper face face, we can observe that this position contains red. So the answer is red. The option number is 7.",
+      "options": [
+        "yellow",
+        "cyan",
+        "orange",
+        "blue",
+        "magenta",
+        "brown",
+        "red",
+        "white"
+      ]
+    }
+  }
+}

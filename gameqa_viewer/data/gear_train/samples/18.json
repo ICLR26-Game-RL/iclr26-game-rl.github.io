@@ -1,0 +1,163 @@
+{
+  "sample": {
+    "index": 18,
+    "data_id": "gear_train-00019-q2",
+    "question_id": 2,
+    "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00019.png",
+    "state": "states/panel_00019.json",
+    "image_url": "data/gear_train/files/images/panel_00019.png",
+    "state_url": "data/gear_train/files/states/panel_00019.json",
+    "has_options": true,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear C and the red arrow shows it spins counterclockwise. What happens to gear E?\n\nOptions:\n[1] Gear E spins clockwise\n[2] Gear E spins counterclockwise\n[3] Gear E does not spin at all",
+    "analysis": "All meshing pairs in the panel are: A-G, B-C, B-D, C-F, D-H, E-I, G-H.\nFollowing these connections from driver gear C, its connected group is {A, B, C, D, F, G, H}, which does NOT contain gear E. Gear E belongs to a separate gear group that nothing drives, so it stays still.\nSo the answer is: Gear E does not spin at all. The option number is 3.",
+    "options": [
+      "Gear E spins clockwise",
+      "Gear E spins counterclockwise",
+      "Gear E does not spin at all"
+    ],
+    "state_content": {
+      "gears": [
+        {
+          "label": "D",
+          "teeth": 12,
+          "center": [
+            352.1,
+            216.3
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "H",
+          "teeth": 12,
+          "center": [
+            317.5,
+            142.4
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "B",
+          "teeth": 12,
+          "center": [
+            295.2,
+            274.8
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "G",
+          "teeth": 12,
+          "center": [
+            235.9,
+            141.1
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "C",
+          "teeth": 20,
+          "center": [
+            196.7,
+            321.0
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "F",
+          "teeth": 12,
+          "center": [
+            135.8,
+            411.2
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "A",
+          "teeth": 20,
+          "center": [
+            127.1,
+            140.1
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "I",
+          "teeth": 20,
+          "center": [
+            512.9,
+            136.0
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "E",
+          "teeth": 20,
+          "center": [
+            507.8,
+            271.9
+          ],
+          "pitch_radius": 68.0
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "G"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C",
+          "F"
+        ],
+        [
+          "D",
+          "H"
+        ],
+        [
+          "E",
+          "I"
+        ],
+        [
+          "G",
+          "H"
+        ]
+      ],
+      "driver": "C",
+      "driver_direction": "counterclockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00019-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+      "image": "images/panel_00019.png",
+      "state": "states/panel_00019.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear C and the red arrow shows it spins counterclockwise. What happens to gear E?\n\nOptions:\n[1] Gear E spins clockwise\n[2] Gear E spins counterclockwise\n[3] Gear E does not spin at all",
+      "answer": 3,
+      "analysis": "All meshing pairs in the panel are: A-G, B-C, B-D, C-F, D-H, E-I, G-H.\nFollowing these connections from driver gear C, its connected group is {A, B, C, D, F, G, H}, which does NOT contain gear E. Gear E belongs to a separate gear group that nothing drives, so it stays still.\nSo the answer is: Gear E does not spin at all. The option number is 3.",
+      "options": [
+        "Gear E spins clockwise",
+        "Gear E spins counterclockwise",
+        "Gear E does not spin at all"
+      ]
+    }
+  }
+}

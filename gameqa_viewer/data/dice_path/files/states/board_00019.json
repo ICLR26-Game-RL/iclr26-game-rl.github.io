@@ -1,0 +1,50 @@
+{
+  "grid_size": {
+    "rows": 6,
+    "cols": 6
+  },
+  "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+  "blocked_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      1
+    ]
+  ],
+  "die_cell": [
+    3,
+    5
+  ],
+  "goal_cell": [
+    0,
+    2
+  ],
+  "die_faces": {
+    "top": 1,
+    "north": 4,
+    "east": 2,
+    "bottom": 6,
+    "south": 3,
+    "west": 5
+  },
+  "rule": "standard die, opposite faces sum to 7; visible faces in the image are top, south, east"
+}

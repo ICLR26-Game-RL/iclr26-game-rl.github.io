@@ -1,0 +1,75 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "snake-5-food_pos",
+    "question_id": 1,
+    "question_description": "Where is the food?",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "(2, 1)",
+    "answer_preview": "(2, 1)",
+    "question_preview": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in...",
+    "image": "images/snake_5.png",
+    "state": "states/snake_5.json",
+    "image_url": "data/snake/files/images/snake_5.png",
+    "state_url": "data/snake/files/states/snake_5.json",
+    "has_options": false,
+    "question": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in the grid represent the matrix format, where x is the row index and y is the column index. The origin (0,0) is in the the upper left of the grid. You need to control the snake that moves across the grid. Each step it can move up, down, right or left. The game ends if the snake head hits the bound of the grid or its own body. Where is the food?",
+    "analysis": "The food is the red block, and the red block is at (2, 1). Thus, the answer is (2, 1).",
+    "options": null,
+    "state_content": {
+      "map": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "snake-5-food_pos",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Where is the food?",
+      "image": "images/snake_5.png",
+      "state": "states/snake_5.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "This is a Snake game. The yellow block is the head of the snake. The blue block is the body of the snake. The red block is the food. The coordinates (x, y) in the grid represent the matrix format, where x is the row index and y is the column index. The origin (0,0) is in the the upper left of the grid. You need to control the snake that moves across the grid. Each step it can move up, down, right or left. The game ends if the snake head hits the bound of the grid or its own body. Where is the food?",
+      "answer": "(2, 1)",
+      "analysis": "The food is the red block, and the red block is at (2, 1). Thus, the answer is (2, 1)."
+    }
+  }
+}

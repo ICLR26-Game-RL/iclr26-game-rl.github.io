@@ -1,0 +1,154 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "turing-machine-train-00007",
+    "question_id": 3,
+    "question_description": "first_state_entry",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Rules: State 0, Symbol 0 -> Write 1, Move left, New State 1 State 0, Symbol 1 -> Write 1, Move down, New State 0 State 0, Symbol 2 -> Write 2, Move up, New Sta...",
+    "image": "images/00007.png",
+    "state": "states/00007.json",
+    "image_url": "data/2d_turing_machine/files/images/00007.png",
+    "state_url": "data/2d_turing_machine/files/states/00007.json",
+    "has_options": true,
+    "question": "Rules:\nState 0, Symbol 0 -> Write 1, Move left, New State 1\nState 0, Symbol 1 -> Write 1, Move down, New State 0\nState 0, Symbol 2 -> Write 2, Move up, New State 0\nState 1, Symbol 0 -> Write 2, Move left, New State 1\nState 1, Symbol 1 -> Write 2, Move left, New State 2\nState 1, Symbol 2 -> Write 2, Move down, New State 0\nState 2, Symbol 0 -> Write 1, Move left, New State 1\nState 2, Symbol 1 -> Write 0, Move up, New State 2\nState 2, Symbol 2 -> Write 0, Move down, New State 0\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (2, 2) with State 0 on Symbol 2 that is (2).\n\nQuestion: after how many steps will the head first enter state 0?\nOptions:\n1: 1\n2: 6\n3: 2\n4: 5\n5: 3\n6: 4\n7: 8\n8: 7\n",
+    "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (2, 2)\n- **State:** 0\n- **Symbol:** Directly from image, it's blue which means symbol 2\n- **State and Symbol**: (2)\n- **Action:** Write 2, Move up, New State 0\n- **Symbol Written on (2, 2):** 2\n- **New Position:** (1, 2)\n- **New State:** 0\n\nThe head first enters state 0 that is brackets () after step 1.\nThe answer is option 1.",
+    "options": [
+      "1",
+      "6",
+      "2",
+      "5",
+      "3",
+      "4",
+      "8",
+      "7"
+    ],
+    "state_content": {
+      "rules": [
+        {
+          "state": 0,
+          "symbol": 0,
+          "new_state": 1,
+          "new_symbol": 1,
+          "direction": 3
+        },
+        {
+          "state": 0,
+          "symbol": 1,
+          "new_state": 0,
+          "new_symbol": 1,
+          "direction": 2
+        },
+        {
+          "state": 0,
+          "symbol": 2,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 0
+        },
+        {
+          "state": 1,
+          "symbol": 0,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 1,
+          "symbol": 1,
+          "new_state": 2,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 1,
+          "symbol": 2,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 2
+        },
+        {
+          "state": 2,
+          "symbol": 0,
+          "new_state": 1,
+          "new_symbol": 1,
+          "direction": 3
+        },
+        {
+          "state": 2,
+          "symbol": 1,
+          "new_state": 2,
+          "new_symbol": 0,
+          "direction": 0
+        },
+        {
+          "state": 2,
+          "symbol": 2,
+          "new_state": 0,
+          "new_symbol": 0,
+          "direction": 2
+        }
+      ],
+      "head": {
+        "x": 2,
+        "y": 2,
+        "state": 0
+      },
+      "grid": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "turing-machine-train-00007",
+      "image": "images/00007.png",
+      "state": "states/00007.json",
+      "plot_level": "Medium",
+      "qa_type": "State Prediction",
+      "qa_level": "Medium",
+      "question_id": 3,
+      "question_description": "first_state_entry",
+      "question": "Rules:\nState 0, Symbol 0 -> Write 1, Move left, New State 1\nState 0, Symbol 1 -> Write 1, Move down, New State 0\nState 0, Symbol 2 -> Write 2, Move up, New State 0\nState 1, Symbol 0 -> Write 2, Move left, New State 1\nState 1, Symbol 1 -> Write 2, Move left, New State 2\nState 1, Symbol 2 -> Write 2, Move down, New State 0\nState 2, Symbol 0 -> Write 1, Move left, New State 1\nState 2, Symbol 1 -> Write 0, Move up, New State 2\nState 2, Symbol 2 -> Write 0, Move down, New State 0\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (2, 2) with State 0 on Symbol 2 that is (2).\n\nQuestion: after how many steps will the head first enter state 0?\nOptions:\n1: 1\n2: 6\n3: 2\n4: 5\n5: 3\n6: 4\n7: 8\n8: 7\n",
+      "answer": 1,
+      "options": [
+        "1",
+        "6",
+        "2",
+        "5",
+        "3",
+        "4",
+        "8",
+        "7"
+      ],
+      "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (2, 2)\n- **State:** 0\n- **Symbol:** Directly from image, it's blue which means symbol 2\n- **State and Symbol**: (2)\n- **Action:** Write 2, Move up, New State 0\n- **Symbol Written on (2, 2):** 2\n- **New Position:** (1, 2)\n- **New State:** 0\n\nThe head first enters state 0 that is brackets () after step 1.\nThe answer is option 1."
+    }
+  }
+}

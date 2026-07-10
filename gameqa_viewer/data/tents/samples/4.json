@@ -1,0 +1,88 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "tents-fill-00001-new-tent-positions",
+    "question_id": 6,
+    "question_description": "how many positions in the grid are available to place a new tent without breaking the game rules immediately (it does not have to be a part of a whole solution to the puzzle)?",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, an...",
+    "image": "images/00001.png",
+    "state": "states/00001.json",
+    "image_url": "data/tents/files/images/00001.png",
+    "state_url": "data/tents/files/states/00001.json",
+    "has_options": false,
+    "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, how many positions in the grid are available to place a new tent without breaking the game rules immediately (it does not have to be a part of a whole solution to the puzzle)?\n",
+    "analysis": "**Step-by-step reasoning:**\nWe need to check every position in the grid to see if it can hold a new tent without violating the game rules. By evaluating the conditions, we can find out how many positions are suitable for placing a new tent.\nPosition (0, 1) is valid for placing a new tent.\n  - The adjacent tree is at (1, 1).\n  - The current row, row 0, still needs 1 more tents.\n  - The current column, column 1, still needs 1 more tents.\nPosition (5, 4) is valid for placing a new tent.\n  - The adjacent tree is at (4, 4).\n  - The current row, row 5, still needs 1 more tents.\n  - The current column, column 4, still needs 1 more tents.\nTherefore, the answer is 2 positions.\n",
+    "options": null,
+    "state_content": {
+      "size": [
+        7,
+        7
+      ],
+      "tree_positions": [
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "tent_positions": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "removed_tents": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tents-fill-00001-new-tent-positions",
+      "qa_type": "State Prediction",
+      "question_id": 6,
+      "question_description": "how many positions in the grid are available to place a new tent without breaking the game rules immediately (it does not have to be a part of a whole solution to the puzzle)?",
+      "image": "images/00001.png",
+      "state": "states/00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, how many positions in the grid are available to place a new tent without breaking the game rules immediately (it does not have to be a part of a whole solution to the puzzle)?\n",
+      "answer": "2",
+      "analysis": "**Step-by-step reasoning:**\nWe need to check every position in the grid to see if it can hold a new tent without violating the game rules. By evaluating the conditions, we can find out how many positions are suitable for placing a new tent.\nPosition (0, 1) is valid for placing a new tent.\n  - The adjacent tree is at (1, 1).\n  - The current row, row 0, still needs 1 more tents.\n  - The current column, column 1, still needs 1 more tents.\nPosition (5, 4) is valid for placing a new tent.\n  - The adjacent tree is at (4, 4).\n  - The current row, row 5, still needs 1 more tents.\n  - The current column, column 4, still needs 1 more tents.\nTherefore, the answer is 2 positions.\n"
+    }
+  }
+}

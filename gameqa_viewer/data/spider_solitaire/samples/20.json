@@ -1,0 +1,686 @@
+{
+  "sample": {
+    "index": 20,
+    "data_id": "spider_solitaire-train-00003-0",
+    "question_id": 0,
+    "question_description": "Remaining deals in the stockpile",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Spider Solitaire # OBJECTIVE Spider is played with eight decks of 13 spade cards each, totaling 104 unique cards. The goal is to arrange all cards in a King-to...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/spider_solitaire/files/images/board_00003.png",
+    "state_url": "data/spider_solitaire/files/states/board_00003.json",
+    "has_options": false,
+    "question": "\nSpider Solitaire\n\n# OBJECTIVE\nSpider is played with eight decks of 13 spade cards each, totaling 104 unique cards. The goal is to arrange all cards in a King-to-Ace sequence in the same suit and move them to the foundation piles. Once all sequences are moved to the foundations, the game is won.\n\n# SETUP\nThe game features waste piles, a stock pile, and foundation piles. Waste piles are where the action happens, and the stock pile provides new cards when necessary.\n\n**Waste Pile Numbering**: Waste piles are numbered from left to right starting with `0`. The cards within each waste pile are also numbered starting from the bottom card.\n\n# GAME BOARD COMPONENTS\n\n## **Stock Pile**\nThe **Stock Pile** holds all remaining cards and is used to deal new cards into the waste piles. \nStock Pile is in the top left corner of the board.\n\n- **Staggered Card Stacking**: Cards are stacked in layers, and the number of layers indicates how many more times you can deal cards to the waste piles. Each deal moves one card face-up to each waste pile.\n\n## **Waste Piles**\nThe **Waste Piles** are where cards are played and organized.\nWaste Piles are on the bottom of the chessboard\n\n- **Face-Up vs. Face-Down Cards**: Cards are stacked with face-up cards visible and face-down cards hidden. Only face-up cards can be played. When a face-down card becomes the top card of a pile, it is turned face-up and can be played.\n\n- **Staggered Cards**: Cards in each waste pile are arranged so that face-up cards are on top, and face-down cards are beneath. As you move cards, new face-down cards are revealed.\n\n- **Card Numbering and Screen Position**: \n  - **Waste Pile Numbering**: Piles are numbered from left to right starting with `0` for the leftmost pile. \n  - The card at the bottom of each waste pile (usually face-down) is numbered **0** and is the **topmost visible card** in the pile.\n  - As you move upward in the pile, the next cards are numbered **1**, **2**, **3**, and so on.\n  - Visually, the bottom card (number **0**) is the one closest to the top of the screen, and the cards above it are stacked above in the pile, going downwards.\n\n## **Foundation Pile**\nFoundation pile stores all the arranged suit. When a suit is arranged in sequence, it may be removed to a foundation pile. If all suits are moved to the foundations, the game is won.\nFoundation Pile is in the top right corner of the board.\n\n# MOVING CARDS\n- **Movement Conditions**: \n  - **Move a single card**: The single card being moved must be placed on a top card that is of the **same suit** and has a **higher rank** (e.g., a Q can be placed on a K). \n  - **Move multiple cards**: A complete **descending sequence** of cards (such as K, Q, J, 10, etc.) can be moved from one pile to another. When moving a descending sequence of cards to another pile, the new sequence must be a **same-suit sequence** and follow the **descending order** from K, Q, J, 10, 9, ..., 2, A.\n- **Face-Down Cards**: If the sequence you are moving includes face-down cards, they will be flipped face-up once they are moved. After flipping, the newly face-up cards can continue to be moved or interacted with.\n- **Example**: If you have a sequence of K-Q-J-10-9-8-7 in the same suit, you can move a card 6 that has the same suit to the top of this pile, resulting in a new sequence K-Q-J-10-9-8-7-6.\n- **Empty Pile Rule**: An empty waste pile can accept any card. After placing the card, you can continue adding a descending same-suit sequence to that pile.\n- **Reveal Cards**: If a move leaves a face-down card on top, it will be turned face-up.\n\n# DEALING\nClick the stock to deal a new row of face-up cards to the waste piles. You may not deal if there is an empty waste pile.\n\n# STRATEGY\n- Turn face-down cards face-up.\n- Form runs of the same suit in descending order.\n- Use empty waste piles strategically.\n\n# VARIANTS\nIn **circular spider solitaire**, a King can be placed on an Ace, allowing for extended sequences.\n\n# **NOTE: Important Numbering Reminder**\n- **Waste Pile Numbering**: Waste piles are numbered from **left to right** starting with `0` for the leftmost pile.\n- **Card Numbering within Waste Piles**: The **bottom-most card** of each pile (usually face-down) is numbered **0**, and the cards above it are numbered **1**, **2**, **3**, etc., moving upwards in the pile.\n- **Please Pay Attention** to both the waste pile and card numbering methods, as they will help you navigate and make strategic decisions effectively.\n\n\n**Question:** How many times can the stockpile still deal cards?",
+    "analysis": "We can see that the stockpile has 2 stacks of overlapping cards. By counting the number of overlapping cards in the stockpile, we know that the stockpile can now be dealt 2 times",
+    "options": null,
+    "state_content": {
+      "stock": [
+        {
+          "code": 48,
+          "rank": 10,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 59,
+          "rank": 8,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 22,
+          "rank": 10,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 58,
+          "rank": 7,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 101,
+          "rank": 11,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 90,
+          "rank": 13,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 18,
+          "rank": 6,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 29,
+          "rank": 4,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 14,
+          "rank": 2,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 16,
+          "rank": 4,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 79,
+          "rank": 2,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 7,
+          "rank": 8,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 42,
+          "rank": 4,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 12,
+          "rank": 13,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 11,
+          "rank": 12,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 56,
+          "rank": 5,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 57,
+          "rank": 6,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 91,
+          "rank": 1,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 33,
+          "rank": 8,
+          "suit": "spade",
+          "faceUp": false
+        },
+        {
+          "code": 49,
+          "rank": 11,
+          "suit": "spade",
+          "faceUp": false
+        }
+      ],
+      "waste": [
+        [
+          {
+            "code": 5,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 6,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 8,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 0,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 92,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 54,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 81,
+            "rank": 4,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 95,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 66,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 31,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 2,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 76,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 80,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 10,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 86,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 37,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 43,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 24,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 9,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 39,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 82,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 89,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 69,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 19,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 35,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 99,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 67,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 23,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 50,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 74,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 71,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 93,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 26,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 15,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 63,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 4,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 1,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 98,
+            "rank": 8,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 27,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 55,
+            "rank": 4,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 34,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 70,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 28,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 36,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 60,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 47,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 62,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 17,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 94,
+            "rank": 4,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 100,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 25,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 65,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 32,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 78,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 53,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 72,
+            "rank": 8,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 64,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 85,
+            "rank": 8,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 97,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 61,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 46,
+            "rank": 8,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 44,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 84,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 20,
+            "rank": 8,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 21,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 51,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 96,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 52,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 3,
+            "rank": 4,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 30,
+            "rank": 5,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 13,
+            "rank": 1,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 40,
+            "rank": 2,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 68,
+            "rank": 4,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 102,
+            "rank": 12,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 75,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 77,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ],
+        [
+          {
+            "code": 88,
+            "rank": 11,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 45,
+            "rank": 7,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 73,
+            "rank": 9,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 41,
+            "rank": 3,
+            "suit": "spade",
+            "faceUp": false
+          },
+          {
+            "code": 87,
+            "rank": 10,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 38,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 103,
+            "rank": 13,
+            "suit": "spade",
+            "faceUp": true
+          },
+          {
+            "code": 83,
+            "rank": 6,
+            "suit": "spade",
+            "faceUp": true
+          }
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "spider_solitaire-train-00003-0",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "Remaining deals in the stockpile",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "\nSpider Solitaire\n\n# OBJECTIVE\nSpider is played with eight decks of 13 spade cards each, totaling 104 unique cards. The goal is to arrange all cards in a King-to-Ace sequence in the same suit and move them to the foundation piles. Once all sequences are moved to the foundations, the game is won.\n\n# SETUP\nThe game features waste piles, a stock pile, and foundation piles. Waste piles are where the action happens, and the stock pile provides new cards when necessary.\n\n**Waste Pile Numbering**: Waste piles are numbered from left to right starting with `0`. The cards within each waste pile are also numbered starting from the bottom card.\n\n# GAME BOARD COMPONENTS\n\n## **Stock Pile**\nThe **Stock Pile** holds all remaining cards and is used to deal new cards into the waste piles. \nStock Pile is in the top left corner of the board.\n\n- **Staggered Card Stacking**: Cards are stacked in layers, and the number of layers indicates how many more times you can deal cards to the waste piles. Each deal moves one card face-up to each waste pile.\n\n## **Waste Piles**\nThe **Waste Piles** are where cards are played and organized.\nWaste Piles are on the bottom of the chessboard\n\n- **Face-Up vs. Face-Down Cards**: Cards are stacked with face-up cards visible and face-down cards hidden. Only face-up cards can be played. When a face-down card becomes the top card of a pile, it is turned face-up and can be played.\n\n- **Staggered Cards**: Cards in each waste pile are arranged so that face-up cards are on top, and face-down cards are beneath. As you move cards, new face-down cards are revealed.\n\n- **Card Numbering and Screen Position**: \n  - **Waste Pile Numbering**: Piles are numbered from left to right starting with `0` for the leftmost pile. \n  - The card at the bottom of each waste pile (usually face-down) is numbered **0** and is the **topmost visible card** in the pile.\n  - As you move upward in the pile, the next cards are numbered **1**, **2**, **3**, and so on.\n  - Visually, the bottom card (number **0**) is the one closest to the top of the screen, and the cards above it are stacked above in the pile, going downwards.\n\n## **Foundation Pile**\nFoundation pile stores all the arranged suit. When a suit is arranged in sequence, it may be removed to a foundation pile. If all suits are moved to the foundations, the game is won.\nFoundation Pile is in the top right corner of the board.\n\n# MOVING CARDS\n- **Movement Conditions**: \n  - **Move a single card**: The single card being moved must be placed on a top card that is of the **same suit** and has a **higher rank** (e.g., a Q can be placed on a K). \n  - **Move multiple cards**: A complete **descending sequence** of cards (such as K, Q, J, 10, etc.) can be moved from one pile to another. When moving a descending sequence of cards to another pile, the new sequence must be a **same-suit sequence** and follow the **descending order** from K, Q, J, 10, 9, ..., 2, A.\n- **Face-Down Cards**: If the sequence you are moving includes face-down cards, they will be flipped face-up once they are moved. After flipping, the newly face-up cards can continue to be moved or interacted with.\n- **Example**: If you have a sequence of K-Q-J-10-9-8-7 in the same suit, you can move a card 6 that has the same suit to the top of this pile, resulting in a new sequence K-Q-J-10-9-8-7-6.\n- **Empty Pile Rule**: An empty waste pile can accept any card. After placing the card, you can continue adding a descending same-suit sequence to that pile.\n- **Reveal Cards**: If a move leaves a face-down card on top, it will be turned face-up.\n\n# DEALING\nClick the stock to deal a new row of face-up cards to the waste piles. You may not deal if there is an empty waste pile.\n\n# STRATEGY\n- Turn face-down cards face-up.\n- Form runs of the same suit in descending order.\n- Use empty waste piles strategically.\n\n# VARIANTS\nIn **circular spider solitaire**, a King can be placed on an Ace, allowing for extended sequences.\n\n# **NOTE: Important Numbering Reminder**\n- **Waste Pile Numbering**: Waste piles are numbered from **left to right** starting with `0` for the leftmost pile.\n- **Card Numbering within Waste Piles**: The **bottom-most card** of each pile (usually face-down) is numbered **0**, and the cards above it are numbered **1**, **2**, **3**, etc., moving upwards in the pile.\n- **Please Pay Attention** to both the waste pile and card numbering methods, as they will help you navigate and make strategic decisions effectively.\n\n\n**Question:** How many times can the stockpile still deal cards?",
+      "answer": "2",
+      "analysis": "We can see that the stockpile has 2 stacks of overlapping cards. By counting the number of overlapping cards in the stockpile, we know that the stockpile can now be dealt 2 times"
+    }
+  }
+}

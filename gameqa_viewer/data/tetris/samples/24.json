@@ -1,0 +1,122 @@
+{
+  "sample": {
+    "index": 24,
+    "data_id": "tetris-00007-max-rows",
+    "question_id": 3,
+    "question_description": "maximum rows to be cleared",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Rules: 1. The image shows a standard Tetris grid with 8 rows and 8 columns. 2. The number and categories of actions done to the falling tetromino are not restr...",
+    "image": "images/tetris-00007.png",
+    "state": "states/tetris-00007.json",
+    "image_url": "data/tetris/files/images/tetris-00007.png",
+    "state_url": "data/tetris/files/states/tetris-00007.json",
+    "has_options": false,
+    "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. The number and categories of actions done to the falling tetromino are not restricted, which means you can perform unlimited rotations and translations (moving left, right, or down) to position the tetromino as needed. \n3. Only consider rows cleared in this turn.\n4. There may not be active tetromino(colored in red) falling in the image.\n\n\nQuestion:\nWhat's the maximum number of rows can be cleared after positioning the active Tetrimino in this turn?",
+    "analysis": "From the image we can see a falling red Tetrimino. This red Tetromino lies horizontally with four blocks in a row, so it is an I-shape tetromino rotated 90° clockwise.\n\nBy placing the 4 blocks of tetromino at [(2, 6), (3, 6), (4, 6), (5, 6)], 1 row can be cleared at rows [5]. This is the maximum possible number of rows that can be cleared with any valid placement of the current tetromino.",
+    "options": null,
+    "state_content": {
+      "grid": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "rows": 8,
+      "cols": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tetris-00007-max-rows",
+      "qa_type": "Strategy Optimization",
+      "question_id": 3,
+      "question_description": "maximum rows to be cleared",
+      "image": "images/tetris-00007.png",
+      "state": "states/tetris-00007.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. The number and categories of actions done to the falling tetromino are not restricted, which means you can perform unlimited rotations and translations (moving left, right, or down) to position the tetromino as needed. \n3. Only consider rows cleared in this turn.\n4. There may not be active tetromino(colored in red) falling in the image.\n\n\nQuestion:\nWhat's the maximum number of rows can be cleared after positioning the active Tetrimino in this turn?",
+      "answer": 1,
+      "analysis": "From the image we can see a falling red Tetrimino. This red Tetromino lies horizontally with four blocks in a row, so it is an I-shape tetromino rotated 90° clockwise.\n\nBy placing the 4 blocks of tetromino at [(2, 6), (3, 6), (4, 6), (5, 6)], 1 row can be cleared at rows [5]. This is the maximum possible number of rows that can be cleared with any valid placement of the current tetromino."
+    }
+  }
+}

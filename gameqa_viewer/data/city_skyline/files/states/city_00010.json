@@ -1,0 +1,35 @@
+{
+  "grid_size": {
+    "rows": 4,
+    "cols": 4
+  },
+  "coordinate_system": "(row, col); r0 is the northernmost row, c0 the westernmost column",
+  "heights": [
+    [
+      6,
+      4,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      2,
+      3,
+      0
+    ],
+    [
+      1,
+      2,
+      4,
+      2
+    ]
+  ],
+  "legend": "0 = park; otherwise number of floors",
+  "visibility_rule": "a building is visible from a direction iff strictly taller than every building nearer the observer in the same line"
+}

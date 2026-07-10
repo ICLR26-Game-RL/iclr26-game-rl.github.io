@@ -1,0 +1,203 @@
+{
+  "sample": {
+    "index": 34,
+    "data_id": "minesweeper-train-00006-4",
+    "question_id": 4,
+    "question_description": "Predict cell reveal outcome",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "C",
+    "answer_preview": "C",
+    "question_preview": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board. The numbers on the board indicate how many...",
+    "image": "images/board_00006.png",
+    "state": "states/board_00006.json",
+    "image_url": "data/minesweeper/files/images/board_00006.png",
+    "state_url": "data/minesweeper/files/states/board_00006.json",
+    "has_options": true,
+    "question": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** What will happen if the player reveals the cell at (2,0)? \n\n**Options:**\nA: The game will end because the cell contains a mine. \nB: The cell will reveal an empty area, and adjacent cells will also be revealed. \nC: The cell will reveal the number 2. \nD: Undecidable. It may contain a mine or not.",
+    "analysis": "The inference uses two main rules: 1. Mine Inference Rule: If the remaining mines (calculated as the number on a revealed cell minus the flagged/inferred mines around it) equal the number of unrevealed neighbors, all those unrevealed neighbors must be mines. 2. Safe Inference Rule: If the remaining mines are zero, all unrevealed neighbors must be safe. Logical deduction confirms the cell at (2,0) is safe. Upon revelation, it will show the number 2, which matches the expected count of adjacent mines based on the board state. Detailed inference path: Starting inference at depth 0 with revealed neighbors: [(1, 1), (2, 1), (3, 1)];  Depth 0, Cell (1,1) with n=1: flagged_count=1, unrevealed_count=3, remaining_mines=0;  Depth 0: Applying safe inference rule for cell (1,1). Depth 0: Inferred cell (0,0) as safe. Depth 0: Inferred cell (2,0) as safe. Depth 0, Cell (2,1) with n=2: flagged_count=1, unrevealed_count=2, remaining_mines=1;  Depth 0, Cell (3,1) with n=1: flagged_count=0, unrevealed_count=4, remaining_mines=1;  Depth 0: Changes detected, recursing to depth 1. Depth 1: Target cell (2,0) already inferred, stopping recursion early. Target cell (2,0) inferred as must_be_safe.Therefore, the correct answer is Option C.",
+    "options": [
+      "A: The game will end because the cell contains a mine. ",
+      "B: The cell will reveal an empty area, and adjacent cells will also be revealed. ",
+      "C: The cell will reveal the number 2. ",
+      "D: Undecidable. It may contain a mine or not."
+    ],
+    "state_content": {
+      "rows": 6,
+      "cols": 6,
+      "mines": 8,
+      "mine_board": [
+        [
+          1,
+          1,
+          0,
+          1,
+          "M",
+          2
+        ],
+        [
+          "M",
+          1,
+          0,
+          1,
+          3,
+          "M"
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          3,
+          "M"
+        ],
+        [
+          "M",
+          1,
+          1,
+          1,
+          3,
+          "M"
+        ],
+        [
+          1,
+          1,
+          1,
+          "M",
+          3,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          2,
+          "M"
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "flagged": [
+        [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "first_click": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minesweeper-train-00006-4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Predict cell reveal outcome",
+      "image": "images/board_00006.png",
+      "state": "states/board_00006.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "This is a Minesweeper game. The size of the chessboard is 6x6, and there are a total of 8 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** What will happen if the player reveals the cell at (2,0)? \n\n**Options:**\nA: The game will end because the cell contains a mine. \nB: The cell will reveal an empty area, and adjacent cells will also be revealed. \nC: The cell will reveal the number 2. \nD: Undecidable. It may contain a mine or not.",
+      "answer": "C",
+      "analysis": "The inference uses two main rules: 1. Mine Inference Rule: If the remaining mines (calculated as the number on a revealed cell minus the flagged/inferred mines around it) equal the number of unrevealed neighbors, all those unrevealed neighbors must be mines. 2. Safe Inference Rule: If the remaining mines are zero, all unrevealed neighbors must be safe. Logical deduction confirms the cell at (2,0) is safe. Upon revelation, it will show the number 2, which matches the expected count of adjacent mines based on the board state. Detailed inference path: Starting inference at depth 0 with revealed neighbors: [(1, 1), (2, 1), (3, 1)];  Depth 0, Cell (1,1) with n=1: flagged_count=1, unrevealed_count=3, remaining_mines=0;  Depth 0: Applying safe inference rule for cell (1,1). Depth 0: Inferred cell (0,0) as safe. Depth 0: Inferred cell (2,0) as safe. Depth 0, Cell (2,1) with n=2: flagged_count=1, unrevealed_count=2, remaining_mines=1;  Depth 0, Cell (3,1) with n=1: flagged_count=0, unrevealed_count=4, remaining_mines=1;  Depth 0: Changes detected, recursing to depth 1. Depth 1: Target cell (2,0) already inferred, stopping recursion early. Target cell (2,0) inferred as must_be_safe.Therefore, the correct answer is Option C.",
+      "options": [
+        "A: The game will end because the cell contains a mine. ",
+        "B: The cell will reveal an empty area, and adjacent cells will also be revealed. ",
+        "C: The cell will reveal the number 2. ",
+        "D: Undecidable. It may contain a mine or not."
+      ]
+    }
+  }
+}

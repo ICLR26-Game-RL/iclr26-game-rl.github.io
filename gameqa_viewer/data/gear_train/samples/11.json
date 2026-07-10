@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "gear_train-00012-q2",
+    "question_id": 2,
+    "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00012.png",
+    "state": "states/panel_00012.json",
+    "image_url": "data/gear_train/files/images/panel_00012.png",
+    "state_url": "data/gear_train/files/states/panel_00012.json",
+    "has_options": true,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear F and the red arrow shows it spins counterclockwise. What happens to gear A?\n\nOptions:\n[1] Gear A spins clockwise\n[2] Gear A spins counterclockwise\n[3] Gear A does not spin at all",
+    "analysis": "All meshing pairs in the panel are: A-E, B-D, B-F, D-E.\nThe meshing path from the driver to gear A is F -> B -> D -> E -> A (4 mesh(es)). Each mesh reverses the spin direction.\nGear F spins counterclockwise, so its meshed neighbor gear B spins clockwise.\nGear B spins clockwise, so its meshed neighbor gear D spins counterclockwise.\nGear D spins counterclockwise, so its meshed neighbor gear E spins clockwise.\nGear E spins clockwise, so its meshed neighbor gear A spins counterclockwise.\nWith 4 reversals from counterclockwise, gear A spins counterclockwise.\nSo the answer is: gear A spins counterclockwise. The option number is 2.",
+    "options": [
+      "Gear A spins clockwise",
+      "Gear A spins counterclockwise",
+      "Gear A does not spin at all"
+    ],
+    "state_content": {
+      "gears": [
+        {
+          "label": "D",
+          "teeth": 16,
+          "center": [
+            317.1,
+            305.7
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "E",
+          "teeth": 16,
+          "center": [
+            272.2,
+            404.9
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "B",
+          "teeth": 20,
+          "center": [
+            422.7,
+            367.6
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "A",
+          "teeth": 16,
+          "center": [
+            178.5,
+            349.6
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "F",
+          "teeth": 12,
+          "center": [
+            454.4,
+            263.5
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "C",
+          "teeth": 12,
+          "center": [
+            475.1,
+            101.5
+          ],
+          "pitch_radius": 40.8
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "E"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "B",
+          "F"
+        ],
+        [
+          "D",
+          "E"
+        ]
+      ],
+      "driver": "F",
+      "driver_direction": "counterclockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00012-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+      "image": "images/panel_00012.png",
+      "state": "states/panel_00012.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear F and the red arrow shows it spins counterclockwise. What happens to gear A?\n\nOptions:\n[1] Gear A spins clockwise\n[2] Gear A spins counterclockwise\n[3] Gear A does not spin at all",
+      "answer": 2,
+      "analysis": "All meshing pairs in the panel are: A-E, B-D, B-F, D-E.\nThe meshing path from the driver to gear A is F -> B -> D -> E -> A (4 mesh(es)). Each mesh reverses the spin direction.\nGear F spins counterclockwise, so its meshed neighbor gear B spins clockwise.\nGear B spins clockwise, so its meshed neighbor gear D spins counterclockwise.\nGear D spins counterclockwise, so its meshed neighbor gear E spins clockwise.\nGear E spins clockwise, so its meshed neighbor gear A spins counterclockwise.\nWith 4 reversals from counterclockwise, gear A spins counterclockwise.\nSo the answer is: gear A spins counterclockwise. The option number is 2.",
+      "options": [
+        "Gear A spins clockwise",
+        "Gear A spins counterclockwise",
+        "Gear A does not spin at all"
+      ]
+    }
+  }
+}

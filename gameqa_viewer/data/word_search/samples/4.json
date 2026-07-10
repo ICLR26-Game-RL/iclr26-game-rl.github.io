@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "word-mcq-00005",
+    "question_id": 2,
+    "question_description": "word_direction",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Rules: 1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left. 2. Starting from position (row 6, column...",
+    "image": "images/word-mcq-00005.png",
+    "state": "states/word-mcq-00005.json",
+    "image_url": "data/word_search/files/images/word-mcq-00005.png",
+    "state_url": "data/word_search/files/states/word-mcq-00005.json",
+    "has_options": true,
+    "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 6, column 5), in which direction can you find the word 'BARWAY'?\n\nOptions:\n1: right\n2: up\n3: diagonal-right-down\n4: left\n5: diagonal-left-down\n6: diagonal-right-up\n7: diagonal-left-up\n8: down",
+    "analysis": "Let's analyze the word 'BARWAY' starting from position (row 6, column 5):\n\n1. Starting position contains 'B'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (6, 6): Expected 'A', found 'P'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Position (7, 5): Expected 'A', found 'D'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-down direction:\n   - Position (7, 6): Expected 'A', found 'F'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (5, 6): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (7, 4): Expected 'A', found 'E'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Position (5, 4): Expected 'A', found 'W'\n   × This direction does not contain the complete word\n\nChecking up direction:\n   - Second letter 'A' found at (5, 5)\n   - Complete sequence:    Sequence found: B → A → R → W → A → Y\n   ✓ Valid word 'BARWAY' found in up direction!\n\nChecking left direction:\n   - Position (6, 4): Expected 'A', found 'V'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: up\n\nTherefore, the answer is Option 2: up",
+    "options": [
+      "right",
+      "up",
+      "diagonal-right-down",
+      "left",
+      "diagonal-left-down",
+      "diagonal-right-up",
+      "diagonal-left-up",
+      "down"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "V",
+          "E",
+          "U",
+          "J",
+          "Y",
+          "A",
+          "J"
+        ],
+        [
+          "X",
+          "S",
+          "H",
+          "X",
+          "A",
+          "W",
+          "D"
+        ],
+        [
+          "Q",
+          "B",
+          "V",
+          "X",
+          "W",
+          "N",
+          "K"
+        ],
+        [
+          "A",
+          "D",
+          "C",
+          "I",
+          "R",
+          "N",
+          "A"
+        ],
+        [
+          "G",
+          "W",
+          "K",
+          "W",
+          "A",
+          "G",
+          "C"
+        ],
+        [
+          "J",
+          "V",
+          "X",
+          "V",
+          "B",
+          "P",
+          "Y"
+        ],
+        [
+          "T",
+          "J",
+          "W",
+          "E",
+          "D",
+          "F",
+          "F"
+        ]
+      ],
+      "size": 7,
+      "question_type": "word_direction"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00005",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "word_direction",
+      "image": "images/word-mcq-00005.png",
+      "state": "states/word-mcq-00005.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. This is a word search game. Words can be placed in different directions: right, down, diagonal, up, or left.\n2. Starting from position (row 6, column 5), in which direction can you find the word 'BARWAY'?\n\nOptions:\n1: right\n2: up\n3: diagonal-right-down\n4: left\n5: diagonal-left-down\n6: diagonal-right-up\n7: diagonal-left-up\n8: down",
+      "answer": 2,
+      "analysis": "Let's analyze the word 'BARWAY' starting from position (row 6, column 5):\n\n1. Starting position contains 'B'. Let's examine all possible directions:\n\nChecking right direction:\n   - Position (6, 6): Expected 'A', found 'P'\n   × This direction does not contain the complete word\n\nChecking down direction:\n   - Position (7, 5): Expected 'A', found 'D'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-down direction:\n   - Position (7, 6): Expected 'A', found 'F'\n   × This direction does not contain the complete word\n\nChecking diagonal-right-up direction:\n   - Position (5, 6): Expected 'A', found 'G'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-down direction:\n   - Position (7, 4): Expected 'A', found 'E'\n   × This direction does not contain the complete word\n\nChecking diagonal-left-up direction:\n   - Position (5, 4): Expected 'A', found 'W'\n   × This direction does not contain the complete word\n\nChecking up direction:\n   - Second letter 'A' found at (5, 5)\n   - Complete sequence:    Sequence found: B → A → R → W → A → Y\n   ✓ Valid word 'BARWAY' found in up direction!\n\nChecking left direction:\n   - Position (6, 4): Expected 'A', found 'V'\n   × This direction does not contain the complete word\n\n3. Only one valid direction found: up\n\nTherefore, the answer is Option 2: up",
+      "options": [
+        "right",
+        "up",
+        "diagonal-right-down",
+        "left",
+        "diagonal-left-down",
+        "diagonal-right-up",
+        "diagonal-left-up",
+        "down"
+      ]
+    }
+  }
+}

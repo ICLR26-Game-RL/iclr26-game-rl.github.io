@@ -1,0 +1,172 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "sudoku-00003",
+    "question_id": 1,
+    "question_description": "Check color state at position",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/sudoku/files/images/board_00003.png",
+    "state_url": "data/sudoku/files/states/board_00003.json",
+    "has_options": true,
+    "question": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are allowed to have duplicate colours.You should fill the empty cells on the board with following 9 colors: red, green, blue, magenta, yellow, aqua, gray, purple, forest green.In this Sudoku board, the row coordinates are 1-9 from top to bottom, and the column coordinates are 1-9 from left to right.What color is at position (9,5)(note that on the board the position (9,5) has already been filled with a certain color)?Choose from following options:A.red, B.green, C.blue, D.magenta, E.yellow, F.aqua, G.gray, H.purple, I.forest green",
+    "analysis": "From the image we can see the color at Position (9,5) is red.So the answer is A",
+    "options": [
+      "A.red",
+      "B.green",
+      "C.blue",
+      "D.magenta",
+      "E.yellow",
+      "F.aqua",
+      "G.gray",
+      "H.purple",
+      "I.forest green"
+    ],
+    "state_content": {
+      "size": 9,
+      "board": [
+        [
+          3,
+          5,
+          0,
+          0,
+          4,
+          0,
+          8,
+          7,
+          9
+        ],
+        [
+          6,
+          2,
+          0,
+          5,
+          8,
+          0,
+          0,
+          1,
+          4
+        ],
+        [
+          8,
+          4,
+          0,
+          0,
+          9,
+          1,
+          2,
+          6,
+          5
+        ],
+        [
+          1,
+          6,
+          0,
+          0,
+          5,
+          0,
+          7,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          0,
+          0,
+          0,
+          3,
+          9,
+          5,
+          8
+        ],
+        [
+          5,
+          9,
+          0,
+          7,
+          2,
+          0,
+          6,
+          4,
+          1
+        ],
+        [
+          0,
+          8,
+          6,
+          9,
+          7,
+          5,
+          1,
+          0,
+          2
+        ],
+        [
+          9,
+          0,
+          5,
+          0,
+          3,
+          2,
+          4,
+          0,
+          7
+        ],
+        [
+          7,
+          3,
+          0,
+          0,
+          1,
+          4,
+          5,
+          9,
+          0
+        ]
+      ],
+      "colors": [
+        "#FF0000",
+        "#00FF00",
+        "#0000FF",
+        "#FF00FF",
+        "#FFFF00",
+        "#00FFFF",
+        "#696969",
+        "#A020F0",
+        "#228B22"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "sudoku-00003",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Check color state at position",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "This is a sudoku game in which the board is filled with a total number of colours equal to the length of the board's sides, and no rows, columns or squares are allowed to have duplicate colours.You should fill the empty cells on the board with following 9 colors: red, green, blue, magenta, yellow, aqua, gray, purple, forest green.In this Sudoku board, the row coordinates are 1-9 from top to bottom, and the column coordinates are 1-9 from left to right.What color is at position (9,5)(note that on the board the position (9,5) has already been filled with a certain color)?Choose from following options:A.red, B.green, C.blue, D.magenta, E.yellow, F.aqua, G.gray, H.purple, I.forest green",
+      "answer": "A",
+      "analysis": "From the image we can see the color at Position (9,5) is red.So the answer is A",
+      "options": [
+        "A.red",
+        "B.green",
+        "C.blue",
+        "D.magenta",
+        "E.yellow",
+        "F.aqua",
+        "G.gray",
+        "H.purple",
+        "I.forest green"
+      ]
+    }
+  }
+}

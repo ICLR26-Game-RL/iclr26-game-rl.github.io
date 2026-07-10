@@ -1,0 +1,230 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "turing-machine-train-00006",
+    "question_id": 2,
+    "question_description": "symbol_at_position",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Rules: State 0, Symbol 0 -> Write 0, Move right, New State 3 State 0, Symbol 1 -> Write 2, Move left, New State 3 State 0, Symbol 2 -> Write 0, Move up, New St...",
+    "image": "images/00006.png",
+    "state": "states/00006.json",
+    "image_url": "data/2d_turing_machine/files/images/00006.png",
+    "state_url": "data/2d_turing_machine/files/states/00006.json",
+    "has_options": true,
+    "question": "Rules:\nState 0, Symbol 0 -> Write 0, Move right, New State 3\nState 0, Symbol 1 -> Write 2, Move left, New State 3\nState 0, Symbol 2 -> Write 0, Move up, New State 3\nState 0, Symbol 3 -> Write 1, Move down, New State 2\nState 0, Symbol 4 -> Write 1, Move up, New State 3\nState 1, Symbol 0 -> Write 3, Move up, New State 0\nState 1, Symbol 1 -> Write 1, Move right, New State 3\nState 1, Symbol 2 -> Write 0, Move right, New State 1\nState 1, Symbol 3 -> Write 3, Move left, New State 3\nState 1, Symbol 4 -> Write 0, Move up, New State 3\nState 2, Symbol 0 -> Write 1, Move right, New State 0\nState 2, Symbol 1 -> Write 4, Move right, New State 1\nState 2, Symbol 2 -> Write 0, Move down, New State 3\nState 2, Symbol 3 -> Write 0, Move left, New State 0\nState 2, Symbol 4 -> Write 2, Move down, New State 0\nState 3, Symbol 0 -> Write 1, Move right, New State 0\nState 3, Symbol 1 -> Write 4, Move right, New State 1\nState 3, Symbol 2 -> Write 2, Move right, New State 2\nState 3, Symbol 3 -> Write 4, Move right, New State 1\nState 3, Symbol 4 -> Write 1, Move down, New State 1\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (1, 1) with State 3 on Symbol 4 that is <4>.\n\nQuestion: how does the symbol at position (1, 2) change after 7 steps? Writing the same symbol needs to be tracked.\nOptions:\n1: 3->3(at step 4)\n2: 3->3(at step 1)->4(at step 4)\n3: 3->1(at step 6)\n4: 3->0(at step 1)->4(at step 4)->1(at step 6)\n5: 3->2(at step 2)\n6: 3->2(at step 4)\n7: 3->2(at step 1)->4(at step 2)->2(at step 5)->3(at step 6)\n8: 3->1(at step 4)->0(at step 5)->4(at step 6)\n",
+    "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 1, Move down, New State 1\n- **Symbol Written on (1, 1):** 1\n- **New Position:** (2, 1)\n- **New State:** 1\nStep 2:\n- **Position:** (2, 1)\n- **State:** 1\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: [4]\n- **Action:** Write 0, Move up, New State 3\n- **Symbol Written on (2, 1):** 0\n- **New Position:** (1, 1)\n- **New State:** 3\nStep 3:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** According to step 1, it has been changed to symbol 1\n- **State and Symbol**: <1>\n- **Action:** Write 4, Move right, New State 1\n- **Symbol Written on (1, 1):** 4\n- **New Position:** (1, 2)\n- **New State:** 1\nStep 4:\n- **Position:** (1, 2)\n- **State:** 1\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: [3]\n- **Action:** Write 3, Move left, New State 3\n- **Symbol Written on (1, 2):** 3\n- **New Position:** (1, 1)\n- **New State:** 3\nStep 5:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** According to step 3, it has been changed to symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 1, Move down, New State 1\n- **Symbol Written on (1, 1):** 1\n- **New Position:** (2, 1)\n- **New State:** 1\nStep 6:\n- **Position:** (2, 1)\n- **State:** 1\n- **Symbol:** According to step 2, it has been changed to symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 3, Move up, New State 0\n- **Symbol Written on (2, 1):** 3\n- **New Position:** (1, 1)\n- **New State:** 0\nStep 7:\n- **Position:** (1, 1)\n- **State:** 0\n- **Symbol:** According to step 5, it has been changed to symbol 1\n- **State and Symbol**: (1)\n- **Action:** Write 2, Move left, New State 3\n- **Symbol Written on (1, 1):** 2\n- **New Position:** (1, 0)\n- **New State:** 3\nThe symbol trajectory at position (1, 2) is: 3->3(at step 4)\nThe answer is option 1.",
+    "options": [
+      "3->3(at step 4)",
+      "3->3(at step 1)->4(at step 4)",
+      "3->1(at step 6)",
+      "3->0(at step 1)->4(at step 4)->1(at step 6)",
+      "3->2(at step 2)",
+      "3->2(at step 4)",
+      "3->2(at step 1)->4(at step 2)->2(at step 5)->3(at step 6)",
+      "3->1(at step 4)->0(at step 5)->4(at step 6)"
+    ],
+    "state_content": {
+      "rules": [
+        {
+          "state": 0,
+          "symbol": 0,
+          "new_state": 3,
+          "new_symbol": 0,
+          "direction": 1
+        },
+        {
+          "state": 0,
+          "symbol": 1,
+          "new_state": 3,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 0,
+          "symbol": 2,
+          "new_state": 3,
+          "new_symbol": 0,
+          "direction": 0
+        },
+        {
+          "state": 0,
+          "symbol": 3,
+          "new_state": 2,
+          "new_symbol": 1,
+          "direction": 2
+        },
+        {
+          "state": 0,
+          "symbol": 4,
+          "new_state": 3,
+          "new_symbol": 1,
+          "direction": 0
+        },
+        {
+          "state": 1,
+          "symbol": 0,
+          "new_state": 0,
+          "new_symbol": 3,
+          "direction": 0
+        },
+        {
+          "state": 1,
+          "symbol": 1,
+          "new_state": 3,
+          "new_symbol": 1,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 0,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 3,
+          "new_state": 3,
+          "new_symbol": 3,
+          "direction": 3
+        },
+        {
+          "state": 1,
+          "symbol": 4,
+          "new_state": 3,
+          "new_symbol": 0,
+          "direction": 0
+        },
+        {
+          "state": 2,
+          "symbol": 0,
+          "new_state": 0,
+          "new_symbol": 1,
+          "direction": 1
+        },
+        {
+          "state": 2,
+          "symbol": 1,
+          "new_state": 1,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 2,
+          "symbol": 2,
+          "new_state": 3,
+          "new_symbol": 0,
+          "direction": 2
+        },
+        {
+          "state": 2,
+          "symbol": 3,
+          "new_state": 0,
+          "new_symbol": 0,
+          "direction": 3
+        },
+        {
+          "state": 2,
+          "symbol": 4,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 2
+        },
+        {
+          "state": 3,
+          "symbol": 0,
+          "new_state": 0,
+          "new_symbol": 1,
+          "direction": 1
+        },
+        {
+          "state": 3,
+          "symbol": 1,
+          "new_state": 1,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 3,
+          "symbol": 2,
+          "new_state": 2,
+          "new_symbol": 2,
+          "direction": 1
+        },
+        {
+          "state": 3,
+          "symbol": 3,
+          "new_state": 1,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 3,
+          "symbol": 4,
+          "new_state": 1,
+          "new_symbol": 1,
+          "direction": 2
+        }
+      ],
+      "head": {
+        "x": 1,
+        "y": 1,
+        "state": 3
+      },
+      "grid": [
+        [
+          0,
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          4,
+          3,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "turing-machine-train-00006",
+      "image": "images/00006.png",
+      "state": "states/00006.json",
+      "plot_level": "Medium",
+      "qa_type": "State Prediction",
+      "qa_level": "Medium",
+      "question_id": 2,
+      "question_description": "symbol_at_position",
+      "question": "Rules:\nState 0, Symbol 0 -> Write 0, Move right, New State 3\nState 0, Symbol 1 -> Write 2, Move left, New State 3\nState 0, Symbol 2 -> Write 0, Move up, New State 3\nState 0, Symbol 3 -> Write 1, Move down, New State 2\nState 0, Symbol 4 -> Write 1, Move up, New State 3\nState 1, Symbol 0 -> Write 3, Move up, New State 0\nState 1, Symbol 1 -> Write 1, Move right, New State 3\nState 1, Symbol 2 -> Write 0, Move right, New State 1\nState 1, Symbol 3 -> Write 3, Move left, New State 3\nState 1, Symbol 4 -> Write 0, Move up, New State 3\nState 2, Symbol 0 -> Write 1, Move right, New State 0\nState 2, Symbol 1 -> Write 4, Move right, New State 1\nState 2, Symbol 2 -> Write 0, Move down, New State 3\nState 2, Symbol 3 -> Write 0, Move left, New State 0\nState 2, Symbol 4 -> Write 2, Move down, New State 0\nState 3, Symbol 0 -> Write 1, Move right, New State 0\nState 3, Symbol 1 -> Write 4, Move right, New State 1\nState 3, Symbol 2 -> Write 2, Move right, New State 2\nState 3, Symbol 3 -> Write 4, Move right, New State 1\nState 3, Symbol 4 -> Write 1, Move down, New State 1\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (1, 1) with State 3 on Symbol 4 that is <4>.\n\nQuestion: how does the symbol at position (1, 2) change after 7 steps? Writing the same symbol needs to be tracked.\nOptions:\n1: 3->3(at step 4)\n2: 3->3(at step 1)->4(at step 4)\n3: 3->1(at step 6)\n4: 3->0(at step 1)->4(at step 4)->1(at step 6)\n5: 3->2(at step 2)\n6: 3->2(at step 4)\n7: 3->2(at step 1)->4(at step 2)->2(at step 5)->3(at step 6)\n8: 3->1(at step 4)->0(at step 5)->4(at step 6)\n",
+      "answer": 1,
+      "options": [
+        "3->3(at step 4)",
+        "3->3(at step 1)->4(at step 4)",
+        "3->1(at step 6)",
+        "3->0(at step 1)->4(at step 4)->1(at step 6)",
+        "3->2(at step 2)",
+        "3->2(at step 4)",
+        "3->2(at step 1)->4(at step 2)->2(at step 5)->3(at step 6)",
+        "3->1(at step 4)->0(at step 5)->4(at step 6)"
+      ],
+      "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 1, Move down, New State 1\n- **Symbol Written on (1, 1):** 1\n- **New Position:** (2, 1)\n- **New State:** 1\nStep 2:\n- **Position:** (2, 1)\n- **State:** 1\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: [4]\n- **Action:** Write 0, Move up, New State 3\n- **Symbol Written on (2, 1):** 0\n- **New Position:** (1, 1)\n- **New State:** 3\nStep 3:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** According to step 1, it has been changed to symbol 1\n- **State and Symbol**: <1>\n- **Action:** Write 4, Move right, New State 1\n- **Symbol Written on (1, 1):** 4\n- **New Position:** (1, 2)\n- **New State:** 1\nStep 4:\n- **Position:** (1, 2)\n- **State:** 1\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: [3]\n- **Action:** Write 3, Move left, New State 3\n- **Symbol Written on (1, 2):** 3\n- **New Position:** (1, 1)\n- **New State:** 3\nStep 5:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** According to step 3, it has been changed to symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 1, Move down, New State 1\n- **Symbol Written on (1, 1):** 1\n- **New Position:** (2, 1)\n- **New State:** 1\nStep 6:\n- **Position:** (2, 1)\n- **State:** 1\n- **Symbol:** According to step 2, it has been changed to symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 3, Move up, New State 0\n- **Symbol Written on (2, 1):** 3\n- **New Position:** (1, 1)\n- **New State:** 0\nStep 7:\n- **Position:** (1, 1)\n- **State:** 0\n- **Symbol:** According to step 5, it has been changed to symbol 1\n- **State and Symbol**: (1)\n- **Action:** Write 2, Move left, New State 3\n- **Symbol Written on (1, 1):** 2\n- **New Position:** (1, 0)\n- **New State:** 3\nThe symbol trajectory at position (1, 2) is: 3->3(at step 4)\nThe answer is option 1."
+    }
+  }
+}

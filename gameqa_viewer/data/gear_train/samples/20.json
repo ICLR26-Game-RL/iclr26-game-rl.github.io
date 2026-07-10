@@ -1,0 +1,154 @@
+{
+  "sample": {
+    "index": 20,
+    "data_id": "gear_train-00021-q3",
+    "question_id": 3,
+    "question_description": "Compute how many turns a gear completes from the driver's turns using the teeth ratio along the meshing chain.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "4",
+    "answer_preview": "4",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00021.png",
+    "state": "states/panel_00021.json",
+    "image_url": "data/gear_train/files/images/panel_00021.png",
+    "state_url": "data/gear_train/files/states/panel_00021.json",
+    "has_options": false,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear G completes exactly 3 full turn(s). How many full turns does gear C complete in the same time? Answer with a single number.",
+    "analysis": "The meshing path from gear G to gear C is G -> D -> H -> E -> B -> C.\nGears G (16T) and D (12T) are meshed, so 16 x turns_G = 12 x turns_D.\nGears D (12T) and H (16T) are meshed, so 12 x turns_D = 16 x turns_H.\nGears H (16T) and E (12T) are meshed, so 16 x turns_H = 12 x turns_E.\nGears E (12T) and B (20T) are meshed, so 12 x turns_E = 20 x turns_B.\nGears B (20T) and C (12T) are meshed, so 20 x turns_B = 12 x turns_C.\nMultiplying these relations along the chain, the intermediate gears cancel out, leaving 16 x turns_G = 12 x turns_C.\nturns_C = 16 x 3 / 12 = 48 / 12 = 4.\nSo the answer is 4.",
+    "options": null,
+    "state_content": {
+      "gears": [
+        {
+          "label": "H",
+          "teeth": 16,
+          "center": [
+            368.9,
+            280.8
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "D",
+          "teeth": 12,
+          "center": [
+            454.7,
+            322.1
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "G",
+          "teeth": 16,
+          "center": [
+            437.3,
+            415.7
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "E",
+          "teeth": 12,
+          "center": [
+            314.7,
+            359.1
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "A",
+          "teeth": 20,
+          "center": [
+            314.5,
+            171.2
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "B",
+          "teeth": 20,
+          "center": [
+            215.3,
+            403.3
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "C",
+          "teeth": 12,
+          "center": [
+            110.2,
+            375.4
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "I",
+          "teeth": 10,
+          "center": [
+            536.6,
+            82.7
+          ],
+          "pitch_radius": 34.0
+        },
+        {
+          "label": "F",
+          "teeth": 20,
+          "center": [
+            500.0,
+            177.9
+          ],
+          "pitch_radius": 68.0
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "H"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "E"
+        ],
+        [
+          "D",
+          "G"
+        ],
+        [
+          "D",
+          "H"
+        ],
+        [
+          "E",
+          "H"
+        ],
+        [
+          "F",
+          "I"
+        ]
+      ],
+      "driver": "G",
+      "driver_direction": "clockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00021-q3",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Compute how many turns a gear completes from the driver's turns using the teeth ratio along the meshing chain.",
+      "image": "images/panel_00021.png",
+      "state": "states/panel_00021.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear G completes exactly 3 full turn(s). How many full turns does gear C complete in the same time? Answer with a single number.",
+      "answer": "4",
+      "analysis": "The meshing path from gear G to gear C is G -> D -> H -> E -> B -> C.\nGears G (16T) and D (12T) are meshed, so 16 x turns_G = 12 x turns_D.\nGears D (12T) and H (16T) are meshed, so 12 x turns_D = 16 x turns_H.\nGears H (16T) and E (12T) are meshed, so 16 x turns_H = 12 x turns_E.\nGears E (12T) and B (20T) are meshed, so 12 x turns_E = 20 x turns_B.\nGears B (20T) and C (12T) are meshed, so 20 x turns_B = 12 x turns_C.\nMultiplying these relations along the chain, the intermediate gears cancel out, leaving 16 x turns_G = 12 x turns_C.\nturns_C = 16 x 3 / 12 = 48 / 12 = 4.\nSo the answer is 4."
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "sample": {
+    "index": 12,
+    "data_id": "tents-fill-00003-missing-tents-in-grid",
+    "question_id": 4,
+    "question_description": "how many tents are still missing in the entire grid?",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": "7",
+    "answer_preview": "7",
+    "question_preview": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, an...",
+    "image": "images/00003.png",
+    "state": "states/00003.json",
+    "image_url": "data/tents/files/images/00003.png",
+    "state_url": "data/tents/files/states/00003.json",
+    "has_options": false,
+    "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, how many tents are still missing in the entire grid?\n",
+    "analysis": "**Step-by-step reasoning:**\n1. Calculate the total number of tents needed in the grid by summing the values in the blue numbers above each column. The sum is: 1 + 0 + 1 + 2 + 1 + 2 + 2 + 2 + 0 + 2 + 1 + 1 + 2 = 17.\n2. Count the number of tents already placed in the grid. There are 10 tents placed in the grid at the following coordinates: (0, 7), (2, 4), (4, 0), (4, 10), (5, 5), (4, 12), (8, 3), (10, 6), (2, 12), (6, 9).\n3. Subtract the number of tents already placed from the total number of tents that should be in the grid. The correct answer is 17 - 10 = 7.",
+    "options": null,
+    "state_content": {
+      "size": [
+        13,
+        13
+      ],
+      "tree_positions": [
+        [
+          3,
+          4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "tent_positions": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "removed_tents": [
+        [
+          0,
+          9
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          10,
+          3
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tents-fill-00003-missing-tents-in-grid",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "how many tents are still missing in the entire grid?",
+      "image": "images/00003.png",
+      "state": "states/00003.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, how many tents are still missing in the entire grid?\n",
+      "answer": "7",
+      "analysis": "**Step-by-step reasoning:**\n1. Calculate the total number of tents needed in the grid by summing the values in the blue numbers above each column. The sum is: 1 + 0 + 1 + 2 + 1 + 2 + 2 + 2 + 0 + 2 + 1 + 1 + 2 = 17.\n2. Count the number of tents already placed in the grid. There are 10 tents placed in the grid at the following coordinates: (0, 7), (2, 4), (4, 0), (4, 10), (5, 5), (4, 12), (8, 3), (10, 6), (2, 12), (6, 9).\n3. Subtract the number of tents already placed from the total number of tents that should be in the grid. The correct answer is 17 - 10 = 7."
+    }
+  }
+}

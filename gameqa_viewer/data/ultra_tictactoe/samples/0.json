@@ -1,0 +1,110 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "ultra_tictactoe-data-00001-00001",
+    "question_id": 1,
+    "question_description": "Find which player marked the cell at a given coordinate.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "1",
+    "answer_preview": "1",
+    "question_preview": "Now I'll give you a picture, which shows a screenshot of Ultra TicTacToe. The introduction of Ultra TicTacToe is as follows: 1. Board and coordinate representa...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/ultra_tictactoe/files/images/board_00001.png",
+    "state_url": "data/ultra_tictactoe/files/states/board_00001.json",
+    "has_options": true,
+    "question": "Now I'll give you a picture, which shows a screenshot of Ultra TicTacToe. The introduction of Ultra TicTacToe is as follows:\n1. Board and coordinate representation: In this game, the board is divided into 9 3*3 squares(called Nine-grids). At the same time, we use $(i, j, row, col)$ to represent the coordinates of a cell: $(i, j)$ represents the coordinates of the Nine-grid; $(row, col)$ represents the coordinate of the cell within the Nine-grid; $i, j, row, col$ all range from 1 to 3. Two players take turns placing pieces on the board to mark the cells on the board, with the first player using \"X\" and the second player using \"O\" (this is the same as traditional TicTacToe). \n2. Rules for placing chess pieces: After the game starts, the first player places a chess piece in any cell in the Nine-grid in the middle (i.e., the Nine-grid (2, 2)). After that, the coordinates of each chess piece placed in the Nine-grid are the same as the coordinates of the Nine-grid in which the opponent's last chess piece was placed; for example, if the first player places a chess piece at the coordinates (2, 2, 3, 1) in the first step, then the second player needs to choose a chess piece in the Nine-grid (3, 1) in the second step. \n3. Scoring rules: For each player, each \"Straight\" (i.e., three identical chess pieces connected in a line, such as in the same row, the same column, or a diagonal line) in each Nine-grid is counted as 1 point. More than 1 point can be counted in each Nine-grid. \n\nNow I will give you a question about the game. Please extract information from the picture I give you, think carefully, reason, and answer: Which player marked the cell at (3, 1, 2, 3) in the image? Options: 1. First Player 2. Second Player 3. Not Marked",
+    "analysis": "There is an X piece at (3, 1, 2, 3) in the image, which means it has been marked by First Player. So, the option number is 1.",
+    "options": [
+      "First Player",
+      "Second Player",
+      "Not Marked"
+    ],
+    "state_content": {
+      "rows": 3,
+      "cols": 3,
+      "middle_cell_count": 1,
+      "last_step": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "best_next_step": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "total_steps": 9,
+      "piece_info": [
+        {
+          "nine_grid": "(2, 1)",
+          "position": "(2, 3)",
+          "type": "X"
+        },
+        {
+          "nine_grid": "(2, 1)",
+          "position": "(3, 1)",
+          "type": "O"
+        },
+        {
+          "nine_grid": "(2, 2)",
+          "position": "(3, 3)",
+          "type": "X"
+        },
+        {
+          "nine_grid": "(2, 2)",
+          "position": "(2, 3)",
+          "type": "X"
+        },
+        {
+          "nine_grid": "(2, 3)",
+          "position": "(2, 1)",
+          "type": "O"
+        },
+        {
+          "nine_grid": "(2, 3)",
+          "position": "(2, 2)",
+          "type": "O"
+        },
+        {
+          "nine_grid": "(3, 1)",
+          "position": "(2, 1)",
+          "type": "X"
+        },
+        {
+          "nine_grid": "(3, 1)",
+          "position": "(2, 3)",
+          "type": "X"
+        },
+        {
+          "nine_grid": "(3, 3)",
+          "position": "(3, 1)",
+          "type": "O"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "ultra_tictactoe-data-00001-00001",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Find which player marked the cell at a given coordinate.",
+      "question": "Now I'll give you a picture, which shows a screenshot of Ultra TicTacToe. The introduction of Ultra TicTacToe is as follows:\n1. Board and coordinate representation: In this game, the board is divided into 9 3*3 squares(called Nine-grids). At the same time, we use $(i, j, row, col)$ to represent the coordinates of a cell: $(i, j)$ represents the coordinates of the Nine-grid; $(row, col)$ represents the coordinate of the cell within the Nine-grid; $i, j, row, col$ all range from 1 to 3. Two players take turns placing pieces on the board to mark the cells on the board, with the first player using \"X\" and the second player using \"O\" (this is the same as traditional TicTacToe). \n2. Rules for placing chess pieces: After the game starts, the first player places a chess piece in any cell in the Nine-grid in the middle (i.e., the Nine-grid (2, 2)). After that, the coordinates of each chess piece placed in the Nine-grid are the same as the coordinates of the Nine-grid in which the opponent's last chess piece was placed; for example, if the first player places a chess piece at the coordinates (2, 2, 3, 1) in the first step, then the second player needs to choose a chess piece in the Nine-grid (3, 1) in the second step. \n3. Scoring rules: For each player, each \"Straight\" (i.e., three identical chess pieces connected in a line, such as in the same row, the same column, or a diagonal line) in each Nine-grid is counted as 1 point. More than 1 point can be counted in each Nine-grid. \n\nNow I will give you a question about the game. Please extract information from the picture I give you, think carefully, reason, and answer: Which player marked the cell at (3, 1, 2, 3) in the image? Options: 1. First Player 2. Second Player 3. Not Marked",
+      "answer": "1",
+      "analysis": "There is an X piece at (3, 1, 2, 3) in the image, which means it has been marked by First Player. So, the option number is 1.",
+      "options": [
+        "First Player",
+        "Second Player",
+        "Not Marked"
+      ]
+    }
+  }
+}

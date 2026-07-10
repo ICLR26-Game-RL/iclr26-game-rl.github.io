@@ -1,0 +1,184 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "tengram-mcq-00010-adjacency",
+    "question_id": 4,
+    "question_description": "piece_adjacency",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00010.png",
+    "state": "states/tengram-mcq-00010.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00010.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00010.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n\nQuestion:\nHow many different pieces are adjacent to Piece 3?\n\nOptions:\n1: 5\n2: 6\n3: 0\n4: 2\n5: 3\n6: 4\n7: 7\n8: 1",
+    "analysis": "Let's analyze Piece 3 (green):\n\nPiece Boundaries:\n- Spans rows 3 to 7 (height: 5)\n- Spans columns 4 to 8 (width: 5)\n\n1. Cell-by-cell examination:\nCell (3,7): No adjacent pieces\nCell (3,8): No adjacent pieces\nCell (4,6): No adjacent pieces\nCell (4,7): No adjacent pieces\nCell (4,8): No adjacent pieces\nCell (5,4):\n   - down: Piece 4 (vivid bright red) at (6,4)\nCell (5,5):\n   - down: Piece 4 (vivid bright red) at (6,5)\nCell (5,6): No adjacent pieces\nCell (5,7): No adjacent pieces\nCell (5,8): No adjacent pieces\nCell (6,6):\n   - down: Piece 4 (vivid bright red) at (7,6)\n   - left: Piece 4 (vivid bright red) at (6,5)\nCell (6,7): No adjacent pieces\nCell (6,8): No adjacent pieces\nCell (7,7):\n   - down: Piece 4 (vivid bright red) at (8,7)\n   - left: Piece 4 (vivid bright red) at (7,6)\nCell (7,8):\n   - down: Piece 4 (vivid bright red) at (8,8)\n\n2. Adjacent Pieces Summary:\n- Piece 4 (vivid bright red): 7 contact sides\n\nTotal number of unique adjacent pieces: 1\nTherefore, the answer is Option 8.",
+    "options": [
+      "5",
+      "6",
+      "0",
+      "2",
+      "3",
+      "4",
+      "7",
+      "1"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          3,
+          3
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          3,
+          3,
+          3
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "seeds": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "removed_pieces": [
+        2
+      ],
+      "config": {
+        "grid_size": 9,
+        "num_seeds": 4,
+        "num_pieces_to_remove": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00010-adjacency",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "piece_adjacency",
+      "image": "images/tengram-mcq-00010.png",
+      "state": "states/tengram-mcq-00010.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n\nQuestion:\nHow many different pieces are adjacent to Piece 3?\n\nOptions:\n1: 5\n2: 6\n3: 0\n4: 2\n5: 3\n6: 4\n7: 7\n8: 1",
+      "answer": 8,
+      "analysis": "Let's analyze Piece 3 (green):\n\nPiece Boundaries:\n- Spans rows 3 to 7 (height: 5)\n- Spans columns 4 to 8 (width: 5)\n\n1. Cell-by-cell examination:\nCell (3,7): No adjacent pieces\nCell (3,8): No adjacent pieces\nCell (4,6): No adjacent pieces\nCell (4,7): No adjacent pieces\nCell (4,8): No adjacent pieces\nCell (5,4):\n   - down: Piece 4 (vivid bright red) at (6,4)\nCell (5,5):\n   - down: Piece 4 (vivid bright red) at (6,5)\nCell (5,6): No adjacent pieces\nCell (5,7): No adjacent pieces\nCell (5,8): No adjacent pieces\nCell (6,6):\n   - down: Piece 4 (vivid bright red) at (7,6)\n   - left: Piece 4 (vivid bright red) at (6,5)\nCell (6,7): No adjacent pieces\nCell (6,8): No adjacent pieces\nCell (7,7):\n   - down: Piece 4 (vivid bright red) at (8,7)\n   - left: Piece 4 (vivid bright red) at (7,6)\nCell (7,8):\n   - down: Piece 4 (vivid bright red) at (8,8)\n\n2. Adjacent Pieces Summary:\n- Piece 4 (vivid bright red): 7 contact sides\n\nTotal number of unique adjacent pieces: 1\nTherefore, the answer is Option 8.",
+      "options": [
+        "5",
+        "6",
+        "0",
+        "2",
+        "3",
+        "4",
+        "7",
+        "1"
+      ]
+    }
+  }
+}

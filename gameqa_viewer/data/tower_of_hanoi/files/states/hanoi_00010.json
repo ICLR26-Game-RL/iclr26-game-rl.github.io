@@ -1,0 +1,16 @@
+{
+  "num_disks": 4,
+  "pegs": {
+    "A": [
+      3,
+      2,
+      1
+    ],
+    "B": [],
+    "C": [
+      4
+    ]
+  },
+  "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+  "goal_note": "strategy questions target gathering all disks on peg C"
+}

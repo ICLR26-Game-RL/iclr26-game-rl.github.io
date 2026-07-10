@@ -1,0 +1,99 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "balance_scale-00004-q2",
+    "question_id": 2,
+    "question_description": "Deduce from the balanced scales how many fruits of one kind balance a given number of another kind.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always...",
+    "image": "images/scales_00004.png",
+    "state": "states/scales_00004.json",
+    "image_url": "data/balance_scale/files/images/scales_00004.png",
+    "state_url": "data/balance_scale/files/states/scales_00004.json",
+    "has_options": false,
+    "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nUsing only the balanced scales, work out the weight relations between the fruits. How many apples are needed to exactly balance 1 orange? Answer with a single number.",
+    "analysis": "Derive the weight of each fruit in units of one apple:\nScale 4 balances 1 apple against 2 bananas. In units of one apple, the left pan weighs 1 x apple = 1 apple(s), so 2 banana(s) = 1 apple(s), giving 1 banana = 1/2 apple(s).\nScale 3 balances 1 apple + 2 bananas against 1 orange. In units of one apple, the left pan weighs 1 x apple + 2 x banana = 2 apple(s), so 1 orange(s) = 2 apple(s), giving 1 orange = 2 apple(s).\nNow compare: 1 orange weighs 2 apple(s) and 1 apple weighs 1 apple(s), so 1 orange(s) weigh 2 apple(s), and 2 / 1 = 2.\nTherefore 2 apples balance 1 orange(s).\nSo the answer is 2.",
+    "options": null,
+    "state_content": {
+      "fruits": [
+        "apple",
+        "banana",
+        "orange"
+      ],
+      "hidden_weights_kg": {
+        "apple": 4,
+        "banana": 2,
+        "orange": 8
+      },
+      "scales": [
+        {
+          "index": 1,
+          "kind": "tilted",
+          "left_pan": {
+            "apple": 2,
+            "banana": 1
+          },
+          "right_pan": {
+            "banana": 1
+          },
+          "iron_weight_kg": null,
+          "balanced": false
+        },
+        {
+          "index": 2,
+          "kind": "kg",
+          "left_pan": {
+            "banana": 1
+          },
+          "right_pan": {},
+          "iron_weight_kg": 2,
+          "balanced": true
+        },
+        {
+          "index": 3,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 1,
+            "banana": 2
+          },
+          "right_pan": {
+            "orange": 1
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 4,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 1
+          },
+          "right_pan": {
+            "banana": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        }
+      ],
+      "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "balance_scale-00004-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Deduce from the balanced scales how many fruits of one kind balance a given number of another kind.",
+      "image": "images/scales_00004.png",
+      "state": "states/scales_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nUsing only the balanced scales, work out the weight relations between the fruits. How many apples are needed to exactly balance 1 orange? Answer with a single number.",
+      "answer": "2",
+      "analysis": "Derive the weight of each fruit in units of one apple:\nScale 4 balances 1 apple against 2 bananas. In units of one apple, the left pan weighs 1 x apple = 1 apple(s), so 2 banana(s) = 1 apple(s), giving 1 banana = 1/2 apple(s).\nScale 3 balances 1 apple + 2 bananas against 1 orange. In units of one apple, the left pan weighs 1 x apple + 2 x banana = 2 apple(s), so 1 orange(s) = 2 apple(s), giving 1 orange = 2 apple(s).\nNow compare: 1 orange weighs 2 apple(s) and 1 apple weighs 1 apple(s), so 1 orange(s) weigh 2 apple(s), and 2 / 1 = 2.\nTherefore 2 apples balance 1 orange(s).\nSo the answer is 2."
+    }
+  }
+}

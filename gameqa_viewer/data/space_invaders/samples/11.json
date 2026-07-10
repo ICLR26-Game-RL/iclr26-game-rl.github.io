@@ -1,0 +1,100 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "space_invaders-fill-00012",
+    "question_id": 3,
+    "question_description": "Ask the total number of enemies",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 11,
+    "answer_preview": "11",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00002.png",
+    "state": "states/space_invaders_00002.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00002.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00002.json",
+    "has_options": false,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are there in total? ",
+    "analysis": "- On row 4, there are 4 enemies.\n- On row 5, there are 4 enemies.\n- On row 6, there are 3 enemies.\n\nTherefore, there are 4 + 4 + 3 = 11 enemies in total. ",
+    "options": null,
+    "state_content": {
+      "enemy_rows": 3,
+      "enemy_cols": 4,
+      "enemy_area_rows": 6,
+      "total_cols": 6,
+      "ship_col": 1,
+      "enemies": [
+        {
+          "x": 4,
+          "y": 1,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "color": "blue"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-fill-00012",
+      "qa_type": "Target Perception",
+      "question_id": 3,
+      "question_description": "Ask the total number of enemies",
+      "image": "images/space_invaders_00002.png",
+      "state": "states/space_invaders_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are there in total? ",
+      "answer": 11,
+      "analysis": "- On row 4, there are 4 enemies.\n- On row 5, there are 4 enemies.\n- On row 6, there are 3 enemies.\n\nTherefore, there are 4 + 4 + 3 = 11 enemies in total. "
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "chess-ranger-011-answer_question",
+    "question_id": 1,
+    "question_description": "Asking the number of moves to solve the puzzle",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "E",
+    "answer_preview": "E",
+    "question_preview": "This game is called Chess Ranger. The rules are as follows:Pieces move like in standard chess.You can only perform capture moves.The king is allowed to be capt...",
+    "image": "images/board_011.png",
+    "state": "states/board_011.json",
+    "image_url": "data/chess_ranger/files/images/board_011.png",
+    "state_url": "data/chess_ranger/files/states/board_011.json",
+    "has_options": true,
+    "question": "This game is called Chess Ranger. The rules are as follows:Pieces move like in standard chess.You can only perform capture moves.The king is allowed to be captured.The goal is to end up with a single piece remaining on the board.How many steps are needed to solve the puzzle?Choose from the following options:A.9,B.7,C.4,D.10,E.5,F.8,G.6,H.3",
+    "analysis": "The current board situation is:Knight at d8.Queen at e7.King at f7.Knight at b3.Pawn at f3.Rook at g2.In the process of solving the puzzle, we have 2 operations and 2 flags to analysis:operation Try indicates the execution of a step, operation Backtrack indicates that the capture operation performed by the last Try step is withdrawn; flag Fail indicates all tries have failed in the current case, flag Success indicates that the puzzle is solved.The solved steps are as follows: Try step 1: move Knight in d8 to capture King in f7.Try step 2: move Queen in e7 to capture Knight in f7.Try step 3: move Queen in f7 to capture Pawn in f3.Try step 4: move Queen in f3 to capture Knight in b3.Fail: No moves left with 2 pieces.Backtrack step 4: move Queen from b3 to f3 and release Knight back to b3.Try step 4: move Queen in f3 to capture Rook in g2.Fail: No moves left with 2 pieces.Backtrack step 4: move Queen from g2 to f3 and release Rook back to g2.Fail: No moves left with 3 pieces.Backtrack step 3: move Queen from f3 to f7 and release Pawn back to f3.Try step 3: move Queen in f7 to capture Knight in b3.Try step 4: move Queen in b3 to capture Pawn in f3.Try step 5: move Queen in f3 to capture Rook in g2.Success: Only one piece remains.So the total number of steps is 5.Then,the right option is E.",
+    "options": [
+      "A.9",
+      "B.7",
+      "C.4",
+      "D.10",
+      "E.5",
+      "F.8",
+      "G.6",
+      "H.3"
+    ],
+    "state_content": {
+      "pieces": 6,
+      "mine_board": [
+        [
+          0,
+          0,
+          0,
+          "N",
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          "Q",
+          "K",
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "N",
+          0,
+          0,
+          0,
+          "P",
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          "R",
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-011-answer_question",
+      "qa_type": "State Prediction",
+      "question_id": 1,
+      "question_description": "Asking the number of moves to solve the puzzle",
+      "image": "images/board_011.png",
+      "state": "states/board_011.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "This game is called Chess Ranger. The rules are as follows:Pieces move like in standard chess.You can only perform capture moves.The king is allowed to be captured.The goal is to end up with a single piece remaining on the board.How many steps are needed to solve the puzzle?Choose from the following options:A.9,B.7,C.4,D.10,E.5,F.8,G.6,H.3",
+      "answer": "E",
+      "analysis": "The current board situation is:Knight at d8.Queen at e7.King at f7.Knight at b3.Pawn at f3.Rook at g2.In the process of solving the puzzle, we have 2 operations and 2 flags to analysis:operation Try indicates the execution of a step, operation Backtrack indicates that the capture operation performed by the last Try step is withdrawn; flag Fail indicates all tries have failed in the current case, flag Success indicates that the puzzle is solved.The solved steps are as follows: Try step 1: move Knight in d8 to capture King in f7.Try step 2: move Queen in e7 to capture Knight in f7.Try step 3: move Queen in f7 to capture Pawn in f3.Try step 4: move Queen in f3 to capture Knight in b3.Fail: No moves left with 2 pieces.Backtrack step 4: move Queen from b3 to f3 and release Knight back to b3.Try step 4: move Queen in f3 to capture Rook in g2.Fail: No moves left with 2 pieces.Backtrack step 4: move Queen from g2 to f3 and release Rook back to g2.Fail: No moves left with 3 pieces.Backtrack step 3: move Queen from f3 to f7 and release Pawn back to f3.Try step 3: move Queen in f7 to capture Knight in b3.Try step 4: move Queen in b3 to capture Pawn in f3.Try step 5: move Queen in f3 to capture Rook in g2.Success: Only one piece remains.So the total number of steps is 5.Then,the right option is E.",
+      "options": [
+        "A.9",
+        "B.7",
+        "C.4",
+        "D.10",
+        "E.5",
+        "F.8",
+        "G.6",
+        "H.3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "zuma-mcq-00004",
+    "question_id": 4,
+    "question_description": "The color of the marble that the frog hits if it shoots at 12 degrees.",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": "blue",
+    "answer_preview": "blue",
+    "question_preview": "This is a Zuma game. You need to control a frog to shoot colored marbles from its mouth toward a winding track of approaching marbles. Your goal is to clear al...",
+    "image": "images/0001.png",
+    "state": "states/0001.json",
+    "image_url": "data/zuma/files/images/0001.png",
+    "state_url": "data/zuma/files/states/0001.json",
+    "has_options": true,
+    "question": "This is a Zuma game. You need to control a frog to shoot colored marbles from its mouth toward a winding track of approaching marbles. Your goal is to clear all marbles before they reach the black hole at the end of the track. The marbles roll steadily along the track, and the player must fire marbles to create groups of three or more of the same color. These groups will disappear, reducing the number of marbles on the track. The frog will shoot marbles in a straight line, if there is no marble on the track, the shooted marble will pass through the track. However, the marble it shoots cannot bypass marbles already in its direct line of fire. In the offered pictures, the frog is often represented as a long triangle, with the circle on it representing the next marble it will shoot. The colored marbles are positioned on a gray track. Any directions or angles mentioned in questions are relative to the center of the circle on the frog, with its positive x-axis as the 0-degree reference line. If the frog shoots the marble at 12 degrees, as shown in the picture, what color is the marble it hits? If it doesn't hit any marble, answer 'none'. Answer in one of the following formats: 'red', 'yellow', 'blue', 'green', or 'none'.",
+    "analysis": "To determine which marble the frog hits, we draw a ray from the frog's position (the center of the circle inside the triangle) at an angle of 12 degrees. We then check if there is any marble within a distance of the diameter of the marble from this ray.  If there are marbles within this distance, we identify the closest marble to the frog, which is of color blue. Thus, the frog hits this marble. So the answer is blue. ",
+    "options": [
+      "red",
+      "yellow",
+      "blue",
+      "green",
+      "none"
+    ],
+    "state_content": {
+      "track": {
+        "plot_level": "Easy",
+        "hole_position": {
+          "x": 2.013237163866484,
+          "y": 1.9759881314517544
+        }
+      },
+      "frog": {
+        "position": {
+          "x": 0.12085502008790439,
+          "y": 0.2920594106873484
+        },
+        "angle": 12,
+        "next_ball_color": "yellow",
+        "after_next_ball_color": "blue"
+      },
+      "balls": [
+        {
+          "position": {
+            "x": -4.423493067470201,
+            "y": -1.2886242288596823
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -4.529520617475268,
+            "y": -0.6818785282251899
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -4.553210634335593,
+            "y": -0.06998463499154332
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": -4.495094717564536,
+            "y": 0.5359995675419646
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -4.3571742424414115,
+            "y": 1.1252507951357402
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": -4.142867250185871,
+            "y": 1.6873736696710653
+          },
+          "color": "red"
+        },
+        {
+          "position": {
+            "x": -3.846231996607261,
+            "y": 2.2293477902296717
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": -3.4797524079949347,
+            "y": 2.7219962326042695
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -3.051326157488582,
+            "y": 3.156474638513787
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -2.5699473096681626,
+            "y": 3.525168424649518
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": -2.0455189509973075,
+            "y": 3.821825078853649
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": -1.4702710474138942,
+            "y": 4.047429857179818
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": -0.8726748836160945,
+            "y": 4.187642564606712
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": -0.26524595111281124,
+            "y": 4.240721424109373
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 0.3394624185821328,
+            "y": 4.206737025090795
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": 0.9291184455254631,
+            "y": 4.087547330225892
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 1.5088916745174343,
+            "y": 3.879198199566709
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 2.047840364230656,
+            "y": 3.5897981178795852
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": 2.534816597057699,
+            "y": 3.2267805727376153
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": 2.959963805909543,
+            "y": 2.7990836191673236
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": 3.324500155273841,
+            "y": 2.3015890109172754
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 3.607217486326732,
+            "y": 1.758635872733673
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": 3.802807695250124,
+            "y": 1.183436977257405
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 3.9080626049386287,
+            "y": 0.5897574861510038
+          },
+          "color": "yellow"
+        },
+        {
+          "position": {
+            "x": 3.9209475854485167,
+            "y": -0.02593236464957899
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 3.8381926571404277,
+            "y": -0.6312459770796763
+          },
+          "color": "blue"
+        },
+        {
+          "position": {
+            "x": 3.6633345151891907,
+            "y": -1.2115375153166925
+          },
+          "color": "green"
+        },
+        {
+          "position": {
+            "x": 3.4021193586909577,
+            "y": -1.753006565150764
+          },
+          "color": "red"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "zuma-mcq-00004",
+      "image": "images/0001.png",
+      "state": "states/0001.json",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "The color of the marble that the frog hits if it shoots at 12 degrees.",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "This is a Zuma game. You need to control a frog to shoot colored marbles from its mouth toward a winding track of approaching marbles. Your goal is to clear all marbles before they reach the black hole at the end of the track. The marbles roll steadily along the track, and the player must fire marbles to create groups of three or more of the same color. These groups will disappear, reducing the number of marbles on the track. The frog will shoot marbles in a straight line, if there is no marble on the track, the shooted marble will pass through the track. However, the marble it shoots cannot bypass marbles already in its direct line of fire. In the offered pictures, the frog is often represented as a long triangle, with the circle on it representing the next marble it will shoot. The colored marbles are positioned on a gray track. Any directions or angles mentioned in questions are relative to the center of the circle on the frog, with its positive x-axis as the 0-degree reference line. If the frog shoots the marble at 12 degrees, as shown in the picture, what color is the marble it hits? If it doesn't hit any marble, answer 'none'. Answer in one of the following formats: 'red', 'yellow', 'blue', 'green', or 'none'.",
+      "answer": "blue",
+      "analysis": "To determine which marble the frog hits, we draw a ray from the frog's position (the center of the circle inside the triangle) at an angle of 12 degrees. We then check if there is any marble within a distance of the diameter of the marble from this ray.  If there are marbles within this distance, we identify the closest marble to the frog, which is of color blue. Thus, the frog hits this marble. So the answer is blue. ",
+      "options": [
+        "red",
+        "yellow",
+        "blue",
+        "green",
+        "none"
+      ]
+    }
+  }
+}

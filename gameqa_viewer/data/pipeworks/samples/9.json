@@ -1,0 +1,286 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "pipeworks-00010-q1",
+    "question_id": 1,
+    "question_description": "Identify the pipe piece (type and openings) at a given coordinate.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/pipeworks/files/images/board_00010.png",
+    "state_url": "data/pipeworks/files/states/board_00010.json",
+    "has_options": true,
+    "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the bottom edge of the board and feeds tile (4, 3); outlet A sits right of the right edge, touching tile (0, 4); outlet B sits below the bottom edge, touching tile (4, 2); outlet C sits below the bottom edge, touching tile (4, 4).\nWhich description matches the tile at (2, 1)?\n\nOptions:\n[1] An elbow pipe (openings: south-west)\n[2] A t-junction pipe (openings: east-south-west)\n[3] A t-junction pipe (openings: north-east-south)\n[4] An elbow pipe (openings: north-east)\n[5] A t-junction pipe (openings: north-east-west)\n[6] A straight pipe (openings: east-west)\n[7] A straight pipe (openings: north-south)\n[8] An elbow pipe (openings: east-south)",
+    "analysis": "Locate row 2 (counting from 0 at the top) and column 1 (counting from 0 at the left). The tile drawn there is a straight pipe (openings: north-south).\nComparing with the options, this matches option [7].\nThe option number is 7.",
+    "options": [
+      "An elbow pipe (openings: south-west)",
+      "A t-junction pipe (openings: east-south-west)",
+      "A t-junction pipe (openings: north-east-south)",
+      "An elbow pipe (openings: north-east)",
+      "A t-junction pipe (openings: north-east-west)",
+      "A straight pipe (openings: east-west)",
+      "A straight pipe (openings: north-south)",
+      "An elbow pipe (openings: east-south)"
+    ],
+    "state_content": {
+      "grid_size": {
+        "rows": 5,
+        "cols": 5
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "tiles": [
+        [
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "ES",
+            "openings": [
+              "E",
+              "S"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "ESW",
+            "openings": [
+              "E",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "WNE",
+            "openings": [
+              "E",
+              "N",
+              "W"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "NESW",
+            "openings": [
+              "E",
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "ESW",
+            "openings": [
+              "E",
+              "S",
+              "W"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "ESW",
+            "openings": [
+              "E",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "SW",
+            "openings": [
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "NESW",
+            "openings": [
+              "E",
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "ESW",
+            "openings": [
+              "E",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          }
+        ]
+      ],
+      "pump": {
+        "side": "S",
+        "index": 3,
+        "feeds_tile": [
+          4,
+          3
+        ]
+      },
+      "outlets": {
+        "A": {
+          "side": "E",
+          "index": 0,
+          "touches_tile": [
+            0,
+            4
+          ]
+        },
+        "B": {
+          "side": "S",
+          "index": 2,
+          "touches_tile": [
+            4,
+            2
+          ]
+        },
+        "C": {
+          "side": "S",
+          "index": 4,
+          "touches_tile": [
+            4,
+            4
+          ]
+        }
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "pipeworks-00010-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the pipe piece (type and openings) at a given coordinate.",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the bottom edge of the board and feeds tile (4, 3); outlet A sits right of the right edge, touching tile (0, 4); outlet B sits below the bottom edge, touching tile (4, 2); outlet C sits below the bottom edge, touching tile (4, 4).\nWhich description matches the tile at (2, 1)?\n\nOptions:\n[1] An elbow pipe (openings: south-west)\n[2] A t-junction pipe (openings: east-south-west)\n[3] A t-junction pipe (openings: north-east-south)\n[4] An elbow pipe (openings: north-east)\n[5] A t-junction pipe (openings: north-east-west)\n[6] A straight pipe (openings: east-west)\n[7] A straight pipe (openings: north-south)\n[8] An elbow pipe (openings: east-south)",
+      "answer": 7,
+      "analysis": "Locate row 2 (counting from 0 at the top) and column 1 (counting from 0 at the left). The tile drawn there is a straight pipe (openings: north-south).\nComparing with the options, this matches option [7].\nThe option number is 7.",
+      "options": [
+        "An elbow pipe (openings: south-west)",
+        "A t-junction pipe (openings: east-south-west)",
+        "A t-junction pipe (openings: north-east-south)",
+        "An elbow pipe (openings: north-east)",
+        "A t-junction pipe (openings: north-east-west)",
+        "A straight pipe (openings: east-west)",
+        "A straight pipe (openings: north-south)",
+        "An elbow pipe (openings: east-south)"
+      ]
+    }
+  }
+}

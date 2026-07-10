@@ -1,0 +1,82 @@
+{
+  "sample": {
+    "index": 22,
+    "data_id": "city_skyline-00023-q4",
+    "question_id": 4,
+    "question_description": "Minimum floors to add to one hidden building so a given observer can see it.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": "6",
+    "answer_preview": "6",
+    "question_preview": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left co...",
+    "image": "images/city_00023.png",
+    "state": "states/city_00023.json",
+    "image_url": "data/city_skyline/files/images/city_00023.png",
+    "state_url": "data/city_skyline/files/states/city_00023.json",
+    "has_options": false,
+    "question": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left corner giving the top view of the same block: its rows r0, r1, ... run top to bottom (r0 is the northernmost row) and its columns c0, c1, ... left to right (c0 is the westernmost column); a lot is written (row, column). The height map shows each lot's exact number of floors ('P' = park, height 0), and matching labels also appear on the front edges of the 3D block. The compass gives the directions in the 3D view: north points toward the upper-right edge of the block, west toward the upper-left. Each building's roof also carries a white chip stating its floor count, and every floor shows one row of windows per wall. An observer standing far away at street level looks along one row or column: a building is VISIBLE to them if and only if it is strictly taller than every building closer to the observer in that same line (parks never block anything). Equal height means hidden.\n\nThe building at lot (0, 0) is currently hidden from an observer standing far to the east of row r0, looking along it. The city may add floors to THIS building only (all other buildings stay the same). What is the minimum number of floors to add so that this observer can see it? Answer with a single number.",
+    "analysis": "Order row r0 from the east end (nearest the observer): (0, 4) height 2, (0, 3) height 4, (0, 2) height 6, (0, 1) height 6, (0, 0) height 1.\nThe building at (0, 0) has height 1. The lots between it and the observer have heights [2, 4, 6, 6], and the tallest of them is 6 at (0, 2); since 1 <= 6, the building is hidden.\nTo be visible it must be STRICTLY taller than every closer building, i.e. at least 7 floors. It already has 1, so it needs 7 - 1 = 6 more floor(s). Adding fewer than 6 floors leaves its height at most 6, still not strictly taller than 6.\nSo the answer is 6.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 5,
+        "cols": 5
+      },
+      "coordinate_system": "(row, col); r0 is the northernmost row, c0 the westernmost column",
+      "heights": [
+        [
+          1,
+          6,
+          6,
+          4,
+          2
+        ],
+        [
+          2,
+          5,
+          3,
+          4,
+          6
+        ],
+        [
+          6,
+          5,
+          2,
+          1,
+          6
+        ],
+        [
+          4,
+          6,
+          4,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          2
+        ]
+      ],
+      "legend": "0 = park; otherwise number of floors",
+      "visibility_rule": "a building is visible from a direction iff strictly taller than every building nearer the observer in the same line"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "city_skyline-00023-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Minimum floors to add to one hidden building so a given observer can see it.",
+      "image": "images/city_00023.png",
+      "state": "states/city_00023.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "City Skyline is a 3D city-block reading puzzle. The image shows a square block of building lots in isometric view, plus a HEIGHT MAP panel in the upper-left corner giving the top view of the same block: its rows r0, r1, ... run top to bottom (r0 is the northernmost row) and its columns c0, c1, ... left to right (c0 is the westernmost column); a lot is written (row, column). The height map shows each lot's exact number of floors ('P' = park, height 0), and matching labels also appear on the front edges of the 3D block. The compass gives the directions in the 3D view: north points toward the upper-right edge of the block, west toward the upper-left. Each building's roof also carries a white chip stating its floor count, and every floor shows one row of windows per wall. An observer standing far away at street level looks along one row or column: a building is VISIBLE to them if and only if it is strictly taller than every building closer to the observer in that same line (parks never block anything). Equal height means hidden.\n\nThe building at lot (0, 0) is currently hidden from an observer standing far to the east of row r0, looking along it. The city may add floors to THIS building only (all other buildings stay the same). What is the minimum number of floors to add so that this observer can see it? Answer with a single number.",
+      "answer": "6",
+      "analysis": "Order row r0 from the east end (nearest the observer): (0, 4) height 2, (0, 3) height 4, (0, 2) height 6, (0, 1) height 6, (0, 0) height 1.\nThe building at (0, 0) has height 1. The lots between it and the observer have heights [2, 4, 6, 6], and the tallest of them is 6 at (0, 2); since 1 <= 6, the building is hidden.\nTo be visible it must be STRICTLY taller than every closer building, i.e. at least 7 floors. It already has 1, so it needs 7 - 1 = 6 more floor(s). Adding fewer than 6 floors leaves its height at most 6, still not strictly taller than 6.\nSo the answer is 6."
+    }
+  }
+}

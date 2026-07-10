@@ -1,0 +1,164 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "minesweeper-train-00002-3",
+    "question_id": 3,
+    "question_description": "Check cell state",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "This is a Minesweeper game. The size of the chessboard is 5x5, and there are a total of 5 mines hidden on the board. The numbers on the board indicate how many...",
+    "image": "images/board_00002.png",
+    "state": "states/board_00002.json",
+    "image_url": "data/minesweeper/files/images/board_00002.png",
+    "state_url": "data/minesweeper/files/states/board_00002.json",
+    "has_options": true,
+    "question": "This is a Minesweeper game. The size of the chessboard is 5x5, and there are a total of 5 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question**: What is the state of the cell at (1,3)? \n\n**Options:**\nA. It is revealed and shows a number. \nB. It is flagged as mine. \nC. It is still hidden. \nD. It is revealed and shows no more information.",
+    "analysis": "The cell at (1,3) is revealed, and it displays the number 2, indicating the count of mines in the surrounding cells. This matches the description of option 'A'.",
+    "options": [
+      "A. It is revealed and shows a number. ",
+      "B. It is flagged as mine. ",
+      "C. It is still hidden. ",
+      "D. It is revealed and shows no more information."
+    ],
+    "state_content": {
+      "rows": 5,
+      "cols": 5,
+      "mines": 5,
+      "mine_board": [
+        [
+          1,
+          2,
+          "M",
+          1,
+          0
+        ],
+        [
+          1,
+          "M",
+          3,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          "M",
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2,
+          3,
+          "M"
+        ],
+        [
+          0,
+          1,
+          "M",
+          2,
+          1
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "flagged": [
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "first_click": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minesweeper-train-00002-3",
+      "qa_type": "Target Perception",
+      "question_id": 3,
+      "question_description": "Check cell state",
+      "image": "images/board_00002.png",
+      "state": "states/board_00002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "This is a Minesweeper game. The size of the chessboard is 5x5, and there are a total of 5 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question**: What is the state of the cell at (1,3)? \n\n**Options:**\nA. It is revealed and shows a number. \nB. It is flagged as mine. \nC. It is still hidden. \nD. It is revealed and shows no more information.",
+      "answer": "A",
+      "analysis": "The cell at (1,3) is revealed, and it displays the number 2, indicating the count of mines in the surrounding cells. This matches the description of option 'A'.",
+      "options": [
+        "A. It is revealed and shows a number. ",
+        "B. It is flagged as mine. ",
+        "C. It is still hidden. ",
+        "D. It is revealed and shows no more information."
+      ]
+    }
+  }
+}

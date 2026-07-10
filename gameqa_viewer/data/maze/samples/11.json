@@ -1,0 +1,195 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "maze_00001_04",
+    "question_id": 4,
+    "question_description": "Count how many turns it takes to reach the finish.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": "11",
+    "answer_preview": "11",
+    "question_preview": "**Rules:** 1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory. 2. The red circle represents...",
+    "image": "images/image_00001.png",
+    "state": "states/state_00001.json",
+    "image_url": "data/maze/files/images/image_00001.png",
+    "state_url": "data/maze/files/states/state_00001.json",
+    "has_options": false,
+    "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Find the path to the finish and count the number of turns it takes to get there. You only need to provide one number.",
+    "analysis": "First,Let’s figure out the path to the goal step by step.\nStep 1. Go left, from (9, 9) to (9, 8). \nStep 2. Go left, from (9, 8) to (9, 7). \nStep 3. Go left, from (9, 7) to (9, 6). \nStep 4. Go left, from (9, 6) to (9, 5). Oops! We hit a dead end. Going back to the last unexplored branch at (9, 7).\nStep 5. Go up, from (9, 7) to (8, 7). \nStep 6. Go up, from (8, 7) to (7, 7). \nStep 7. Go up, from (7, 7) to (6, 7). \nStep 8. Go up, from (6, 7) to (5, 7). Oops! We hit a dead end. Going back to the last unexplored branch at (7, 7).\nStep 9. Go right, from (7, 7) to (7, 8). \nStep 10. Go right, from (7, 8) to (7, 9). \nStep 11. Go up, from (7, 9) to (6, 9). \nStep 12. Go up, from (6, 9) to (5, 9). \nStep 13. Go up, from (5, 9) to (4, 9). \nStep 14. Go up, from (4, 9) to (3, 9). \nStep 15. Go left, from (3, 9) to (3, 8). \nStep 16. Go left, from (3, 8) to (3, 7). \nStep 17. Go up, from (3, 7) to (2, 7). \nStep 18. Go up, from (2, 7) to (1, 7). \nStep 19. Go left, from (1, 7) to (1, 6). \nStep 20. Go left, from (1, 6) to (1, 5). \nStep 21. Go down, from (1, 5) to (2, 5). \nStep 22. Go down, from (2, 5) to (3, 5). \nStep 23. Go down, from (3, 5) to (4, 5). \nStep 24. Go down, from (4, 5) to (5, 5). \nStep 25. Go down, from (5, 5) to (6, 5). \nStep 26. Go down, from (6, 5) to (7, 5). \nStep 27. Go left, from (7, 5) to (7, 4). \nStep 28. Go left, from (7, 4) to (7, 3). \nStep 29. Go down, from (7, 3) to (8, 3). \nStep 30. Go down, from (8, 3) to (9, 3). \nStep 31. Go left, from (9, 3) to (9, 2). \nStep 32. Go left, from (9, 2) to (9, 1). \nStep 33. Go up, from (9, 1) to (8, 1). \nStep 34. Go up, from (8, 1) to (7, 1). \nStep 35. Go up, from (7, 1) to (6, 1). \nStep 36. Go up, from (6, 1) to (5, 1). \nStep 37. Go right, from (5, 1) to (5, 2). \nStep 38. Go right, from (5, 2) to (5, 3). \nStep 39. Go up, from (5, 3) to (4, 3). \nStep 40. Go up, from (4, 3) to (3, 3). \nStep 41. Go up, from (3, 3) to (2, 3). \nStep 42. Go up, from (2, 3) to (1, 3). \nStep 43. Go left, from (1, 3) to (1, 2). \nStep 44. Go left, from (1, 2) to (1, 1). Oops! We hit a dead end. Going back to the last unexplored branch at (5, 1).\nStep 45. Go up, from (5, 1) to (4, 1). \nStep 46. Go up, from (4, 1) to (3, 1). Achieved the goal!Therefore, the path is: (9, 9), (9, 8), (9, 7), (8, 7), (7, 7), (7, 8), (7, 9), (6, 9), (5, 9), (4, 9), (3, 9), (3, 8), (3, 7), (2, 7), (1, 7), (1, 6), (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 4), (7, 3), (8, 3), (9, 3), (9, 2), (9, 1), (8, 1), (7, 1), (6, 1), (5, 1), (4, 1), (3, 1)\n\nThen,Let's count the number of turns step by step.\nStep 2. No turn detected.\nStep 3. Turn detected: from left to up.\nStep 4. No turn detected.\nStep 5. Turn detected: from up to right.\nStep 6. No turn detected.\nStep 7. Turn detected: from right to up.\nStep 8. No turn detected.\nStep 9. No turn detected.\nStep 10. No turn detected.\nStep 11. Turn detected: from up to left.\nStep 12. No turn detected.\nStep 13. Turn detected: from left to up.\nStep 14. No turn detected.\nStep 15. Turn detected: from up to left.\nStep 16. No turn detected.\nStep 17. Turn detected: from left to down.\nStep 18. No turn detected.\nStep 19. No turn detected.\nStep 20. No turn detected.\nStep 21. No turn detected.\nStep 22. No turn detected.\nStep 23. Turn detected: from down to left.\nStep 24. No turn detected.\nStep 25. Turn detected: from left to down.\nStep 26. No turn detected.\nStep 27. Turn detected: from down to left.\nStep 28. No turn detected.\nStep 29. Turn detected: from left to up.\nStep 30. No turn detected.\nStep 31. No turn detected.\nStep 32. No turn detected.\nStep 33. No turn detected.\nStep 34. No turn detected.\n\nIn summary, the total number of turns is 11",
+    "options": null,
+    "state_content": {
+      "maze": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "size": [
+        11,
+        11
+      ],
+      "playerPosition": [
+        9,
+        9
+      ],
+      "endPosition": [
+        3,
+        1
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "maze_00001_04",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Count how many turns it takes to reach the finish.",
+      "image": "images/image_00001.png",
+      "state": "states/state_00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Find the path to the finish and count the number of turns it takes to get there. You only need to provide one number.",
+      "answer": "11",
+      "analysis": "First,Let’s figure out the path to the goal step by step.\nStep 1. Go left, from (9, 9) to (9, 8). \nStep 2. Go left, from (9, 8) to (9, 7). \nStep 3. Go left, from (9, 7) to (9, 6). \nStep 4. Go left, from (9, 6) to (9, 5). Oops! We hit a dead end. Going back to the last unexplored branch at (9, 7).\nStep 5. Go up, from (9, 7) to (8, 7). \nStep 6. Go up, from (8, 7) to (7, 7). \nStep 7. Go up, from (7, 7) to (6, 7). \nStep 8. Go up, from (6, 7) to (5, 7). Oops! We hit a dead end. Going back to the last unexplored branch at (7, 7).\nStep 9. Go right, from (7, 7) to (7, 8). \nStep 10. Go right, from (7, 8) to (7, 9). \nStep 11. Go up, from (7, 9) to (6, 9). \nStep 12. Go up, from (6, 9) to (5, 9). \nStep 13. Go up, from (5, 9) to (4, 9). \nStep 14. Go up, from (4, 9) to (3, 9). \nStep 15. Go left, from (3, 9) to (3, 8). \nStep 16. Go left, from (3, 8) to (3, 7). \nStep 17. Go up, from (3, 7) to (2, 7). \nStep 18. Go up, from (2, 7) to (1, 7). \nStep 19. Go left, from (1, 7) to (1, 6). \nStep 20. Go left, from (1, 6) to (1, 5). \nStep 21. Go down, from (1, 5) to (2, 5). \nStep 22. Go down, from (2, 5) to (3, 5). \nStep 23. Go down, from (3, 5) to (4, 5). \nStep 24. Go down, from (4, 5) to (5, 5). \nStep 25. Go down, from (5, 5) to (6, 5). \nStep 26. Go down, from (6, 5) to (7, 5). \nStep 27. Go left, from (7, 5) to (7, 4). \nStep 28. Go left, from (7, 4) to (7, 3). \nStep 29. Go down, from (7, 3) to (8, 3). \nStep 30. Go down, from (8, 3) to (9, 3). \nStep 31. Go left, from (9, 3) to (9, 2). \nStep 32. Go left, from (9, 2) to (9, 1). \nStep 33. Go up, from (9, 1) to (8, 1). \nStep 34. Go up, from (8, 1) to (7, 1). \nStep 35. Go up, from (7, 1) to (6, 1). \nStep 36. Go up, from (6, 1) to (5, 1). \nStep 37. Go right, from (5, 1) to (5, 2). \nStep 38. Go right, from (5, 2) to (5, 3). \nStep 39. Go up, from (5, 3) to (4, 3). \nStep 40. Go up, from (4, 3) to (3, 3). \nStep 41. Go up, from (3, 3) to (2, 3). \nStep 42. Go up, from (2, 3) to (1, 3). \nStep 43. Go left, from (1, 3) to (1, 2). \nStep 44. Go left, from (1, 2) to (1, 1). Oops! We hit a dead end. Going back to the last unexplored branch at (5, 1).\nStep 45. Go up, from (5, 1) to (4, 1). \nStep 46. Go up, from (4, 1) to (3, 1). Achieved the goal!Therefore, the path is: (9, 9), (9, 8), (9, 7), (8, 7), (7, 7), (7, 8), (7, 9), (6, 9), (5, 9), (4, 9), (3, 9), (3, 8), (3, 7), (2, 7), (1, 7), (1, 6), (1, 5), (2, 5), (3, 5), (4, 5), (5, 5), (6, 5), (7, 5), (7, 4), (7, 3), (8, 3), (9, 3), (9, 2), (9, 1), (8, 1), (7, 1), (6, 1), (5, 1), (4, 1), (3, 1)\n\nThen,Let's count the number of turns step by step.\nStep 2. No turn detected.\nStep 3. Turn detected: from left to up.\nStep 4. No turn detected.\nStep 5. Turn detected: from up to right.\nStep 6. No turn detected.\nStep 7. Turn detected: from right to up.\nStep 8. No turn detected.\nStep 9. No turn detected.\nStep 10. No turn detected.\nStep 11. Turn detected: from up to left.\nStep 12. No turn detected.\nStep 13. Turn detected: from left to up.\nStep 14. No turn detected.\nStep 15. Turn detected: from up to left.\nStep 16. No turn detected.\nStep 17. Turn detected: from left to down.\nStep 18. No turn detected.\nStep 19. No turn detected.\nStep 20. No turn detected.\nStep 21. No turn detected.\nStep 22. No turn detected.\nStep 23. Turn detected: from down to left.\nStep 24. No turn detected.\nStep 25. Turn detected: from left to down.\nStep 26. No turn detected.\nStep 27. Turn detected: from down to left.\nStep 28. No turn detected.\nStep 29. Turn detected: from left to up.\nStep 30. No turn detected.\nStep 31. No turn detected.\nStep 32. No turn detected.\nStep 33. No turn detected.\nStep 34. No turn detected.\n\nIn summary, the total number of turns is 11"
+    }
+  }
+}

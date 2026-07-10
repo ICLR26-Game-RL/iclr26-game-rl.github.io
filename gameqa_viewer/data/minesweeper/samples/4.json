@@ -1,0 +1,131 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "minesweeper-train-00001-4",
+    "question_id": 4,
+    "question_description": "Predict cell reveal outcome",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "D",
+    "answer_preview": "D",
+    "question_preview": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board. The numbers on the board indicate how many...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/minesweeper/files/images/board_00001.png",
+    "state_url": "data/minesweeper/files/states/board_00001.json",
+    "has_options": true,
+    "question": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** What will happen if the player reveals the cell at (3,3)? \n\n**Options:**\nA: The game will end because the cell contains a mine. \nB: The cell will reveal an empty area, and adjacent cells will also be revealed. \nC: The cell will reveal the number 6. \nD: Undecidable. It may contain a mine or not.",
+    "analysis": "The inference uses two main rules: 1. Mine Inference Rule: If the remaining mines (calculated as the number on a revealed cell minus the flagged/inferred mines around it) equal the number of unrevealed neighbors, all those unrevealed neighbors must be mines. 2. Safe Inference Rule: If the remaining mines are zero, all unrevealed neighbors must be safe. The status of the cell at (3,3) cannot be definitively determined from the current board information. Detailed inference path: Starting inference at depth 0 with revealed neighbors: [(2, 2), (2, 3)];  Depth 0, Cell (2,2) with n=2: flagged_count=1, unrevealed_count=3, remaining_mines=1;  Depth 0, Cell (2,3) with n=1: flagged_count=0, unrevealed_count=2, remaining_mines=1;  Depth 0: No changes, ending recursion at this level. Target cell (3,3) remains uncertain. The surrounding cells do not provide enough constraints to prove it is definitely a mine or definitely safe, so revealing it carries a risk of hitting a mine or safely revealing a number/empty area.Therefore, the correct answer is Option D.",
+    "options": [
+      "A: The game will end because the cell contains a mine. ",
+      "B: The cell will reveal an empty area, and adjacent cells will also be revealed. ",
+      "C: The cell will reveal the number 6. ",
+      "D: Undecidable. It may contain a mine or not."
+    ],
+    "state_content": {
+      "rows": 4,
+      "cols": 4,
+      "mines": 3,
+      "mine_board": [
+        [
+          "M",
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          "M",
+          2,
+          "M"
+        ]
+      ],
+      "revealed": [
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "flagged": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false
+        ]
+      ],
+      "first_click": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minesweeper-train-00001-4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Predict cell reveal outcome",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "This is a Minesweeper game. The size of the chessboard is 4x4, and there are a total of 3 mines hidden on the board.\n\nThe numbers on the board indicate how many mines are adjacent to that cell, including diagonals. Cells marked with \"F\" (flagged) are identified as potential locations of mines based on logical deduction or prior knowledge. These flagged cells play a critical role in guiding your reasoning for answering the questions. Cells with no numbers and no flags are safe and contain no adjacent mines.\n\nThe board uses a coordinate system where the top-left cell corresponds to (0,0), and the rows and columns are numbered starting from 0.\n\nPlease use the provided board configuration and logical reasoning to deduce the correct answers to the following questions:\n\n**Question:** What will happen if the player reveals the cell at (3,3)? \n\n**Options:**\nA: The game will end because the cell contains a mine. \nB: The cell will reveal an empty area, and adjacent cells will also be revealed. \nC: The cell will reveal the number 6. \nD: Undecidable. It may contain a mine or not.",
+      "answer": "D",
+      "analysis": "The inference uses two main rules: 1. Mine Inference Rule: If the remaining mines (calculated as the number on a revealed cell minus the flagged/inferred mines around it) equal the number of unrevealed neighbors, all those unrevealed neighbors must be mines. 2. Safe Inference Rule: If the remaining mines are zero, all unrevealed neighbors must be safe. The status of the cell at (3,3) cannot be definitively determined from the current board information. Detailed inference path: Starting inference at depth 0 with revealed neighbors: [(2, 2), (2, 3)];  Depth 0, Cell (2,2) with n=2: flagged_count=1, unrevealed_count=3, remaining_mines=1;  Depth 0, Cell (2,3) with n=1: flagged_count=0, unrevealed_count=2, remaining_mines=1;  Depth 0: No changes, ending recursion at this level. Target cell (3,3) remains uncertain. The surrounding cells do not provide enough constraints to prove it is definitely a mine or definitely safe, so revealing it carries a risk of hitting a mine or safely revealing a number/empty area.Therefore, the correct answer is Option D.",
+      "options": [
+        "A: The game will end because the cell contains a mine. ",
+        "B: The cell will reveal an empty area, and adjacent cells will also be revealed. ",
+        "C: The cell will reveal the number 6. ",
+        "D: Undecidable. It may contain a mine or not."
+      ]
+    }
+  }
+}

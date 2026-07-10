@@ -1,0 +1,119 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "gear_train-00008-q4",
+    "question_id": 4,
+    "question_description": "Decide whether a gear train containing a closed loop spins or jams, and if it spins, give the direction of a target gear.",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00008.png",
+    "state": "states/panel_00008.json",
+    "image_url": "data/gear_train/files/images/panel_00008.png",
+    "state_url": "data/gear_train/files/states/panel_00008.json",
+    "has_options": true,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nIn this panel some gears form a closed loop. The driver gear D tries to spin counterclockwise. What happens?\n\nOptions:\n[1] The train spins freely and gear E turns clockwise\n[2] The train spins freely and gear E turns counterclockwise\n[3] The whole train is jammed - no gear can spin",
+    "analysis": "All meshing pairs are: A-B, A-D, B-C, B-E, C-D.\nGears A-D-C-B form a closed loop of 4 gears - an EVEN number, so directions alternate consistently around the loop and nothing jams; the train can spin.\nPath from the driver to gear E: D -> C -> B -> E.\nGear D spins counterclockwise, so its meshed neighbor gear C spins clockwise.\nGear C spins clockwise, so its meshed neighbor gear B spins counterclockwise.\nGear B spins counterclockwise, so its meshed neighbor gear E spins clockwise.\nSo the answer is: the train spins and gear E turns clockwise. The option number is 1.",
+    "options": [
+      "The train spins freely and gear E turns clockwise",
+      "The train spins freely and gear E turns counterclockwise",
+      "The whole train is jammed - no gear can spin"
+    ],
+    "state_content": {
+      "gears": [
+        {
+          "label": "B",
+          "teeth": 12,
+          "center": [
+            301.7,
+            300.6
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "C",
+          "teeth": 16,
+          "center": [
+            396.9,
+            300.6
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "D",
+          "teeth": 20,
+          "center": [
+            386.9,
+            178.7
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "A",
+          "teeth": 20,
+          "center": [
+            253.1,
+            203.3
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "E",
+          "teeth": 10,
+          "center": [
+            297.7,
+            375.3
+          ],
+          "pitch_radius": 34.0
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "B",
+          "E"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "driver": "D",
+      "driver_direction": "counterclockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00008-q4",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Decide whether a gear train containing a closed loop spins or jams, and if it spins, give the direction of a target gear.",
+      "image": "images/panel_00008.png",
+      "state": "states/panel_00008.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nIn this panel some gears form a closed loop. The driver gear D tries to spin counterclockwise. What happens?\n\nOptions:\n[1] The train spins freely and gear E turns clockwise\n[2] The train spins freely and gear E turns counterclockwise\n[3] The whole train is jammed - no gear can spin",
+      "answer": 1,
+      "analysis": "All meshing pairs are: A-B, A-D, B-C, B-E, C-D.\nGears A-D-C-B form a closed loop of 4 gears - an EVEN number, so directions alternate consistently around the loop and nothing jams; the train can spin.\nPath from the driver to gear E: D -> C -> B -> E.\nGear D spins counterclockwise, so its meshed neighbor gear C spins clockwise.\nGear C spins clockwise, so its meshed neighbor gear B spins counterclockwise.\nGear B spins counterclockwise, so its meshed neighbor gear E spins clockwise.\nSo the answer is: the train spins and gear E turns clockwise. The option number is 1.",
+      "options": [
+        "The train spins freely and gear E turns clockwise",
+        "The train spins freely and gear E turns counterclockwise",
+        "The whole train is jammed - no gear can spin"
+      ]
+    }
+  }
+}

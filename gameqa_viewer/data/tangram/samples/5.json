@@ -1,0 +1,173 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "tengram-mcq-00005-rotation",
+    "question_id": 2,
+    "question_description": "piece_rotation",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00005.png",
+    "state": "states/tengram-mcq-00005.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00005.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00005.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 0 degrees\n2: no matter what degrees rotated, it always can fit\n3: both rotate 0 and 180 degrees\n4: rotate 90 degrees clockwise\n5: can't put inside (flipped)\n6: rotate 180 degrees\n7: rotate 90 degrees by both direction\n8: rotate 90 degrees counterclockwise",
+    "analysis": "Let's analyze how piece 1 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 6x6\n   - Piece dimensions: 6x6\n\n   - Based on dimensions, these rotations (clockwise) might work: [0, 90, 180, 270]\n\n\n2. Testing Each Rotation:\n\n   0° rotation:\n   - Failed: First mismatch at row 0, column 1 (mapped to (0,1) of removed piece and (2,3) of board)\n   - At this position, the hole was empty but the piece was absent\n\n   90° rotation:\n   - Failed: First mismatch at row 0, column 0 (mapped to (5,0) of removed piece and (2,2) of board)\n   - At this position, the hole was filled but the piece was present\n\n   180° rotation:\n   - Failed: First mismatch at row 0, column 1 (mapped to (5,4) of removed piece and (2,3) of board)\n   - At this position, the hole was empty but the piece was absent\n\n   270° rotation:\n   - Success! Piece fits perfectly\n\n3. Summary:\n   - Valid rotations found: [270]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 90 degrees counterclockwise which is Option 8.",
+    "options": [
+      "rotate 0 degrees",
+      "no matter what degrees rotated, it always can fit",
+      "both rotate 0 and 180 degrees",
+      "rotate 90 degrees clockwise",
+      "can't put inside (flipped)",
+      "rotate 180 degrees",
+      "rotate 90 degrees by both direction",
+      "rotate 90 degrees counterclockwise"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          3,
+          6,
+          6,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          3,
+          6,
+          6,
+          6,
+          4,
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          6,
+          6,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          5,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          5,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "seeds": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "removed_pieces": [
+        1
+      ],
+      "config": {
+        "grid_size": 8,
+        "num_seeds": 6,
+        "num_pieces_to_remove": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00005-rotation",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "piece_rotation",
+      "image": "images/tengram-mcq-00005.png",
+      "state": "states/tengram-mcq-00005.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 0 degrees\n2: no matter what degrees rotated, it always can fit\n3: both rotate 0 and 180 degrees\n4: rotate 90 degrees clockwise\n5: can't put inside (flipped)\n6: rotate 180 degrees\n7: rotate 90 degrees by both direction\n8: rotate 90 degrees counterclockwise",
+      "answer": 8,
+      "analysis": "Let's analyze how piece 1 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 6x6\n   - Piece dimensions: 6x6\n\n   - Based on dimensions, these rotations (clockwise) might work: [0, 90, 180, 270]\n\n\n2. Testing Each Rotation:\n\n   0° rotation:\n   - Failed: First mismatch at row 0, column 1 (mapped to (0,1) of removed piece and (2,3) of board)\n   - At this position, the hole was empty but the piece was absent\n\n   90° rotation:\n   - Failed: First mismatch at row 0, column 0 (mapped to (5,0) of removed piece and (2,2) of board)\n   - At this position, the hole was filled but the piece was present\n\n   180° rotation:\n   - Failed: First mismatch at row 0, column 1 (mapped to (5,4) of removed piece and (2,3) of board)\n   - At this position, the hole was empty but the piece was absent\n\n   270° rotation:\n   - Success! Piece fits perfectly\n\n3. Summary:\n   - Valid rotations found: [270]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 90 degrees counterclockwise which is Option 8.",
+      "options": [
+        "rotate 0 degrees",
+        "no matter what degrees rotated, it always can fit",
+        "both rotate 0 and 180 degrees",
+        "rotate 90 degrees clockwise",
+        "can't put inside (flipped)",
+        "rotate 180 degrees",
+        "rotate 90 degrees by both direction",
+        "rotate 90 degrees counterclockwise"
+      ]
+    }
+  }
+}

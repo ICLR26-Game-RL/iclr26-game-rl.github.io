@@ -1,0 +1,137 @@
+{
+  "sample": {
+    "index": 18,
+    "data_id": "klondike-mcq-007-001",
+    "question_id": 1,
+    "question_description": "A board_state question about the current state of Klondike Solitaire",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "3",
+    "answer_preview": "3",
+    "question_preview": "The given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinc...",
+    "image": "images/board_007_001.png",
+    "state": "states/board_007_001.json",
+    "image_url": "data/klondike/files/images/board_007_001.png",
+    "state_url": "data/klondike/files/states/board_007_001.json",
+    "has_options": true,
+    "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\nAnalyze the current state of the board and possible moves.\nChoose the correct move or choose option 8 if there are no possible moves from the options\nOptions:\n1. Move from Waste Pile to Tab6\n2. Move from Tab1 to Foundation 1\n3. Move from Tab2 to Foundation 3\n4. Move from Tab2 to Tab6\n5. Move from Waste Pile to Foundation 1\n6. Move from Waste Pile to Tab3\n7. Move from Waste Pile to Tab2\n8. No possible moves from the options",
+    "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: diamond 6\nTab2: diamond 1\nTab3: club 4\nTab4: diamond 2\nTab5: spade 10\nTab6: spade 12\nTab7: club 7\n\n**Foundation Piles:**\n- Foundation 1: heart 2\n- Foundation 2: club 2\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** club 13\n\nAnalyzing Each Move Option:\n\nMove from Waste Pile to Tab6:\nThe move is invalid because both cards are black (cards must alternate colors)\n\nMove from Tab1 to Foundation 1:\nThe move is invalid because the card cannot be moved to foundation (must build up from Ace in same suit)\n\nMove from Tab2 to Foundation 3:\nThe move is valid because you can move diamond 1 to foundation 3\n\nMove from Tab2 to Tab6:\nThe move is invalid because the source card's value (1) is not one less than the target card's value (12)\n\nMove from Waste Pile to Foundation 1:\nThe move is invalid because the card cannot be moved to foundation (must build up from Ace in same suit)\n\nMove from Waste Pile to Tab3:\nThe move is invalid because both cards are black (cards must alternate colors)\n\nMove from Waste Pile to Tab2:\nThe move is invalid because the source card's value (13) is not one less than the target card's value (1)\n\nNo possible moves from the options:\nWrong, there are valid moves available\n\nSo the correct option number is 3.",
+    "options": [
+      "Move from Waste Pile to Tab6",
+      "Move from Tab1 to Foundation 1",
+      "Move from Tab2 to Foundation 3",
+      "Move from Tab2 to Tab6",
+      "Move from Waste Pile to Foundation 1",
+      "Move from Waste Pile to Tab3",
+      "Move from Waste Pile to Tab2",
+      "No possible moves from the options"
+    ],
+    "state_content": {
+      "draw": [
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>",
+        "<Card Sprite(in 1 groups)>"
+      ],
+      "dump": [
+        "spade 3",
+        "club 13"
+      ],
+      "piles": [
+        [
+          "heart 1",
+          "heart 2"
+        ],
+        [
+          "club 1",
+          "club 2"
+        ],
+        [],
+        []
+      ],
+      "tableau": [
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "heart 10",
+          "club 9",
+          "diamond 8",
+          "spade 7",
+          "diamond 6"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "club 8",
+          "diamond 7",
+          "club 6",
+          "diamond 5",
+          "spade 4",
+          "heart 3",
+          "spade 2",
+          "diamond 1"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "heart 7",
+          "spade 6",
+          "heart 5",
+          "club 4"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "club 5",
+          "heart 4",
+          "club 3",
+          "diamond 2"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "diamond 11",
+          "spade 10"
+        ],
+        [
+          "spade 12"
+        ],
+        [
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "<Card Sprite(in 1 groups)>",
+          "heart 8",
+          "club 7"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "klondike-mcq-007-001",
+      "question_id": 1,
+      "question_description": "A board_state question about the current state of Klondike Solitaire",
+      "image": "images/board_007_001.png",
+      "state": "states/board_007_001.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question": "\nThe given image represents the interface of the game Klondike Solitaire. The user interface consists of a board with 52 playing cards divided into four distinct areas:\n\n1. **Stock Pile (Draw Pile):** Initially composed of 24 face-down cards. The player can draw one card at a time to reveal its face.\n\n2. **Waste Pile (Dump Pile):** This pile holds the cards drawn from the Stock Pile that have not been moved to other areas. Only the topmost card in the Waste Pile is available for play.\n\n3. **Foundation Piles:** These four piles are designated for each suit (hearts, diamonds, clubs, and spades, but not necessarily following this order). From left to right, they are referred to as foundation 1 through foundation 4. Players must build up the foundation starting with the Ace and then place cards in ascending order (2 through King) of the same suit.\n\n4. **Tableau Piles:** There are seven tableau piles. From left to right, these piles are referred to as Tab 1 through Tab 7, and initially contain an increasing number of cards from 1 to 7. Only the topmost cards in each pile are face-up and built in descending order, alternating colors (red and black suits). Only when the topmost cards are removed to some other place (e.g. another tableau pile or the foundation pile) will the hidden card beneath be revealed. Only a King can be placed on an empty tableau pile unless it starts there at the beginning of the game.\n\n**Objective:**\nThe goal of Klondike Solitaire is to move all cards to the Foundation Piles, organized by suit in ascending order from Ace to King.\nAnalyze the current state of the board and possible moves.\nChoose the correct move or choose option 8 if there are no possible moves from the options\nOptions:\n1. Move from Waste Pile to Tab6\n2. Move from Tab1 to Foundation 1\n3. Move from Tab2 to Foundation 3\n4. Move from Tab2 to Tab6\n5. Move from Waste Pile to Foundation 1\n6. Move from Waste Pile to Tab3\n7. Move from Waste Pile to Tab2\n8. No possible moves from the options",
+      "answer": "3",
+      "analysis": "Current State Analysis:\n\nTop Cards in Tableau Piles:\nTab1: diamond 6\nTab2: diamond 1\nTab3: club 4\nTab4: diamond 2\nTab5: spade 10\nTab6: spade 12\nTab7: club 7\n\n**Foundation Piles:**\n- Foundation 1: heart 2\n- Foundation 2: club 2\n- Foundation 3: Empty\n- Foundation 4: Empty\n\n**Waste Pile:** club 13\n\nAnalyzing Each Move Option:\n\nMove from Waste Pile to Tab6:\nThe move is invalid because both cards are black (cards must alternate colors)\n\nMove from Tab1 to Foundation 1:\nThe move is invalid because the card cannot be moved to foundation (must build up from Ace in same suit)\n\nMove from Tab2 to Foundation 3:\nThe move is valid because you can move diamond 1 to foundation 3\n\nMove from Tab2 to Tab6:\nThe move is invalid because the source card's value (1) is not one less than the target card's value (12)\n\nMove from Waste Pile to Foundation 1:\nThe move is invalid because the card cannot be moved to foundation (must build up from Ace in same suit)\n\nMove from Waste Pile to Tab3:\nThe move is invalid because both cards are black (cards must alternate colors)\n\nMove from Waste Pile to Tab2:\nThe move is invalid because the source card's value (13) is not one less than the target card's value (1)\n\nNo possible moves from the options:\nWrong, there are valid moves available\n\nSo the correct option number is 3.",
+      "options": [
+        "Move from Waste Pile to Tab6",
+        "Move from Tab1 to Foundation 1",
+        "Move from Tab2 to Foundation 3",
+        "Move from Tab2 to Tab6",
+        "Move from Waste Pile to Foundation 1",
+        "Move from Waste Pile to Tab3",
+        "Move from Waste Pile to Tab2",
+        "No possible moves from the options"
+      ]
+    }
+  }
+}

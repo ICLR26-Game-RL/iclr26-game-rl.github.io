@@ -1,0 +1,202 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "tengram-mcq-00000-placement",
+    "question_id": 5,
+    "question_description": "piece_placement",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00000.png",
+    "state": "states/tengram-mcq-00000.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00000.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00000.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. Two adjacent pieces have been removed from the board.\n5. A valid placement is one where both pieces fit into the hole without overlapping.\n\nQuestion:\nAt which position should Piece 1 be placed? Each option shows (top_row,left_col) to (bottom_row,right_col).\n\nOptions:\n1: (0,3) to (6,6)\n2: (0,6) to (6,9)\n3: (0,4) to (6,7)\n4: (0,5) to (6,8)",
+    "analysis": "Let's analyze the placement of Piece 1 and Piece 4:\n\n1. Hole dimensions: 7x5\n2. Piece 1 dimensions: 7x4\n3. Piece 4 dimensions: 4x4\n\nWe know that if Piece 1 fits, then it must be placed at one of the four corners.\nTesting each corner:\n- upper-left: Attempting to place Piece 1 at (0,5) to (6,8)\n  Failed: Cell (4,0) on Removed Pieces plot maps to board position (4,5) which isn't empty\n- upper-right: Attempting to place Piece 1 at (0,6) to (6,9)\n  Success! Remaining hole dimensions: 4x4\n  Then placing Piece 4 at (0,5) to (3,8)\n  Both pieces fit perfectly!\n- bottom-left: Since Piece 1 has the same height as the hole, bottom-left corner is same as upper-left corner. Skipped.\n- bottom-right: Since Piece 1 has the same height as the hole, bottom-right corner is same as upper-right corner. Skipped.\n\nTherefore, Piece 1 should be placed at position (0,6) to (6,9) as shown in Option 2.",
+    "options": [
+      "(0,3) to (6,6)",
+      "(0,6) to (6,9)",
+      "(0,4) to (6,7)",
+      "(0,5) to (6,8)"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          0
+        ],
+        [
+          3,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "seeds": [
+        [
+          2,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "removed_pieces": [
+        1,
+        4
+      ],
+      "config": {
+        "grid_size": 10,
+        "num_seeds": 5,
+        "num_pieces_to_remove": 3
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00000-placement",
+      "qa_type": "State Prediction",
+      "question_id": 5,
+      "question_description": "piece_placement",
+      "image": "images/tengram-mcq-00000.png",
+      "state": "states/tengram-mcq-00000.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. Two adjacent pieces have been removed from the board.\n5. A valid placement is one where both pieces fit into the hole without overlapping.\n\nQuestion:\nAt which position should Piece 1 be placed? Each option shows (top_row,left_col) to (bottom_row,right_col).\n\nOptions:\n1: (0,3) to (6,6)\n2: (0,6) to (6,9)\n3: (0,4) to (6,7)\n4: (0,5) to (6,8)",
+      "answer": 2,
+      "analysis": "Let's analyze the placement of Piece 1 and Piece 4:\n\n1. Hole dimensions: 7x5\n2. Piece 1 dimensions: 7x4\n3. Piece 4 dimensions: 4x4\n\nWe know that if Piece 1 fits, then it must be placed at one of the four corners.\nTesting each corner:\n- upper-left: Attempting to place Piece 1 at (0,5) to (6,8)\n  Failed: Cell (4,0) on Removed Pieces plot maps to board position (4,5) which isn't empty\n- upper-right: Attempting to place Piece 1 at (0,6) to (6,9)\n  Success! Remaining hole dimensions: 4x4\n  Then placing Piece 4 at (0,5) to (3,8)\n  Both pieces fit perfectly!\n- bottom-left: Since Piece 1 has the same height as the hole, bottom-left corner is same as upper-left corner. Skipped.\n- bottom-right: Since Piece 1 has the same height as the hole, bottom-right corner is same as upper-right corner. Skipped.\n\nTherefore, Piece 1 should be placed at position (0,6) to (6,9) as shown in Option 2.",
+      "options": [
+        "(0,3) to (6,6)",
+        "(0,6) to (6,9)",
+        "(0,4) to (6,7)",
+        "(0,5) to (6,8)"
+      ]
+    }
+  }
+}

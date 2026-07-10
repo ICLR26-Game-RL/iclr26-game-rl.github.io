@@ -1,0 +1,139 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "free_cell-specified_card-Easy-00001",
+    "question_id": 1,
+    "question_description": "Given a particular game state, the puzzle will present a question about which card is at a specific position in one of the cascade piles.Your task is to indentify the card in the options. ",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "In this FreeCell game: we have 8 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5, 6, 7]We have 4 freecell on the left top, and their indexes are...",
+    "image": "images/state_analysis_Easy_00001.png",
+    "state": "states/state_analysis_Easy_00001.json",
+    "image_url": "data/freecell/files/images/state_analysis_Easy_00001.png",
+    "state_url": "data/freecell/files/states/state_analysis_Easy_00001.json",
+    "has_options": true,
+    "question": "In this FreeCell game:\nwe have 8 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5, 6, 7]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards can be moved according to specific rules: A card can be moved to a free cell if available, stacked in descending order alternating colors in cascade piles, or placed in foundation piles starting from Ace. Now, find the 2-th card from the top of cascade pile 0.the options are as follows:\n1.(Spade, 3)\n2.(Diamond, 6)\n3.(Club, 4)\n4.(Spade, Q)\n5.(Spade, 9)\n6.(Club, 2)\n7.(Club, 3)\n8.(Spade, 2)\n",
+    "analysis": "The selected pile0 contains (from top to bottom) the following cards:\n (Spade,10), (Spade,3), (Spade,Q), (Diamond,K), (Spade,2), (Diamond,10), (Heart,6). The 2-th card from the top is (Spade, 3).",
+    "options": [
+      "(Spade, 3)",
+      "(Diamond, 6)",
+      "(Club, 4)",
+      "(Spade, Q)",
+      "(Spade, 9)",
+      "(Club, 2)",
+      "(Club, 3)",
+      "(Spade, 2)"
+    ],
+    "state_content": {
+      "cascade_piles": [
+        [
+          "6 ♥",
+          "10 ♦",
+          "2 ♠",
+          "K ♦",
+          "Q ♠",
+          "3 ♠",
+          "10 ♠"
+        ],
+        [
+          "Q ♣",
+          "6 ♠",
+          "8 ♣",
+          "J ♥",
+          "8 ♥",
+          "J ♣",
+          "A ♦"
+        ],
+        [
+          "4 ♠",
+          "A ♠",
+          "A ♣",
+          "7 ♠",
+          "8 ♠",
+          "A ♥",
+          "2 ♦"
+        ],
+        [
+          "3 ♣",
+          "10 ♣",
+          "4 ♣",
+          "Q ♥",
+          "J ♦",
+          "2 ♣",
+          "2 ♥"
+        ],
+        [
+          "5 ♦",
+          "5 ♠",
+          "7 ♣",
+          "8 ♦",
+          "6 ♣",
+          "K ♥"
+        ],
+        [
+          "9 ♠",
+          "7 ♥",
+          "3 ♥",
+          "Q ♦",
+          "5 ♣",
+          "9 ♥"
+        ],
+        [
+          "7 ♦",
+          "5 ♥",
+          "4 ♦",
+          "9 ♦",
+          "K ♣",
+          "J ♠"
+        ],
+        [
+          "9 ♣",
+          "3 ♦",
+          "10 ♥",
+          "K ♠",
+          "4 ♥",
+          "6 ♦"
+        ]
+      ],
+      "free_cells": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "foundation_piles": {
+        "HEARTS": null,
+        "DIAMONDS": null,
+        "CLUBS": null,
+        "SPADES": null
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "free_cell-specified_card-Easy-00001",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Given a particular game state, the puzzle will present a question about which card is at a specific position in one of the cascade piles.Your task is to indentify the card in the options. ",
+      "image": "images/state_analysis_Easy_00001.png",
+      "state": "states/state_analysis_Easy_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "In this FreeCell game:\nwe have 8 cascade piles at sum, and their indexes are [0, 1, 2, 3, 4, 5, 6, 7]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards can be moved according to specific rules: A card can be moved to a free cell if available, stacked in descending order alternating colors in cascade piles, or placed in foundation piles starting from Ace. Now, find the 2-th card from the top of cascade pile 0.the options are as follows:\n1.(Spade, 3)\n2.(Diamond, 6)\n3.(Club, 4)\n4.(Spade, Q)\n5.(Spade, 9)\n6.(Club, 2)\n7.(Club, 3)\n8.(Spade, 2)\n",
+      "answer": 1,
+      "analysis": "The selected pile0 contains (from top to bottom) the following cards:\n (Spade,10), (Spade,3), (Spade,Q), (Diamond,K), (Spade,2), (Diamond,10), (Heart,6). The 2-th card from the top is (Spade, 3).",
+      "options": [
+        "(Spade, 3)",
+        "(Diamond, 6)",
+        "(Club, 4)",
+        "(Spade, Q)",
+        "(Spade, 9)",
+        "(Club, 2)",
+        "(Club, 3)",
+        "(Spade, 2)"
+      ]
+    }
+  }
+}

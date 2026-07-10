@@ -1,0 +1,115 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "balance_scale-00010-q1",
+    "question_id": 1,
+    "question_description": "Count how many fruits of a given kind appear across all pans.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "3",
+    "answer_preview": "3",
+    "question_preview": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always...",
+    "image": "images/scales_00010.png",
+    "state": "states/scales_00010.json",
+    "image_url": "data/balance_scale/files/images/scales_00010.png",
+    "state_url": "data/balance_scale/files/states/scales_00010.json",
+    "has_options": false,
+    "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nCount carefully: how many oranges appear in the whole picture (across all pans of all scales)? Answer with a single number.",
+    "analysis": "Go through the scales one by one and count the oranges:\nScale 1: 0 on the left pan + 0 on the right pan = 0\nScale 2: 0 on the left pan + 2 on the right pan = 2\nScale 3: 1 on the left pan + 0 on the right pan = 1\nScale 4: 0 on the left pan + 0 on the right pan = 0\nScale 5: 0 on the left pan + 0 on the right pan = 0\nTotal: 3 oranges.\nSo the answer is 3.",
+    "options": null,
+    "state_content": {
+      "fruits": [
+        "apple",
+        "banana",
+        "orange",
+        "pear"
+      ],
+      "hidden_weights_kg": {
+        "apple": 2,
+        "banana": 4,
+        "orange": 6,
+        "pear": 12
+      },
+      "scales": [
+        {
+          "index": 1,
+          "kind": "kg",
+          "left_pan": {
+            "banana": 2,
+            "pear": 1
+          },
+          "right_pan": {},
+          "iron_weight_kg": 20,
+          "balanced": true
+        },
+        {
+          "index": 2,
+          "kind": "equation",
+          "left_pan": {
+            "banana": 1,
+            "apple": 4
+          },
+          "right_pan": {
+            "orange": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 3,
+          "kind": "equation",
+          "left_pan": {
+            "orange": 1,
+            "apple": 3
+          },
+          "right_pan": {
+            "pear": 1
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        },
+        {
+          "index": 4,
+          "kind": "tilted",
+          "left_pan": {
+            "apple": 1,
+            "banana": 2
+          },
+          "right_pan": {
+            "apple": 3
+          },
+          "iron_weight_kg": null,
+          "balanced": false
+        },
+        {
+          "index": 5,
+          "kind": "equation",
+          "left_pan": {
+            "apple": 4
+          },
+          "right_pan": {
+            "banana": 2
+          },
+          "iron_weight_kg": null,
+          "balanced": true
+        }
+      ],
+      "note": "hidden_weights_kg is ground truth used to build the scales; the image never shows it"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "balance_scale-00010-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count how many fruits of a given kind appear across all pans.",
+      "image": "images/scales_00010.png",
+      "state": "states/scales_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Balance Scale is a weighing-deduction puzzle. The picture shows several two-pan balance scales, numbered under their bases. Every fruit of the same kind always has the same hidden weight, and different kinds may have different weights. A scale whose green pointer is centered and whose beam is level is EXACTLY balanced: its two pans carry equal total weight. A scale with a red pointer is tilted: the lower pan is strictly heavier. Iron blocks are labeled with their exact mass in kg.\n\nCount carefully: how many oranges appear in the whole picture (across all pans of all scales)? Answer with a single number.",
+      "answer": "3",
+      "analysis": "Go through the scales one by one and count the oranges:\nScale 1: 0 on the left pan + 0 on the right pan = 0\nScale 2: 0 on the left pan + 2 on the right pan = 2\nScale 3: 1 on the left pan + 0 on the right pan = 1\nScale 4: 0 on the left pan + 0 on the right pan = 0\nScale 5: 0 on the left pan + 0 on the right pan = 0\nTotal: 3 oranges.\nSo the answer is 3."
+    }
+  }
+}

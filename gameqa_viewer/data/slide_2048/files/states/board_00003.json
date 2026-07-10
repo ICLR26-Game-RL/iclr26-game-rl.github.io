@@ -1,0 +1,22 @@
+{
+  "grid_size": 3,
+  "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+  "grid": [
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      16,
+      8,
+      4
+    ],
+    [
+      0,
+      8,
+      16
+    ]
+  ],
+  "rule_note": "deterministic variant: no random tile spawns after a move; merge score equals merged tile value"
+}

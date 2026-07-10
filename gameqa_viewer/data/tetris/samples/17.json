@@ -1,0 +1,122 @@
+{
+  "sample": {
+    "index": 17,
+    "data_id": "tetris-00010-onestep-outcome",
+    "question_id": 2,
+    "question_description": "timesteps_until_collision",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": -1,
+    "answer_preview": "-1",
+    "question_preview": "Rules: 1. The image shows a standard Tetris grid with 8 rows and 8 columns. 2. The first number in a cell coordinate represents the row, and the second number...",
+    "image": "images/tetris-00010.png",
+    "state": "states/tetris-00010.json",
+    "image_url": "data/tetris/files/images/tetris-00010.png",
+    "state_url": "data/tetris/files/states/tetris-00010.json",
+    "has_options": false,
+    "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns. \n2. The first number in a cell coordinate represents the row, and the second number represents the column.3. The action done to the falling tetromino is randomly selected between moved to left / right.\n4. The active tetromino falls one row every timestep.\n5. Collision means there is at least one cell around the falling tetromino taken by another tetromino or the boundary, which causes the falling tetromino can't continue falling or moving left/right.\n6. There may not be active tetromino(colored in red) falling in the image. If so, the answer should be -1. \n\n\nQuestion:\nIf the current active Tetrimino is only moved one step (After moving right for one column), how many timesteps will it take to collide with another block or the grid boundary?\n\n",
+    "analysis": "The red cells in the image are at [].\nNo red cells in the image, therefore there is no falling Tetrimino currently.\nNo red cells in the image, therefore there is no falling Tetrimino currently.",
+    "options": null,
+    "state_content": {
+      "grid": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rows": 8,
+      "cols": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tetris-00010-onestep-outcome",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "timesteps_until_collision",
+      "image": "images/tetris-00010.png",
+      "state": "states/tetris-00010.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns. \n2. The first number in a cell coordinate represents the row, and the second number represents the column.3. The action done to the falling tetromino is randomly selected between moved to left / right.\n4. The active tetromino falls one row every timestep.\n5. Collision means there is at least one cell around the falling tetromino taken by another tetromino or the boundary, which causes the falling tetromino can't continue falling or moving left/right.\n6. There may not be active tetromino(colored in red) falling in the image. If so, the answer should be -1. \n\n\nQuestion:\nIf the current active Tetrimino is only moved one step (After moving right for one column), how many timesteps will it take to collide with another block or the grid boundary?\n\n",
+      "answer": -1,
+      "analysis": "The red cells in the image are at [].\nNo red cells in the image, therefore there is no falling Tetrimino currently.\nNo red cells in the image, therefore there is no falling Tetrimino currently."
+    }
+  }
+}

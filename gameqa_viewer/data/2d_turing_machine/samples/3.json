@@ -1,0 +1,160 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "turing-machine-train-00004",
+    "question_id": 1,
+    "question_description": "head_state",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Rules: State 0, Symbol 0 -> Write 2, Move up, New State 0 State 0, Symbol 1 -> Write 2, Move left, New State 0 State 0, Symbol 2 -> Write 2, Move left, New Sta...",
+    "image": "images/00004.png",
+    "state": "states/00004.json",
+    "image_url": "data/2d_turing_machine/files/images/00004.png",
+    "state_url": "data/2d_turing_machine/files/states/00004.json",
+    "has_options": true,
+    "question": "Rules:\nState 0, Symbol 0 -> Write 2, Move up, New State 0\nState 0, Symbol 1 -> Write 2, Move left, New State 0\nState 0, Symbol 2 -> Write 2, Move left, New State 1\nState 0, Symbol 3 -> Write 0, Move right, New State 0\nState 0, Symbol 4 -> Write 4, Move up, New State 1\nState 1, Symbol 0 -> Write 2, Move left, New State 1\nState 1, Symbol 1 -> Write 4, Move right, New State 0\nState 1, Symbol 2 -> Write 3, Move left, New State 0\nState 1, Symbol 3 -> Write 0, Move right, New State 1\nState 1, Symbol 4 -> Write 2, Move down, New State 1\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nCurrent head position is (0, 2) with State 1 on Symbol 3 that is [3].\n\nQuestion: what will be the head state and symbol under it after 3 steps?\nOptions:\n1: [4]\n2: (0)\n3: [0]\n4: [1]\n5: (2)\n6: (1)\n7: [2]\n8: (3)\n",
+    "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (0, 2)\n- **State:** 1\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: [3]\n- **Action:** Write 0, Move right, New State 1\n- **Symbol Written on (0, 2):** 0\n- **New Position:** (0, 3)\n- **New State:** 1\nStep 2:\n- **Position:** (0, 3)\n- **State:** 1\n- **Symbol:** Directly from image, it's red which means symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 2, Move left, New State 1\n- **Symbol Written on (0, 3):** 2\n- **New Position:** (0, 2)\n- **New State:** 1\nStep 3:\n- **Position:** (0, 2)\n- **State:** 1\n- **Symbol:** According to step 1, it has been changed to symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 2, Move left, New State 1\n- **Symbol Written on (0, 2):** 2\n- **New Position:** (0, 1)\n- **New State:** 1\nFinal:\n- **Position:** (0, 1)\n- **State:** 1\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: [4]\nAfter 3 steps, the head state and symbol under it will be [4].\nThe answer is option 1.",
+    "options": [
+      "[4]",
+      "(0)",
+      "[0]",
+      "[1]",
+      "(2)",
+      "(1)",
+      "[2]",
+      "(3)"
+    ],
+    "state_content": {
+      "rules": [
+        {
+          "state": 0,
+          "symbol": 0,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 0
+        },
+        {
+          "state": 0,
+          "symbol": 1,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 0,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 0,
+          "symbol": 3,
+          "new_state": 0,
+          "new_symbol": 0,
+          "direction": 1
+        },
+        {
+          "state": 0,
+          "symbol": 4,
+          "new_state": 1,
+          "new_symbol": 4,
+          "direction": 0
+        },
+        {
+          "state": 1,
+          "symbol": 0,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 1,
+          "symbol": 1,
+          "new_state": 0,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 2,
+          "new_state": 0,
+          "new_symbol": 3,
+          "direction": 3
+        },
+        {
+          "state": 1,
+          "symbol": 3,
+          "new_state": 1,
+          "new_symbol": 0,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 4,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 2
+        }
+      ],
+      "head": {
+        "x": 2,
+        "y": 0,
+        "state": 1
+      },
+      "grid": [
+        [
+          1,
+          4,
+          3,
+          0
+        ],
+        [
+          3,
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          4,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          2
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "turing-machine-train-00004",
+      "image": "images/00004.png",
+      "state": "states/00004.json",
+      "plot_level": "Medium",
+      "qa_type": "State Prediction",
+      "qa_level": "Medium",
+      "question_id": 1,
+      "question_description": "head_state",
+      "question": "Rules:\nState 0, Symbol 0 -> Write 2, Move up, New State 0\nState 0, Symbol 1 -> Write 2, Move left, New State 0\nState 0, Symbol 2 -> Write 2, Move left, New State 1\nState 0, Symbol 3 -> Write 0, Move right, New State 0\nState 0, Symbol 4 -> Write 4, Move up, New State 1\nState 1, Symbol 0 -> Write 2, Move left, New State 1\nState 1, Symbol 1 -> Write 4, Move right, New State 0\nState 1, Symbol 2 -> Write 3, Move left, New State 0\nState 1, Symbol 3 -> Write 0, Move right, New State 1\nState 1, Symbol 4 -> Write 2, Move down, New State 1\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nCurrent head position is (0, 2) with State 1 on Symbol 3 that is [3].\n\nQuestion: what will be the head state and symbol under it after 3 steps?\nOptions:\n1: [4]\n2: (0)\n3: [0]\n4: [1]\n5: (2)\n6: (1)\n7: [2]\n8: (3)\n",
+      "answer": 1,
+      "options": [
+        "[4]",
+        "(0)",
+        "[0]",
+        "[1]",
+        "(2)",
+        "(1)",
+        "[2]",
+        "(3)"
+      ],
+      "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (0, 2)\n- **State:** 1\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: [3]\n- **Action:** Write 0, Move right, New State 1\n- **Symbol Written on (0, 2):** 0\n- **New Position:** (0, 3)\n- **New State:** 1\nStep 2:\n- **Position:** (0, 3)\n- **State:** 1\n- **Symbol:** Directly from image, it's red which means symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 2, Move left, New State 1\n- **Symbol Written on (0, 3):** 2\n- **New Position:** (0, 2)\n- **New State:** 1\nStep 3:\n- **Position:** (0, 2)\n- **State:** 1\n- **Symbol:** According to step 1, it has been changed to symbol 0\n- **State and Symbol**: [0]\n- **Action:** Write 2, Move left, New State 1\n- **Symbol Written on (0, 2):** 2\n- **New Position:** (0, 1)\n- **New State:** 1\nFinal:\n- **Position:** (0, 1)\n- **State:** 1\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: [4]\nAfter 3 steps, the head state and symbol under it will be [4].\nThe answer is option 1."
+    }
+  }
+}

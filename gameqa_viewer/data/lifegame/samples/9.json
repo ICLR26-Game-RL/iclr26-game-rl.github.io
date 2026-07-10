@@ -1,0 +1,74 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "lifegame-mcq-00009-state",
+    "question_id": 1,
+    "question_description": "Questions about counting the current number of live cells in the grid",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "G",
+    "answer_preview": "G",
+    "question_preview": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). Each cell interacts with its eight neigh...",
+    "image": "images/board_009.png",
+    "state": "states/board_009.json",
+    "image_url": "data/lifegame/files/images/board_009.png",
+    "state_url": "data/lifegame/files/states/board_009.json",
+    "has_options": true,
+    "question": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). \n\nEach cell interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent. For a cell at position (r,c), its neighbors are:\n- (r-1,c-1)  (r-1,c)  (r-1,c+1)   [above row]\n- (r,c-1)     (r,c)    (r,c+1)     [same row]\n- (r+1,c-1)  (r+1,c)  (r+1,c+1)   [below row]\n\nRegion boundaries wrap around to the opposite side:\n- A cell at the top edge connects to cells at the bottom edge\n- A cell at the left edge connects to cells at the right edge\n- Corner cells connect to the diagonally opposite corner\nFor example, in a 3x3 region:\n- Cell (0,0)'s top neighbor is (2,0)\n- Cell (0,0)'s left neighbor is (0,2)\n- Cell (0,0)'s top-left neighbor is (2,2)\n\nThe game evolves in discrete steps according to these rules:\n1. Any live cell with fewer than two live neighbors dies (underpopulation)\n2. Any live cell with two or three live neighbors lives on to the next generation\n3. Any live cell with more than three live neighbors dies (overpopulation)\n4. Any dead cell with exactly three live neighbors becomes alive (reproduction)\n\nIn the image, black squares represent live cells, white squares represent dead cells, and the grid lines help visualize the cell boundaries. \n\nIn this grid, we use (row, col) coordinates where:\n- row increases from top to bottom (0 at top)\n- col increases from left to right (0 at left)\nFor example, the top-left cell is at (0, 0), and the cell below it is at (1, 0).\n\nHow many live cells are currently in the grid?\n\nOptions:\nA: 5\nB: 3\nC: 9\nD: 8\nE: 0\nF: 7\nG: 2\nH: 6",
+    "analysis": "Current State Analysis:\n\nGrid State('1' stands for living cell and '0' stands for dead cell):\n   0 1 2\n0: 0 0 1\n1: 0 0 0\n2: 0 0 1\n\nCounting live cells row by row:\n\nRow 0:\n- Live cells in this row: 1\n- Positions: (0,2)\n\nRow 1:\n- Live cells in this row: 0\n\nRow 2:\n- Live cells in this row: 1\n- Positions: (2,2)\n\nFinal Count:\n- Total live cells: 2\n\nThe option is G.",
+    "options": [
+      "A: 5",
+      "B: 3",
+      "C: 9",
+      "D: 8",
+      "E: 0",
+      "F: 7",
+      "G: 2",
+      "H: 6"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lifegame-mcq-00009-state",
+      "qa_type": "Target Perception",
+      "qa_level": "Easy",
+      "question_id": 1,
+      "question_description": "Questions about counting the current number of live cells in the grid",
+      "plot_level": "Easy",
+      "question": "Conway's Game of Life is a cellular automaton where each cell in the grid can be either alive (black) or dead (white). \n\nEach cell interacts with its eight neighbors, which are the cells that are horizontally, vertically, or diagonally adjacent. For a cell at position (r,c), its neighbors are:\n- (r-1,c-1)  (r-1,c)  (r-1,c+1)   [above row]\n- (r,c-1)     (r,c)    (r,c+1)     [same row]\n- (r+1,c-1)  (r+1,c)  (r+1,c+1)   [below row]\n\nRegion boundaries wrap around to the opposite side:\n- A cell at the top edge connects to cells at the bottom edge\n- A cell at the left edge connects to cells at the right edge\n- Corner cells connect to the diagonally opposite corner\nFor example, in a 3x3 region:\n- Cell (0,0)'s top neighbor is (2,0)\n- Cell (0,0)'s left neighbor is (0,2)\n- Cell (0,0)'s top-left neighbor is (2,2)\n\nThe game evolves in discrete steps according to these rules:\n1. Any live cell with fewer than two live neighbors dies (underpopulation)\n2. Any live cell with two or three live neighbors lives on to the next generation\n3. Any live cell with more than three live neighbors dies (overpopulation)\n4. Any dead cell with exactly three live neighbors becomes alive (reproduction)\n\nIn the image, black squares represent live cells, white squares represent dead cells, and the grid lines help visualize the cell boundaries. \n\nIn this grid, we use (row, col) coordinates where:\n- row increases from top to bottom (0 at top)\n- col increases from left to right (0 at left)\nFor example, the top-left cell is at (0, 0), and the cell below it is at (1, 0).\n\nHow many live cells are currently in the grid?\n\nOptions:\nA: 5\nB: 3\nC: 9\nD: 8\nE: 0\nF: 7\nG: 2\nH: 6",
+      "answer": "G",
+      "analysis": "Current State Analysis:\n\nGrid State('1' stands for living cell and '0' stands for dead cell):\n   0 1 2\n0: 0 0 1\n1: 0 0 0\n2: 0 0 1\n\nCounting live cells row by row:\n\nRow 0:\n- Live cells in this row: 1\n- Positions: (0,2)\n\nRow 1:\n- Live cells in this row: 0\n\nRow 2:\n- Live cells in this row: 1\n- Positions: (2,2)\n\nFinal Count:\n- Total live cells: 2\n\nThe option is G.",
+      "options": [
+        "A: 5",
+        "B: 3",
+        "C: 9",
+        "D: 8",
+        "E: 0",
+        "F: 7",
+        "G: 2",
+        "H: 6"
+      ],
+      "image": "images/board_009.png",
+      "state": "states/board_009.json"
+    }
+  }
+}

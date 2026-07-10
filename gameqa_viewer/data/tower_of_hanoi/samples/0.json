@@ -1,0 +1,52 @@
+{
+  "sample": {
+    "index": 0,
+    "data_id": "tower_of_hanoi-00001-q1",
+    "question_id": 1,
+    "question_description": "Identify which peg holds a given disk.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": "A",
+    "answer_preview": "A",
+    "question_preview": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1...",
+    "image": "images/hanoi_00001.png",
+    "state": "states/hanoi_00001.json",
+    "image_url": "data/tower_of_hanoi/files/images/hanoi_00001.png",
+    "state_url": "data/tower_of_hanoi/files/states/hanoi_00001.json",
+    "has_options": false,
+    "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nOn which peg is disk 2 (remember the number is printed on each disk)? Answer with the peg letter.",
+    "analysis": "Read the picture: peg A: disks [2] (bottom to top); peg B: disks [1] (bottom to top); peg C: disks [3] (bottom to top).\nDisk 2 appears in the stack of peg A.\nSo the answer is A.",
+    "options": null,
+    "state_content": {
+      "num_disks": 3,
+      "pegs": {
+        "A": [
+          2
+        ],
+        "B": [
+          1
+        ],
+        "C": [
+          3
+        ]
+      },
+      "order": "each peg lists disk sizes bottom to top; disk 1 is smallest",
+      "goal_note": "strategy questions target gathering all disks on peg C"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-00001-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify which peg holds a given disk.",
+      "image": "images/hanoi_00001.png",
+      "state": "states/hanoi_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Tower of Hanoi is a classic puzzle with three pegs labeled A, B and C (left to right) and several disks of different sizes. Disks are numbered by size: disk 1 is the smallest. A disk's number is printed on it. Only the TOP disk of a peg can be moved, and it may only be placed on an empty peg or on top of a LARGER disk. The move X->Y means: take the top disk of peg X and put it on peg Y.\n\nOn which peg is disk 2 (remember the number is printed on each disk)? Answer with the peg letter.",
+      "answer": "A",
+      "analysis": "Read the picture: peg A: disks [2] (bottom to top); peg B: disks [1] (bottom to top); peg C: disks [3] (bottom to top).\nDisk 2 appears in the stack of peg A.\nSo the answer is A."
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "logic_circuit-00010-q1",
+    "question_id": 1,
+    "question_description": "Identify the type of a labeled gate.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logi...",
+    "image": "images/circuit_00010.png",
+    "state": "states/circuit_00010.json",
+    "image_url": "data/logic_circuit/files/images/circuit_00010.png",
+    "state_url": "data/logic_circuit/files/states/circuit_00010.json",
+    "has_options": true,
+    "question": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logic gates in the middle, and one lamp on the right. Wires carry the values left to right; a black dot marks a wire that branches to several gates. Gate shapes follow the usual convention and each gate is also labeled with its type: AND outputs 1 only if all inputs are 1; OR outputs 1 if at least one input is 1; XOR outputs 1 if an odd number of inputs are 1; NAND outputs the opposite of AND (0 only if all inputs are 1); NOT outputs the opposite of its single input. The lamp lights up exactly when the final wire carries 1.\n\nWhat type is gate G2 (the gate whose inputs come from B, C)?\n\nOptions:\n[1] AND\n[2] OR\n[3] XOR\n[4] NAND\n[5] NOT",
+    "analysis": "Locate the gate labeled G2 in the diagram; its inputs come from B, C. Its symbol and printed label show it is a OR gate.\nThe option number is 2.",
+    "options": [
+      "AND",
+      "OR",
+      "XOR",
+      "NAND",
+      "NOT"
+    ],
+    "state_content": {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "gates": {
+        "G1": {
+          "type": "OR",
+          "inputs": [
+            "A",
+            "B"
+          ]
+        },
+        "G2": {
+          "type": "OR",
+          "inputs": [
+            "B",
+            "C"
+          ]
+        },
+        "G3": {
+          "type": "XOR",
+          "inputs": [
+            "C",
+            "D"
+          ]
+        },
+        "G4": {
+          "type": "OR",
+          "inputs": [
+            "G1",
+            "G2",
+            "G3"
+          ]
+        }
+      },
+      "lamp_driven_by": "G4",
+      "gate_semantics": {
+        "AND": "1 iff all inputs are 1",
+        "OR": "1 iff at least one input is 1",
+        "XOR": "1 iff an odd number of inputs are 1",
+        "NAND": "0 iff all inputs are 1",
+        "NOT": "inverts its single input"
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "logic_circuit-00010-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the type of a labeled gate.",
+      "image": "images/circuit_00010.png",
+      "state": "states/circuit_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logic gates in the middle, and one lamp on the right. Wires carry the values left to right; a black dot marks a wire that branches to several gates. Gate shapes follow the usual convention and each gate is also labeled with its type: AND outputs 1 only if all inputs are 1; OR outputs 1 if at least one input is 1; XOR outputs 1 if an odd number of inputs are 1; NAND outputs the opposite of AND (0 only if all inputs are 1); NOT outputs the opposite of its single input. The lamp lights up exactly when the final wire carries 1.\n\nWhat type is gate G2 (the gate whose inputs come from B, C)?\n\nOptions:\n[1] AND\n[2] OR\n[3] XOR\n[4] NAND\n[5] NOT",
+      "answer": 2,
+      "analysis": "Locate the gate labeled G2 in the diagram; its inputs come from B, C. Its symbol and printed label show it is a OR gate.\nThe option number is 2.",
+      "options": [
+        "AND",
+        "OR",
+        "XOR",
+        "NAND",
+        "NOT"
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "chess-ranger-012-count_piece_question",
+    "question_id": 2,
+    "question_description": "Asking how many pieces of a specific type are on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": "1",
+    "answer_preview": "1",
+    "question_preview": "How many Queens are on the board?",
+    "image": "images/board_012.png",
+    "state": "states/board_012.json",
+    "image_url": "data/chess_ranger/files/images/board_012.png",
+    "state_url": "data/chess_ranger/files/states/board_012.json",
+    "has_options": false,
+    "question": "How many Queens are on the board?",
+    "analysis": "The current board situation is:Bishop at f8.Knight at g8.Knight at b3.Pawn at e3.Queen at b1.King at e1.The Queen is in the following positions on the board: b1.So the number of Queen is 1.",
+    "options": null,
+    "state_content": {
+      "pieces": 6,
+      "mine_board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          "B",
+          "N",
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "N",
+          0,
+          0,
+          "P",
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "Q",
+          0,
+          0,
+          "K",
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-012-count_piece_question",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Asking how many pieces of a specific type are on the board",
+      "image": "images/board_012.png",
+      "state": "states/board_012.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "How many Queens are on the board?",
+      "answer": "1",
+      "analysis": "The current board situation is:Bishop at f8.Knight at g8.Knight at b3.Pawn at e3.Queen at b1.King at e1.The Queen is in the following positions on the board: b1.So the number of Queen is 1."
+    }
+  }
+}

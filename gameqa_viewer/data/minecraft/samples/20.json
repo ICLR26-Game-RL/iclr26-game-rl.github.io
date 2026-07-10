@@ -1,0 +1,45 @@
+{
+  "sample": {
+    "index": 20,
+    "data_id": "minecraft-00021-climb",
+    "question_id": 4,
+    "question_description": "Ask the minimum number of blocks needed to reach a block (pumpkin/gold ore/diamond ore), considering the possibility of using existing ladders.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. T...",
+    "image": "images/00021.png",
+    "state": "states/00021.json",
+    "image_url": "data/minecraft/files/images/00021.png",
+    "state_url": "data/minecraft/files/states/00021.json",
+    "has_options": false,
+    "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThere is a diamond ore block in the scene. If the diamond ore is simply on the ground (i.e., at the height of 1 blocks), the player can directly mine it. Otherwise, n (a positive integer) block(s) is/are under the diamond ore so that the diamond ore is a height of n+1. Under this circumstance:\n- If there are ladders attached to the block(s) under the diamond ore, the player can climb up (if needed) and mine the diamond ore directly without consuming any blocks.\n- If there are no ladders attached to the block(s) under the diamond ore. We should know that to mine the diamond ore, the player's upper body (assuming the player is 2 blocks tall) must not be below the diamond ore's height. For example, if the diamond ore is located at a height of 2 blocks, the player can directly mine the diamond ore. However, if the diamond ore is at a height of 3 blocks, the player cannot mine it directly. The player can instead build blocks under his feet to raise his height. For instance, if the player builds 2 blocks under his feet, he will reach a height of 4 blocks.\n\nQuestion: To obtain the diamond ore, what is the minimum number of blocks the player needs to consume?",
+    "analysis": "From the image we can see that there are no ladders, and the diamond ore, on the top of 4 block(s), is at a height of 5 block(s). The player is 2 blocks tall. Therefore, the player needs to build 5 - 2 = 3 block(s) under his feet to reach the diamond ore. The answer is 3.",
+    "options": null,
+    "state_content": {
+      "pumkin_position": [
+        1,
+        4,
+        -2
+      ],
+      "blocks_under_pumpkin": 4,
+      "blocks_with_ladder": false
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "minecraft-00021-climb",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Ask the minimum number of blocks needed to reach a block (pumpkin/gold ore/diamond ore), considering the possibility of using existing ladders.",
+      "image": "images/00021.png",
+      "state": "states/00021.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "You are provided with a game interface that mimics \"Minecraft\", where all objects are composed of equal-sized cubes. Players build and explore in this world. They have numerous blocks and can place them following the basic placement rules of \"Minecraft.\" In simple terms, players can place blocks around their current position, and new blocks must be adjacent to existing ones (i.e., sharing a common face). Placing blocks in fluids (such as river water) is allowed, replacing the fluid at that position directly with the block. Players can also sometimes remove blocks.\nThere is a diamond ore block in the scene. If the diamond ore is simply on the ground (i.e., at the height of 1 blocks), the player can directly mine it. Otherwise, n (a positive integer) block(s) is/are under the diamond ore so that the diamond ore is a height of n+1. Under this circumstance:\n- If there are ladders attached to the block(s) under the diamond ore, the player can climb up (if needed) and mine the diamond ore directly without consuming any blocks.\n- If there are no ladders attached to the block(s) under the diamond ore. We should know that to mine the diamond ore, the player's upper body (assuming the player is 2 blocks tall) must not be below the diamond ore's height. For example, if the diamond ore is located at a height of 2 blocks, the player can directly mine the diamond ore. However, if the diamond ore is at a height of 3 blocks, the player cannot mine it directly. The player can instead build blocks under his feet to raise his height. For instance, if the player builds 2 blocks under his feet, he will reach a height of 4 blocks.\n\nQuestion: To obtain the diamond ore, what is the minimum number of blocks the player needs to consume?",
+      "answer": 3,
+      "analysis": "From the image we can see that there are no ladders, and the diamond ore, on the top of 4 block(s), is at a height of 5 block(s). The player is 2 blocks tall. Therefore, the player needs to build 5 - 2 = 3 block(s) under his feet to reach the diamond ore. The answer is 3."
+    }
+  }
+}

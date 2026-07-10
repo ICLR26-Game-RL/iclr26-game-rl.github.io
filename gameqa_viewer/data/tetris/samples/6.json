@@ -1,0 +1,141 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "tetris-00003-shape-recognizing",
+    "question_id": 1,
+    "question_description": "shape_recognizing",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Rules: 1. The image shows a standard Tetris grid with 8 rows and 8 columns. 2. In Tetris, a Tetrimino is a geometric shape composed of four square blocks. Ther...",
+    "image": "images/tetris-00003.png",
+    "state": "states/tetris-00003.json",
+    "image_url": "data/tetris/files/images/tetris-00003.png",
+    "state_url": "data/tetris/files/states/tetris-00003.json",
+    "has_options": true,
+    "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. In Tetris, a Tetrimino is a geometric shape composed of four square blocks. There are seven types of Tetriminos represented by the letters I, O, T, L, J, S, and Z.\n   - I: A straight line of 4 blocks.\n   - O: A square shape composed of 4 blocks arranged in a 2x2 square.\n   - T: A T-shape made up of 4 blocks, with one block in the center and the other three forming a horizontal row above it.\n   - L: An L-shape made of 4 blocks, with 3 blocks forming a vertical line and 1 block extending right at the bottom, forming an 'L'.\n   - J: A J-shape made of 4 blocks, similar to the L-shape but mirrored.\n   - S: An S-shape made of 4 blocks arranged in two stacked rows, each row having two blocks arranged diagonally.\n   - Z: A Z-shape made of 4 blocks arranged similarly to the S-shape, but mirrored.\n3. The falling tetromino is painted red in the image.\n4. The image may not contain active tetromino if the game is already over.\n\n\nQuestion:\nWhat is the shape of the active Tetrimino at the top of the screen?\n\nOptions:\n1: I\n2: O\n3: T\n4: L\n5: J\n6: S\n7: Z\n8: no falling Tetrimino",
+    "analysis": "From the image we can see a falling red Tetrimino. The red cells form a 2x2 square, which is the O-shape tetromino. Due to its symmetrical nature, rotation doesn't change its appearance.So the shape of the active Tetrimino is identified as O, and the option number is 2.\n",
+    "options": [
+      "I",
+      "O",
+      "T",
+      "L",
+      "J",
+      "S",
+      "Z",
+      "no falling Tetrimino"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "rows": 8,
+      "cols": 8
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tetris-00003-shape-recognizing",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "shape_recognizing",
+      "image": "images/tetris-00003.png",
+      "state": "states/tetris-00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "question": "Rules:\n1. The image shows a standard Tetris grid with 8 rows and 8 columns.\n2. In Tetris, a Tetrimino is a geometric shape composed of four square blocks. There are seven types of Tetriminos represented by the letters I, O, T, L, J, S, and Z.\n   - I: A straight line of 4 blocks.\n   - O: A square shape composed of 4 blocks arranged in a 2x2 square.\n   - T: A T-shape made up of 4 blocks, with one block in the center and the other three forming a horizontal row above it.\n   - L: An L-shape made of 4 blocks, with 3 blocks forming a vertical line and 1 block extending right at the bottom, forming an 'L'.\n   - J: A J-shape made of 4 blocks, similar to the L-shape but mirrored.\n   - S: An S-shape made of 4 blocks arranged in two stacked rows, each row having two blocks arranged diagonally.\n   - Z: A Z-shape made of 4 blocks arranged similarly to the S-shape, but mirrored.\n3. The falling tetromino is painted red in the image.\n4. The image may not contain active tetromino if the game is already over.\n\n\nQuestion:\nWhat is the shape of the active Tetrimino at the top of the screen?\n\nOptions:\n1: I\n2: O\n3: T\n4: L\n5: J\n6: S\n7: Z\n8: no falling Tetrimino",
+      "answer": 2,
+      "analysis": "From the image we can see a falling red Tetrimino. The red cells form a 2x2 square, which is the O-shape tetromino. Due to its symmetrical nature, rotation doesn't change its appearance.So the shape of the active Tetrimino is identified as O, and the option number is 2.\n",
+      "Options": [
+        "I",
+        "O",
+        "T",
+        "L",
+        "J",
+        "S",
+        "Z",
+        "no falling Tetrimino"
+      ]
+    }
+  }
+}

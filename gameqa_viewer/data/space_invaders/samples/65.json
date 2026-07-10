@@ -1,0 +1,119 @@
+{
+  "sample": {
+    "index": 65,
+    "data_id": "space_invaders-mcq-00016",
+    "question_id": 7,
+    "question_description": "Ask the points gained by continually shooting where the ship is with the enemies keeping on moving",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00002.png",
+    "state": "states/space_invaders_00002.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00002.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00002.json",
+    "has_options": true,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, and the enemies keep on moving right.\nHow many points will the player get in total at the end of time interval t+1 if the ship stays at the current position and shoots once during each time interval? Give the number of the correct option.\nOptions:\n1: 5\n2: 10\n3: 15\n4: 20\n5: 25\n6: 30\n7: 35\n8: 40",
+    "analysis": "As can be seen from the image, the ship is on column 1. It keeps still and shoots once during each time interval while the enemies move right.\nThus equivalently, in the current scene, there will be laser attacks from the ship on columns 1. Let's check points gained on these columns one by one.\n- Column 1: The lowermost enemy is on row 6, which is green, adding 10 points.\n\nSo finally the player will get 10 points at the end of time interval t+1. The option number is 2.",
+    "options": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ],
+    "state_content": {
+      "enemy_rows": 3,
+      "enemy_cols": 4,
+      "enemy_area_rows": 6,
+      "total_cols": 6,
+      "ship_col": 1,
+      "enemies": [
+        {
+          "x": 4,
+          "y": 1,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "color": "blue"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "color": "green"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "color": "blue"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-mcq-00016",
+      "qa_type": "State Prediction",
+      "question_id": 7,
+      "question_description": "Ask the points gained by continually shooting where the ship is with the enemies keeping on moving",
+      "image": "images/space_invaders_00002.png",
+      "state": "states/space_invaders_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, and the enemies keep on moving right.\nHow many points will the player get in total at the end of time interval t+1 if the ship stays at the current position and shoots once during each time interval? Give the number of the correct option.\nOptions:\n1: 5\n2: 10\n3: 15\n4: 20\n5: 25\n6: 30\n7: 35\n8: 40",
+      "answer": 2,
+      "analysis": "As can be seen from the image, the ship is on column 1. It keeps still and shoots once during each time interval while the enemies move right.\nThus equivalently, in the current scene, there will be laser attacks from the ship on columns 1. Let's check points gained on these columns one by one.\n- Column 1: The lowermost enemy is on row 6, which is green, adding 10 points.\n\nSo finally the player will get 10 points at the end of time interval t+1. The option number is 2.",
+      "options": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40
+      ]
+    }
+  }
+}

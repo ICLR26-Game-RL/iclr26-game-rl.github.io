@@ -1,0 +1,241 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "turing-machine-train-00008",
+    "question_id": 3,
+    "question_description": "first_state_entry",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "Rules: State 0, Symbol 0 -> Write 2, Move left, New State 2 State 0, Symbol 1 -> Write 1, Move down, New State 1 State 0, Symbol 2 -> Write 2, Move right, New...",
+    "image": "images/00008.png",
+    "state": "states/00008.json",
+    "image_url": "data/2d_turing_machine/files/images/00008.png",
+    "state_url": "data/2d_turing_machine/files/states/00008.json",
+    "has_options": true,
+    "question": "Rules:\nState 0, Symbol 0 -> Write 2, Move left, New State 2\nState 0, Symbol 1 -> Write 1, Move down, New State 1\nState 0, Symbol 2 -> Write 2, Move right, New State 1\nState 0, Symbol 3 -> Write 2, Move right, New State 0\nState 0, Symbol 4 -> Write 3, Move right, New State 1\nState 1, Symbol 0 -> Write 2, Move up, New State 0\nState 1, Symbol 1 -> Write 3, Move down, New State 2\nState 1, Symbol 2 -> Write 3, Move down, New State 1\nState 1, Symbol 3 -> Write 4, Move right, New State 3\nState 1, Symbol 4 -> Write 4, Move down, New State 2\nState 2, Symbol 0 -> Write 4, Move right, New State 1\nState 2, Symbol 1 -> Write 2, Move right, New State 1\nState 2, Symbol 2 -> Write 0, Move left, New State 1\nState 2, Symbol 3 -> Write 0, Move right, New State 0\nState 2, Symbol 4 -> Write 2, Move left, New State 0\nState 3, Symbol 0 -> Write 2, Move right, New State 3\nState 3, Symbol 1 -> Write 3, Move up, New State 2\nState 3, Symbol 2 -> Write 2, Move up, New State 1\nState 3, Symbol 3 -> Write 4, Move up, New State 3\nState 3, Symbol 4 -> Write 4, Move right, New State 2\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (1, 1) with State 3 on Symbol 3 that is <3>.\n\nQuestion: after how many steps will the head first enter state 0?\nOptions:\n1: 2\n2: 5\n3: 4\n4: 7\n5: 3\n6: 6\n7: 8\n8: 1\n",
+    "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: <3>\n- **Action:** Write 4, Move up, New State 3\n- **Symbol Written on (1, 1):** 4\n- **New Position:** (0, 1)\n- **New State:** 3\nStep 2:\n- **Position:** (0, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 4, Move right, New State 2\n- **Symbol Written on (0, 1):** 4\n- **New Position:** (0, 2)\n- **New State:** 2\nStep 3:\n- **Position:** (0, 2)\n- **State:** 2\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: {3}\n- **Action:** Write 0, Move right, New State 0\n- **Symbol Written on (0, 2):** 0\n- **New Position:** (0, 3)\n- **New State:** 0\n\nThe head first enters state 0 that is brackets () after step 3.\nThe answer is option 5.",
+    "options": [
+      "2",
+      "5",
+      "4",
+      "7",
+      "3",
+      "6",
+      "8",
+      "1"
+    ],
+    "state_content": {
+      "rules": [
+        {
+          "state": 0,
+          "symbol": 0,
+          "new_state": 2,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 0,
+          "symbol": 1,
+          "new_state": 1,
+          "new_symbol": 1,
+          "direction": 2
+        },
+        {
+          "state": 0,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 1
+        },
+        {
+          "state": 0,
+          "symbol": 3,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 1
+        },
+        {
+          "state": 0,
+          "symbol": 4,
+          "new_state": 1,
+          "new_symbol": 3,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 0,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 0
+        },
+        {
+          "state": 1,
+          "symbol": 1,
+          "new_state": 2,
+          "new_symbol": 3,
+          "direction": 2
+        },
+        {
+          "state": 1,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 3,
+          "direction": 2
+        },
+        {
+          "state": 1,
+          "symbol": 3,
+          "new_state": 3,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 1,
+          "symbol": 4,
+          "new_state": 2,
+          "new_symbol": 4,
+          "direction": 2
+        },
+        {
+          "state": 2,
+          "symbol": 0,
+          "new_state": 1,
+          "new_symbol": 4,
+          "direction": 1
+        },
+        {
+          "state": 2,
+          "symbol": 1,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 1
+        },
+        {
+          "state": 2,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 0,
+          "direction": 3
+        },
+        {
+          "state": 2,
+          "symbol": 3,
+          "new_state": 0,
+          "new_symbol": 0,
+          "direction": 1
+        },
+        {
+          "state": 2,
+          "symbol": 4,
+          "new_state": 0,
+          "new_symbol": 2,
+          "direction": 3
+        },
+        {
+          "state": 3,
+          "symbol": 0,
+          "new_state": 3,
+          "new_symbol": 2,
+          "direction": 1
+        },
+        {
+          "state": 3,
+          "symbol": 1,
+          "new_state": 2,
+          "new_symbol": 3,
+          "direction": 0
+        },
+        {
+          "state": 3,
+          "symbol": 2,
+          "new_state": 1,
+          "new_symbol": 2,
+          "direction": 0
+        },
+        {
+          "state": 3,
+          "symbol": 3,
+          "new_state": 3,
+          "new_symbol": 4,
+          "direction": 0
+        },
+        {
+          "state": 3,
+          "symbol": 4,
+          "new_state": 2,
+          "new_symbol": 4,
+          "direction": 1
+        }
+      ],
+      "head": {
+        "x": 1,
+        "y": 1,
+        "state": 3
+      },
+      "grid": [
+        [
+          4,
+          4,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          2,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          3,
+          3,
+          4
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "turing-machine-train-00008",
+      "image": "images/00008.png",
+      "state": "states/00008.json",
+      "plot_level": "Hard",
+      "qa_type": "State Prediction",
+      "qa_level": "Medium",
+      "question_id": 3,
+      "question_description": "first_state_entry",
+      "question": "Rules:\nState 0, Symbol 0 -> Write 2, Move left, New State 2\nState 0, Symbol 1 -> Write 1, Move down, New State 1\nState 0, Symbol 2 -> Write 2, Move right, New State 1\nState 0, Symbol 3 -> Write 2, Move right, New State 0\nState 0, Symbol 4 -> Write 3, Move right, New State 1\nState 1, Symbol 0 -> Write 2, Move up, New State 0\nState 1, Symbol 1 -> Write 3, Move down, New State 2\nState 1, Symbol 2 -> Write 3, Move down, New State 1\nState 1, Symbol 3 -> Write 4, Move right, New State 3\nState 1, Symbol 4 -> Write 4, Move down, New State 2\nState 2, Symbol 0 -> Write 4, Move right, New State 1\nState 2, Symbol 1 -> Write 2, Move right, New State 1\nState 2, Symbol 2 -> Write 0, Move left, New State 1\nState 2, Symbol 3 -> Write 0, Move right, New State 0\nState 2, Symbol 4 -> Write 2, Move left, New State 0\nState 3, Symbol 0 -> Write 2, Move right, New State 3\nState 3, Symbol 1 -> Write 3, Move up, New State 2\nState 3, Symbol 2 -> Write 2, Move up, New State 1\nState 3, Symbol 3 -> Write 4, Move up, New State 3\nState 3, Symbol 4 -> Write 4, Move right, New State 2\n\nColor Legend for Symbols:\nSymbol 0: Color = red\nSymbol 1: Color = green\nSymbol 2: Color = blue\nSymbol 3: Color = magenta\nSymbol 4: Color = cyan\n\nBracket Legend for States:\nState 0: Bracket = ( )\nState 1: Bracket = [ ]\nState 2: Bracket = { }\nState 3: Bracket = < >\nCurrent head position is (1, 1) with State 3 on Symbol 3 that is <3>.\n\nQuestion: after how many steps will the head first enter state 0?\nOptions:\n1: 2\n2: 5\n3: 4\n4: 7\n5: 3\n6: 6\n7: 8\n8: 1\n",
+      "answer": 5,
+      "options": [
+        "2",
+        "5",
+        "4",
+        "7",
+        "3",
+        "6",
+        "8",
+        "1"
+      ],
+      "analysis": "Detailed step-by-step analysis:\n\nStep 1:\n- **Position:** (1, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: <3>\n- **Action:** Write 4, Move up, New State 3\n- **Symbol Written on (1, 1):** 4\n- **New Position:** (0, 1)\n- **New State:** 3\nStep 2:\n- **Position:** (0, 1)\n- **State:** 3\n- **Symbol:** Directly from image, it's cyan which means symbol 4\n- **State and Symbol**: <4>\n- **Action:** Write 4, Move right, New State 2\n- **Symbol Written on (0, 1):** 4\n- **New Position:** (0, 2)\n- **New State:** 2\nStep 3:\n- **Position:** (0, 2)\n- **State:** 2\n- **Symbol:** Directly from image, it's magenta which means symbol 3\n- **State and Symbol**: {3}\n- **Action:** Write 0, Move right, New State 0\n- **Symbol Written on (0, 2):** 0\n- **New Position:** (0, 3)\n- **New State:** 0\n\nThe head first enters state 0 that is brackets () after step 3.\nThe answer is option 5."
+    }
+  }
+}

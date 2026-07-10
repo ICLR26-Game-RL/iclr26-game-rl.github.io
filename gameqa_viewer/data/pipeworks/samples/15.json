@@ -1,0 +1,278 @@
+{
+  "sample": {
+    "index": 15,
+    "data_id": "pipeworks-00016-q4",
+    "question_id": 4,
+    "question_description": "Choose the single tile whose 90-degree clockwise rotation routes water to a dry outlet.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so...",
+    "image": "images/board_00016.png",
+    "state": "states/board_00016.json",
+    "image_url": "data/pipeworks/files/images/board_00016.png",
+    "state_url": "data/pipeworks/files/states/board_00016.json",
+    "has_options": true,
+    "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the bottom edge of the board and feeds tile (4, 2); outlet A sits right of the right edge, touching tile (4, 4); outlet B sits below the bottom edge, touching tile (4, 4); outlet C sits below the bottom edge, touching tile (4, 3).\nWith the current layout, outlet A stays dry. You may rotate EXACTLY ONE pipe tile by 90 degrees clockwise (a rotation turns a north opening into an east opening, east into south, south into west, west into north). Rotating which tile makes water reach outlet A?\n\nOptions:\n[1] Rotate the tile at (4, 1)\n[2] Rotate the tile at (1, 0)\n[3] Rotate the tile at (2, 3)\n[4] Rotate the tile at (2, 4)\n[5] Rotate the tile at (3, 0)\n[6] Rotate the tile at (0, 2)\n[7] Rotate the tile at (3, 4)\n[8] Rotate the tile at (4, 3)",
+    "analysis": "Currently outlet A receives no water. Consider the candidate tiles one by one and simulate the flow after rotating each by 90 degrees clockwise.\nRotating the tile at (4, 3) turns a T-junction pipe (openings: north-south-west) into a T-junction pipe (openings: north-east-west). After this rotation the flow becomes:\nWater enters at tile (4, 2) through its south opening (a T-junction pipe (openings: north-east-south)).\nFrom (4, 2) water flows east into (4, 3) (a T-junction pipe (openings: north-east-west)).\nFrom (4, 3) water flows north into (3, 3) (a T-junction pipe (openings: north-south-west)).\nFrom (4, 3) water flows east into (4, 4) (a cross pipe (openings: north-east-south-west)).\nFrom (3, 3) water flows north into (2, 3) (a straight pipe (openings: north-south)).\nFrom (4, 4) water flows north into (3, 4) (an elbow pipe (openings: south-west)).\nFrom (2, 3) water flows north into (1, 3) (a T-junction pipe (openings: east-south-west)).\nFrom (1, 3) water flows west into (1, 2) (a straight pipe (openings: east-west)).\nTile (4, 4) is wet and has a east opening on the board edge, so outlet A receives water.\nTile (4, 4) is wet and has a south opening on the board edge, so outlet B receives water.\nSo outlet A now receives water.\nFor each of the other candidates ((0, 2); (1, 0); (2, 3); (2, 4); (3, 0); (3, 4); (4, 1)), simulating the rotated layout shows the water still never reaches outlet A.\nTherefore the tile to rotate is (4, 3). The option number is 8.",
+    "options": [
+      "Rotate the tile at (4, 1)",
+      "Rotate the tile at (1, 0)",
+      "Rotate the tile at (2, 3)",
+      "Rotate the tile at (2, 4)",
+      "Rotate the tile at (3, 0)",
+      "Rotate the tile at (0, 2)",
+      "Rotate the tile at (3, 4)",
+      "Rotate the tile at (4, 3)"
+    ],
+    "state_content": {
+      "grid_size": {
+        "rows": 5,
+        "cols": 5
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "tiles": [
+        [
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "NESW",
+            "openings": [
+              "E",
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          }
+        ],
+        [
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "WN",
+            "openings": [
+              "N",
+              "W"
+            ]
+          },
+          {
+            "type": "EW",
+            "openings": [
+              "E",
+              "W"
+            ]
+          },
+          {
+            "type": "ESW",
+            "openings": [
+              "E",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          }
+        ],
+        [
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "EW",
+            "openings": [
+              "E",
+              "W"
+            ]
+          },
+          {
+            "type": "NS",
+            "openings": [
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "SW",
+            "openings": [
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NE",
+            "openings": [
+              "E",
+              "N"
+            ]
+          },
+          {
+            "type": "EMPTY",
+            "openings": []
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "SW",
+            "openings": [
+              "S",
+              "W"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "EW",
+            "openings": [
+              "E",
+              "W"
+            ]
+          },
+          {
+            "type": "EW",
+            "openings": [
+              "E",
+              "W"
+            ]
+          },
+          {
+            "type": "NES",
+            "openings": [
+              "E",
+              "N",
+              "S"
+            ]
+          },
+          {
+            "type": "SWN",
+            "openings": [
+              "N",
+              "S",
+              "W"
+            ]
+          },
+          {
+            "type": "NESW",
+            "openings": [
+              "E",
+              "N",
+              "S",
+              "W"
+            ]
+          }
+        ]
+      ],
+      "pump": {
+        "side": "S",
+        "index": 2,
+        "feeds_tile": [
+          4,
+          2
+        ]
+      },
+      "outlets": {
+        "A": {
+          "side": "E",
+          "index": 4,
+          "touches_tile": [
+            4,
+            4
+          ]
+        },
+        "B": {
+          "side": "S",
+          "index": 4,
+          "touches_tile": [
+            4,
+            4
+          ]
+        },
+        "C": {
+          "side": "S",
+          "index": 3,
+          "touches_tile": [
+            4,
+            3
+          ]
+        }
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "pipeworks-00016-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Choose the single tile whose 90-degree clockwise rotation routes water to a dry outlet.",
+      "image": "images/board_00016.png",
+      "state": "states/board_00016.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "Pipeworks is a plumbing puzzle. The board is a grid of square tiles; rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a tile is written (row, column). Each tile either holds a fixed pipe piece (straight, elbow, T-junction or cross) or is empty. A pipe piece has openings on some sides of its tile; water can pass between two adjacent tiles only when BOTH tiles have pipe openings on their shared edge. The blue PUMP outside the board pushes water into the tile it points at, through that tile's edge on the board rim; if that tile has no opening on that edge, no water enters at all. Lettered buckets outside the board are outlets: an outlet receives water when the rim tile it touches gets filled AND that tile has an opening on the touching edge. Water spreads through every connected opening (it can branch at T-junctions and crosses).\n\nThe pump is attached to the bottom edge of the board and feeds tile (4, 2); outlet A sits right of the right edge, touching tile (4, 4); outlet B sits below the bottom edge, touching tile (4, 4); outlet C sits below the bottom edge, touching tile (4, 3).\nWith the current layout, outlet A stays dry. You may rotate EXACTLY ONE pipe tile by 90 degrees clockwise (a rotation turns a north opening into an east opening, east into south, south into west, west into north). Rotating which tile makes water reach outlet A?\n\nOptions:\n[1] Rotate the tile at (4, 1)\n[2] Rotate the tile at (1, 0)\n[3] Rotate the tile at (2, 3)\n[4] Rotate the tile at (2, 4)\n[5] Rotate the tile at (3, 0)\n[6] Rotate the tile at (0, 2)\n[7] Rotate the tile at (3, 4)\n[8] Rotate the tile at (4, 3)",
+      "answer": 8,
+      "analysis": "Currently outlet A receives no water. Consider the candidate tiles one by one and simulate the flow after rotating each by 90 degrees clockwise.\nRotating the tile at (4, 3) turns a T-junction pipe (openings: north-south-west) into a T-junction pipe (openings: north-east-west). After this rotation the flow becomes:\nWater enters at tile (4, 2) through its south opening (a T-junction pipe (openings: north-east-south)).\nFrom (4, 2) water flows east into (4, 3) (a T-junction pipe (openings: north-east-west)).\nFrom (4, 3) water flows north into (3, 3) (a T-junction pipe (openings: north-south-west)).\nFrom (4, 3) water flows east into (4, 4) (a cross pipe (openings: north-east-south-west)).\nFrom (3, 3) water flows north into (2, 3) (a straight pipe (openings: north-south)).\nFrom (4, 4) water flows north into (3, 4) (an elbow pipe (openings: south-west)).\nFrom (2, 3) water flows north into (1, 3) (a T-junction pipe (openings: east-south-west)).\nFrom (1, 3) water flows west into (1, 2) (a straight pipe (openings: east-west)).\nTile (4, 4) is wet and has a east opening on the board edge, so outlet A receives water.\nTile (4, 4) is wet and has a south opening on the board edge, so outlet B receives water.\nSo outlet A now receives water.\nFor each of the other candidates ((0, 2); (1, 0); (2, 3); (2, 4); (3, 0); (3, 4); (4, 1)), simulating the rotated layout shows the water still never reaches outlet A.\nTherefore the tile to rotate is (4, 3). The option number is 8.",
+      "options": [
+        "Rotate the tile at (4, 1)",
+        "Rotate the tile at (1, 0)",
+        "Rotate the tile at (2, 3)",
+        "Rotate the tile at (2, 4)",
+        "Rotate the tile at (3, 0)",
+        "Rotate the tile at (0, 2)",
+        "Rotate the tile at (3, 4)",
+        "Rotate the tile at (4, 3)"
+      ]
+    }
+  }
+}

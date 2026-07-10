@@ -1,0 +1,264 @@
+{
+  "sample": {
+    "index": 97,
+    "data_id": "space_invaders-mcq-00048",
+    "question_id": 8,
+    "question_description": "Ask the maximum points gained by shooting once",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00006.png",
+    "state": "states/space_invaders_00006.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00006.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00006.json",
+    "has_options": true,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, during which the enemies keep still.\nWhat is the maximum number of points the player can get if he can move the ship to any column and let the ship shoot? Give the number of the correct option.\nOptions:\n1: 10\n2: 15\n3: 20\n4: 25\n5: 30\n6: 35\n7: 40\n8: 45",
+    "analysis": "Since the ship can move to any column and shoot, we just need to find the enemy with the highest score among all the ones being the lowermost on their columns. Let's check the columns one by one.\n- Column 1: There is no enemy.\n- Column 2: There is no enemy.\n- Column 3: There is no enemy.\n- Column 4: The lowermost enemy is on row 3, which is blue and worth 20 points.\n- Column 5: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 6: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 7: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 8: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 9: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 10: The lowermost enemy is on row 3, which is blue and worth 20 points.\n- Column 11: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 12: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 13: The lowermost enemy is on row 2, which is blue and worth 20 points.\n- Column 14: There is no enemy.\n\nTherefore, the maximum number of points the player can get is 20, which can be achieved by letting the ship shoot on column 4, 10 or 13. The option number is 3.",
+    "options": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45
+    ],
+    "state_content": {
+      "enemy_rows": 5,
+      "enemy_cols": 10,
+      "enemy_area_rows": 7,
+      "total_cols": 14,
+      "ship_col": 7,
+      "enemies": [
+        {
+          "x": 1,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 10,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 10,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 11,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 11,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 12,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 13,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 13,
+          "color": "blue"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-mcq-00048",
+      "qa_type": "Strategy Optimization",
+      "question_id": 8,
+      "question_description": "Ask the maximum points gained by shooting once",
+      "image": "images/space_invaders_00006.png",
+      "state": "states/space_invaders_00006.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nIf the ship shoots, the enemy closest to the ship (i.e. the lowermost one) on the same column as the ship, if any, will be destroyed and disappear, adding points to the player's score and exposing the enemy behind (if any). Purple enemies are worth 30 points, blue enemies are worth 20 points, and green enemies are worth 10 points.\nThe enemies keep on uniformly moving in a certain direction (left or right). Carefully understand the time sequence rules below. \n- Consider the consecutive time intervals, denoted by t, t+1, t+2, ...\n- During each time interval t:\n  - The ship can shoot at most once.\n  - The ship can move to another column before shooting.\n  - The enemies keep still.\n- At the very end of this time interval t, the enemies move one step in the direction they are moving, thus changing the columns they are on.\n\nGiven that the image depicts the scene at the beginning of time interval t, during which the enemies keep still.\nWhat is the maximum number of points the player can get if he can move the ship to any column and let the ship shoot? Give the number of the correct option.\nOptions:\n1: 10\n2: 15\n3: 20\n4: 25\n5: 30\n6: 35\n7: 40\n8: 45",
+      "answer": 3,
+      "analysis": "Since the ship can move to any column and shoot, we just need to find the enemy with the highest score among all the ones being the lowermost on their columns. Let's check the columns one by one.\n- Column 1: There is no enemy.\n- Column 2: There is no enemy.\n- Column 3: There is no enemy.\n- Column 4: The lowermost enemy is on row 3, which is blue and worth 20 points.\n- Column 5: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 6: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 7: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 8: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 9: The lowermost enemy is on row 4, which is green and worth 10 points.\n- Column 10: The lowermost enemy is on row 3, which is blue and worth 20 points.\n- Column 11: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 12: The lowermost enemy is on row 5, which is green and worth 10 points.\n- Column 13: The lowermost enemy is on row 2, which is blue and worth 20 points.\n- Column 14: There is no enemy.\n\nTherefore, the maximum number of points the player can get is 20, which can be achieved by letting the ship shoot on column 4, 10 or 13. The option number is 3.",
+      "options": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "inputs": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 1
+  },
+  "gates": {
+    "G1": {
+      "type": "NAND",
+      "inputs": [
+        "A",
+        "B"
+      ]
+    },
+    "G2": {
+      "type": "NAND",
+      "inputs": [
+        "C",
+        "D"
+      ]
+    },
+    "G3": {
+      "type": "NAND",
+      "inputs": [
+        "G1",
+        "G2"
+      ]
+    },
+    "G4": {
+      "type": "XOR",
+      "inputs": [
+        "G2",
+        "D"
+      ]
+    },
+    "G5": {
+      "type": "XOR",
+      "inputs": [
+        "G3",
+        "G4"
+      ]
+    }
+  },
+  "lamp_driven_by": "G5",
+  "gate_semantics": {
+    "AND": "1 iff all inputs are 1",
+    "OR": "1 iff at least one input is 1",
+    "XOR": "1 iff an odd number of inputs are 1",
+    "NAND": "0 iff all inputs are 1",
+    "NOT": "inverts its single input"
+  }
+}

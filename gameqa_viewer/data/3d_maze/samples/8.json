@@ -1,0 +1,707 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "path-mcq-00009-path_finding",
+    "question_id": 0,
+    "question_description": "path_finding",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 16,
+    "answer_preview": "16",
+    "question_preview": "Rules: 1. Player can only walk on top of cubes 2. Player can climb ladders if they can reach the cube under the ladder 3. From a ladder, player can reach the t...",
+    "image": "images/path-mcq-00009.png",
+    "state": "states/path-mcq-00009.json",
+    "image_url": "data/3d_maze/files/images/path-mcq-00009.png",
+    "state_url": "data/3d_maze/files/states/path-mcq-00009.json",
+    "has_options": true,
+    "question": "Rules:\n1. Player can only walk on top of cubes\n2. Player can climb ladders if they can reach the cube under the ladder\n3. From a ladder, player can reach the top of the last cube with the ladder\n4. Blue cube is start position, red cube is goal position\n5. Numbered cubes are branch points where player must choose a path\n\nWhich combination of path choices leads to the goal?\n\nOptions:\n1: 4-up, 3-up, 1-left-forward, 2-right-forward\n2: 4-up, 3-up, 1-right-forward, 2-up\n3: 4-right-forward, 3-up, 1-right-forward, 2-right-forward\n4: 4-right-forward, 3-up, 1-right-forward, 2-up\n5: 4-right-forward, 3-up, 1-left-forward, 2-right-forward\n6: 4-up, 3-left-forward, 1-left-forward, 2-right-forward\n7: 4-right-forward, 3-up, 1-left-forward, 2-up\n8: 4-up, 3-left-forward, 1-right-forward, 2-up\n9: 4-up, 3-up, 1-right-forward, 2-right-forward\n10: 4-up, 3-up, 1-left-forward, 2-up\n11: 4-right-forward, 3-left-forward, 1-left-forward, 2-right-forward\n12: 4-up, 3-left-forward, 1-right-forward, 2-right-forward\n13: 4-right-forward, 3-left-forward, 1-right-forward, 2-right-forward\n14: 4-right-forward, 3-left-forward, 1-right-forward, 2-up\n15: 4-up, 3-left-forward, 1-left-forward, 2-up\n16: 4-right-forward, 3-left-forward, 1-left-forward, 2-up",
+    "analysis": "From the start point, you first meet branch 4, then branch 3, then branch 1, then branch 2, before finally reaching the goal.\n\nAnalyzing each branch point:\n- At branch 4, going right-forward leads to branch 3, while going up leads to a dead end\n- At branch 3, going left-forward leads to branch 1, while going up leads to a dead end\n- At branch 1, going left-forward leads to branch 2, while going right-forward leads to a dead end\n- At branch 2, going up leads toward the goal, while going right-forward leads to a dead end\n\nTherefore, the correct sequence is 4-right-forward, 3-left-forward, 1-left-forward, 2-up, that is 4-right-forward, 3-left-forward, 1-left-forward, 2-up, making the answer Option 16.",
+    "options": [
+      "4-up, 3-up, 1-left-forward, 2-right-forward",
+      "4-up, 3-up, 1-right-forward, 2-up",
+      "4-right-forward, 3-up, 1-right-forward, 2-right-forward",
+      "4-right-forward, 3-up, 1-right-forward, 2-up",
+      "4-right-forward, 3-up, 1-left-forward, 2-right-forward",
+      "4-up, 3-left-forward, 1-left-forward, 2-right-forward",
+      "4-right-forward, 3-up, 1-left-forward, 2-up",
+      "4-up, 3-left-forward, 1-right-forward, 2-up",
+      "4-up, 3-up, 1-right-forward, 2-right-forward",
+      "4-up, 3-up, 1-left-forward, 2-up",
+      "4-right-forward, 3-left-forward, 1-left-forward, 2-right-forward",
+      "4-up, 3-left-forward, 1-right-forward, 2-right-forward",
+      "4-right-forward, 3-left-forward, 1-right-forward, 2-right-forward",
+      "4-right-forward, 3-left-forward, 1-right-forward, 2-up",
+      "4-up, 3-left-forward, 1-left-forward, 2-up",
+      "4-right-forward, 3-left-forward, 1-left-forward, 2-up"
+    ],
+    "state_content": {
+      "schema_version": "1.1",
+      "game": "3d_maze",
+      "question_description": "path_finding",
+      "grid_size": {
+        "x": 8,
+        "y": 8,
+        "z": 7
+      },
+      "start_pos": {
+        "x": 7,
+        "y": 7,
+        "z": 0
+      },
+      "goal_pos": {
+        "x": 1,
+        "y": 3,
+        "z": 3
+      },
+      "cubes": [
+        {
+          "pos": {
+            "x": 3,
+            "y": 3,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 4,
+            "y": 3,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path",
+            "branch_point",
+            "main_path",
+            "numbered_block"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 4,
+            "z": 0
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 3,
+            "y": 5,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 4,
+            "y": 5,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 5,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path",
+            "branch_point",
+            "main_path",
+            "numbered_block"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 6,
+            "z": 0
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path",
+            "branch_point",
+            "main_path",
+            "numbered_block"
+          ]
+        },
+        {
+          "pos": {
+            "x": 6,
+            "y": 7,
+            "z": 0
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 7,
+            "y": 7,
+            "z": 0
+          },
+          "roles": [
+            "alternative_path",
+            "branch_point",
+            "main_path",
+            "numbered_block",
+            "start"
+          ]
+        },
+        {
+          "pos": {
+            "x": 1,
+            "y": 3,
+            "z": 3
+          },
+          "roles": [
+            "goal",
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 2,
+            "y": 3,
+            "z": 3
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 3,
+            "y": 3,
+            "z": 3
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 4,
+            "y": 3,
+            "z": 3
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 3,
+            "z": 3
+          },
+          "roles": [
+            "main_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 3,
+            "y": 7,
+            "z": 3
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 4,
+            "y": 7,
+            "z": 3
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 5,
+            "y": 7,
+            "z": 3
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        },
+        {
+          "pos": {
+            "x": 7,
+            "y": 7,
+            "z": 3
+          },
+          "roles": [
+            "alternative_path"
+          ]
+        }
+      ],
+      "main_path_segments": [
+        {
+          "start": {
+            "x": 7,
+            "y": 7,
+            "z": 0
+          },
+          "end": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "type": "walk",
+          "direction": "right-forward"
+        },
+        {
+          "start": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "end": {
+            "x": 5,
+            "y": 5,
+            "z": 0
+          },
+          "type": "walk",
+          "direction": "left-forward"
+        },
+        {
+          "start": {
+            "x": 5,
+            "y": 5,
+            "z": 0
+          },
+          "end": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "type": "walk",
+          "direction": "left-forward"
+        },
+        {
+          "start": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "end": {
+            "x": 5,
+            "y": 3,
+            "z": 3
+          },
+          "type": "ladder",
+          "direction": "up"
+        },
+        {
+          "start": {
+            "x": 5,
+            "y": 3,
+            "z": 3
+          },
+          "end": {
+            "x": 3,
+            "y": 3,
+            "z": 3
+          },
+          "type": "walk",
+          "direction": "right-forward"
+        },
+        {
+          "start": {
+            "x": 3,
+            "y": 3,
+            "z": 3
+          },
+          "end": {
+            "x": 1,
+            "y": 3,
+            "z": 3
+          },
+          "type": "walk",
+          "direction": "right-forward"
+        }
+      ],
+      "main_path_ordered_cubes": [
+        {
+          "x": 7,
+          "y": 7,
+          "z": 0
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 5,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "z": 0
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "z": 3
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "z": 3
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "z": 3
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "z": 3
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "z": 3
+        }
+      ],
+      "ladders": [
+        {
+          "base_pos": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "direction": "+x",
+          "height": 3
+        },
+        {
+          "base_pos": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "direction": "+x",
+          "height": 3
+        },
+        {
+          "base_pos": {
+            "x": 7,
+            "y": 7,
+            "z": 0
+          },
+          "direction": "+x",
+          "height": 3
+        }
+      ],
+      "sequence_points": [],
+      "numbered_markers": [
+        {
+          "label": 1,
+          "pos": {
+            "x": 5,
+            "y": 5,
+            "z": 0
+          },
+          "marker_type": "branch_point"
+        },
+        {
+          "label": 2,
+          "pos": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "marker_type": "branch_point"
+        },
+        {
+          "label": 3,
+          "pos": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "marker_type": "branch_point"
+        },
+        {
+          "label": 4,
+          "pos": {
+            "x": 7,
+            "y": 7,
+            "z": 0
+          },
+          "marker_type": "branch_point"
+        }
+      ],
+      "branches": [
+        {
+          "branch_id": 1,
+          "pos": {
+            "x": 5,
+            "y": 5,
+            "z": 0
+          },
+          "main_path_direction": "left-forward",
+          "alternative_path": [
+            {
+              "start": {
+                "x": 5,
+                "y": 5,
+                "z": 0
+              },
+              "end": {
+                "x": 3,
+                "y": 5,
+                "z": 0
+              },
+              "type": "walk",
+              "direction": "right-forward"
+            }
+          ],
+          "alternative_ordered_cubes": [
+            {
+              "x": 5,
+              "y": 5,
+              "z": 0
+            },
+            {
+              "x": 4,
+              "y": 5,
+              "z": 0
+            },
+            {
+              "x": 3,
+              "y": 5,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "branch_id": 2,
+          "pos": {
+            "x": 5,
+            "y": 3,
+            "z": 0
+          },
+          "main_path_direction": "up",
+          "alternative_path": [
+            {
+              "start": {
+                "x": 5,
+                "y": 3,
+                "z": 0
+              },
+              "end": {
+                "x": 3,
+                "y": 3,
+                "z": 0
+              },
+              "type": "walk",
+              "direction": "right-forward"
+            }
+          ],
+          "alternative_ordered_cubes": [
+            {
+              "x": 5,
+              "y": 3,
+              "z": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "z": 0
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "z": 0
+            }
+          ]
+        },
+        {
+          "branch_id": 3,
+          "pos": {
+            "x": 5,
+            "y": 7,
+            "z": 0
+          },
+          "main_path_direction": "left-forward",
+          "alternative_path": [
+            {
+              "start": {
+                "x": 5,
+                "y": 7,
+                "z": 0
+              },
+              "end": {
+                "x": 5,
+                "y": 7,
+                "z": 3
+              },
+              "type": "ladder",
+              "direction": "up"
+            },
+            {
+              "start": {
+                "x": 5,
+                "y": 7,
+                "z": 3
+              },
+              "end": {
+                "x": 3,
+                "y": 7,
+                "z": 3
+              },
+              "type": "walk",
+              "direction": "right-forward"
+            }
+          ],
+          "alternative_ordered_cubes": [
+            {
+              "x": 5,
+              "y": 7,
+              "z": 0
+            },
+            {
+              "x": 5,
+              "y": 7,
+              "z": 3
+            },
+            {
+              "x": 4,
+              "y": 7,
+              "z": 3
+            },
+            {
+              "x": 3,
+              "y": 7,
+              "z": 3
+            }
+          ]
+        },
+        {
+          "branch_id": 4,
+          "pos": {
+            "x": 7,
+            "y": 7,
+            "z": 0
+          },
+          "main_path_direction": "right-forward",
+          "alternative_path": [
+            {
+              "start": {
+                "x": 7,
+                "y": 7,
+                "z": 0
+              },
+              "end": {
+                "x": 7,
+                "y": 7,
+                "z": 3
+              },
+              "type": "ladder",
+              "direction": "up"
+            }
+          ],
+          "alternative_ordered_cubes": [
+            {
+              "x": 7,
+              "y": 7,
+              "z": 0
+            },
+            {
+              "x": 7,
+              "y": 7,
+              "z": 3
+            }
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "qa_type": "State Prediction",
+      "question_description": "path_finding",
+      "question_id": 0,
+      "data_id": "path-mcq-00009-path_finding",
+      "image": "images/path-mcq-00009.png",
+      "state": "states/path-mcq-00009.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "question": "Rules:\n1. Player can only walk on top of cubes\n2. Player can climb ladders if they can reach the cube under the ladder\n3. From a ladder, player can reach the top of the last cube with the ladder\n4. Blue cube is start position, red cube is goal position\n5. Numbered cubes are branch points where player must choose a path\n\nWhich combination of path choices leads to the goal?\n\nOptions:\n1: 4-up, 3-up, 1-left-forward, 2-right-forward\n2: 4-up, 3-up, 1-right-forward, 2-up\n3: 4-right-forward, 3-up, 1-right-forward, 2-right-forward\n4: 4-right-forward, 3-up, 1-right-forward, 2-up\n5: 4-right-forward, 3-up, 1-left-forward, 2-right-forward\n6: 4-up, 3-left-forward, 1-left-forward, 2-right-forward\n7: 4-right-forward, 3-up, 1-left-forward, 2-up\n8: 4-up, 3-left-forward, 1-right-forward, 2-up\n9: 4-up, 3-up, 1-right-forward, 2-right-forward\n10: 4-up, 3-up, 1-left-forward, 2-up\n11: 4-right-forward, 3-left-forward, 1-left-forward, 2-right-forward\n12: 4-up, 3-left-forward, 1-right-forward, 2-right-forward\n13: 4-right-forward, 3-left-forward, 1-right-forward, 2-right-forward\n14: 4-right-forward, 3-left-forward, 1-right-forward, 2-up\n15: 4-up, 3-left-forward, 1-left-forward, 2-up\n16: 4-right-forward, 3-left-forward, 1-left-forward, 2-up",
+      "answer": 16,
+      "options": [
+        "4-up, 3-up, 1-left-forward, 2-right-forward",
+        "4-up, 3-up, 1-right-forward, 2-up",
+        "4-right-forward, 3-up, 1-right-forward, 2-right-forward",
+        "4-right-forward, 3-up, 1-right-forward, 2-up",
+        "4-right-forward, 3-up, 1-left-forward, 2-right-forward",
+        "4-up, 3-left-forward, 1-left-forward, 2-right-forward",
+        "4-right-forward, 3-up, 1-left-forward, 2-up",
+        "4-up, 3-left-forward, 1-right-forward, 2-up",
+        "4-up, 3-up, 1-right-forward, 2-right-forward",
+        "4-up, 3-up, 1-left-forward, 2-up",
+        "4-right-forward, 3-left-forward, 1-left-forward, 2-right-forward",
+        "4-up, 3-left-forward, 1-right-forward, 2-right-forward",
+        "4-right-forward, 3-left-forward, 1-right-forward, 2-right-forward",
+        "4-right-forward, 3-left-forward, 1-right-forward, 2-up",
+        "4-up, 3-left-forward, 1-left-forward, 2-up",
+        "4-right-forward, 3-left-forward, 1-left-forward, 2-up"
+      ],
+      "analysis": "From the start point, you first meet branch 4, then branch 3, then branch 1, then branch 2, before finally reaching the goal.\n\nAnalyzing each branch point:\n- At branch 4, going right-forward leads to branch 3, while going up leads to a dead end\n- At branch 3, going left-forward leads to branch 1, while going up leads to a dead end\n- At branch 1, going left-forward leads to branch 2, while going right-forward leads to a dead end\n- At branch 2, going up leads toward the goal, while going right-forward leads to a dead end\n\nTherefore, the correct sequence is 4-right-forward, 3-left-forward, 1-left-forward, 2-up, that is 4-right-forward, 3-left-forward, 1-left-forward, 2-up, making the answer Option 16."
+    }
+  }
+}

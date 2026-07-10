@@ -1,0 +1,70 @@
+{
+  "sample": {
+    "index": 6,
+    "data_id": "dice_path-00007-q4",
+    "question_id": 4,
+    "question_description": "Compute the minimum number of rolls for the die to rest on the goal cell with a required number on its top face.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "6",
+    "answer_preview": "6",
+    "question_preview": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die...",
+    "image": "images/board_00007.png",
+    "state": "states/board_00007.json",
+    "image_url": "data/dice_path/files/images/board_00007.png",
+    "state_url": "data/dice_path/files/states/board_00007.json",
+    "has_options": false,
+    "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die must travel from its current cell (3, 2) to the goal cell (0, 1) so that, at the moment it rests on the goal, the number 2 is on its TOP face. The die may take any route (it may even revisit cells) but every roll must stay on the board and avoid rocks. What is the minimum number of rolls needed? Answer with a single number.",
+    "analysis": "Initial faces: top = 2, south = 1, east = 3 (hidden: north = 6, west = 4, bottom = 5).\nAn exhaustive breadth-first search over every reachable (cell, orientation) state shows the minimum is 6 rolls. The shortest route ignoring the die's orientation takes 4 rolls, but no 4-roll route ends with 2 on top, so extra rolls are required. One optimal sequence is: left (west), up (north), left (west), up (north), right (east), up (north).\nRoll 1 - left (west): the die moves from (3, 2) to (3, 1); rolling left (west) rotates the die about its north-south axis, so top 2->3, north 6->6, east 3->5.\nRoll 2 - up (north): the die moves from (3, 1) to (2, 1); rolling up (north) rotates the die about its east-west axis, so top 3->1, north 6->3, east 5->5.\nRoll 3 - left (west): the die moves from (2, 1) to (2, 0); rolling left (west) rotates the die about its north-south axis, so top 1->5, north 3->3, east 5->6.\nRoll 4 - up (north): the die moves from (2, 0) to (1, 0); rolling up (north) rotates the die about its east-west axis, so top 5->4, north 3->5, east 6->6.\nRoll 5 - right (east): the die moves from (1, 0) to (1, 1); rolling right (east) rotates the die about its north-south axis, so top 4->1, north 5->5, east 6->4.\nRoll 6 - up (north): the die moves from (1, 1) to (0, 1); rolling up (north) rotates the die about its east-west axis, so top 1->2, north 5->1, east 4->4.\nThe die rests on the goal (0, 1) after 6 rolls with 2 on top, and the search guarantees no shorter sequence works.\nSo the answer is 6.",
+    "options": null,
+    "state_content": {
+      "grid_size": {
+        "rows": 4,
+        "cols": 4
+      },
+      "coordinate_system": "(row, col); row 0 is the top row, col 0 is the leftmost column",
+      "blocked_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "die_cell": [
+        3,
+        2
+      ],
+      "goal_cell": [
+        0,
+        1
+      ],
+      "die_faces": {
+        "top": 2,
+        "north": 6,
+        "east": 3,
+        "bottom": 5,
+        "south": 1,
+        "west": 4
+      },
+      "rule": "standard die, opposite faces sum to 7; visible faces in the image are top, south, east"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_path-00007-q4",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Compute the minimum number of rolls for the die to rest on the goal cell with a required number on its top face.",
+      "image": "images/board_00007.png",
+      "state": "states/board_00007.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "Dice Path is a rolling-cube puzzle played on a grid board. A standard six-sided die (opposite faces always sum to 7: 1-6, 2-5, 3-4) rests on one cell. The die is drawn in 3D: you can see its top face, its south face (the lower-left side of the drawing, marked S, facing the bottom edge of the board) and its east face (the lower-right side, marked E, facing the right edge of the board). Rows are numbered from 0 at the top downward and columns from 0 at the left rightward, so a cell is written (row, column). In one move the die rolls one cell up (north), down (south), left (west) or right (east) by tipping over the corresponding bottom edge; rolling changes which number faces up. For example, rolling right makes the old top face point east while the old west face becomes the new top. Cells covered by gray rocks are blocked. A roll that would leave the board or enter a blocked cell fails: the die stays in place and its faces do not change. The cell tinted yellow with the checkered flag is the goal cell.\n\nThe die must travel from its current cell (3, 2) to the goal cell (0, 1) so that, at the moment it rests on the goal, the number 2 is on its TOP face. The die may take any route (it may even revisit cells) but every roll must stay on the board and avoid rocks. What is the minimum number of rolls needed? Answer with a single number.",
+      "answer": "6",
+      "analysis": "Initial faces: top = 2, south = 1, east = 3 (hidden: north = 6, west = 4, bottom = 5).\nAn exhaustive breadth-first search over every reachable (cell, orientation) state shows the minimum is 6 rolls. The shortest route ignoring the die's orientation takes 4 rolls, but no 4-roll route ends with 2 on top, so extra rolls are required. One optimal sequence is: left (west), up (north), left (west), up (north), right (east), up (north).\nRoll 1 - left (west): the die moves from (3, 2) to (3, 1); rolling left (west) rotates the die about its north-south axis, so top 2->3, north 6->6, east 3->5.\nRoll 2 - up (north): the die moves from (3, 1) to (2, 1); rolling up (north) rotates the die about its east-west axis, so top 3->1, north 6->3, east 5->5.\nRoll 3 - left (west): the die moves from (2, 1) to (2, 0); rolling left (west) rotates the die about its north-south axis, so top 1->5, north 3->3, east 5->6.\nRoll 4 - up (north): the die moves from (2, 0) to (1, 0); rolling up (north) rotates the die about its east-west axis, so top 5->4, north 3->5, east 6->6.\nRoll 5 - right (east): the die moves from (1, 0) to (1, 1); rolling right (east) rotates the die about its north-south axis, so top 4->1, north 5->5, east 6->4.\nRoll 6 - up (north): the die moves from (1, 1) to (0, 1); rolling up (north) rotates the die about its east-west axis, so top 1->2, north 5->1, east 4->4.\nThe die rests on the goal (0, 1) after 6 rolls with 2 on top, and the search guarantees no shorter sequence works.\nSo the answer is 6."
+    }
+  }
+}

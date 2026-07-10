@@ -1,0 +1,131 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "free_cell-card_after_move-Hard-00001",
+    "question_id": 3,
+    "question_description": "Given a particular game state,a selected move and a selected cascade pile, the puzzle will present a question about which card is at the top of the cascade pile.\nYour task is to indentify the card in the options. ",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "In this FreeCell game: we have 4 cascade piles, and their indexes are [0, 1, 2, 3]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 f...",
+    "image": "images/state_analysis_Hard_00001.png",
+    "state": "states/state_analysis_Hard_00001.json",
+    "image_url": "data/freecell/files/images/state_analysis_Hard_00001.png",
+    "state_url": "data/freecell/files/states/state_analysis_Hard_00001.json",
+    "has_options": true,
+    "question": "In this FreeCell game:\nwe have 4 cascade piles, and their indexes are [0, 1, 2, 3]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards can be moved according to specific rules: A card can be moved to a free cell if available, stacked in descending order alternating colors in cascade piles, or placed in foundation piles starting from Ace. Now, find the top card from cascade pile 2 after moving the card (Diamond,4) from Cascade 2 to FreeCell 2.the options are as follows:\n1.(Spade, K)\n2.(Diamond, 7)\n3.(Heart, 1)\n4.(Diamond, 5)\n5.(Club, J)\n6.(Spade, 8)\n7.(Club, Q)\n8.(Spade, 6)\n",
+    "analysis": "We have 4 cascade piles.Their indexes are [0, 1, 2, 3].\nBefore the move,the state of the cascade_pile2 is:['(Spade,2)', '(Heart,11)', '(Club,7)', '(Spade,6)', '(Spade,3)', '(Diamond,1)', '(Heart,5)', '(Diamond,9)', '(Diamond,8)', '(Heart,6)', '(Diamond,3)', '(Club,11)', '(Diamond,4)']. After moving the card (Diamond,4) from Cascade 2 to FreeCell 2,the top card of the cascade_pile 2 is (Club,11).and the top card of the FreeCell 2 becomes card (Club,J).the new state of the cascade_pile 2 is:\n['(Spade,2)', '(Heart,11)', '(Club,7)', '(Spade,6)', '(Spade,3)', '(Diamond,1)', '(Heart,5)', '(Diamond,9)', '(Diamond,8)', '(Heart,6)', '(Diamond,3)', '(Club,11)']\n Therefore the top card of the cascade_pile 2 is (Club, J)",
+    "options": [
+      "(Spade, K)",
+      "(Diamond, 7)",
+      "(Heart, 1)",
+      "(Diamond, 5)",
+      "(Club, J)",
+      "(Spade, 8)",
+      "(Club, Q)",
+      "(Spade, 6)"
+    ],
+    "state_content": {
+      "cascade_piles": [
+        [
+          "8 ♥",
+          "6 ♣",
+          "8 ♠",
+          "7 ♠",
+          "2 ♥",
+          "2 ♦",
+          "2 ♣",
+          "3 ♣",
+          "9 ♠",
+          "3 ♥",
+          "Q ♦",
+          "7 ♥",
+          "5 ♣"
+        ],
+        [
+          "10 ♠",
+          "K ♣",
+          "7 ♦",
+          "4 ♠",
+          "A ♠",
+          "K ♥",
+          "4 ♥",
+          "K ♦",
+          "9 ♣",
+          "9 ♥",
+          "J ♦",
+          "4 ♣",
+          "Q ♣"
+        ],
+        [
+          "2 ♠",
+          "J ♥",
+          "7 ♣",
+          "6 ♠",
+          "3 ♠",
+          "A ♦",
+          "5 ♥",
+          "9 ♦",
+          "8 ♦",
+          "6 ♥",
+          "3 ♦",
+          "J ♣",
+          "4 ♦"
+        ],
+        [
+          "8 ♣",
+          "10 ♥",
+          "10 ♦",
+          "10 ♣",
+          "Q ♥",
+          "Q ♠",
+          "5 ♠",
+          "5 ♦",
+          "K ♠",
+          "A ♣",
+          "6 ♦",
+          "A ♥",
+          "J ♠"
+        ]
+      ],
+      "free_cells": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "foundation_piles": {
+        "HEARTS": null,
+        "DIAMONDS": null,
+        "CLUBS": null,
+        "SPADES": null
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "free_cell-card_after_move-Hard-00001",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Given a particular game state,a selected move and a selected cascade pile, the puzzle will present a question about which card is at the top of the cascade pile.\nYour task is to indentify the card in the options. ",
+      "image": "images/state_analysis_Hard_00001.png",
+      "state": "states/state_analysis_Hard_00001.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "question": "In this FreeCell game:\nwe have 4 cascade piles, and their indexes are [0, 1, 2, 3]We have 4 freecell on the left top, and their indexes are 0,1,2,3.We have 4 foundation piles on the right top, and their indexes are 0,1,2,3.In FreeCell, cards can be moved according to specific rules: A card can be moved to a free cell if available, stacked in descending order alternating colors in cascade piles, or placed in foundation piles starting from Ace. Now, find the top card from cascade pile 2 after moving the card (Diamond,4) from Cascade 2 to FreeCell 2.the options are as follows:\n1.(Spade, K)\n2.(Diamond, 7)\n3.(Heart, 1)\n4.(Diamond, 5)\n5.(Club, J)\n6.(Spade, 8)\n7.(Club, Q)\n8.(Spade, 6)\n",
+      "answer": 5,
+      "analysis": "We have 4 cascade piles.Their indexes are [0, 1, 2, 3].\nBefore the move,the state of the cascade_pile2 is:['(Spade,2)', '(Heart,11)', '(Club,7)', '(Spade,6)', '(Spade,3)', '(Diamond,1)', '(Heart,5)', '(Diamond,9)', '(Diamond,8)', '(Heart,6)', '(Diamond,3)', '(Club,11)', '(Diamond,4)']. After moving the card (Diamond,4) from Cascade 2 to FreeCell 2,the top card of the cascade_pile 2 is (Club,11).and the top card of the FreeCell 2 becomes card (Club,J).the new state of the cascade_pile 2 is:\n['(Spade,2)', '(Heart,11)', '(Club,7)', '(Spade,6)', '(Spade,3)', '(Diamond,1)', '(Heart,5)', '(Diamond,9)', '(Diamond,8)', '(Heart,6)', '(Diamond,3)', '(Club,11)']\n Therefore the top card of the cascade_pile 2 is (Club, J)",
+      "options": [
+        "(Spade, K)",
+        "(Diamond, 7)",
+        "(Heart, 1)",
+        "(Diamond, 5)",
+        "(Club, J)",
+        "(Spade, 8)",
+        "(Club, Q)",
+        "(Spade, 6)"
+      ]
+    }
+  }
+}

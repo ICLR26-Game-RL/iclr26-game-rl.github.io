@@ -1,0 +1,177 @@
+{
+  "sample": {
+    "index": 14,
+    "data_id": "tengram-mcq-00014-rotation",
+    "question_id": 2,
+    "question_description": "piece_rotation",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00014.png",
+    "state": "states/tengram-mcq-00014.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00014.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00014.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 90 degrees counterclockwise\n2: rotate 90 degrees clockwise\n3: rotate 90 degrees by both direction\n4: can't put inside (flipped)\n5: rotate 180 degrees\n6: both rotate 0 and 180 degrees\n7: no matter what degrees rotated, it always can fit\n8: rotate 0 degrees",
+    "analysis": "Let's analyze how piece 7 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 2x3\n   - Piece dimensions: 2x3\n\n   - Based on dimensions, these rotations (clockwise) might work: [0, 180]\n\n\n2. Testing Each Rotation:\n\n   0° rotation:\n   - Success! Piece fits perfectly\n\n   180° rotation:\n   - Failed: First mismatch at row 0, column 2 (mapped to (1,0) of removed piece and (0,6) of board)\n   - At this position, the hole was empty but the piece was absent\n\n3. Summary:\n   - Valid rotations found: [0]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 0 degrees which is Option 8.",
+    "options": [
+      "rotate 90 degrees counterclockwise",
+      "rotate 90 degrees clockwise",
+      "rotate 90 degrees by both direction",
+      "can't put inside (flipped)",
+      "rotate 180 degrees",
+      "both rotate 0 and 180 degrees",
+      "no matter what degrees rotated, it always can fit",
+      "rotate 0 degrees"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          4,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          0,
+          5
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          2,
+          2,
+          2
+        ]
+      ],
+      "seeds": [
+        [
+          2,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "removed_pieces": [
+        7
+      ],
+      "config": {
+        "grid_size": 8,
+        "num_seeds": 7,
+        "num_pieces_to_remove": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00014-rotation",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "piece_rotation",
+      "image": "images/tengram-mcq-00014.png",
+      "state": "states/tengram-mcq-00014.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 90 degrees counterclockwise\n2: rotate 90 degrees clockwise\n3: rotate 90 degrees by both direction\n4: can't put inside (flipped)\n5: rotate 180 degrees\n6: both rotate 0 and 180 degrees\n7: no matter what degrees rotated, it always can fit\n8: rotate 0 degrees",
+      "answer": 8,
+      "analysis": "Let's analyze how piece 7 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 2x3\n   - Piece dimensions: 2x3\n\n   - Based on dimensions, these rotations (clockwise) might work: [0, 180]\n\n\n2. Testing Each Rotation:\n\n   0° rotation:\n   - Success! Piece fits perfectly\n\n   180° rotation:\n   - Failed: First mismatch at row 0, column 2 (mapped to (1,0) of removed piece and (0,6) of board)\n   - At this position, the hole was empty but the piece was absent\n\n3. Summary:\n   - Valid rotations found: [0]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 0 degrees which is Option 8.",
+      "options": [
+        "rotate 90 degrees counterclockwise",
+        "rotate 90 degrees clockwise",
+        "rotate 90 degrees by both direction",
+        "can't put inside (flipped)",
+        "rotate 180 degrees",
+        "both rotate 0 and 180 degrees",
+        "no matter what degrees rotated, it always can fit",
+        "rotate 0 degrees"
+      ]
+    }
+  }
+}

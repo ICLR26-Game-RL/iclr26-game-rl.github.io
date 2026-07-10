@@ -1,0 +1,446 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "color-mcq-00009-gradient_pattern",
+    "question_id": 2,
+    "question_description": "gradient_pattern",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Rules: 1. Colors change gradually along rows or columns. 2. A gradient transitions between two colors. 3. Each row or column can have its own independent gradi...",
+    "image": "images/color-mcq-00009.png",
+    "state": "states/color-mcq-00009.json",
+    "image_url": "data/hue/files/images/color-mcq-00009.png",
+    "state_url": "data/hue/files/states/color-mcq-00009.json",
+    "has_options": true,
+    "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat is the gradient pattern in column 2?\n\nOptions:\n1: transitioning from bright orange to vivid dark blue\n2: transitioning from vivid indigo to dark gray\n3: transitioning from bright cyan to vivid dark purple\n4: transitioning from vivid cyan to pale bright red\n5: transitioning from vivid bright red to pale dark cyan\n6: transitioning from blue to black\n7: transitioning from bright purple to vivid dark yellow\n8: transitioning from dark purple to vivid bright cyan",
+    "analysis": "The column 2 shows a pattern that is transitioning from dark purple to vivid bright cyan. So the answer is Option 8.",
+    "options": [
+      "transitioning from bright orange to vivid dark blue",
+      "transitioning from vivid indigo to dark gray",
+      "transitioning from bright cyan to vivid dark purple",
+      "transitioning from vivid cyan to pale bright red",
+      "transitioning from vivid bright red to pale dark cyan",
+      "transitioning from blue to black",
+      "transitioning from bright purple to vivid dark yellow",
+      "transitioning from dark purple to vivid bright cyan"
+    ],
+    "state_content": {
+      "board": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            99,
+            28,
+            79
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            40,
+            34,
+            50
+          ],
+          [
+            81,
+            68,
+            100
+          ],
+          [
+            95,
+            83,
+            112
+          ],
+          [
+            110,
+            99,
+            125
+          ],
+          [
+            124,
+            114,
+            138
+          ],
+          [
+            139,
+            130,
+            151
+          ],
+          [
+            153,
+            145,
+            164
+          ],
+          [
+            168,
+            161,
+            177
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            64,
+            109,
+            122
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            46,
+            150,
+            143
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            29,
+            191,
+            165
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            6,
+            116,
+            93
+          ],
+          [
+            12,
+            232,
+            187
+          ],
+          [
+            32,
+            233,
+            192
+          ],
+          [
+            52,
+            235,
+            198
+          ],
+          [
+            72,
+            237,
+            204
+          ],
+          [
+            92,
+            239,
+            209
+          ],
+          [
+            112,
+            241,
+            215
+          ],
+          [
+            133,
+            243,
+            221
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "removed_positions": [],
+      "removed_colors": [],
+      "extra_options": [],
+      "cell_labels": {},
+      "gradient_info": [
+        {
+          "type": "column",
+          "index": 1,
+          "direction": null,
+          "start_color": [
+            99,
+            28,
+            79
+          ],
+          "end_color": [
+            12,
+            232,
+            187
+          ]
+        },
+        {
+          "type": "row",
+          "index": 2,
+          "direction": null,
+          "start_color": [
+            40,
+            34,
+            50
+          ],
+          "end_color": [
+            168,
+            161,
+            177
+          ]
+        },
+        {
+          "type": "row",
+          "index": 6,
+          "direction": null,
+          "start_color": [
+            6,
+            116,
+            93
+          ],
+          "end_color": [
+            133,
+            243,
+            221
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat is the gradient pattern in column 2?\n\nOptions:\n1: transitioning from bright orange to vivid dark blue\n2: transitioning from vivid indigo to dark gray\n3: transitioning from bright cyan to vivid dark purple\n4: transitioning from vivid cyan to pale bright red\n5: transitioning from vivid bright red to pale dark cyan\n6: transitioning from blue to black\n7: transitioning from bright purple to vivid dark yellow\n8: transitioning from dark purple to vivid bright cyan",
+      "answer": 8,
+      "options": [
+        "transitioning from bright orange to vivid dark blue",
+        "transitioning from vivid indigo to dark gray",
+        "transitioning from bright cyan to vivid dark purple",
+        "transitioning from vivid cyan to pale bright red",
+        "transitioning from vivid bright red to pale dark cyan",
+        "transitioning from blue to black",
+        "transitioning from bright purple to vivid dark yellow",
+        "transitioning from dark purple to vivid bright cyan"
+      ],
+      "qa_type": "Target Perception",
+      "analysis": "The column 2 shows a pattern that is transitioning from dark purple to vivid bright cyan. So the answer is Option 8.",
+      "data_id": "color-mcq-00009-gradient_pattern",
+      "question_id": 2,
+      "question_description": "gradient_pattern",
+      "image": "images/color-mcq-00009.png",
+      "state": "states/color-mcq-00009.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium"
+    }
+  }
+}

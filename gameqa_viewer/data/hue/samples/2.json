@@ -1,0 +1,260 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "color-mcq-00003-gradient_pattern",
+    "question_id": 2,
+    "question_description": "gradient_pattern",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Rules: 1. Colors change gradually along rows or columns. 2. A gradient transitions between two colors. 3. Each row or column can have its own independent gradi...",
+    "image": "images/color-mcq-00003.png",
+    "state": "states/color-mcq-00003.json",
+    "image_url": "data/hue/files/images/color-mcq-00003.png",
+    "state_url": "data/hue/files/states/color-mcq-00003.json",
+    "has_options": true,
+    "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat is the gradient pattern in column 5?\n\nOptions:\n1: transitioning from bright purple to pale dark cyan\n2: transitioning from vivid green to pale bright purple\n3: transitioning from pale bright yellow to vivid dark blue\n4: transitioning from vivid bright blue to pale red\n5: transitioning from yellow to light gray\n6: transitioning from red to pale bright cyan\n7: transitioning from purple to bright red\n8: transitioning from black to pale bright cyan",
+    "analysis": "The column 5 shows a pattern that is transitioning from purple to bright red. So the answer is Option 7.",
+    "options": [
+      "transitioning from bright purple to pale dark cyan",
+      "transitioning from vivid green to pale bright purple",
+      "transitioning from pale bright yellow to vivid dark blue",
+      "transitioning from vivid bright blue to pale red",
+      "transitioning from yellow to light gray",
+      "transitioning from red to pale bright cyan",
+      "transitioning from purple to bright red",
+      "transitioning from black to pale bright cyan"
+    ],
+    "state_content": {
+      "board": [
+        [
+          [
+            89,
+            124,
+            59
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            60,
+            79,
+            57
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            178,
+            248,
+            119
+          ],
+          [
+            149,
+            203,
+            117
+          ],
+          [
+            120,
+            159,
+            115
+          ],
+          [
+            91,
+            115,
+            113
+          ],
+          [
+            149,
+            41,
+            199
+          ]
+        ],
+        [
+          [
+            190,
+            249,
+            141
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            142,
+            175,
+            138
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            181,
+            73,
+            150
+          ]
+        ],
+        [
+          [
+            203,
+            250,
+            164
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            164,
+            191,
+            161
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            213,
+            105,
+            102
+          ]
+        ],
+        [
+          [
+            216,
+            251,
+            187
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            187,
+            207,
+            185
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            246,
+            138,
+            54
+          ]
+        ]
+      ],
+      "removed_positions": [],
+      "removed_colors": [],
+      "extra_options": [],
+      "cell_labels": {},
+      "gradient_info": [
+        {
+          "type": "row",
+          "index": 1,
+          "direction": null,
+          "start_color": [
+            178,
+            248,
+            119
+          ],
+          "end_color": [
+            91,
+            115,
+            113
+          ]
+        },
+        {
+          "type": "column",
+          "index": 2,
+          "direction": null,
+          "start_color": [
+            60,
+            79,
+            57
+          ],
+          "end_color": [
+            187,
+            207,
+            185
+          ]
+        },
+        {
+          "type": "column",
+          "index": 4,
+          "direction": null,
+          "start_color": [
+            149,
+            41,
+            199
+          ],
+          "end_color": [
+            246,
+            138,
+            54
+          ]
+        },
+        {
+          "type": "column",
+          "index": 0,
+          "direction": null,
+          "start_color": [
+            89,
+            124,
+            59
+          ],
+          "end_color": [
+            216,
+            251,
+            187
+          ]
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "question": "Rules:\n1. Colors change gradually along rows or columns.\n2. A gradient transitions between two colors.\n3. Each row or column can have its own independent gradient pattern.\n4. Row and column indexes begin from 1 at the top-left corner.\n\n\nQuestion:\nWhat is the gradient pattern in column 5?\n\nOptions:\n1: transitioning from bright purple to pale dark cyan\n2: transitioning from vivid green to pale bright purple\n3: transitioning from pale bright yellow to vivid dark blue\n4: transitioning from vivid bright blue to pale red\n5: transitioning from yellow to light gray\n6: transitioning from red to pale bright cyan\n7: transitioning from purple to bright red\n8: transitioning from black to pale bright cyan",
+      "answer": 7,
+      "options": [
+        "transitioning from bright purple to pale dark cyan",
+        "transitioning from vivid green to pale bright purple",
+        "transitioning from pale bright yellow to vivid dark blue",
+        "transitioning from vivid bright blue to pale red",
+        "transitioning from yellow to light gray",
+        "transitioning from red to pale bright cyan",
+        "transitioning from purple to bright red",
+        "transitioning from black to pale bright cyan"
+      ],
+      "qa_type": "Target Perception",
+      "analysis": "The column 5 shows a pattern that is transitioning from purple to bright red. So the answer is Option 7.",
+      "data_id": "color-mcq-00003-gradient_pattern",
+      "question_id": 2,
+      "question_description": "gradient_pattern",
+      "image": "images/color-mcq-00003.png",
+      "state": "states/color-mcq-00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium"
+    }
+  }
+}

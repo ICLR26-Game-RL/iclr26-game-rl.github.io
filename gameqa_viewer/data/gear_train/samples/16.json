@@ -1,0 +1,154 @@
+{
+  "sample": {
+    "index": 16,
+    "data_id": "gear_train-00017-q1",
+    "question_id": 1,
+    "question_description": "Count how many gears are directly meshed with a given gear.",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00017.png",
+    "state": "states/panel_00017.json",
+    "image_url": "data/gear_train/files/images/panel_00017.png",
+    "state_url": "data/gear_train/files/states/panel_00017.json",
+    "has_options": false,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nLook at the panel and count: how many gears are directly meshed with gear A? Answer with a single number.",
+    "analysis": "Checking the image, the toothed rim of gear A touches the rim(s) of: B, E.\nAll meshing pairs in the panel are: A-B, A-E, B-H, B-I, C-E, D-H, F-G.\nTherefore gear A is directly meshed with 2 gear(s).\nSo the answer is 2.",
+    "options": null,
+    "state_content": {
+      "gears": [
+        {
+          "label": "B",
+          "teeth": 20,
+          "center": [
+            258.8,
+            323.5
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "H",
+          "teeth": 10,
+          "center": [
+            224.2,
+            227.6
+          ],
+          "pitch_radius": 34.0
+        },
+        {
+          "label": "D",
+          "teeth": 12,
+          "center": [
+            182.9,
+            165.2
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "A",
+          "teeth": 12,
+          "center": [
+            367.6,
+            323.0
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "E",
+          "teeth": 16,
+          "center": [
+            462.8,
+            323.4
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "C",
+          "teeth": 12,
+          "center": [
+            474.2,
+            417.9
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "I",
+          "teeth": 16,
+          "center": [
+            141.3,
+            357.7
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "F",
+          "teeth": 16,
+          "center": [
+            498.7,
+            155.7
+          ],
+          "pitch_radius": 54.4
+        },
+        {
+          "label": "G",
+          "teeth": 16,
+          "center": [
+            397.5,
+            115.7
+          ],
+          "pitch_radius": 54.4
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "A",
+          "E"
+        ],
+        [
+          "B",
+          "H"
+        ],
+        [
+          "B",
+          "I"
+        ],
+        [
+          "C",
+          "E"
+        ],
+        [
+          "D",
+          "H"
+        ],
+        [
+          "F",
+          "G"
+        ]
+      ],
+      "driver": "E",
+      "driver_direction": "clockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00017-q1",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count how many gears are directly meshed with a given gear.",
+      "image": "images/panel_00017.png",
+      "state": "states/panel_00017.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nLook at the panel and count: how many gears are directly meshed with gear A? Answer with a single number.",
+      "answer": "2",
+      "analysis": "Checking the image, the toothed rim of gear A touches the rim(s) of: B, E.\nAll meshing pairs in the panel are: A-B, A-E, B-H, B-I, C-E, D-H, F-G.\nTherefore gear A is directly meshed with 2 gear(s).\nSo the answer is 2."
+    }
+  }
+}

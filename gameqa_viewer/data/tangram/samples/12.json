@@ -1,0 +1,205 @@
+{
+  "sample": {
+    "index": 12,
+    "data_id": "tengram-mcq-00012-adjacency",
+    "question_id": 4,
+    "question_description": "piece_adjacency",
+    "qa_type": "Target Perception",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00012.png",
+    "state": "states/tengram-mcq-00012.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00012.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00012.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n\nQuestion:\nHow many different pieces are adjacent to Piece 3?\n\nOptions:\n1: 0\n2: 2\n3: 1\n4: 6\n5: 3\n6: 4\n7: 7\n8: 5",
+    "analysis": "Let's analyze Piece 3 (green):\n\nPiece Boundaries:\n- Spans rows 3 to 9 (height: 7)\n- Spans columns 0 to 2 (width: 3)\n\n1. Cell-by-cell examination:\nCell (3,0):\n   - up: Piece 2 (vivid bright orange) at (2,0)\n   - right: Piece 2 (vivid bright orange) at (3,1)\nCell (4,0):\n   - right: Piece 2 (vivid bright orange) at (4,1)\nCell (5,0): No adjacent pieces\nCell (5,1):\n   - up: Piece 2 (vivid bright orange) at (4,1)\nCell (6,0): No adjacent pieces\nCell (6,1): No adjacent pieces\nCell (7,0): No adjacent pieces\nCell (7,1): No adjacent pieces\nCell (8,0): No adjacent pieces\nCell (8,1): No adjacent pieces\nCell (8,2): No adjacent pieces\nCell (9,0): No adjacent pieces\nCell (9,1): No adjacent pieces\nCell (9,2): No adjacent pieces\n\n2. Adjacent Pieces Summary:\n- Piece 2 (vivid bright orange): 4 contact sides\n\nTotal number of unique adjacent pieces: 1\nTherefore, the answer is Option 3.",
+    "options": [
+      "0",
+      "2",
+      "1",
+      "6",
+      "3",
+      "4",
+      "7",
+      "5"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          3,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          3,
+          3,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        [
+          3,
+          3,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "seeds": [
+        [
+          7,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "removed_pieces": [
+        1
+      ],
+      "config": {
+        "grid_size": 10,
+        "num_seeds": 4,
+        "num_pieces_to_remove": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00012-adjacency",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "piece_adjacency",
+      "image": "images/tengram-mcq-00012.png",
+      "state": "states/tengram-mcq-00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n\nQuestion:\nHow many different pieces are adjacent to Piece 3?\n\nOptions:\n1: 0\n2: 2\n3: 1\n4: 6\n5: 3\n6: 4\n7: 7\n8: 5",
+      "answer": 3,
+      "analysis": "Let's analyze Piece 3 (green):\n\nPiece Boundaries:\n- Spans rows 3 to 9 (height: 7)\n- Spans columns 0 to 2 (width: 3)\n\n1. Cell-by-cell examination:\nCell (3,0):\n   - up: Piece 2 (vivid bright orange) at (2,0)\n   - right: Piece 2 (vivid bright orange) at (3,1)\nCell (4,0):\n   - right: Piece 2 (vivid bright orange) at (4,1)\nCell (5,0): No adjacent pieces\nCell (5,1):\n   - up: Piece 2 (vivid bright orange) at (4,1)\nCell (6,0): No adjacent pieces\nCell (6,1): No adjacent pieces\nCell (7,0): No adjacent pieces\nCell (7,1): No adjacent pieces\nCell (8,0): No adjacent pieces\nCell (8,1): No adjacent pieces\nCell (8,2): No adjacent pieces\nCell (9,0): No adjacent pieces\nCell (9,1): No adjacent pieces\nCell (9,2): No adjacent pieces\n\n2. Adjacent Pieces Summary:\n- Piece 2 (vivid bright orange): 4 contact sides\n\nTotal number of unique adjacent pieces: 1\nTherefore, the answer is Option 3.",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "6",
+        "3",
+        "4",
+        "7",
+        "5"
+      ]
+    }
+  }
+}

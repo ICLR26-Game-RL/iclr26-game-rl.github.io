@@ -1,0 +1,102 @@
+{
+  "sample": {
+    "index": 2,
+    "data_id": "gear_train-00003-q2",
+    "question_id": 2,
+    "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears...",
+    "image": "images/panel_00003.png",
+    "state": "states/panel_00003.json",
+    "image_url": "data/gear_train/files/images/panel_00003.png",
+    "state_url": "data/gear_train/files/states/panel_00003.json",
+    "has_options": true,
+    "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear A and the red arrow shows it spins counterclockwise. What happens to gear B?\n\nOptions:\n[1] Gear B spins clockwise\n[2] Gear B spins counterclockwise\n[3] Gear B does not spin at all",
+    "analysis": "All meshing pairs in the panel are: A-C, A-D, B-C.\nThe meshing path from the driver to gear B is A -> C -> B (2 mesh(es)). Each mesh reverses the spin direction.\nGear A spins counterclockwise, so its meshed neighbor gear C spins clockwise.\nGear C spins clockwise, so its meshed neighbor gear B spins counterclockwise.\nWith 2 reversals from counterclockwise, gear B spins counterclockwise.\nSo the answer is: gear B spins counterclockwise. The option number is 2.",
+    "options": [
+      "Gear B spins clockwise",
+      "Gear B spins counterclockwise",
+      "Gear B does not spin at all"
+    ],
+    "state_content": {
+      "gears": [
+        {
+          "label": "C",
+          "teeth": 12,
+          "center": [
+            267.3,
+            178.0
+          ],
+          "pitch_radius": 40.8
+        },
+        {
+          "label": "A",
+          "teeth": 10,
+          "center": [
+            230.2,
+            242.9
+          ],
+          "pitch_radius": 34.0
+        },
+        {
+          "label": "B",
+          "teeth": 20,
+          "center": [
+            375.8,
+            185.4
+          ],
+          "pitch_radius": 68.0
+        },
+        {
+          "label": "D",
+          "teeth": 20,
+          "center": [
+            275.0,
+            334.6
+          ],
+          "pitch_radius": 68.0
+        }
+      ],
+      "meshing_pairs": [
+        [
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "driver": "A",
+      "driver_direction": "counterclockwise",
+      "rules": "meshed gears spin in opposite directions; teeth x turns is equal for meshed gears; an odd loop jams"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "gear_train-00003-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine the spin direction of a gear (or that it cannot spin) given the driver gear's direction.",
+      "image": "images/panel_00003.png",
+      "state": "states/panel_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "question": "Gear Train is a mechanical reasoning puzzle. Several spur gears are mounted on a fixed panel; gears never move sideways, they can only spin in place. Two gears are meshed if and only if their toothed rims touch in the image. Each gear is labeled with a letter and its number of teeth is printed under the letter (for example '12T' means 12 teeth). Meshed gears obey two laws: (1) they always spin in opposite directions, and (2) they pass the same number of teeth per unit time, so teeth_A x turns_A = teeth_B x turns_B. The driver gear is marked with a red circular arrow showing its spin direction. A chain of meshed gears forming a closed loop with an ODD number of gears cannot spin at all - the whole train jams.\n\nThe driver gear is gear A and the red arrow shows it spins counterclockwise. What happens to gear B?\n\nOptions:\n[1] Gear B spins clockwise\n[2] Gear B spins counterclockwise\n[3] Gear B does not spin at all",
+      "answer": 2,
+      "analysis": "All meshing pairs in the panel are: A-C, A-D, B-C.\nThe meshing path from the driver to gear B is A -> C -> B (2 mesh(es)). Each mesh reverses the spin direction.\nGear A spins counterclockwise, so its meshed neighbor gear C spins clockwise.\nGear C spins clockwise, so its meshed neighbor gear B spins counterclockwise.\nWith 2 reversals from counterclockwise, gear B spins counterclockwise.\nSo the answer is: gear B spins counterclockwise. The option number is 2.",
+      "options": [
+        "Gear B spins clockwise",
+        "Gear B spins counterclockwise",
+        "Gear B does not spin at all"
+      ]
+    }
+  }
+}

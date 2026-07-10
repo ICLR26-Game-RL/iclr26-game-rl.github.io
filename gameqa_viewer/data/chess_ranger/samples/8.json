@@ -1,0 +1,138 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "chess-ranger-009-pos_question",
+    "question_id": 4,
+    "question_description": "Asking a piece located at a specific square",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": "G",
+    "answer_preview": "G",
+    "question_preview": "What piece is at g3?Choose from the following options:A.Pawn,B.Rook,C.Knight,D.Bishop,E.Queen,F.King,G.No Piece",
+    "image": "images/board_009.png",
+    "state": "states/board_009.json",
+    "image_url": "data/chess_ranger/files/images/board_009.png",
+    "state_url": "data/chess_ranger/files/states/board_009.json",
+    "has_options": true,
+    "question": "What piece is at g3?Choose from the following options:A.Pawn,B.Rook,C.Knight,D.Bishop,E.Queen,F.King,G.No Piece",
+    "analysis": "The current board situation is:Rook at f8.Rook at e7.Queen at d6.Knight at b4.King at f4.The piece at g3 is No Piece.So the option is G.",
+    "options": [
+      "A.Pawn",
+      "B.Rook",
+      "C.Knight",
+      "D.Bishop",
+      "E.Queen",
+      "F.King",
+      "G.No Piece"
+    ],
+    "state_content": {
+      "pieces": 5,
+      "mine_board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          "R",
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          "R",
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          "Q",
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "N",
+          0,
+          0,
+          0,
+          "K",
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "chess-ranger-009-pos_question",
+      "qa_type": "Target Perception",
+      "question_id": 4,
+      "question_description": "Asking a piece located at a specific square",
+      "image": "images/board_009.png",
+      "state": "states/board_009.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "What piece is at g3?Choose from the following options:A.Pawn,B.Rook,C.Knight,D.Bishop,E.Queen,F.King,G.No Piece",
+      "answer": "G",
+      "analysis": "The current board situation is:Rook at f8.Rook at e7.Queen at d6.Knight at b4.King at f4.The piece at g3 is No Piece.So the option is G.",
+      "options": [
+        "A.Pawn",
+        "B.Rook",
+        "C.Knight",
+        "D.Bishop",
+        "E.Queen",
+        "F.King",
+        "G.No Piece"
+      ]
+    }
+  }
+}

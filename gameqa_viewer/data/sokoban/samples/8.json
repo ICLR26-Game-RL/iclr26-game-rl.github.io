@@ -1,0 +1,123 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "sokoban-data-00003-00001",
+    "question_id": 1,
+    "question_description": "Given a sequence of player moves, predict the final position of the player",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are m...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/sokoban/files/images/board_00003.png",
+    "state_url": "data/sokoban/files/states/board_00003.json",
+    "has_options": true,
+    "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.If the player makes these moves: Left → Left → Up → Right → Right, where will player end up?\n\nOptions:\n[1] (2, 2)\n[2] (2, 3)\n[3] (2, 1)\n[4] (3, 2)\n[5] (3, 3)\n[6] (1, 2)\n[7] (3, 1)\n[8] (1, 3)",
+    "analysis": "- Player position: (3, 3)\n- Boxes positions: (2, 2)\n- Target positions: (2, 1)\nMove sequence analysis:\nInitial position: (3, 3)\nMove 1 - Left: Player moves from (3, 3) to (3, 2)\nMove 2 - Left: Player moves from (3, 2) to (3, 1)\nMove 3 - Up: Player moves from (3, 1) to (2, 1)\nMove 4 - Right: Player moves from (2, 1) to (2, 2)\nMove 5 - Right: Failed - Cannot push box (Player stays at (2, 2))\n\nFinal position: (2, 2)\n\nSo the answer is (2, 2). The option number is 1. ",
+    "options": [
+      "(2, 2)",
+      "(2, 3)",
+      "(2, 1)",
+      "(3, 2)",
+      "(3, 3)",
+      "(1, 2)",
+      "(3, 1)",
+      "(1, 3)"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "grid_size": {
+        "width": 5,
+        "height": 5
+      },
+      "player": {
+        "x": 3,
+        "y": 3
+      },
+      "boxes": [
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "targets": [
+        {
+          "x": 1,
+          "y": 2
+        }
+      ],
+      "symbols": {
+        "empty": 0,
+        "wall": 1,
+        "box": 2,
+        "target": 3,
+        "box_on_target": 4,
+        "player": 5,
+        "player_on_target": 6
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "sokoban-data-00003-00001",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 1,
+      "question_description": "Given a sequence of player moves, predict the final position of the player",
+      "question": "This is a Sokoban puzzle where cartoon person is player, green X is target, brown box with X is box to push, brown tiles are walls, and light brown areas are movable spaces.The coordinates (x, y) in this puzzle represent the matrix format.If the player makes these moves: Left → Left → Up → Right → Right, where will player end up?\n\nOptions:\n[1] (2, 2)\n[2] (2, 3)\n[3] (2, 1)\n[4] (3, 2)\n[5] (3, 3)\n[6] (1, 2)\n[7] (3, 1)\n[8] (1, 3)",
+      "answer": 1,
+      "analysis": "- Player position: (3, 3)\n- Boxes positions: (2, 2)\n- Target positions: (2, 1)\nMove sequence analysis:\nInitial position: (3, 3)\nMove 1 - Left: Player moves from (3, 3) to (3, 2)\nMove 2 - Left: Player moves from (3, 2) to (3, 1)\nMove 3 - Up: Player moves from (3, 1) to (2, 1)\nMove 4 - Right: Player moves from (2, 1) to (2, 2)\nMove 5 - Right: Failed - Cannot push box (Player stays at (2, 2))\n\nFinal position: (2, 2)\n\nSo the answer is (2, 2). The option number is 1. ",
+      "options": [
+        "(2, 2)",
+        "(2, 3)",
+        "(2, 1)",
+        "(3, 2)",
+        "(3, 3)",
+        "(1, 2)",
+        "(3, 1)",
+        "(1, 3)"
+      ]
+    }
+  }
+}

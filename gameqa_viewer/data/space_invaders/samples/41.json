@@ -1,0 +1,245 @@
+{
+  "sample": {
+    "index": 41,
+    "data_id": "space_invaders-fill-00042",
+    "question_id": 2,
+    "question_description": "Ask the number of enemies in a row",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 10,
+    "answer_preview": "10",
+    "question_preview": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and colum...",
+    "image": "images/space_invaders_00006.png",
+    "state": "states/space_invaders_00006.json",
+    "image_url": "data/space_invaders/files/images/space_invaders_00006.png",
+    "state_url": "data/space_invaders/files/states/space_invaders_00006.json",
+    "has_options": false,
+    "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are on row 2? ",
+    "analysis": "It can be seen from the image that on row 2, enemies are present on columns 4, 5, 6, 7, 8, 9, 10, 11, 12 and 13. So the number is 10. ",
+    "options": null,
+    "state_content": {
+      "enemy_rows": 5,
+      "enemy_cols": 10,
+      "enemy_area_rows": 7,
+      "total_cols": 14,
+      "ship_col": 7,
+      "enemies": [
+        {
+          "x": 1,
+          "y": 4,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 9,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 9,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 10,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 10,
+          "color": "blue"
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 11,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 11,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "color": "blue"
+        },
+        {
+          "x": 3,
+          "y": 12,
+          "color": "blue"
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "color": "green"
+        },
+        {
+          "x": 5,
+          "y": 12,
+          "color": "green"
+        },
+        {
+          "x": 1,
+          "y": 13,
+          "color": "purple"
+        },
+        {
+          "x": 2,
+          "y": 13,
+          "color": "blue"
+        }
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "space_invaders-fill-00042",
+      "qa_type": "Target Perception",
+      "question_id": 2,
+      "question_description": "Ask the number of enemies in a row",
+      "image": "images/space_invaders_00006.png",
+      "state": "states/space_invaders_00006.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "The given image represents a simplified interface of the game Space Invaders. The enemy area is implicitly divided into a grid of cells, with the row and column numbers shown on the left and top sides of the grid respectively which you should strictly follow. Each cell is either empty or occupied by an incoming enemy which can be purple, blue or green. The ship is at the bottom row, aligned with one of the columns, which shoots the enemies using laser while dodging possible lasers from the enemies. \nHow many enemies are on row 2? ",
+      "answer": 10,
+      "analysis": "It can be seen from the image that on row 2, enemies are present on columns 4, 5, 6, 7, 8, 9, 10, 11, 12 and 13. So the number is 10. "
+    }
+  }
+}

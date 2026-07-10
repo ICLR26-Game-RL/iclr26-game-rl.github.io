@@ -1,0 +1,83 @@
+{
+  "sample": {
+    "index": 10,
+    "data_id": "logic_circuit-00011-q2",
+    "question_id": 2,
+    "question_description": "Evaluate the circuit for the shown switch states and decide whether the lamp is ON or OFF.",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": "OFF",
+    "answer_preview": "OFF",
+    "question_preview": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logi...",
+    "image": "images/circuit_00011.png",
+    "state": "states/circuit_00011.json",
+    "image_url": "data/logic_circuit/files/images/circuit_00011.png",
+    "state_url": "data/logic_circuit/files/states/circuit_00011.json",
+    "has_options": false,
+    "question": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logic gates in the middle, and one lamp on the right. Wires carry the values left to right; a black dot marks a wire that branches to several gates. Gate shapes follow the usual convention and each gate is also labeled with its type: AND outputs 1 only if all inputs are 1; OR outputs 1 if at least one input is 1; XOR outputs 1 if an odd number of inputs are 1; NAND outputs the opposite of AND (0 only if all inputs are 1); NOT outputs the opposite of its single input. The lamp lights up exactly when the final wire carries 1.\n\nThe switches are set as shown in the image. Evaluate the circuit: is the lamp ON or OFF? Answer with ON or OFF.",
+    "analysis": "Read the switch states from the image: A = 0, B = 1, C = 0, D = 0.\nEvaluate the gates in order:\nGate G1 (OR): inputs A = 0, B = 1 -> OR(0, 1) = 1.\nGate G2 (OR): inputs B = 1, C = 0 -> OR(1, 0) = 1.\nGate G3 (AND): inputs C = 0, D = 0 -> AND(0, 0) = 0.\nGate G4 (AND): inputs G1 = 1, G2 = 1, G3 = 0 -> AND(1, 1, 0) = 0.\nThe lamp wire carries 0, so the lamp is OFF.\nSo the answer is OFF.",
+    "options": null,
+    "state_content": {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "gates": {
+        "G1": {
+          "type": "OR",
+          "inputs": [
+            "A",
+            "B"
+          ]
+        },
+        "G2": {
+          "type": "OR",
+          "inputs": [
+            "B",
+            "C"
+          ]
+        },
+        "G3": {
+          "type": "AND",
+          "inputs": [
+            "C",
+            "D"
+          ]
+        },
+        "G4": {
+          "type": "AND",
+          "inputs": [
+            "G1",
+            "G2",
+            "G3"
+          ]
+        }
+      },
+      "lamp_driven_by": "G4",
+      "gate_semantics": {
+        "AND": "1 iff all inputs are 1",
+        "OR": "1 iff at least one input is 1",
+        "XOR": "1 iff an odd number of inputs are 1",
+        "NAND": "0 iff all inputs are 1",
+        "NOT": "inverts its single input"
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "logic_circuit-00011-q2",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Evaluate the circuit for the shown switch states and decide whether the lamp is ON or OFF.",
+      "image": "images/circuit_00011.png",
+      "state": "states/circuit_00011.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Logic Circuit is a digital-circuit reading puzzle. The diagram shows input switches on the left (each labeled with a letter and set to 1 = ON or 0 = OFF), logic gates in the middle, and one lamp on the right. Wires carry the values left to right; a black dot marks a wire that branches to several gates. Gate shapes follow the usual convention and each gate is also labeled with its type: AND outputs 1 only if all inputs are 1; OR outputs 1 if at least one input is 1; XOR outputs 1 if an odd number of inputs are 1; NAND outputs the opposite of AND (0 only if all inputs are 1); NOT outputs the opposite of its single input. The lamp lights up exactly when the final wire carries 1.\n\nThe switches are set as shown in the image. Evaluate the circuit: is the lamp ON or OFF? Answer with ON or OFF.",
+      "answer": "OFF",
+      "analysis": "Read the switch states from the image: A = 0, B = 1, C = 0, D = 0.\nEvaluate the gates in order:\nGate G1 (OR): inputs A = 0, B = 1 -> OR(0, 1) = 1.\nGate G2 (OR): inputs B = 1, C = 0 -> OR(1, 0) = 1.\nGate G3 (AND): inputs C = 0, D = 0 -> AND(0, 0) = 0.\nGate G4 (AND): inputs G1 = 1, G2 = 1, G3 = 0 -> AND(1, 1, 0) = 0.\nThe lamp wire carries 0, so the lamp is OFF.\nSo the answer is OFF."
+    }
+  }
+}

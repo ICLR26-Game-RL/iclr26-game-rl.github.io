@@ -1,0 +1,251 @@
+{
+  "sample": {
+    "index": 19,
+    "data_id": "tents-mcq-00003-which-position-has-tree",
+    "question_id": 8,
+    "question_description": "which of the following positions contains a tree?",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, an...",
+    "image": "images/00003.png",
+    "state": "states/00003.json",
+    "image_url": "data/tents/files/images/00003.png",
+    "state_url": "data/tents/files/states/00003.json",
+    "has_options": true,
+    "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, which of the following positions contains a tree?\nOptions:\n1: (8, 5)\n2: (12, 3)\n3: (9, 6)\n4: (1, 8)\n5: (8, 0)\n6: (0, 2)\n7: (7, 9)\n8: (3, 8)",
+    "analysis": "**Step-by-step reasoning:**\nOption 1: The position (8, 5) is empty.\nOption 2: The position (12, 3) is empty.\nOption 3: The position (9, 6) contains a tree.\nOption 4: The position (1, 8) is empty.\nOption 5: The position (8, 0) is empty.\nOption 6: The position (0, 2) is empty.\nOption 7: The position (7, 9) is empty.\nOption 8: The position (3, 8) is empty.\n\nSo, the correct answer is option 3, which corresponds to the position (9, 6).",
+    "options": [
+      [
+        8,
+        5
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    "state_content": {
+      "size": [
+        13,
+        13
+      ],
+      "tree_positions": [
+        [
+          3,
+          4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "tent_positions": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "removed_tents": [
+        [
+          0,
+          9
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          10,
+          3
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tents-mcq-00003-which-position-has-tree",
+      "qa_type": "Target Perception",
+      "question_id": 8,
+      "question_description": "which of the following positions contains a tree?",
+      "image": "images/00003.png",
+      "state": "states/00003.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "question": "This is a Tents puzzle. In this game, you will start with a grid that only marks the positions of the trees, the number of tents that should be in each row, and the number of tents that should be in each column. Your goal is to place the tents step by step on the grid according to the following rules until there are no more missing tents in the grid:\n1. **Valid Cell States**: Each cell in the grid can only be in one of the following three states, which are empty, containing a tree, and containing a tent.\n2. **Equal Number of Tents and Trees**: The total number of tents you place must be equal to the number of trees present on the grid.\n3. **Tent Placement Restrictions**: Tents can only be placed horizontally or vertically (diagonally does not count) adjacent to at least one tree.\n4. **No Adjacent Tents**: No two tents can be adjacent, including diagonally.\n5. **Row and Column Constraints**: The number of tents that should be placed in each row or column is given by the numbers on the left and top of the grid.\n\nThe positions of the trees and the tents are represented by their icons on the grid respectively. The blue numbers on the left and top of the grid indicate the number of tents that should be placed in each row or column finally. The black numbers on the left and top of the grid are the row numbers and column numbers, respectively. In the coordinates (x, y), x corresponds to the row number, and y corresponds to the column number. The row and column numbering both start from 0, meaning that the first row is actually row 0. The origin (0,0) is in the upper-left corner of the grid.\n\nIn the current state, only some of the correct positions of the tents are marked in the grid.Given the current state, which of the following positions contains a tree?\nOptions:\n1: (8, 5)\n2: (12, 3)\n3: (9, 6)\n4: (1, 8)\n5: (8, 0)\n6: (0, 2)\n7: (7, 9)\n8: (3, 8)",
+      "answer": 3,
+      "options": [
+        [
+          8,
+          5
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "analysis": "**Step-by-step reasoning:**\nOption 1: The position (8, 5) is empty.\nOption 2: The position (12, 3) is empty.\nOption 3: The position (9, 6) contains a tree.\nOption 4: The position (1, 8) is empty.\nOption 5: The position (8, 0) is empty.\nOption 6: The position (0, 2) is empty.\nOption 7: The position (7, 9) is empty.\nOption 8: The position (3, 8) is empty.\n\nSo, the correct answer is option 3, which corresponds to the position (9, 6)."
+    }
+  }
+}

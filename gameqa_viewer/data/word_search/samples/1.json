@@ -1,0 +1,124 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "word-mcq-00002",
+    "question_id": 0,
+    "question_description": "cell_letter",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "Rules: 1. The grid contains uppercase letters. 2. Row and column indexes begin from 1 at the top-left corner. Question: What letter is at row 3, column 7? Opti...",
+    "image": "images/word-mcq-00002.png",
+    "state": "states/word-mcq-00002.json",
+    "image_url": "data/word_search/files/images/word-mcq-00002.png",
+    "state_url": "data/word_search/files/states/word-mcq-00002.json",
+    "has_options": true,
+    "question": "Rules:\n1. The grid contains uppercase letters.\n2. Row and column indexes begin from 1 at the top-left corner.\n\nQuestion:\nWhat letter is at row 3, column 7?\n\nOptions:\n1: N\n2: U\n3: V\n4: J\n5: I\n6: K\n7: H\n8: T",
+    "analysis": "The letter at position (3, 7) is V. So the answer is Option 3.",
+    "options": [
+      "N",
+      "U",
+      "V",
+      "J",
+      "I",
+      "K",
+      "H",
+      "T"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          "D",
+          "T",
+          "X",
+          "I",
+          "P",
+          "A",
+          "Q"
+        ],
+        [
+          "C",
+          "X",
+          "X",
+          "Q",
+          "J",
+          "W",
+          "Q"
+        ],
+        [
+          "G",
+          "E",
+          "H",
+          "M",
+          "J",
+          "L",
+          "V"
+        ],
+        [
+          "P",
+          "N",
+          "T",
+          "U",
+          "F",
+          "B",
+          "R"
+        ],
+        [
+          "P",
+          "O",
+          "T",
+          "J",
+          "Y",
+          "T",
+          "G"
+        ],
+        [
+          "J",
+          "F",
+          "R",
+          "J",
+          "M",
+          "N",
+          "R"
+        ],
+        [
+          "J",
+          "V",
+          "V",
+          "H",
+          "C",
+          "L",
+          "W"
+        ]
+      ],
+      "size": 7,
+      "question_type": "cell_letter"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "word-mcq-00002",
+      "qa_type": "Target Perception",
+      "question_id": 0,
+      "question_description": "cell_letter",
+      "image": "images/word-mcq-00002.png",
+      "state": "states/word-mcq-00002.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "question": "Rules:\n1. The grid contains uppercase letters.\n2. Row and column indexes begin from 1 at the top-left corner.\n\nQuestion:\nWhat letter is at row 3, column 7?\n\nOptions:\n1: N\n2: U\n3: V\n4: J\n5: I\n6: K\n7: H\n8: T",
+      "answer": 3,
+      "analysis": "The letter at position (3, 7) is V. So the answer is Option 3.",
+      "options": [
+        "N",
+        "U",
+        "V",
+        "J",
+        "I",
+        "K",
+        "H",
+        "T"
+      ]
+    }
+  }
+}

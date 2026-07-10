@@ -1,0 +1,149 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "tengram-mcq-00001-rotation",
+    "question_id": 2,
+    "question_description": "piece_rotation",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "Rules: 1. Each numbered region represents a piece on the board. 2. Pieces are considered adjacent if they share at least one edge. 3. Pieces that only touch at...",
+    "image": "images/tengram-mcq-00001.png",
+    "state": "states/tengram-mcq-00001.json",
+    "image_url": "data/tangram/files/images/tengram-mcq-00001.png",
+    "state_url": "data/tangram/files/states/tengram-mcq-00001.json",
+    "has_options": true,
+    "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 90 degrees counterclockwise\n2: no matter what degrees rotated, it always can fit\n3: rotate 90 degrees clockwise\n4: rotate 90 degrees by both direction\n5: rotate 0 degrees\n6: both rotate 0 and 180 degrees\n7: rotate 180 degrees\n8: can't put inside (flipped)",
+    "analysis": "Let's analyze how piece 5 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 2x1\n   - Piece dimensions: 1x2\n\n   - Based on dimensions, these rotations (clockwise) might work: [90, 270]\n\n\n2. Testing Each Rotation:\n\n   90° rotation:\n   - Success! Piece fits perfectly\n\n   270° rotation:\n   - Success! Piece fits perfectly\n\n3. Summary:\n   - Valid rotations found: [90, 270]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 90 degrees by both direction which is Option 4.",
+    "options": [
+      "rotate 90 degrees counterclockwise",
+      "no matter what degrees rotated, it always can fit",
+      "rotate 90 degrees clockwise",
+      "rotate 90 degrees by both direction",
+      "rotate 0 degrees",
+      "both rotate 0 and 180 degrees",
+      "rotate 180 degrees",
+      "can't put inside (flipped)"
+    ],
+    "state_content": {
+      "grid": [
+        [
+          3,
+          3,
+          3,
+          6,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          3,
+          6,
+          6,
+          7
+        ],
+        [
+          1,
+          3,
+          3,
+          6,
+          6,
+          7
+        ],
+        [
+          1,
+          0,
+          3,
+          4,
+          4,
+          7
+        ],
+        [
+          1,
+          0,
+          2,
+          4,
+          4,
+          8
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          8,
+          8
+        ]
+      ],
+      "seeds": [
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "removed_pieces": [
+        5
+      ],
+      "config": {
+        "grid_size": 6,
+        "num_seeds": 8,
+        "num_pieces_to_remove": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tengram-mcq-00001-rotation",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "piece_rotation",
+      "image": "images/tengram-mcq-00001.png",
+      "state": "states/tengram-mcq-00001.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "question": "Rules:\n1. Each numbered region represents a piece on the board.\n2. Pieces are considered adjacent if they share at least one edge.\n3. Pieces that only touch at corners are not considered adjacent.\n4. One piece is removed from main board and shown below. It has been rotated and may have been flipped.\n\nQuestion:\nCan the removed piece fit back into the main board by only rotation? If yes, what rotation(s) would work?\n\nOptions:\n1: rotate 90 degrees counterclockwise\n2: no matter what degrees rotated, it always can fit\n3: rotate 90 degrees clockwise\n4: rotate 90 degrees by both direction\n5: rotate 0 degrees\n6: both rotate 0 and 180 degrees\n7: rotate 180 degrees\n8: can't put inside (flipped)",
+      "answer": 4,
+      "analysis": "Let's analyze how piece 5 can be rotated to fit the hole:\n\n\n1. Dimension Analysis:\n   - Hole dimensions: 2x1\n   - Piece dimensions: 1x2\n\n   - Based on dimensions, these rotations (clockwise) might work: [90, 270]\n\n\n2. Testing Each Rotation:\n\n   90° rotation:\n   - Success! Piece fits perfectly\n\n   270° rotation:\n   - Success! Piece fits perfectly\n\n3. Summary:\n   - Valid rotations found: [90, 270]\n   - Some rotations work\n\nSo, the correct answer is:  rotate 90 degrees by both direction which is Option 4.",
+      "options": [
+        "rotate 90 degrees counterclockwise",
+        "no matter what degrees rotated, it always can fit",
+        "rotate 90 degrees clockwise",
+        "rotate 90 degrees by both direction",
+        "rotate 0 degrees",
+        "both rotate 0 and 180 degrees",
+        "rotate 180 degrees",
+        "can't put inside (flipped)"
+      ]
+    }
+  }
+}

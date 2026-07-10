@@ -1,0 +1,151 @@
+{
+  "sample": {
+    "index": 5,
+    "data_id": "maze_00000_04",
+    "question_id": 4,
+    "question_description": "Count how many turns it takes to reach the finish.",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": "2",
+    "answer_preview": "2",
+    "question_preview": "**Rules:** 1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory. 2. The red circle represents...",
+    "image": "images/image_00000.png",
+    "state": "states/state_00000.json",
+    "image_url": "data/maze/files/images/image_00000.png",
+    "state_url": "data/maze/files/states/state_00000.json",
+    "has_options": false,
+    "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Find the path to the finish and count the number of turns it takes to get there. You only need to provide one number.",
+    "analysis": "First,Let’s figure out the path to the goal step by step.\nStep 1. Go down, from (4, 5) to (5, 5). \nStep 2. Go right, from (5, 5) to (5, 6). \nStep 3. Go right, from (5, 6) to (5, 7). \nStep 4. Go down, from (5, 7) to (6, 7). \nStep 5. Go down, from (6, 7) to (7, 7). Achieved the goal!Therefore, the path is: (4, 5), (5, 5), (5, 6), (5, 7), (6, 7), (7, 7)\n\nThen,Let's count the number of turns step by step.\nStep 2. Turn detected: from down to right.\nStep 3. No turn detected.\nStep 4. Turn detected: from right to down.\nStep 5. No turn detected.\n\nIn summary, the total number of turns is 2",
+    "options": null,
+    "state_content": {
+      "maze": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "size": [
+        9,
+        9
+      ],
+      "playerPosition": [
+        4,
+        5
+      ],
+      "endPosition": [
+        7,
+        7
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "maze_00000_04",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Count how many turns it takes to reach the finish.",
+      "image": "images/image_00000.png",
+      "state": "states/state_00000.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "question": "**Rules:**\n1. This is a maze mini-game.The player needs to navigate around obstacles to reach the destination and achieve victory.\n2. The red circle represents the player, the green block is the goal and the blue blocks are obstacles.\n3. The player can only move within the white blocks.\n4. The coordinates are given in the format (row, col), where row represents the vertical position and col represents the horizontal position.\n\n**Question:** Find the path to the finish and count the number of turns it takes to get there. You only need to provide one number.",
+      "answer": "2",
+      "analysis": "First,Let’s figure out the path to the goal step by step.\nStep 1. Go down, from (4, 5) to (5, 5). \nStep 2. Go right, from (5, 5) to (5, 6). \nStep 3. Go right, from (5, 6) to (5, 7). \nStep 4. Go down, from (5, 7) to (6, 7). \nStep 5. Go down, from (6, 7) to (7, 7). Achieved the goal!Therefore, the path is: (4, 5), (5, 5), (5, 6), (5, 7), (6, 7), (7, 7)\n\nThen,Let's count the number of turns step by step.\nStep 2. Turn detected: from down to right.\nStep 3. No turn detected.\nStep 4. Turn detected: from right to down.\nStep 5. No turn detected.\n\nIn summary, the total number of turns is 2"
+    }
+  }
+}
