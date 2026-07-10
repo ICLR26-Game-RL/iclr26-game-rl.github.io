@@ -113,45 +113,6 @@
       "load_error": null
     },
     {
-      "id": "balance_scale",
-      "name": "Balance Scale",
-      "dataset": "balance_scale_dataset_example",
-      "data_path": "src/balance_scale/balance_scale_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
       "id": "chess_ranger",
       "name": "Chess Ranger",
       "dataset": "chess_ranger_dataset_example",
@@ -229,87 +190,11 @@
       "load_error": null
     },
     {
-      "id": "dice_path",
-      "name": "Dice Path",
-      "dataset": "dice_path_dataset_example",
-      "data_path": "src/dice_path/dice_path_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
       "id": "freecell",
       "name": "Freecell",
       "dataset": "freecell_dataset_example",
       "data_path": "src/freecell/freecell_dataset_example/data.json",
       "count": 9,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
-      "id": "gear_train",
-      "name": "Gear Train",
-      "dataset": "gear_train_dataset_example",
-      "data_path": "src/gear_train/gear_train_dataset_example/data.json",
-      "count": 24,
       "keys": [
         "analysis",
         "answer",
@@ -727,45 +612,6 @@
       "load_error": null
     },
     {
-      "id": "pipeworks",
-      "name": "Pipeworks",
-      "dataset": "pipeworks_dataset_example",
-      "data_path": "src/pipeworks/pipeworks_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
       "id": "PyramidChess",
       "name": "Pyramid Chess",
       "dataset": "pyramidchess_dataset_example",
@@ -849,45 +695,6 @@
       "dataset": "rubiks_cube_dataset_example",
       "data_path": "src/rubiks_cube/rubiks_cube_dataset_example/data.json",
       "count": 18,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
-      "id": "slide_2048",
-      "name": "Slide 2048",
-      "dataset": "slide_2048_dataset_example",
-      "data_path": "src/slide_2048/slide_2048_dataset_example/data.json",
-      "count": 24,
       "keys": [
         "analysis",
         "answer",
@@ -1307,45 +1114,6 @@
       "load_error": null
     },
     {
-      "id": "tower_of_hanoi",
-      "name": "Tower Of Hanoi",
-      "dataset": "tower_of_hanoi_dataset_example",
-      "data_path": "src/tower_of_hanoi/tower_of_hanoi_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
       "id": "ultra_tictactoe",
       "name": "Ultra TicTacToe",
       "dataset": "ultra_tictactoe_dataset_example",
@@ -1426,6 +1194,238 @@
       "dataset": "zuma_dataset_example",
       "data_path": "src/zuma/zuma_dataset_example/data.json",
       "count": 18,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "balance_scale",
+      "name": "[Fable 5] Balance Scale",
+      "dataset": "balance_scale_dataset_example",
+      "data_path": "src/balance_scale/balance_scale_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "dice_path",
+      "name": "[Fable 5] Dice Path",
+      "dataset": "dice_path_dataset_example",
+      "data_path": "src/dice_path/dice_path_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "gear_train",
+      "name": "[Fable 5] Gear Train",
+      "dataset": "gear_train_dataset_example",
+      "data_path": "src/gear_train/gear_train_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "pipeworks",
+      "name": "[Fable 5] Pipeworks",
+      "dataset": "pipeworks_dataset_example",
+      "data_path": "src/pipeworks/pipeworks_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "slide_2048",
+      "name": "[Fable 5] Slide 2048",
+      "dataset": "slide_2048_dataset_example",
+      "data_path": "src/slide_2048/slide_2048_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "tower_of_hanoi",
+      "name": "[Fable 5] Tower Of Hanoi",
+      "dataset": "tower_of_hanoi_dataset_example",
+      "data_path": "src/tower_of_hanoi/tower_of_hanoi_dataset_example/data.json",
+      "count": 24,
       "keys": [
         "analysis",
         "answer",
