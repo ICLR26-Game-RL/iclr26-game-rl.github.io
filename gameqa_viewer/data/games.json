@@ -152,44 +152,6 @@
       "load_error": null
     },
     {
-      "id": "city_skyline",
-      "name": "City Skyline",
-      "dataset": "city_skyline_dataset_example",
-      "data_path": "src/city_skyline/city_skyline_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
       "id": "freecell",
       "name": "Freecell",
       "dataset": "freecell_dataset_example",
@@ -403,45 +365,6 @@
       ],
       "qa_types": [
         "State Prediction",
-        "Target Perception"
-      ],
-      "qa_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "plot_levels": [
-        "Easy",
-        "Hard",
-        "Medium"
-      ],
-      "image_missing": 0,
-      "state_missing": 0,
-      "load_error": null
-    },
-    {
-      "id": "logic_circuit",
-      "name": "Logic Circuit",
-      "dataset": "logic_circuit_dataset_example",
-      "data_path": "src/logic_circuit/logic_circuit_dataset_example/data.json",
-      "count": 24,
-      "keys": [
-        "analysis",
-        "answer",
-        "data_id",
-        "image",
-        "options",
-        "plot_level",
-        "qa_level",
-        "qa_type",
-        "question",
-        "question_description",
-        "question_id",
-        "state"
-      ],
-      "qa_types": [
-        "State Prediction",
-        "Strategy Optimization",
         "Target Perception"
       ],
       "qa_levels": [
@@ -1267,6 +1190,44 @@
       "load_error": null
     },
     {
+      "id": "city_skyline",
+      "name": "[Fable 5] City Skyline",
+      "dataset": "city_skyline_dataset_example",
+      "data_path": "src/city_skyline/city_skyline_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
       "id": "dice_path",
       "name": "[Fable 5] Dice Path",
       "dataset": "dice_path_dataset_example",
@@ -1326,6 +1287,45 @@
       ],
       "qa_types": [
         "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "logic_circuit",
+      "name": "[Fable 5] Logic Circuit",
+      "dataset": "logic_circuit_dataset_example",
+      "data_path": "src/logic_circuit/logic_circuit_dataset_example/data.json",
+      "count": 24,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
         "Target Perception"
       ],
       "qa_levels": [
