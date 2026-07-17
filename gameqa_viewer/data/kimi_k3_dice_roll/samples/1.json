@@ -1,0 +1,101 @@
+{
+  "sample": {
+    "index": 1,
+    "data_id": "dice_roll-mcq-00002",
+    "question_id": 2,
+    "question_description": "Predict the die's orientation or final cell after a given sequence of rolls",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00001.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00001.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. The die is rolled: North, South, South. What number will be on the TOP face of the die after these rolls?\n\nOptions:\n[1] The roll sequence cannot be performed\n[2] 5\n[3] 6\n[4] 4\n[5] The die falls off the board\n[6] 1\n[7] 2\n[8] 3",
+    "analysis": "The die starts at (2, 0) with top=4, front-left=5, front-right=1 (so bottom=3, back-right/hidden-north=2, back-left/hidden-west=6).\nRoll 1 - North: the die moves from (2, 0) to (1, 0). Visible faces become top=5, front-left=3, front-right=1.\nRoll 2 - South: the die moves from (1, 0) to (2, 0). Visible faces become top=4, front-left=5, front-right=1.\nRoll 3 - South: the die moves from (2, 0) to (3, 0). Visible faces become top=2, front-left=4, front-right=1.\nAfter all rolls the TOP face shows 2.\n\nSo the answer is 2. The option number is 7.",
+    "options": [
+      "The roll sequence cannot be performed",
+      "5",
+      "6",
+      "4",
+      "The die falls off the board",
+      "1",
+      "2",
+      "3"
+    ],
+    "state_content": {
+      "rows": 5,
+      "cols": 5,
+      "blocked": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "star": [
+        0,
+        1
+      ],
+      "die": [
+        2,
+        0
+      ],
+      "orientation": {
+        "top": 4,
+        "bottom": 3,
+        "north": 2,
+        "south": 5,
+        "east": 1,
+        "west": 6
+      },
+      "move_sequence": [
+        "North",
+        "South",
+        "South"
+      ],
+      "extra_move_sequence": [
+        "East",
+        "West",
+        "North",
+        "North",
+        "South"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00002",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the die's orientation or final cell after a given sequence of rolls",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. The die is rolled: North, South, South. What number will be on the TOP face of the die after these rolls?\n\nOptions:\n[1] The roll sequence cannot be performed\n[2] 5\n[3] 6\n[4] 4\n[5] The die falls off the board\n[6] 1\n[7] 2\n[8] 3",
+      "answer": 7,
+      "analysis": "The die starts at (2, 0) with top=4, front-left=5, front-right=1 (so bottom=3, back-right/hidden-north=2, back-left/hidden-west=6).\nRoll 1 - North: the die moves from (2, 0) to (1, 0). Visible faces become top=5, front-left=3, front-right=1.\nRoll 2 - South: the die moves from (1, 0) to (2, 0). Visible faces become top=4, front-left=5, front-right=1.\nRoll 3 - South: the die moves from (2, 0) to (3, 0). Visible faces become top=2, front-left=4, front-right=1.\nAfter all rolls the TOP face shows 2.\n\nSo the answer is 2. The option number is 7.",
+      "options": [
+        "The roll sequence cannot be performed",
+        "5",
+        "6",
+        "4",
+        "The die falls off the board",
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  }
+}

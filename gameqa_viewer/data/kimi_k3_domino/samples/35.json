@@ -1,0 +1,129 @@
+{
+  "sample": {
+    "index": 35,
+    "data_id": "domino-mcq-00036",
+    "question_id": 4,
+    "question_description": "Find the maximum number of hand tiles that can be played onto the chain in some order",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of...",
+    "image": "images/board_00009.png",
+    "state": "states/board_00009.json",
+    "image_url": "data/kimi_k3_domino/files/images/board_00009.png",
+    "state_url": "data/kimi_k3_domino/files/states/board_00009.json",
+    "has_options": true,
+    "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. What is the maximum number of hand tiles that can be played onto the chain, in some order? Each hand tile can be used at most once, and every tile played must match one of the two open ends at the moment it is played. The open ends change as tiles are added.\n\nOptions:\n[1] 3\n[2] 6\n[3] 2\n[4] 0\n[5] 1\n[6] 4\n[7] 5\n[8] 7",
+    "analysis": "The chain starts with open ends left = 5 and right = 4.\nOne sequence that achieves the maximum (3 tiles):\n1. Play A (0|4) on the RIGHT end: its 4-half matches the right open end 4, so that end becomes 0. Open ends are now (5, 0).\n2. Play C (3|0) on the RIGHT end: its 0-half matches the right open end 0, so that end becomes 3. Open ends are now (5, 3).\n3. Play D (5|5) on the LEFT end: its 5-half matches the left open end 5, so that end becomes 5. Open ends are now (5, 3).\nThe unused hand tiles are B (6|1) and E (1|1): none of their halves matches 5 or 3, so no further tile can be played.\nHence the maximum number of hand tiles that can be played is 3.\n\nSo the answer is 3. The option number is 1.",
+    "options": [
+      "3",
+      "6",
+      "2",
+      "0",
+      "1",
+      "4",
+      "5",
+      "7"
+    ],
+    "state_content": {
+      "chain": [
+        [
+          5,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "chain_oriented": true,
+      "open_left": 5,
+      "open_right": 4,
+      "hand": [
+        {
+          "label": "A",
+          "tile": [
+            0,
+            4
+          ]
+        },
+        {
+          "label": "B",
+          "tile": [
+            6,
+            1
+          ]
+        },
+        {
+          "label": "C",
+          "tile": [
+            3,
+            0
+          ]
+        },
+        {
+          "label": "D",
+          "tile": [
+            5,
+            5
+          ]
+        },
+        {
+          "label": "E",
+          "tile": [
+            1,
+            1
+          ]
+        }
+      ],
+      "table_note": "doubles vertical",
+      "plot_level": "Medium"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "domino-mcq-00036",
+      "image": "images/board_00009.png",
+      "state": "states/board_00009.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Find the maximum number of hand tiles that can be played onto the chain in some order",
+      "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. What is the maximum number of hand tiles that can be played onto the chain, in some order? Each hand tile can be used at most once, and every tile played must match one of the two open ends at the moment it is played. The open ends change as tiles are added.\n\nOptions:\n[1] 3\n[2] 6\n[3] 2\n[4] 0\n[5] 1\n[6] 4\n[7] 5\n[8] 7",
+      "answer": 1,
+      "analysis": "The chain starts with open ends left = 5 and right = 4.\nOne sequence that achieves the maximum (3 tiles):\n1. Play A (0|4) on the RIGHT end: its 4-half matches the right open end 4, so that end becomes 0. Open ends are now (5, 0).\n2. Play C (3|0) on the RIGHT end: its 0-half matches the right open end 0, so that end becomes 3. Open ends are now (5, 3).\n3. Play D (5|5) on the LEFT end: its 5-half matches the left open end 5, so that end becomes 5. Open ends are now (5, 3).\nThe unused hand tiles are B (6|1) and E (1|1): none of their halves matches 5 or 3, so no further tile can be played.\nHence the maximum number of hand tiles that can be played is 3.\n\nSo the answer is 3. The option number is 1.",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "0",
+        "1",
+        "4",
+        "5",
+        "7"
+      ]
+    }
+  }
+}

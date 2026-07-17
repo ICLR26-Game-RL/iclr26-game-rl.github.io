@@ -1,0 +1,96 @@
+{
+  "sample": {
+    "index": 28,
+    "data_id": "dice_roll-mcq-00029",
+    "question_id": 1,
+    "question_description": "Identify a visible face value, the total visible pip count, or a piece position on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00008.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00008.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. What number is on the FRONT-LEFT face of the die?\n\nOptions:\n[1] 1\n[2] 2\n[3] 8\n[4] 4\n[5] 6\n[6] 7\n[7] 5\n[8] 3",
+    "analysis": "Looking at the isometric die in the image, the FRONT-LEFT face shows 5 pip(s).\n\nSo the answer is 5. The option number is 7.",
+    "options": [
+      "1",
+      "2",
+      "8",
+      "4",
+      "6",
+      "7",
+      "5",
+      "3"
+    ],
+    "state_content": {
+      "rows": 6,
+      "cols": 6,
+      "blocked": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "star": [
+        0,
+        5
+      ],
+      "die": [
+        2,
+        5
+      ],
+      "orientation": {
+        "top": 1,
+        "bottom": 6,
+        "north": 2,
+        "south": 5,
+        "east": 3,
+        "west": 4
+      },
+      "move_sequence": [
+        "West",
+        "East",
+        "West",
+        "North",
+        "West"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00029",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify a visible face value, the total visible pip count, or a piece position on the board",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. What number is on the FRONT-LEFT face of the die?\n\nOptions:\n[1] 1\n[2] 2\n[3] 8\n[4] 4\n[5] 6\n[6] 7\n[7] 5\n[8] 3",
+      "answer": 7,
+      "analysis": "Looking at the isometric die in the image, the FRONT-LEFT face shows 5 pip(s).\n\nSo the answer is 5. The option number is 7.",
+      "options": [
+        "1",
+        "2",
+        "8",
+        "4",
+        "6",
+        "7",
+        "5",
+        "3"
+      ]
+    }
+  }
+}

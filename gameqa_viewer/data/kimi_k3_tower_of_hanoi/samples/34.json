@@ -1,0 +1,117 @@
+{
+  "sample": {
+    "index": 34,
+    "data_id": "tower_of_hanoi-mcq-00035",
+    "question_id": 3,
+    "question_description": "Infer which single legal move produced a described outcome",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00009.png",
+    "state": "states/board_00009.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00009.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00009.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nExactly ONE legal move was made starting from the state shown in the image. After this move, peg C has 1 disk(s) with disk 2 on top. Which move was made?\n\nOptions:\n[1] A → C\n[2] B → C\n[3] C → A\n[4] C → B\n[5] B → A\n[6] A → B",
+    "analysis": "Target outcome: peg C must have 1 disk(s) with disk 2 on top.\nShown state (bottom to top): peg A: [4, 2], peg B: [3, 1], peg C: [] (empty).\nChecking every candidate move:\n- A → B: illegal (disk 2 cannot be placed on top of disk 1), so it cannot be the move that was made.\n- A → C: legal; peg C becomes [2] — 1 disk(s) with disk 2 on top. This matches the outcome.\n- B → A: legal; peg C would have 0 disk(s) (empty) — does not match.\n- B → C: legal; peg C would have 1 disk(s) with disk 1 on top — does not match.\n- C → A: illegal (peg C is empty), so it cannot be the move that was made.\n- C → B: illegal (peg C is empty), so it cannot be the move that was made.\nOnly A → C produces the described outcome.\n\nSo the answer is A → C. The option number is 1.",
+    "options": [
+      "A → C",
+      "B → C",
+      "C → A",
+      "C → B",
+      "B → A",
+      "A → B"
+    ],
+    "state_content": {
+      "num_disks": 4,
+      "pegs": {
+        "A": [
+          4,
+          2
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "C": []
+      },
+      "target_peg": "C",
+      "initial_peg": "A",
+      "scramble_moves": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00035",
+      "image": "images/board_00009.png",
+      "state": "states/board_00009.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Infer which single legal move produced a described outcome",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nExactly ONE legal move was made starting from the state shown in the image. After this move, peg C has 1 disk(s) with disk 2 on top. Which move was made?\n\nOptions:\n[1] A → C\n[2] B → C\n[3] C → A\n[4] C → B\n[5] B → A\n[6] A → B",
+      "answer": 1,
+      "analysis": "Target outcome: peg C must have 1 disk(s) with disk 2 on top.\nShown state (bottom to top): peg A: [4, 2], peg B: [3, 1], peg C: [] (empty).\nChecking every candidate move:\n- A → B: illegal (disk 2 cannot be placed on top of disk 1), so it cannot be the move that was made.\n- A → C: legal; peg C becomes [2] — 1 disk(s) with disk 2 on top. This matches the outcome.\n- B → A: legal; peg C would have 0 disk(s) (empty) — does not match.\n- B → C: legal; peg C would have 1 disk(s) with disk 1 on top — does not match.\n- C → A: illegal (peg C is empty), so it cannot be the move that was made.\n- C → B: illegal (peg C is empty), so it cannot be the move that was made.\nOnly A → C produces the described outcome.\n\nSo the answer is A → C. The option number is 1.",
+      "options": [
+        "A → C",
+        "B → C",
+        "C → A",
+        "C → B",
+        "B → A",
+        "A → B"
+      ]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "sample": {
+    "index": 11,
+    "data_id": "mastermind-mcq-00012",
+    "question_id": 5,
+    "question_description": "Pick the next guess that minimizes the worst-case number of remaining codes",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to ...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/kimi_k3_mastermind/files/images/board_00003.png",
+    "state_url": "data/kimi_k3_mastermind/files/states/board_00003.json",
+    "has_options": true,
+    "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nYou may ask for feedback on one more guess. Consider the four candidate guesses listed in the options. Which one minimizes the WORST-CASE number of remaining possible secret codes after its feedback is revealed? (The worst case is the size of the largest group of still-possible codes that would share the same feedback.)\n\nOptions:\n[1] orange, orange, green, purple\n[2] red, blue, orange, red\n[3] orange, green, green, purple\n[4] red, red, blue, red",
+    "analysis": "There are 46 codes still consistent with the board. For each candidate guess, split those codes into groups that would get the same feedback; the worst case is the largest group:\n- orange, green, green, purple -> worst case 8 code(s) remain\n- red, blue, orange, red -> worst case 11 code(s) remain\n- orange, orange, green, purple -> worst case 13 code(s) remain\n- red, red, blue, red -> worst case 14 code(s) remain\nThe smallest worst case is 8, achieved by orange, green, green, purple.\n\nSo the answer is orange, green, green, purple. The option number is 3.",
+    "options": [
+      "orange, orange, green, purple",
+      "red, blue, orange, red",
+      "orange, green, green, purple",
+      "red, red, blue, red"
+    ],
+    "state_content": {
+      "code_length": 4,
+      "num_colors": 6,
+      "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "board_type": "multi",
+      "secret": [
+        "orange",
+        "blue",
+        "orange",
+        "orange"
+      ],
+      "guesses": [
+        {
+          "row": 1,
+          "pegs": [
+            "blue",
+            "blue",
+            "blue",
+            "purple"
+          ],
+          "black": 1,
+          "white": 0
+        },
+        {
+          "row": 2,
+          "pegs": [
+            "yellow",
+            "purple",
+            "yellow",
+            "blue"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 3,
+          "pegs": [
+            "blue",
+            "yellow",
+            "yellow",
+            "green"
+          ],
+          "black": 0,
+          "white": 1
+        }
+      ],
+      "consistent_count": 46
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mastermind-mcq-00012",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 5,
+      "question_description": "Pick the next guess that minimizes the worst-case number of remaining codes",
+      "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nYou may ask for feedback on one more guess. Consider the four candidate guesses listed in the options. Which one minimizes the WORST-CASE number of remaining possible secret codes after its feedback is revealed? (The worst case is the size of the largest group of still-possible codes that would share the same feedback.)\n\nOptions:\n[1] orange, orange, green, purple\n[2] red, blue, orange, red\n[3] orange, green, green, purple\n[4] red, red, blue, red",
+      "answer": 3,
+      "analysis": "There are 46 codes still consistent with the board. For each candidate guess, split those codes into groups that would get the same feedback; the worst case is the largest group:\n- orange, green, green, purple -> worst case 8 code(s) remain\n- red, blue, orange, red -> worst case 11 code(s) remain\n- orange, orange, green, purple -> worst case 13 code(s) remain\n- red, red, blue, red -> worst case 14 code(s) remain\nThe smallest worst case is 8, achieved by orange, green, green, purple.\n\nSo the answer is orange, green, green, purple. The option number is 3.",
+      "options": [
+        "orange, orange, green, purple",
+        "red, blue, orange, red",
+        "orange, green, green, purple",
+        "red, red, blue, red"
+      ]
+    }
+  }
+}

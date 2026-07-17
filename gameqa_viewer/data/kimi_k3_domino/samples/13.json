@@ -1,0 +1,114 @@
+{
+  "sample": {
+    "index": 13,
+    "data_id": "domino-mcq-00014",
+    "question_id": 2,
+    "question_description": "Determine which hand tiles can be legally played on either open end of the chain",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of...",
+    "image": "images/board_00004.png",
+    "state": "states/board_00004.json",
+    "image_url": "data/kimi_k3_domino/files/images/board_00004.png",
+    "state_url": "data/kimi_k3_domino/files/states/board_00004.json",
+    "has_options": true,
+    "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. Which of the hand tiles can be legally played on EITHER open end of the chain right now? A tile counts as playable if it can be played on the left open end, on the right open end, or on both.\n\nOptions:\n[1] B and C\n[2] A, B and C\n[3] B and D\n[4] A and D\n[5] A, B and D\n[6] A only\n[7] B, C and D\n[8] C only",
+    "analysis": "The left open end of the chain is 1 and the right open end is 5.\nChecking every hand tile against these two values:\n- A (6|4): neither 6 nor 4 matches 1 or 5 -> not playable\n- B (5|0): its 5-half matches the right open end 5 -> playable\n- C (3|5): its 5-half matches the right open end 5 -> playable\n- D (0|0): both its halves are 0 and 0 matches neither 1 nor 5 -> not playable\nSo the playable hand tiles are: B and C.\n\nSo the answer is B and C. The option number is 1.",
+    "options": [
+      "B and C",
+      "A, B and C",
+      "B and D",
+      "A and D",
+      "A, B and D",
+      "A only",
+      "B, C and D",
+      "C only"
+    ],
+    "state_content": {
+      "chain": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "chain_oriented": true,
+      "open_left": 1,
+      "open_right": 5,
+      "hand": [
+        {
+          "label": "A",
+          "tile": [
+            6,
+            4
+          ]
+        },
+        {
+          "label": "B",
+          "tile": [
+            5,
+            0
+          ]
+        },
+        {
+          "label": "C",
+          "tile": [
+            3,
+            5
+          ]
+        },
+        {
+          "label": "D",
+          "tile": [
+            0,
+            0
+          ]
+        }
+      ],
+      "table_note": "doubles vertical",
+      "plot_level": "Easy"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "domino-mcq-00014",
+      "image": "images/board_00004.png",
+      "state": "states/board_00004.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine which hand tiles can be legally played on either open end of the chain",
+      "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. Which of the hand tiles can be legally played on EITHER open end of the chain right now? A tile counts as playable if it can be played on the left open end, on the right open end, or on both.\n\nOptions:\n[1] B and C\n[2] A, B and C\n[3] B and D\n[4] A and D\n[5] A, B and D\n[6] A only\n[7] B, C and D\n[8] C only",
+      "answer": 1,
+      "analysis": "The left open end of the chain is 1 and the right open end is 5.\nChecking every hand tile against these two values:\n- A (6|4): neither 6 nor 4 matches 1 or 5 -> not playable\n- B (5|0): its 5-half matches the right open end 5 -> playable\n- C (3|5): its 5-half matches the right open end 5 -> playable\n- D (0|0): both its halves are 0 and 0 matches neither 1 nor 5 -> not playable\nSo the playable hand tiles are: B and C.\n\nSo the answer is B and C. The option number is 1.",
+      "options": [
+        "B and C",
+        "A, B and C",
+        "B and D",
+        "A and D",
+        "A, B and D",
+        "A only",
+        "B, C and D",
+        "C only"
+      ]
+    }
+  }
+}

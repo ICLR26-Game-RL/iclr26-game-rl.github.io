@@ -1,0 +1,103 @@
+{
+  "sample": {
+    "index": 7,
+    "data_id": "lights_out-mcq-00008",
+    "question_id": 3,
+    "question_description": "Infer which button press(es) produced the shown board",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00002.png",
+    "state": "states/board_00002.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00002.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00002.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nThe board started with ALL lights OFF. Exactly two buttons were pressed to reach the shown state. One of them was (0, 2). Which was the other one?\n\nOptions:\n[1] (1, 1)\n[2] (2, 2)\n[3] (2, 0)\n[4] (1, 0)\n[5] (1, 2)\n[6] (2, 1)\n[7] (0, 1)\n[8] (0, 0)",
+    "analysis": "Pressing (0, 2) toggles (0, 2), (1, 2), (0, 1).\nThe board shows these lights ON: (0, 1), (0, 2), (2, 1), (2, 2).\nRemoving (XOR) the effect of (0, 2) from the board leaves the lights (1, 2), (2, 1), (2, 2) that the second press must have switched ON.\nThat remaining set is exactly the press pattern of (2, 2): pressing it toggles (2, 2), (1, 2), (2, 1). Checking the other candidates, none of their press patterns matches the remaining set.\n\nSo the answer is (2, 2). The option number is 2.",
+    "options": [
+      "(1, 1)",
+      "(2, 2)",
+      "(2, 0)",
+      "(1, 0)",
+      "(1, 2)",
+      "(2, 1)",
+      "(0, 1)",
+      "(0, 0)"
+    ],
+    "state_content": {
+      "size": 3,
+      "grid": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "board_kind": "two_press",
+      "generation_presses": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "on_count": 4,
+      "solver": {
+        "solvable": true,
+        "nullity": 0,
+        "min_weight": 2,
+        "min_presses": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "num_solutions": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00008",
+      "image": "images/board_00002.png",
+      "state": "states/board_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Infer which button press(es) produced the shown board",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nThe board started with ALL lights OFF. Exactly two buttons were pressed to reach the shown state. One of them was (0, 2). Which was the other one?\n\nOptions:\n[1] (1, 1)\n[2] (2, 2)\n[3] (2, 0)\n[4] (1, 0)\n[5] (1, 2)\n[6] (2, 1)\n[7] (0, 1)\n[8] (0, 0)",
+      "answer": 2,
+      "analysis": "Pressing (0, 2) toggles (0, 2), (1, 2), (0, 1).\nThe board shows these lights ON: (0, 1), (0, 2), (2, 1), (2, 2).\nRemoving (XOR) the effect of (0, 2) from the board leaves the lights (1, 2), (2, 1), (2, 2) that the second press must have switched ON.\nThat remaining set is exactly the press pattern of (2, 2): pressing it toggles (2, 2), (1, 2), (2, 1). Checking the other candidates, none of their press patterns matches the remaining set.\n\nSo the answer is (2, 2). The option number is 2.",
+      "options": [
+        "(1, 1)",
+        "(2, 2)",
+        "(2, 0)",
+        "(1, 0)",
+        "(1, 2)",
+        "(2, 1)",
+        "(0, 1)",
+        "(0, 0)"
+      ]
+    }
+  }
+}

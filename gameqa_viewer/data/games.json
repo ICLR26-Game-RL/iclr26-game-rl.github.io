@@ -2004,6 +2004,239 @@
       "image_missing": 0,
       "state_missing": 0,
       "load_error": null
+    },
+    {
+      "id": "kimi_k3_cube_net",
+      "name": "[Kimi-K3] Cube Net",
+      "dataset": "cube_net_dataset_example",
+      "data_path": "src/cube_net/cube_net_dataset_example/data.json",
+      "count": 69,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kimi_k3_dice_roll",
+      "name": "[Kimi-K3] Dice Roll",
+      "dataset": "dice_roll_dataset_example",
+      "data_path": "src/dice_roll/dice_roll_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kimi_k3_domino",
+      "name": "[Kimi-K3] Domino",
+      "dataset": "domino_dataset_example",
+      "data_path": "src/domino/domino_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kimi_k3_mastermind",
+      "name": "[Kimi-K3] Mastermind",
+      "dataset": "mastermind_dataset_example",
+      "data_path": "src/mastermind/mastermind_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kimi_k3_lights_out",
+      "name": "[Kimi-K3] Lights Out",
+      "dataset": "lights_out_dataset_example",
+      "data_path": "src/lights_out/lights_out_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
+    },
+    {
+      "id": "kimi_k3_tower_of_hanoi",
+      "name": "[Kimi-K3] Tower Of Hanoi",
+      "dataset": "tower_of_hanoi_dataset_example",
+      "data_path": "src/tower_of_hanoi/tower_of_hanoi_dataset_example/data.json",
+      "count": 60,
+      "keys": [
+        "analysis",
+        "answer",
+        "data_id",
+        "image",
+        "options",
+        "plot_level",
+        "qa_level",
+        "qa_type",
+        "question",
+        "question_description",
+        "question_id",
+        "state"
+      ],
+      "qa_types": [
+        "State Prediction",
+        "Strategy Optimization",
+        "Target Perception"
+      ],
+      "qa_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "plot_levels": [
+        "Easy",
+        "Hard",
+        "Medium"
+      ],
+      "image_missing": 0,
+      "state_missing": 0,
+      "load_error": null
     }
   ]
 }

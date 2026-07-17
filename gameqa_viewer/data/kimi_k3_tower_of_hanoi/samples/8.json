@@ -1,0 +1,93 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "tower_of_hanoi-mcq-00009",
+    "question_id": 1,
+    "question_description": "Find which peg holds the largest disk",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00003.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00003.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhich peg holds the largest disk (disk 3)?\n\nOptions:\n[1] Peg A\n[2] None of the pegs\n[3] Peg C\n[4] Peg B",
+    "analysis": "The largest disk is disk 3. In the image it sits on peg B (peg B holds [3]), while the other pegs hold only smaller disks. Disk 3 is on exactly one peg.\n\nSo the answer is Peg B. The option number is 4.",
+    "options": [
+      "Peg A",
+      "None of the pegs",
+      "Peg C",
+      "Peg B"
+    ],
+    "state_content": {
+      "num_disks": 3,
+      "pegs": {
+        "A": [
+          2
+        ],
+        "B": [
+          3
+        ],
+        "C": [
+          1
+        ]
+      },
+      "target_peg": "C",
+      "initial_peg": "B",
+      "scramble_moves": [
+        [
+          "B",
+          "A"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00009",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Find which peg holds the largest disk",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhich peg holds the largest disk (disk 3)?\n\nOptions:\n[1] Peg A\n[2] None of the pegs\n[3] Peg C\n[4] Peg B",
+      "answer": 4,
+      "analysis": "The largest disk is disk 3. In the image it sits on peg B (peg B holds [3]), while the other pegs hold only smaller disks. Disk 3 is on exactly one peg.\n\nSo the answer is Peg B. The option number is 4.",
+      "options": [
+        "Peg A",
+        "None of the pegs",
+        "Peg C",
+        "Peg B"
+      ]
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "sample": {
+    "index": 44,
+    "data_id": "dice_roll-mcq-00045",
+    "question_id": 1,
+    "question_description": "Identify a visible face value, the total visible pip count, or a piece position on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00012.png",
+    "state": "states/board_00012.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00012.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00012.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. Which cell (row, column) is the star (goal) on?\n\nOptions:\n[1] (5, 4)\n[2] (5, 6)\n[3] (0, 4)\n[4] (0, 0)\n[5] (4, 3)\n[6] (2, 5)\n[7] (6, 2)\n[8] (6, 5)",
+    "analysis": "The golden star is drawn in the row labeled 4 on the left and the column labeled 3 on top.\nSo the star (goal) is on cell (4, 3).\n\nSo the answer is (4, 3). The option number is 5.",
+    "options": [
+      "(5, 4)",
+      "(5, 6)",
+      "(0, 4)",
+      "(0, 0)",
+      "(4, 3)",
+      "(2, 5)",
+      "(6, 2)",
+      "(6, 5)"
+    ],
+    "state_content": {
+      "rows": 7,
+      "cols": 7,
+      "blocked": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "star": [
+        4,
+        3
+      ],
+      "die": [
+        6,
+        0
+      ],
+      "orientation": {
+        "top": 6,
+        "bottom": 1,
+        "north": 5,
+        "south": 2,
+        "east": 3,
+        "west": 4
+      },
+      "move_sequence": [
+        "East",
+        "West",
+        "East",
+        "North",
+        "North"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00045",
+      "image": "images/board_00012.png",
+      "state": "states/board_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify a visible face value, the total visible pip count, or a piece position on the board",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. Which cell (row, column) is the star (goal) on?\n\nOptions:\n[1] (5, 4)\n[2] (5, 6)\n[3] (0, 4)\n[4] (0, 0)\n[5] (4, 3)\n[6] (2, 5)\n[7] (6, 2)\n[8] (6, 5)",
+      "answer": 5,
+      "analysis": "The golden star is drawn in the row labeled 4 on the left and the column labeled 3 on top.\nSo the star (goal) is on cell (4, 3).\n\nSo the answer is (4, 3). The option number is 5.",
+      "options": [
+        "(5, 4)",
+        "(5, 6)",
+        "(0, 4)",
+        "(0, 0)",
+        "(4, 3)",
+        "(2, 5)",
+        "(6, 2)",
+        "(6, 5)"
+      ]
+    }
+  }
+}

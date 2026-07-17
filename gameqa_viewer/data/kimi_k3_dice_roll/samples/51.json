@@ -1,0 +1,113 @@
+{
+  "sample": {
+    "index": 51,
+    "data_id": "dice_roll-mcq-00052",
+    "question_id": 3,
+    "question_description": "Find the roll sequence that produces a given final cell and orientation",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00013.png",
+    "state": "states/board_00013.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00013.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00013.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. Starting from the position and orientation shown in the image, the die went through a sequence of rolls. It ended at cell (2, 4) with 2 on the top face and 4 on the front-left face. Which of the following roll sequences produces exactly this final position and orientation?\n\nOptions:\n[1] East, East, West\n[2] East, East, West, North, West\n[3] East, East, East, North, West\n[4] North, East, East, West\n[5] North, East, North, West\n[6] East, East, North\n[7] East, East, North, South\n[8] East, East, North, West",
+    "analysis": "Simulate the candidate sequences from the start at (3, 3) (top=4, front-left=6, front-right=5):\nCorrect sequence \"East, East, North, West\" step by step:\nRoll 1 - East: the die moves from (3, 3) to (3, 4). Visible faces become top=2, front-left=6, front-right=4.\nRoll 2 - East: the die moves from (3, 4) to (3, 5). Visible faces become top=3, front-left=6, front-right=2.\nRoll 3 - North: the die moves from (3, 5) to (2, 5). Visible faces become top=6, front-left=4, front-right=2.\nRoll 4 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=2, front-left=4, front-right=1.\nIt ends at (2, 4) with top=2 and front-left=4 - exactly the required result.\nThe sequence \"East, East, North\" ends at (2, 5) instead of (2, 4) and has top=6 instead of 2.\nThe sequence \"North, East, North, West\" has top=6 instead of 2 and has front-left=5 instead of 4.\nEvery other listed sequence also fails to match the final cell and/or orientation.\n\nSo the answer is East, East, North, West. The option number is 8.",
+    "options": [
+      "East, East, West",
+      "East, East, West, North, West",
+      "East, East, East, North, West",
+      "North, East, East, West",
+      "North, East, North, West",
+      "East, East, North",
+      "East, East, North, South",
+      "East, East, North, West"
+    ],
+    "state_content": {
+      "rows": 7,
+      "cols": 7,
+      "blocked": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "star": [
+        2,
+        6
+      ],
+      "die": [
+        3,
+        3
+      ],
+      "orientation": {
+        "top": 4,
+        "bottom": 3,
+        "north": 1,
+        "south": 6,
+        "east": 5,
+        "west": 2
+      },
+      "move_sequence": [
+        "West",
+        "North",
+        "North",
+        "South"
+      ],
+      "extra_move_sequence": [
+        "East",
+        "West",
+        "East",
+        "North"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00052",
+      "image": "images/board_00013.png",
+      "state": "states/board_00013.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Find the roll sequence that produces a given final cell and orientation",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. Starting from the position and orientation shown in the image, the die went through a sequence of rolls. It ended at cell (2, 4) with 2 on the top face and 4 on the front-left face. Which of the following roll sequences produces exactly this final position and orientation?\n\nOptions:\n[1] East, East, West\n[2] East, East, West, North, West\n[3] East, East, East, North, West\n[4] North, East, East, West\n[5] North, East, North, West\n[6] East, East, North\n[7] East, East, North, South\n[8] East, East, North, West",
+      "answer": 8,
+      "analysis": "Simulate the candidate sequences from the start at (3, 3) (top=4, front-left=6, front-right=5):\nCorrect sequence \"East, East, North, West\" step by step:\nRoll 1 - East: the die moves from (3, 3) to (3, 4). Visible faces become top=2, front-left=6, front-right=4.\nRoll 2 - East: the die moves from (3, 4) to (3, 5). Visible faces become top=3, front-left=6, front-right=2.\nRoll 3 - North: the die moves from (3, 5) to (2, 5). Visible faces become top=6, front-left=4, front-right=2.\nRoll 4 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=2, front-left=4, front-right=1.\nIt ends at (2, 4) with top=2 and front-left=4 - exactly the required result.\nThe sequence \"East, East, North\" ends at (2, 5) instead of (2, 4) and has top=6 instead of 2.\nThe sequence \"North, East, North, West\" has top=6 instead of 2 and has front-left=5 instead of 4.\nEvery other listed sequence also fails to match the final cell and/or orientation.\n\nSo the answer is East, East, North, West. The option number is 8.",
+      "options": [
+        "East, East, West",
+        "East, East, West, North, West",
+        "East, East, East, North, West",
+        "North, East, East, West",
+        "North, East, North, West",
+        "East, East, North",
+        "East, East, North, South",
+        "East, East, North, West"
+      ]
+    }
+  }
+}

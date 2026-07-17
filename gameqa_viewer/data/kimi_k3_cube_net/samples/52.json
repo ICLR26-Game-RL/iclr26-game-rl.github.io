@@ -1,0 +1,253 @@
+{
+  "sample": {
+    "index": 52,
+    "data_id": "cube_net-mcq-00053",
+    "question_id": 2,
+    "question_description": "Determine which face is opposite a given face after folding",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared...",
+    "image": "images/board_00012.png",
+    "state": "states/board_00012.json",
+    "image_url": "data/kimi_k3_cube_net/files/images/board_00012.png",
+    "state_url": "data/kimi_k3_cube_net/files/states/board_00012.json",
+    "has_options": true,
+    "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nWhen this net is folded into a cube, which face is opposite to the red face?\n\nOptions:\n[1] purple\n[2] pink\n[3] blue\n[4] orange\n[5] yellow\n[6] green",
+    "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- green face (triangle) at grid (0, 0): front (toward the viewer)\n- red face (heart) at grid (0, 1): right\n- yellow face (cross) at grid (1, 1): bottom (down)\n- orange face (circle) at grid (1, 2): back\n- purple face (star) at grid (2, 2): left\n- blue face (diamond) at grid (2, 3): top (up)\nThe red face ends up pointing to the right. The face pointing in the exact opposite direction (left) is the purple face, so those two faces are opposite each other on the cube.\n\nSo the answer is purple. The option number is 1.",
+    "options": [
+      "purple",
+      "pink",
+      "blue",
+      "orange",
+      "yellow",
+      "green"
+    ],
+    "state_content": {
+      "net_id": 6,
+      "plot_level": "Hard",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "faces": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "color": "green",
+          "rgb": [
+            39,
+            174,
+            96
+          ],
+          "symbol": "triangle",
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "color": "red",
+          "rgb": [
+            231,
+            76,
+            60
+          ],
+          "symbol": "heart",
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "color": "yellow",
+          "rgb": [
+            241,
+            196,
+            15
+          ],
+          "symbol": "cross",
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "color": "orange",
+          "rgb": [
+            243,
+            156,
+            18
+          ],
+          "symbol": "circle",
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "color": "purple",
+          "rgb": [
+            155,
+            89,
+            182
+          ],
+          "symbol": "star",
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            2,
+            3
+          ],
+          "color": "blue",
+          "rgb": [
+            52,
+            152,
+            219
+          ],
+          "symbol": "diamond",
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "grid_rows": 3,
+      "grid_cols": 4
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube_net-mcq-00053",
+      "image": "images/board_00012.png",
+      "state": "states/board_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine which face is opposite a given face after folding",
+      "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nWhen this net is folded into a cube, which face is opposite to the red face?\n\nOptions:\n[1] purple\n[2] pink\n[3] blue\n[4] orange\n[5] yellow\n[6] green",
+      "answer": 1,
+      "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- green face (triangle) at grid (0, 0): front (toward the viewer)\n- red face (heart) at grid (0, 1): right\n- yellow face (cross) at grid (1, 1): bottom (down)\n- orange face (circle) at grid (1, 2): back\n- purple face (star) at grid (2, 2): left\n- blue face (diamond) at grid (2, 3): top (up)\nThe red face ends up pointing to the right. The face pointing in the exact opposite direction (left) is the purple face, so those two faces are opposite each other on the cube.\n\nSo the answer is purple. The option number is 1.",
+      "options": [
+        "purple",
+        "pink",
+        "blue",
+        "orange",
+        "yellow",
+        "green"
+      ]
+    }
+  }
+}

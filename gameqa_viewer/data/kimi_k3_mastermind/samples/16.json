@@ -1,0 +1,104 @@
+{
+  "sample": {
+    "index": 16,
+    "data_id": "mastermind-mcq-00017",
+    "question_id": 1,
+    "question_description": "Read a guess row: its peg colors, its feedback counts, or color occurrences",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to ...",
+    "image": "images/board_00005.png",
+    "state": "states/board_00005.json",
+    "image_url": "data/kimi_k3_mastermind/files/images/board_00005.png",
+    "state_url": "data/kimi_k3_mastermind/files/states/board_00005.json",
+    "has_options": true,
+    "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nHow many purple pegs appear in the guess in row 3?\n\nOptions:\n[1] 3\n[2] 1\n[3] 2\n[4] 4\n[5] 0",
+    "analysis": "Row 3 is red, yellow, red, green. The color purple appears 0 time(s) in it.\n\nSo the answer is 0. The option number is 5.",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4",
+      "0"
+    ],
+    "state_content": {
+      "code_length": 4,
+      "num_colors": 6,
+      "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "board_type": "multi",
+      "secret": [
+        "yellow",
+        "orange",
+        "purple",
+        "orange"
+      ],
+      "guesses": [
+        {
+          "row": 1,
+          "pegs": [
+            "green",
+            "purple",
+            "purple",
+            "purple"
+          ],
+          "black": 1,
+          "white": 0
+        },
+        {
+          "row": 2,
+          "pegs": [
+            "green",
+            "green",
+            "green",
+            "purple"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 3,
+          "pegs": [
+            "red",
+            "yellow",
+            "red",
+            "green"
+          ],
+          "black": 0,
+          "white": 1
+        }
+      ],
+      "consistent_count": 41
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mastermind-mcq-00017",
+      "image": "images/board_00005.png",
+      "state": "states/board_00005.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Read a guess row: its peg colors, its feedback counts, or color occurrences",
+      "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nHow many purple pegs appear in the guess in row 3?\n\nOptions:\n[1] 3\n[2] 1\n[3] 2\n[4] 4\n[5] 0",
+      "answer": 5,
+      "analysis": "Row 3 is red, yellow, red, green. The color purple appears 0 time(s) in it.\n\nSo the answer is 0. The option number is 5.",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "0"
+      ]
+    }
+  }
+}

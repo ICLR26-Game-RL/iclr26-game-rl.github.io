@@ -1,0 +1,103 @@
+{
+  "sample": {
+    "index": 4,
+    "data_id": "lights_out-mcq-00005",
+    "question_id": 1,
+    "question_description": "Identify states and counts of lights on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00002.png",
+    "state": "states/board_00002.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00002.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00002.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nHow many lights are currently ON?\n\nOptions:\n[1] 6\n[2] 2\n[3] 0\n[4] 1\n[5] 7\n[6] 3\n[7] 5\n[8] 4",
+    "analysis": "Counting the glowing (yellow) buttons row by row: row 0 has 2, row 1 has 0, row 2 has 2.\nTotal lights ON = 2 + 0 + 2 = 4.\n\nSo the answer is 4. The option number is 8.",
+    "options": [
+      "6",
+      "2",
+      "0",
+      "1",
+      "7",
+      "3",
+      "5",
+      "4"
+    ],
+    "state_content": {
+      "size": 3,
+      "grid": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "board_kind": "two_press",
+      "generation_presses": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "on_count": 4,
+      "solver": {
+        "solvable": true,
+        "nullity": 0,
+        "min_weight": 2,
+        "min_presses": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "num_solutions": 1
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00005",
+      "image": "images/board_00002.png",
+      "state": "states/board_00002.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify states and counts of lights on the board",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nHow many lights are currently ON?\n\nOptions:\n[1] 6\n[2] 2\n[3] 0\n[4] 1\n[5] 7\n[6] 3\n[7] 5\n[8] 4",
+      "answer": 8,
+      "analysis": "Counting the glowing (yellow) buttons row by row: row 0 has 2, row 1 has 0, row 2 has 2.\nTotal lights ON = 2 + 0 + 2 = 4.\n\nSo the answer is 4. The option number is 8.",
+      "options": [
+        "6",
+        "2",
+        "0",
+        "1",
+        "7",
+        "3",
+        "5",
+        "4"
+      ]
+    }
+  }
+}

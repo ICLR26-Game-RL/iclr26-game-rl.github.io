@@ -1,0 +1,132 @@
+{
+  "sample": {
+    "index": 46,
+    "data_id": "mastermind-mcq-00047",
+    "question_id": 3,
+    "question_description": "Find the candidate code that is consistent with every row of feedback",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to ...",
+    "image": "images/board_00012.png",
+    "state": "states/board_00012.json",
+    "image_url": "data/kimi_k3_mastermind/files/images/board_00012.png",
+    "state_url": "data/kimi_k3_mastermind/files/states/board_00012.json",
+    "has_options": true,
+    "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nWhich ONE of the following candidate codes is consistent with every row of feedback shown on the board?\n\nOptions:\n[1] blue, purple, yellow, purple\n[2] blue, purple, green, purple\n[3] green, orange, purple, orange\n[4] blue, purple, purple, purple\n[5] purple, red, yellow, red\n[6] green, purple, yellow, purple\n[7] red, orange, yellow, orange\n[8] blue, orange, purple, orange",
+    "analysis": "Test the candidate 'blue, purple, purple, purple' against every row of the board:\n- Row 1 (guess orange, blue, blue, blue): the board shows 0 black, 1 white; the candidate scores 0 black, 1 white - match.\n- Row 2 (guess red, green, blue, green): the board shows 0 black, 1 white; the candidate scores 0 black, 1 white - match.\n- Row 3 (guess blue, yellow, yellow, yellow): the board shows 1 black, 0 white; the candidate scores 1 black, 0 white - match.\n- Row 4 (guess purple, orange, red, purple): the board shows 1 black, 1 white; the candidate scores 1 black, 1 white - match.\n- Row 5 (guess purple, purple, red, orange): the board shows 1 black, 1 white; the candidate scores 1 black, 1 white - match.\nIt matches every row, so it is consistent. The other options each fail at least one row, for example:\n- 'green, orange, purple, orange' fails row 3: it would score 0 black, 0 white, but the board shows 1 black, 0 white.\n- 'blue, orange, purple, orange' fails row 1: it would score 0 black, 2 white, but the board shows 0 black, 1 white.\n\nSo the answer is blue, purple, purple, purple. The option number is 4.",
+    "options": [
+      "blue, purple, yellow, purple",
+      "blue, purple, green, purple",
+      "green, orange, purple, orange",
+      "blue, purple, purple, purple",
+      "purple, red, yellow, red",
+      "green, purple, yellow, purple",
+      "red, orange, yellow, orange",
+      "blue, orange, purple, orange"
+    ],
+    "state_content": {
+      "code_length": 4,
+      "num_colors": 6,
+      "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "board_type": "unique",
+      "secret": [
+        "blue",
+        "purple",
+        "purple",
+        "purple"
+      ],
+      "guesses": [
+        {
+          "row": 1,
+          "pegs": [
+            "orange",
+            "blue",
+            "blue",
+            "blue"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 2,
+          "pegs": [
+            "red",
+            "green",
+            "blue",
+            "green"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 3,
+          "pegs": [
+            "blue",
+            "yellow",
+            "yellow",
+            "yellow"
+          ],
+          "black": 1,
+          "white": 0
+        },
+        {
+          "row": 4,
+          "pegs": [
+            "purple",
+            "orange",
+            "red",
+            "purple"
+          ],
+          "black": 1,
+          "white": 1
+        },
+        {
+          "row": 5,
+          "pegs": [
+            "purple",
+            "purple",
+            "red",
+            "orange"
+          ],
+          "black": 1,
+          "white": 1
+        }
+      ],
+      "consistent_count": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mastermind-mcq-00047",
+      "image": "images/board_00012.png",
+      "state": "states/board_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 3,
+      "question_description": "Find the candidate code that is consistent with every row of feedback",
+      "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nWhich ONE of the following candidate codes is consistent with every row of feedback shown on the board?\n\nOptions:\n[1] blue, purple, yellow, purple\n[2] blue, purple, green, purple\n[3] green, orange, purple, orange\n[4] blue, purple, purple, purple\n[5] purple, red, yellow, red\n[6] green, purple, yellow, purple\n[7] red, orange, yellow, orange\n[8] blue, orange, purple, orange",
+      "answer": 4,
+      "analysis": "Test the candidate 'blue, purple, purple, purple' against every row of the board:\n- Row 1 (guess orange, blue, blue, blue): the board shows 0 black, 1 white; the candidate scores 0 black, 1 white - match.\n- Row 2 (guess red, green, blue, green): the board shows 0 black, 1 white; the candidate scores 0 black, 1 white - match.\n- Row 3 (guess blue, yellow, yellow, yellow): the board shows 1 black, 0 white; the candidate scores 1 black, 0 white - match.\n- Row 4 (guess purple, orange, red, purple): the board shows 1 black, 1 white; the candidate scores 1 black, 1 white - match.\n- Row 5 (guess purple, purple, red, orange): the board shows 1 black, 1 white; the candidate scores 1 black, 1 white - match.\nIt matches every row, so it is consistent. The other options each fail at least one row, for example:\n- 'green, orange, purple, orange' fails row 3: it would score 0 black, 0 white, but the board shows 1 black, 0 white.\n- 'blue, orange, purple, orange' fails row 1: it would score 0 black, 2 white, but the board shows 0 black, 1 white.\n\nSo the answer is blue, purple, purple, purple. The option number is 4.",
+      "options": [
+        "blue, purple, yellow, purple",
+        "blue, purple, green, purple",
+        "green, orange, purple, orange",
+        "blue, purple, purple, purple",
+        "purple, red, yellow, red",
+        "green, purple, yellow, purple",
+        "red, orange, yellow, orange",
+        "blue, orange, purple, orange"
+      ]
+    }
+  }
+}

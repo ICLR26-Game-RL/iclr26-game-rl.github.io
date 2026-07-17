@@ -1,0 +1,115 @@
+{
+  "sample": {
+    "index": 45,
+    "data_id": "tower_of_hanoi-mcq-00046",
+    "question_id": 2,
+    "question_description": "Apply a move sequence and identify the top disk on a peg",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Hard",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00012.png",
+    "state": "states/board_00012.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00012.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00012.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nThe following moves are made in order: C → A, A → B, A → C, C → A. If a move is illegal, it is skipped and the board remains unchanged for that step. After the full sequence, what will be the size of the top disk on peg C?\n\nOptions:\n[1] 2\n[2] The peg is empty\n[3] 5\n[4] 3\n[5] 4\n[6] 1",
+    "analysis": "Initial state (bottom to top): peg A: [2], peg B: [5, 4, 3], peg C: [1].\nMove 1 - C → A: Legal. Disk 1 moves from peg C onto peg A, landing on top of disk 2. Peg tops now: A → 1, B → 3, C → (empty).\nMove 2 - A → B: Legal. Disk 1 moves from peg A onto peg B, landing on top of disk 3. Peg tops now: A → 2, B → 1, C → (empty).\nMove 3 - A → C: Legal. Disk 2 moves from peg A onto the empty peg C. Peg tops now: A → (empty), B → 1, C → 2.\nMove 4 - C → A: Legal. Disk 2 moves from peg C onto the empty peg A. Peg tops now: A → 2, B → 1, C → (empty).\nAfter the full sequence, peg C holds no disks — it is empty.\n\nSo the answer is The peg is empty. The option number is 2.",
+    "options": [
+      "2",
+      "The peg is empty",
+      "5",
+      "3",
+      "4",
+      "1"
+    ],
+    "state_content": {
+      "num_disks": 5,
+      "pegs": {
+        "A": [
+          2
+        ],
+        "B": [
+          5,
+          4,
+          3
+        ],
+        "C": [
+          1
+        ]
+      },
+      "target_peg": "C",
+      "initial_peg": "B",
+      "scramble_moves": [
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00046",
+      "image": "images/board_00012.png",
+      "state": "states/board_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Apply a move sequence and identify the top disk on a peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nThe following moves are made in order: C → A, A → B, A → C, C → A. If a move is illegal, it is skipped and the board remains unchanged for that step. After the full sequence, what will be the size of the top disk on peg C?\n\nOptions:\n[1] 2\n[2] The peg is empty\n[3] 5\n[4] 3\n[5] 4\n[6] 1",
+      "answer": 2,
+      "analysis": "Initial state (bottom to top): peg A: [2], peg B: [5, 4, 3], peg C: [1].\nMove 1 - C → A: Legal. Disk 1 moves from peg C onto peg A, landing on top of disk 2. Peg tops now: A → 1, B → 3, C → (empty).\nMove 2 - A → B: Legal. Disk 1 moves from peg A onto peg B, landing on top of disk 3. Peg tops now: A → 2, B → 1, C → (empty).\nMove 3 - A → C: Legal. Disk 2 moves from peg A onto the empty peg C. Peg tops now: A → (empty), B → 1, C → 2.\nMove 4 - C → A: Legal. Disk 2 moves from peg C onto the empty peg A. Peg tops now: A → 2, B → 1, C → (empty).\nAfter the full sequence, peg C holds no disks — it is empty.\n\nSo the answer is The peg is empty. The option number is 2.",
+      "options": [
+        "2",
+        "The peg is empty",
+        "5",
+        "3",
+        "4",
+        "1"
+      ]
+    }
+  }
+}

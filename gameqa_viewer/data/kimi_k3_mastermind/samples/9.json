@@ -1,0 +1,110 @@
+{
+  "sample": {
+    "index": 9,
+    "data_id": "mastermind-mcq-00010",
+    "question_id": 2,
+    "question_description": "Determine which colors are certainly in or certainly not in the secret code",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Easy",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to ...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/kimi_k3_mastermind/files/images/board_00003.png",
+    "state_url": "data/kimi_k3_mastermind/files/states/board_00003.json",
+    "has_options": true,
+    "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nBased on all the feedback shown on the board, which colors are CERTAINLY NOT in the secret code? (List every color that definitely does not appear in the code.)\n\nOptions:\n[1] orange, yellow\n[2] yellow\n[3] orange\n[4] red\n[5] yellow, green\n[6] yellow, purple\n[7] green\n[8] yellow, blue",
+    "analysis": "Checking all 1296 possible codes against every row of feedback leaves 46 code(s) that could still be the secret. No single color appears in every one of them. The colors that appear in none of them are: yellow. Therefore the colors that are CERTAINLY NOT in the secret code are: yellow.\n\nSo the answer is yellow. The option number is 2.",
+    "options": [
+      "orange, yellow",
+      "yellow",
+      "orange",
+      "red",
+      "yellow, green",
+      "yellow, purple",
+      "green",
+      "yellow, blue"
+    ],
+    "state_content": {
+      "code_length": 4,
+      "num_colors": 6,
+      "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "board_type": "multi",
+      "secret": [
+        "orange",
+        "blue",
+        "orange",
+        "orange"
+      ],
+      "guesses": [
+        {
+          "row": 1,
+          "pegs": [
+            "blue",
+            "blue",
+            "blue",
+            "purple"
+          ],
+          "black": 1,
+          "white": 0
+        },
+        {
+          "row": 2,
+          "pegs": [
+            "yellow",
+            "purple",
+            "yellow",
+            "blue"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 3,
+          "pegs": [
+            "blue",
+            "yellow",
+            "yellow",
+            "green"
+          ],
+          "black": 0,
+          "white": 1
+        }
+      ],
+      "consistent_count": 46
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mastermind-mcq-00010",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Determine which colors are certainly in or certainly not in the secret code",
+      "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nBased on all the feedback shown on the board, which colors are CERTAINLY NOT in the secret code? (List every color that definitely does not appear in the code.)\n\nOptions:\n[1] orange, yellow\n[2] yellow\n[3] orange\n[4] red\n[5] yellow, green\n[6] yellow, purple\n[7] green\n[8] yellow, blue",
+      "answer": 2,
+      "analysis": "Checking all 1296 possible codes against every row of feedback leaves 46 code(s) that could still be the secret. No single color appears in every one of them. The colors that appear in none of them are: yellow. Therefore the colors that are CERTAINLY NOT in the secret code are: yellow.\n\nSo the answer is yellow. The option number is 2.",
+      "options": [
+        "orange, yellow",
+        "yellow",
+        "orange",
+        "red",
+        "yellow, green",
+        "yellow, purple",
+        "green",
+        "yellow, blue"
+      ]
+    }
+  }
+}
