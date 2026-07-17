@@ -53,8 +53,8 @@ const DATA_BASE = "data/";
 const IMAGE_PRELOAD_RADIUS = 3;
 const imagePreloadCache = new Map();
 
-async function getJson(url) {
-  const response = await fetch(url);
+async function getJson(url, options = undefined) {
+  const response = await fetch(url, options);
   const payload = await response.json();
   if (!response.ok) {
     throw new Error(payload.error || `Request failed: ${url}`);
@@ -219,7 +219,9 @@ function qaLevelSort(a, b) {
 
 async function init() {
   initTheme();
-  const payload = await getJson(`${DATA_BASE}games.json`);
+  const gamesUrl = new URL(`${DATA_BASE}games.json`, location.href);
+  gamesUrl.searchParams.set("fresh", Date.now().toString());
+  const payload = await getJson(gamesUrl, { cache: "no-store" });
   state.games = payload.games;
   const totalSamples = state.games.reduce((sum, game) => sum + game.count, 0);
   els.globalStats.innerHTML = [
@@ -239,7 +241,12 @@ async function init() {
 }
 
 async function loadGame(gameId, sampleIndex = 0) {
-  state.game = state.games.find((game) => game.id === gameId);
+  state.game = state.games.find((game) => game.id === gameId) || state.games[0];
+  if (!state.game) {
+    throw new Error("No games are available");
+  }
+  gameId = state.game.id;
+  els.gameSelect.value = gameId;
   const payload = await getJson(`${DATA_BASE}${encodeURIComponent(gameId)}/samples.json`);
   state.samples = payload.samples;
 
