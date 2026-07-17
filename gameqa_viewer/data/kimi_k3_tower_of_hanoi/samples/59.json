@@ -1,0 +1,90 @@
+{
+  "sample": {
+    "index": 59,
+    "data_id": "tower_of_hanoi-mcq-00060",
+    "question_id": 4,
+    "question_description": "Find the minimum number of moves to gather all disks on the target peg",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 8,
+    "answer_preview": "8",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00015.png",
+    "state": "states/board_00015.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00015.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00015.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhat is the minimum number of moves needed to get all 5 disks onto peg C (a single legal tower), starting from the state shown in the image?\n\nOptions:\n[1] 6\n[2] 4\n[3] 7\n[4] 1\n[5] 8\n[6] 2\n[7] 5\n[8] 3",
+    "analysis": "A breadth-first search over all reachable configurations of the 5 disks finds a shortest solution of 3 moves. One optimal solution is:\n1. C → B\n2. A → C\n3. B → C\nAfter these 3 moves, all 5 disks form a single legal tower on peg C. Because BFS explores states in increasing order of move count, no solution with fewer than 3 moves exists.\n\nSo the answer is 3. The option number is 8.",
+    "options": [
+      "6",
+      "4",
+      "7",
+      "1",
+      "8",
+      "2",
+      "5",
+      "3"
+    ],
+    "state_content": {
+      "num_disks": 5,
+      "pegs": {
+        "A": [
+          2
+        ],
+        "B": [],
+        "C": [
+          5,
+          4,
+          3,
+          1
+        ]
+      },
+      "target_peg": "C",
+      "initial_peg": "C",
+      "scramble_moves": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00060",
+      "image": "images/board_00015.png",
+      "state": "states/board_00015.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Find the minimum number of moves to gather all disks on the target peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhat is the minimum number of moves needed to get all 5 disks onto peg C (a single legal tower), starting from the state shown in the image?\n\nOptions:\n[1] 6\n[2] 4\n[3] 7\n[4] 1\n[5] 8\n[6] 2\n[7] 5\n[8] 3",
+      "answer": 8,
+      "analysis": "A breadth-first search over all reachable configurations of the 5 disks finds a shortest solution of 3 moves. One optimal solution is:\n1. C → B\n2. A → C\n3. B → C\nAfter these 3 moves, all 5 disks form a single legal tower on peg C. Because BFS explores states in increasing order of move count, no solution with fewer than 3 moves exists.\n\nSo the answer is 3. The option number is 8.",
+      "options": [
+        "6",
+        "4",
+        "7",
+        "1",
+        "8",
+        "2",
+        "5",
+        "3"
+      ]
+    }
+  }
+}

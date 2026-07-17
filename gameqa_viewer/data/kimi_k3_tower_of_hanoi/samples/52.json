@@ -1,0 +1,95 @@
+{
+  "sample": {
+    "index": 52,
+    "data_id": "tower_of_hanoi-mcq-00053",
+    "question_id": 1,
+    "question_description": "Identify the top disk on a given peg",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00014.png",
+    "state": "states/board_00014.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00014.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00014.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhat is the size of the top disk on peg A?\n\nOptions:\n[1] 5\n[2] The peg is empty\n[3] 4\n[4] 2\n[5] 1\n[6] 3",
+    "analysis": "Peg A holds (from bottom to top): [1]. The uppermost disk is disk 1, so the top disk has size 1.\n\nSo the answer is 1. The option number is 5.",
+    "options": [
+      "5",
+      "The peg is empty",
+      "4",
+      "2",
+      "1",
+      "3"
+    ],
+    "state_content": {
+      "num_disks": 5,
+      "pegs": {
+        "A": [
+          1
+        ],
+        "B": [
+          5,
+          4,
+          3
+        ],
+        "C": [
+          2
+        ]
+      },
+      "target_peg": "B",
+      "initial_peg": "B",
+      "scramble_moves": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "A"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00053",
+      "image": "images/board_00014.png",
+      "state": "states/board_00014.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify the top disk on a given peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nWhat is the size of the top disk on peg A?\n\nOptions:\n[1] 5\n[2] The peg is empty\n[3] 4\n[4] 2\n[5] 1\n[6] 3",
+      "answer": 5,
+      "analysis": "Peg A holds (from bottom to top): [1]. The uppermost disk is disk 1, so the top disk has size 1.\n\nSo the answer is 1. The option number is 5.",
+      "options": [
+        "5",
+        "The peg is empty",
+        "4",
+        "2",
+        "1",
+        "3"
+      ]
+    }
+  }
+}

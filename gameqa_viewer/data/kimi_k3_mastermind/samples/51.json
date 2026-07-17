@@ -1,0 +1,132 @@
+{
+  "sample": {
+    "index": 51,
+    "data_id": "mastermind-mcq-00052",
+    "question_id": 4,
+    "question_description": "Deduce the exact secret code from all the feedback",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to ...",
+    "image": "images/board_00013.png",
+    "state": "states/board_00013.json",
+    "image_url": "data/kimi_k3_mastermind/files/images/board_00013.png",
+    "state_url": "data/kimi_k3_mastermind/files/states/board_00013.json",
+    "has_options": true,
+    "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nUsing all the feedback shown on the board, deduce the exact secret code (positions 1 to 4, left to right).\n\nOptions:\n[1] orange, blue, orange, orange\n[2] orange, orange, blue, blue\n[3] orange, purple, purple, orange\n[4] orange, red, orange, purple\n[5] orange, purple, blue, purple\n[6] orange, blue, blue, blue\n[7] orange, purple, blue, orange\n[8] orange, blue, purple, blue",
+    "analysis": "Start from all 1296 possible codes and keep only those consistent with each row's feedback:\n- After row 1: 308 code(s) remain consistent.\n- After row 2: 75 code(s) remain consistent.\n- After row 3: 18 code(s) remain consistent.\n- After row 4: 4 code(s) remain consistent.\n- After row 5: 1 code(s) remain consistent.\nAfter the last row only one code remains: orange, purple, blue, purple. It is the only code consistent with all the feedback, so it must be the secret code.\n\nSo the answer is orange, purple, blue, purple. The option number is 5.",
+    "options": [
+      "orange, blue, orange, orange",
+      "orange, orange, blue, blue",
+      "orange, purple, purple, orange",
+      "orange, red, orange, purple",
+      "orange, purple, blue, purple",
+      "orange, blue, blue, blue",
+      "orange, purple, blue, orange",
+      "orange, blue, purple, blue"
+    ],
+    "state_content": {
+      "code_length": 4,
+      "num_colors": 6,
+      "colors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple"
+      ],
+      "board_type": "unique",
+      "secret": [
+        "orange",
+        "purple",
+        "blue",
+        "purple"
+      ],
+      "guesses": [
+        {
+          "row": 1,
+          "pegs": [
+            "green",
+            "orange",
+            "green",
+            "green"
+          ],
+          "black": 0,
+          "white": 1
+        },
+        {
+          "row": 2,
+          "pegs": [
+            "orange",
+            "green",
+            "yellow",
+            "green"
+          ],
+          "black": 1,
+          "white": 0
+        },
+        {
+          "row": 3,
+          "pegs": [
+            "yellow",
+            "green",
+            "red",
+            "yellow"
+          ],
+          "black": 0,
+          "white": 0
+        },
+        {
+          "row": 4,
+          "pegs": [
+            "orange",
+            "purple",
+            "orange",
+            "blue"
+          ],
+          "black": 2,
+          "white": 1
+        },
+        {
+          "row": 5,
+          "pegs": [
+            "red",
+            "red",
+            "blue",
+            "green"
+          ],
+          "black": 1,
+          "white": 0
+        }
+      ],
+      "consistent_count": 1
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "mastermind-mcq-00052",
+      "image": "images/board_00013.png",
+      "state": "states/board_00013.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Deduce the exact secret code from all the feedback",
+      "question": "You are looking at a Mastermind board. Mastermind is a code-breaking game: a hidden secret code consists of 4 colored pegs in a row (positions 1 to 4, left to right), each chosen from 6 available colors (red, orange, yellow, green, blue, purple), and the same color may appear multiple times in the code. The secret code is covered at the top of the board and drawn as four dark wooden caps marked with '?'. Below it, each numbered row shows one past guess of 4 colored pegs (left to right = positions 1 to 4) together with its feedback: a 2x2 cluster of small pegs on the right side of the row. A black feedback peg means one peg of that guess is the correct color in the correct position; a white feedback peg means one peg is a correct color but in the wrong position. The positions of the feedback pegs inside the cluster carry no meaning (black pegs are drawn first, then white ones), and the number of black plus white pegs never exceeds 4. Guess rows are numbered 1 to N from top to bottom, printed on the left of each row. A legend and the palette of the 6 available colors are shown at the bottom of the board. Every feedback shown on the board is correct.\n\nUsing all the feedback shown on the board, deduce the exact secret code (positions 1 to 4, left to right).\n\nOptions:\n[1] orange, blue, orange, orange\n[2] orange, orange, blue, blue\n[3] orange, purple, purple, orange\n[4] orange, red, orange, purple\n[5] orange, purple, blue, purple\n[6] orange, blue, blue, blue\n[7] orange, purple, blue, orange\n[8] orange, blue, purple, blue",
+      "answer": 5,
+      "analysis": "Start from all 1296 possible codes and keep only those consistent with each row's feedback:\n- After row 1: 308 code(s) remain consistent.\n- After row 2: 75 code(s) remain consistent.\n- After row 3: 18 code(s) remain consistent.\n- After row 4: 4 code(s) remain consistent.\n- After row 5: 1 code(s) remain consistent.\nAfter the last row only one code remains: orange, purple, blue, purple. It is the only code consistent with all the feedback, so it must be the secret code.\n\nSo the answer is orange, purple, blue, purple. The option number is 5.",
+      "options": [
+        "orange, blue, orange, orange",
+        "orange, orange, blue, blue",
+        "orange, purple, purple, orange",
+        "orange, red, orange, purple",
+        "orange, purple, blue, purple",
+        "orange, blue, blue, blue",
+        "orange, purple, blue, orange",
+        "orange, blue, purple, blue"
+      ]
+    }
+  }
+}

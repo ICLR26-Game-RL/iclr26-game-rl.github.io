@@ -1,0 +1,115 @@
+{
+  "sample": {
+    "index": 42,
+    "data_id": "lights_out-mcq-00043",
+    "question_id": 4,
+    "question_description": "Find the minimum presses needed to turn all lights off",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00011.png",
+    "state": "states/board_00011.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00011.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00011.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhat is the minimum number of button presses needed to turn ALL lights OFF from the shown state?\n\nOptions:\n[1] 2\n[2] 1\n[3] 3\n[4] 6\n[5] 7\n[6] 4\n[7] 5\n[8] 8",
+    "analysis": "Model the puzzle as a linear system over GF(2): each button press is a variable, and each light must be toggled an odd number of times to end OFF.\nSolving the system and taking the solution with the fewest presses gives the optimal press set {(2, 0)}: pressing (2, 0) toggles (2, 0), (1, 0), (3, 0), (2, 1).\nEvery ON light is toggled an odd number of times and every OFF light an even number of times, so the board becomes completely dark after these 1 presses.\nNo solution with fewer presses exists - all 4 solution(s) of the system were enumerated via linear algebra over GF(2), so the minimum is 1.\n\nSo the answer is 1. The option number is 2.",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "6",
+      "7",
+      "4",
+      "5",
+      "8"
+    ],
+    "state_content": {
+      "size": 5,
+      "grid": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "board_kind": "single_press",
+      "generation_presses": [
+        [
+          2,
+          0
+        ]
+      ],
+      "on_count": 4,
+      "solver": {
+        "solvable": true,
+        "nullity": 2,
+        "min_weight": 1,
+        "min_presses": [
+          [
+            2,
+            0
+          ]
+        ],
+        "num_solutions": 4
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00043",
+      "image": "images/board_00011.png",
+      "state": "states/board_00011.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Find the minimum presses needed to turn all lights off",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhat is the minimum number of button presses needed to turn ALL lights OFF from the shown state?\n\nOptions:\n[1] 2\n[2] 1\n[3] 3\n[4] 6\n[5] 7\n[6] 4\n[7] 5\n[8] 8",
+      "answer": 2,
+      "analysis": "Model the puzzle as a linear system over GF(2): each button press is a variable, and each light must be toggled an odd number of times to end OFF.\nSolving the system and taking the solution with the fewest presses gives the optimal press set {(2, 0)}: pressing (2, 0) toggles (2, 0), (1, 0), (3, 0), (2, 1).\nEvery ON light is toggled an odd number of times and every OFF light an even number of times, so the board becomes completely dark after these 1 presses.\nNo solution with fewer presses exists - all 4 solution(s) of the system were enumerated via linear algebra over GF(2), so the minimum is 1.\n\nSo the answer is 1. The option number is 2.",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "6",
+        "7",
+        "4",
+        "5",
+        "8"
+      ]
+    }
+  }
+}

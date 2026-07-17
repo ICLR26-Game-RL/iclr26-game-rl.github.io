@@ -1,0 +1,136 @@
+{
+  "sample": {
+    "index": 30,
+    "data_id": "lights_out-mcq-00031",
+    "question_id": 4,
+    "question_description": "Find the minimum presses needed to turn all lights off",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00008.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00008.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhich set of button presses turns ALL lights OFF from the shown state?\n\nOptions:\n[1] {(0, 2), (1, 2), (2, 0), (2, 2)}\n[2] {(1, 0), (1, 3), (2, 3), (3, 0)}\n[3] {(0, 2), (1, 2), (1, 3), (2, 2)}\n[4] {(0, 0), (0, 2), (2, 0), (2, 1)}\n[5] {(0, 2), (1, 2), (2, 2), (3, 1)}\n[6] {(0, 2), (1, 1), (1, 2), (2, 0)}\n[7] {(0, 2), (2, 0), (2, 2), (3, 2)}\n[8] {(0, 0), (1, 1), (2, 1), (3, 0)}",
+    "analysis": "Simulate each candidate set: a light ends OFF only if it is toggled an even number of times when it started ON... precisely, every ON light must be toggled an odd number of times and every OFF light an even number.\nThe set {(0, 2), (1, 2), (2, 0), (2, 2)} toggles: (0, 2) -> (0, 2), (1, 2), (0, 1), (0, 3); (1, 2) -> (1, 2), (0, 2), (2, 2), (1, 1), (1, 3); (2, 0) -> (2, 0), (1, 0), (3, 0), (2, 1); (2, 2) -> (2, 2), (1, 2), (3, 2), (2, 1), (2, 3).\nAggregating these toggles, every ON light is covered an odd number of times and every OFF light an even number of times, so all lights turn OFF.\nEach of the other listed sets leaves at least one light ON when simulated.\n\nSo the answer is {(0, 2), (1, 2), (2, 0), (2, 2)}. The option number is 1.",
+    "options": [
+      "{(0, 2), (1, 2), (2, 0), (2, 2)}",
+      "{(1, 0), (1, 3), (2, 3), (3, 0)}",
+      "{(0, 2), (1, 2), (1, 3), (2, 2)}",
+      "{(0, 0), (0, 2), (2, 0), (2, 1)}",
+      "{(0, 2), (1, 2), (2, 2), (3, 1)}",
+      "{(0, 2), (1, 1), (1, 2), (2, 0)}",
+      "{(0, 2), (2, 0), (2, 2), (3, 2)}",
+      "{(0, 0), (1, 1), (2, 1), (3, 0)}"
+    ],
+    "state_content": {
+      "size": 4,
+      "grid": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "board_kind": "general",
+      "generation_presses": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "on_count": 10,
+      "solver": {
+        "solvable": true,
+        "nullity": 4,
+        "min_weight": 4,
+        "min_presses": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "num_solutions": 16
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00031",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Find the minimum presses needed to turn all lights off",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhich set of button presses turns ALL lights OFF from the shown state?\n\nOptions:\n[1] {(0, 2), (1, 2), (2, 0), (2, 2)}\n[2] {(1, 0), (1, 3), (2, 3), (3, 0)}\n[3] {(0, 2), (1, 2), (1, 3), (2, 2)}\n[4] {(0, 0), (0, 2), (2, 0), (2, 1)}\n[5] {(0, 2), (1, 2), (2, 2), (3, 1)}\n[6] {(0, 2), (1, 1), (1, 2), (2, 0)}\n[7] {(0, 2), (2, 0), (2, 2), (3, 2)}\n[8] {(0, 0), (1, 1), (2, 1), (3, 0)}",
+      "answer": 1,
+      "analysis": "Simulate each candidate set: a light ends OFF only if it is toggled an even number of times when it started ON... precisely, every ON light must be toggled an odd number of times and every OFF light an even number.\nThe set {(0, 2), (1, 2), (2, 0), (2, 2)} toggles: (0, 2) -> (0, 2), (1, 2), (0, 1), (0, 3); (1, 2) -> (1, 2), (0, 2), (2, 2), (1, 1), (1, 3); (2, 0) -> (2, 0), (1, 0), (3, 0), (2, 1); (2, 2) -> (2, 2), (1, 2), (3, 2), (2, 1), (2, 3).\nAggregating these toggles, every ON light is covered an odd number of times and every OFF light an even number of times, so all lights turn OFF.\nEach of the other listed sets leaves at least one light ON when simulated.\n\nSo the answer is {(0, 2), (1, 2), (2, 0), (2, 2)}. The option number is 1.",
+      "options": [
+        "{(0, 2), (1, 2), (2, 0), (2, 2)}",
+        "{(1, 0), (1, 3), (2, 3), (3, 0)}",
+        "{(0, 2), (1, 2), (1, 3), (2, 2)}",
+        "{(0, 0), (0, 2), (2, 0), (2, 1)}",
+        "{(0, 2), (1, 2), (2, 2), (3, 1)}",
+        "{(0, 2), (1, 1), (1, 2), (2, 0)}",
+        "{(0, 2), (2, 0), (2, 2), (3, 2)}",
+        "{(0, 0), (1, 1), (2, 1), (3, 0)}"
+      ]
+    }
+  }
+}

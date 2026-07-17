@@ -1,0 +1,109 @@
+{
+  "sample": {
+    "index": 55,
+    "data_id": "dice_roll-mcq-00056",
+    "question_id": 4,
+    "question_description": "Compute the minimum number of rolls to reach the star (possibly with a required top face)",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00014.png",
+    "state": "states/board_00014.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00014.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00014.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. What is the minimum number of rolls needed to move the die onto the star cell (6, 1) AND have 2 on the top face when it arrives?\n\nOptions:\n[1] 4\n[2] 3\n[3] 11\n[4] 6\n[5] 8\n[6] 5\n[7] 7\n[8] 10",
+    "analysis": "Run a breadth-first search over (die cell, orientation) states, starting at (5, 5). The BFS expands the frontier one roll at a time: no state reaching the star cell with top=2 appears at depths 1 to 6, and the first such state appears at depth 7.\nOne optimal sequence of 7 rolls: West, North, West, South, South, West, West.\nPositions along the way: (5, 5) -> (5, 4) -> (4, 4) -> (4, 3) -> (5, 3) -> (6, 3) -> (6, 2) -> (6, 1).\n\nSo the answer is 7. The option number is 7.",
+    "options": [
+      "4",
+      "3",
+      "11",
+      "6",
+      "8",
+      "5",
+      "7",
+      "10"
+    ],
+    "state_content": {
+      "rows": 7,
+      "cols": 7,
+      "blocked": [
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "star": [
+        6,
+        1
+      ],
+      "die": [
+        5,
+        5
+      ],
+      "orientation": {
+        "top": 5,
+        "bottom": 2,
+        "north": 6,
+        "south": 1,
+        "east": 4,
+        "west": 3
+      },
+      "move_sequence": [
+        "East",
+        "South",
+        "North",
+        "West",
+        "South",
+        "West"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00056",
+      "image": "images/board_00014.png",
+      "state": "states/board_00014.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Compute the minimum number of rolls to reach the star (possibly with a required top face)",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. What is the minimum number of rolls needed to move the die onto the star cell (6, 1) AND have 2 on the top face when it arrives?\n\nOptions:\n[1] 4\n[2] 3\n[3] 11\n[4] 6\n[5] 8\n[6] 5\n[7] 7\n[8] 10",
+      "answer": 7,
+      "analysis": "Run a breadth-first search over (die cell, orientation) states, starting at (5, 5). The BFS expands the frontier one roll at a time: no state reaching the star cell with top=2 appears at depths 1 to 6, and the first such state appears at depth 7.\nOne optimal sequence of 7 rolls: West, North, West, South, South, West, West.\nPositions along the way: (5, 5) -> (5, 4) -> (4, 4) -> (4, 3) -> (5, 3) -> (6, 3) -> (6, 2) -> (6, 1).\n\nSo the answer is 7. The option number is 7.",
+      "options": [
+        "4",
+        "3",
+        "11",
+        "6",
+        "8",
+        "5",
+        "7",
+        "10"
+      ]
+    }
+  }
+}

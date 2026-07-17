@@ -1,0 +1,152 @@
+{
+  "sample": {
+    "index": 39,
+    "data_id": "lights_out-mcq-00040",
+    "question_id": 2,
+    "question_description": "Predict the board after a sequence of button presses",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00010.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00010.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nStarting from the shown board, the buttons (1, 0), (3, 1), (3, 2) are pressed in that order. How many lights will be ON afterwards?\n\nOptions:\n[1] 3\n[2] 9\n[3] 7\n[4] 4\n[5] 2\n[6] 6\n[7] 8\n[8] 5",
+    "analysis": "The board initially has 8 light(s) ON.\nPress 1 at (1, 0) toggles (1, 0), (0, 0), (2, 0), (1, 1): the ON count goes from 8 to 6.\nPress 2 at (3, 1) toggles (3, 1), (2, 1), (3, 0), (3, 2): the ON count goes from 6 to 8.\nPress 3 at (3, 2) toggles (3, 2), (2, 2), (3, 1), (3, 3): the ON count goes from 8 to 6.\nAfter all presses, 6 light(s) are ON.\n\nSo the answer is 6. The option number is 6.",
+    "options": [
+      "3",
+      "9",
+      "7",
+      "4",
+      "2",
+      "6",
+      "8",
+      "5"
+    ],
+    "state_content": {
+      "size": 4,
+      "grid": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "board_kind": "general",
+      "generation_presses": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "on_count": 8,
+      "solver": {
+        "solvable": true,
+        "nullity": 4,
+        "min_weight": 6,
+        "min_presses": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "num_solutions": 16
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00040",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the board after a sequence of button presses",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nStarting from the shown board, the buttons (1, 0), (3, 1), (3, 2) are pressed in that order. How many lights will be ON afterwards?\n\nOptions:\n[1] 3\n[2] 9\n[3] 7\n[4] 4\n[5] 2\n[6] 6\n[7] 8\n[8] 5",
+      "answer": 6,
+      "analysis": "The board initially has 8 light(s) ON.\nPress 1 at (1, 0) toggles (1, 0), (0, 0), (2, 0), (1, 1): the ON count goes from 8 to 6.\nPress 2 at (3, 1) toggles (3, 1), (2, 1), (3, 0), (3, 2): the ON count goes from 6 to 8.\nPress 3 at (3, 2) toggles (3, 2), (2, 2), (3, 1), (3, 3): the ON count goes from 8 to 6.\nAfter all presses, 6 light(s) are ON.\n\nSo the answer is 6. The option number is 6.",
+      "options": [
+        "3",
+        "9",
+        "7",
+        "4",
+        "2",
+        "6",
+        "8",
+        "5"
+      ]
+    }
+  }
+}

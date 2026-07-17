@@ -1,0 +1,96 @@
+{
+  "sample": {
+    "index": 29,
+    "data_id": "dice_roll-mcq-00030",
+    "question_id": 2,
+    "question_description": "Predict the die's orientation or final cell after a given sequence of rolls",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 5,
+    "answer_preview": "5",
+    "question_preview": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the boa...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/kimi_k3_dice_roll/files/images/board_00008.png",
+    "state_url": "data/kimi_k3_dice_roll/files/states/board_00008.json",
+    "has_options": true,
+    "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. The die is rolled: West, East, West, North, West. What number will be on the TOP face of the die after these rolls?\n\nOptions:\n[1] 4\n[2] 2\n[3] 1\n[4] The roll sequence cannot be performed\n[5] 6\n[6] 3\n[7] 5\n[8] The die falls off the board",
+    "analysis": "The die starts at (2, 5) with top=1, front-left=5, front-right=3 (so bottom=6, back-right/hidden-north=2, back-left/hidden-west=4).\nRoll 1 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=3, front-left=5, front-right=6.\nRoll 2 - East: the die moves from (2, 4) to (2, 5). Visible faces become top=1, front-left=5, front-right=3.\nRoll 3 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=3, front-left=5, front-right=6.\nRoll 4 - North: the die moves from (2, 4) to (1, 4). Visible faces become top=5, front-left=4, front-right=6.\nRoll 5 - West: the die moves from (1, 4) to (1, 3). Visible faces become top=6, front-left=4, front-right=2.\nAfter all rolls the TOP face shows 6.\n\nSo the answer is 6. The option number is 5.",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "The roll sequence cannot be performed",
+      "6",
+      "3",
+      "5",
+      "The die falls off the board"
+    ],
+    "state_content": {
+      "rows": 6,
+      "cols": 6,
+      "blocked": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "star": [
+        0,
+        5
+      ],
+      "die": [
+        2,
+        5
+      ],
+      "orientation": {
+        "top": 1,
+        "bottom": 6,
+        "north": 2,
+        "south": 5,
+        "east": 3,
+        "west": 4
+      },
+      "move_sequence": [
+        "West",
+        "East",
+        "West",
+        "North",
+        "West"
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "dice_roll-mcq-00030",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Predict the die's orientation or final cell after a given sequence of rolls",
+      "question": "Dice Roll puzzle. A standard six-sided die sits on a grid board shown from above. Row numbers (0-based, increasing downward) are printed on the left of the board and column numbers (0-based, increasing rightward) on top; positions are written as (row, column). Gray-brown rocks are blocked cells that the die cannot enter. The golden star marks the goal cell. The die is drawn in isometric style so three of its faces are visible: the TOP face, the FRONT-LEFT face (the face pointing South, toward larger row numbers) and the FRONT-RIGHT face (the face pointing East, toward larger column numbers). It is a standard die: opposite faces always sum to 7 (1 opposite 6, 2 opposite 5, 3 opposite 4), so the three hidden faces are fully determined by the three visible ones. The die can be rolled North (up, toward smaller row numbers), South (down), East (right) or West (left): it tips onto the adjacent cell and its orientation changes accordingly (the face opposite to the rolling direction comes to the top). If the target cell is blocked by a rock or lies outside the board, the die does not move and its orientation stays unchanged. The die is rolled: West, East, West, North, West. What number will be on the TOP face of the die after these rolls?\n\nOptions:\n[1] 4\n[2] 2\n[3] 1\n[4] The roll sequence cannot be performed\n[5] 6\n[6] 3\n[7] 5\n[8] The die falls off the board",
+      "answer": 5,
+      "analysis": "The die starts at (2, 5) with top=1, front-left=5, front-right=3 (so bottom=6, back-right/hidden-north=2, back-left/hidden-west=4).\nRoll 1 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=3, front-left=5, front-right=6.\nRoll 2 - East: the die moves from (2, 4) to (2, 5). Visible faces become top=1, front-left=5, front-right=3.\nRoll 3 - West: the die moves from (2, 5) to (2, 4). Visible faces become top=3, front-left=5, front-right=6.\nRoll 4 - North: the die moves from (2, 4) to (1, 4). Visible faces become top=5, front-left=4, front-right=6.\nRoll 5 - West: the die moves from (1, 4) to (1, 3). Visible faces become top=6, front-left=4, front-right=2.\nAfter all rolls the TOP face shows 6.\n\nSo the answer is 6. The option number is 5.",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "The roll sequence cannot be performed",
+        "6",
+        "3",
+        "5",
+        "The die falls off the board"
+      ]
+    }
+  }
+}

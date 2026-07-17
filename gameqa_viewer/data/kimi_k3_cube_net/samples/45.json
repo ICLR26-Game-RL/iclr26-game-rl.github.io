@@ -1,0 +1,257 @@
+{
+  "sample": {
+    "index": 45,
+    "data_id": "cube_net-mcq-00046",
+    "question_id": 5,
+    "question_description": "Identify which three faces meet at a single cube vertex",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Medium",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/kimi_k3_cube_net/files/images/board_00010.png",
+    "state_url": "data/kimi_k3_cube_net/files/states/board_00010.json",
+    "has_options": true,
+    "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nAfter the net is folded into a cube, which set of three faces meets at a single vertex (corner) of the cube?\n\nOptions:\n[1] blue, purple, yellow\n[2] blue, red, yellow\n[3] green, red, yellow\n[4] orange, purple, yellow\n[5] green, orange, purple\n[6] blue, orange, purple\n[7] green, orange, yellow\n[8] orange, purple, red",
+    "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- red face (heart) at grid (0, 0): front (toward the viewer)\n- orange face (star) at grid (0, 1): right\n- green face (triangle) at grid (0, 2): back\n- yellow face (diamond) at grid (1, 2): bottom (down)\n- purple face (circle) at grid (1, 3): left\n- blue face (cross) at grid (1, 4): top (up)\nThe three opposite face pairs are: blue is opposite yellow; green is opposite red; orange is opposite purple. Every vertex of a cube is touched by exactly one face from each opposite pair, so a valid vertex triple must contain no opposite pair, and any such choice of one face per pair does meet at one corner. The triple green, orange, yellow contains no opposite pair; reading the fold orientations, the three faces green (back), orange (right), yellow (bottom (down)) indeed meet at one cube corner. Each of the other listed triples contains an opposite pair, so those faces cannot meet at a single vertex.\n\nSo the answer is green, orange, yellow. The option number is 7.",
+    "options": [
+      "blue, purple, yellow",
+      "blue, red, yellow",
+      "green, red, yellow",
+      "orange, purple, yellow",
+      "green, orange, purple",
+      "blue, orange, purple",
+      "green, orange, yellow",
+      "orange, purple, red"
+    ],
+    "state_content": {
+      "net_id": 1,
+      "plot_level": "Medium",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "faces": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "color": "red",
+          "rgb": [
+            231,
+            76,
+            60
+          ],
+          "symbol": "heart",
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "color": "orange",
+          "rgb": [
+            243,
+            156,
+            18
+          ],
+          "symbol": "star",
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "color": "green",
+          "rgb": [
+            39,
+            174,
+            96
+          ],
+          "symbol": "triangle",
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "color": "yellow",
+          "rgb": [
+            241,
+            196,
+            15
+          ],
+          "symbol": "diamond",
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            1,
+            3
+          ],
+          "color": "purple",
+          "rgb": [
+            155,
+            89,
+            182
+          ],
+          "symbol": "circle",
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            1,
+            4
+          ],
+          "color": "blue",
+          "rgb": [
+            52,
+            152,
+            219
+          ],
+          "symbol": "cross",
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "grid_rows": 2,
+      "grid_cols": 5
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube_net-mcq-00046",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 5,
+      "question_description": "Identify which three faces meet at a single cube vertex",
+      "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nAfter the net is folded into a cube, which set of three faces meets at a single vertex (corner) of the cube?\n\nOptions:\n[1] blue, purple, yellow\n[2] blue, red, yellow\n[3] green, red, yellow\n[4] orange, purple, yellow\n[5] green, orange, purple\n[6] blue, orange, purple\n[7] green, orange, yellow\n[8] orange, purple, red",
+      "answer": 7,
+      "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- red face (heart) at grid (0, 0): front (toward the viewer)\n- orange face (star) at grid (0, 1): right\n- green face (triangle) at grid (0, 2): back\n- yellow face (diamond) at grid (1, 2): bottom (down)\n- purple face (circle) at grid (1, 3): left\n- blue face (cross) at grid (1, 4): top (up)\nThe three opposite face pairs are: blue is opposite yellow; green is opposite red; orange is opposite purple. Every vertex of a cube is touched by exactly one face from each opposite pair, so a valid vertex triple must contain no opposite pair, and any such choice of one face per pair does meet at one corner. The triple green, orange, yellow contains no opposite pair; reading the fold orientations, the three faces green (back), orange (right), yellow (bottom (down)) indeed meet at one cube corner. Each of the other listed triples contains an opposite pair, so those faces cannot meet at a single vertex.\n\nSo the answer is green, orange, yellow. The option number is 7.",
+      "options": [
+        "blue, purple, yellow",
+        "blue, red, yellow",
+        "green, red, yellow",
+        "orange, purple, yellow",
+        "green, orange, purple",
+        "blue, orange, purple",
+        "green, orange, yellow",
+        "orange, purple, red"
+      ]
+    }
+  }
+}

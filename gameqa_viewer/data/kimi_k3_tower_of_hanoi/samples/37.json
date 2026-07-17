@@ -1,0 +1,91 @@
+{
+  "sample": {
+    "index": 37,
+    "data_id": "tower_of_hanoi-mcq-00038",
+    "question_id": 2,
+    "question_description": "Apply a move sequence and identify the top disk on a peg",
+    "qa_type": "State Prediction",
+    "qa_level": "Medium",
+    "plot_level": "Medium",
+    "answer": 4,
+    "answer_preview": "4",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00010.png",
+    "state": "states/board_00010.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00010.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00010.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nThe following moves are made in order: C → A, A → C, B → A. If a move is illegal, it is skipped and the board remains unchanged for that step. After the full sequence, what will be the size of the top disk on peg A?\n\nOptions:\n[1] The peg is empty\n[2] 2\n[3] 3\n[4] 1\n[5] 4",
+    "analysis": "Initial state (bottom to top): peg A: [] (empty), peg B: [2, 1], peg C: [4, 3].\nMove 1 - C → A: Legal. Disk 3 moves from peg C onto the empty peg A. Peg tops now: A → 3, B → 1, C → 4.\nMove 2 - A → C: Legal. Disk 3 moves from peg A onto peg C, landing on top of disk 4. Peg tops now: A → (empty), B → 1, C → 3.\nMove 3 - B → A: Legal. Disk 1 moves from peg B onto the empty peg A. Peg tops now: A → 1, B → 2, C → 3.\nAfter the full sequence, peg A holds [1], so its top disk is disk 1.\n\nSo the answer is 1. The option number is 4.",
+    "options": [
+      "The peg is empty",
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "state_content": {
+      "num_disks": 4,
+      "pegs": {
+        "A": [],
+        "B": [
+          2,
+          1
+        ],
+        "C": [
+          4,
+          3
+        ]
+      },
+      "target_peg": "A",
+      "initial_peg": "C",
+      "scramble_moves": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "A",
+          "B"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00038",
+      "image": "images/board_00010.png",
+      "state": "states/board_00010.json",
+      "plot_level": "Medium",
+      "qa_level": "Medium",
+      "qa_type": "State Prediction",
+      "question_id": 2,
+      "question_description": "Apply a move sequence and identify the top disk on a peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nThe following moves are made in order: C → A, A → C, B → A. If a move is illegal, it is skipped and the board remains unchanged for that step. After the full sequence, what will be the size of the top disk on peg A?\n\nOptions:\n[1] The peg is empty\n[2] 2\n[3] 3\n[4] 1\n[5] 4",
+      "answer": 4,
+      "analysis": "Initial state (bottom to top): peg A: [] (empty), peg B: [2, 1], peg C: [4, 3].\nMove 1 - C → A: Legal. Disk 3 moves from peg C onto the empty peg A. Peg tops now: A → 3, B → 1, C → 4.\nMove 2 - A → C: Legal. Disk 3 moves from peg A onto peg C, landing on top of disk 4. Peg tops now: A → (empty), B → 1, C → 3.\nMove 3 - B → A: Legal. Disk 1 moves from peg B onto the empty peg A. Peg tops now: A → 1, B → 2, C → 3.\nAfter the full sequence, peg A holds [1], so its top disk is disk 1.\n\nSo the answer is 1. The option number is 4.",
+      "options": [
+        "The peg is empty",
+        "2",
+        "3",
+        "1",
+        "4"
+      ]
+    }
+  }
+}

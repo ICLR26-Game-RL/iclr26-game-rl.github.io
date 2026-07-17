@@ -1,0 +1,100 @@
+{
+  "sample": {
+    "index": 3,
+    "data_id": "tower_of_hanoi-mcq-00004",
+    "question_id": 4,
+    "question_description": "Choose the optimal first move to gather all disks on the target peg",
+    "qa_type": "Strategy Optimization",
+    "qa_level": "Hard",
+    "plot_level": "Easy",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00001.png",
+    "state": "states/board_00001.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00001.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00001.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nStarting from the state shown in the image, you want to gather all 3 disks onto peg A (a single legal tower) in as few moves as possible. Which FIRST move belongs to a shortest solution?\n\nOptions:\n[1] C → A\n[2] B → A\n[3] C → B\n[4] B → C\n[5] A → C\n[6] A → B",
+    "analysis": "Gathering all 3 disks on peg A takes a minimum of 6 moves (found by breadth-first search over all reachable states).\nChecking every possible first move (the number is the minimum moves still needed afterwards):\n- A → B: 5 more move(s), 6 in total — optimal.\n- A → C: illegal move (disk 2 cannot be placed on top of disk 1) — cannot be played.\n- B → A: illegal move (peg B is empty) — cannot be played.\n- B → C: illegal move (peg B is empty) — cannot be played.\n- C → A: 7 more move(s), 8 in total — not optimal.\n- C → B: 7 more move(s), 8 in total — not optimal.\nOnly A → B keeps a shortest (6-move) solution open.\n\nSo the answer is A → B. The option number is 6.",
+    "options": [
+      "C → A",
+      "B → A",
+      "C → B",
+      "B → C",
+      "A → C",
+      "A → B"
+    ],
+    "state_content": {
+      "num_disks": 3,
+      "pegs": {
+        "A": [
+          2
+        ],
+        "B": [],
+        "C": [
+          3,
+          1
+        ]
+      },
+      "target_peg": "A",
+      "initial_peg": "C",
+      "scramble_moves": [
+        [
+          "C",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "A"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00004",
+      "image": "images/board_00001.png",
+      "state": "states/board_00001.json",
+      "plot_level": "Easy",
+      "qa_level": "Hard",
+      "qa_type": "Strategy Optimization",
+      "question_id": 4,
+      "question_description": "Choose the optimal first move to gather all disks on the target peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nStarting from the state shown in the image, you want to gather all 3 disks onto peg A (a single legal tower) in as few moves as possible. Which FIRST move belongs to a shortest solution?\n\nOptions:\n[1] C → A\n[2] B → A\n[3] C → B\n[4] B → C\n[5] A → C\n[6] A → B",
+      "answer": 6,
+      "analysis": "Gathering all 3 disks on peg A takes a minimum of 6 moves (found by breadth-first search over all reachable states).\nChecking every possible first move (the number is the minimum moves still needed afterwards):\n- A → B: 5 more move(s), 6 in total — optimal.\n- A → C: illegal move (disk 2 cannot be placed on top of disk 1) — cannot be played.\n- B → A: illegal move (peg B is empty) — cannot be played.\n- B → C: illegal move (peg B is empty) — cannot be played.\n- C → A: 7 more move(s), 8 in total — not optimal.\n- C → B: 7 more move(s), 8 in total — not optimal.\nOnly A → B keeps a shortest (6-move) solution open.\n\nSo the answer is A → B. The option number is 6.",
+      "options": [
+        "C → A",
+        "B → A",
+        "C → B",
+        "B → C",
+        "A → C",
+        "A → B"
+      ]
+    }
+  }
+}

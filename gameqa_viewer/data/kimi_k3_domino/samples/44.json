@@ -1,0 +1,138 @@
+{
+  "sample": {
+    "index": 44,
+    "data_id": "domino-mcq-00045",
+    "question_id": 1,
+    "question_description": "Identify which hand tile is a double",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of...",
+    "image": "images/board_00012.png",
+    "state": "states/board_00012.json",
+    "image_url": "data/kimi_k3_domino/files/images/board_00012.png",
+    "state_url": "data/kimi_k3_domino/files/states/board_00012.json",
+    "has_options": true,
+    "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. Which hand tile is a double (a tile whose two halves show the same number of pips)?\n\nOptions:\n[1] D\n[2] B\n[3] None of them\n[4] E\n[5] A\n[6] F\n[7] C",
+    "analysis": "Checking each hand tile: A (6|5): halves differ; B (2|5): halves differ; C (3|4): halves differ; D (6|6): equal halves -> double; E (4|2): halves differ; F (5|1): halves differ. Only tile D has two equal halves.\n\nSo the answer is D. The option number is 1.",
+    "options": [
+      "D",
+      "B",
+      "None of them",
+      "E",
+      "A",
+      "F",
+      "C"
+    ],
+    "state_content": {
+      "chain": [
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "chain_oriented": true,
+      "open_left": 4,
+      "open_right": 5,
+      "hand": [
+        {
+          "label": "A",
+          "tile": [
+            6,
+            5
+          ]
+        },
+        {
+          "label": "B",
+          "tile": [
+            2,
+            5
+          ]
+        },
+        {
+          "label": "C",
+          "tile": [
+            3,
+            4
+          ]
+        },
+        {
+          "label": "D",
+          "tile": [
+            6,
+            6
+          ]
+        },
+        {
+          "label": "E",
+          "tile": [
+            4,
+            2
+          ]
+        },
+        {
+          "label": "F",
+          "tile": [
+            5,
+            1
+          ]
+        }
+      ],
+      "table_note": "doubles vertical",
+      "plot_level": "Hard"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "domino-mcq-00045",
+      "image": "images/board_00012.png",
+      "state": "states/board_00012.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify which hand tile is a double",
+      "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. Which hand tile is a double (a tile whose two halves show the same number of pips)?\n\nOptions:\n[1] D\n[2] B\n[3] None of them\n[4] E\n[5] A\n[6] F\n[7] C",
+      "answer": 1,
+      "analysis": "Checking each hand tile: A (6|5): halves differ; B (2|5): halves differ; C (3|4): halves differ; D (6|6): equal halves -> double; E (4|2): halves differ; F (5|1): halves differ. Only tile D has two equal halves.\n\nSo the answer is D. The option number is 1.",
+      "options": [
+        "D",
+        "B",
+        "None of them",
+        "E",
+        "A",
+        "F",
+        "C"
+      ]
+    }
+  }
+}

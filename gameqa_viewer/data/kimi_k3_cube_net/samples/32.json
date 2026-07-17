@@ -1,0 +1,257 @@
+{
+  "sample": {
+    "index": 32,
+    "data_id": "cube_net-mcq-00033",
+    "question_id": 1,
+    "question_description": "Identify a face's color, symbol, or grid position in the net",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 2,
+    "answer_preview": "2",
+    "question_preview": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared...",
+    "image": "images/board_00008.png",
+    "state": "states/board_00008.json",
+    "image_url": "data/kimi_k3_cube_net/files/images/board_00008.png",
+    "state_url": "data/kimi_k3_cube_net/files/states/board_00008.json",
+    "has_options": true,
+    "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nWhich symbol is drawn on the purple face?\n\nOptions:\n[1] triangle\n[2] cross\n[3] diamond\n[4] heart\n[5] square\n[6] circle\n[7] hexagon\n[8] star",
+    "analysis": "Find the purple face in the net: it is at grid position (1, 2). The symbol drawn in its center is the cross.\n\nSo the answer is cross. The option number is 2.",
+    "options": [
+      "triangle",
+      "cross",
+      "diamond",
+      "heart",
+      "square",
+      "circle",
+      "hexagon",
+      "star"
+    ],
+    "state_content": {
+      "net_id": 3,
+      "plot_level": "Medium",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "faces": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "color": "green",
+          "rgb": [
+            39,
+            174,
+            96
+          ],
+          "symbol": "star",
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "color": "red",
+          "rgb": [
+            231,
+            76,
+            60
+          ],
+          "symbol": "triangle",
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "color": "orange",
+          "rgb": [
+            243,
+            156,
+            18
+          ],
+          "symbol": "diamond",
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "color": "purple",
+          "rgb": [
+            155,
+            89,
+            182
+          ],
+          "symbol": "cross",
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            1,
+            3
+          ],
+          "color": "yellow",
+          "rgb": [
+            241,
+            196,
+            15
+          ],
+          "symbol": "heart",
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "color": "blue",
+          "rgb": [
+            52,
+            152,
+            219
+          ],
+          "symbol": "circle",
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "grid_rows": 3,
+      "grid_cols": 4
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube_net-mcq-00033",
+      "image": "images/board_00008.png",
+      "state": "states/board_00008.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify a face's color, symbol, or grid position in the net",
+      "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nWhich symbol is drawn on the purple face?\n\nOptions:\n[1] triangle\n[2] cross\n[3] diamond\n[4] heart\n[5] square\n[6] circle\n[7] hexagon\n[8] star",
+      "answer": 2,
+      "analysis": "Find the purple face in the net: it is at grid position (1, 2). The symbol drawn in its center is the cross.\n\nSo the answer is cross. The option number is 2.",
+      "options": [
+        "triangle",
+        "cross",
+        "diamond",
+        "heart",
+        "square",
+        "circle",
+        "hexagon",
+        "star"
+      ]
+    }
+  }
+}

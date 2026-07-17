@@ -1,0 +1,114 @@
+{
+  "sample": {
+    "index": 8,
+    "data_id": "domino-mcq-00009",
+    "question_id": 1,
+    "question_description": "Count the doubles in the chain",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Easy",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of...",
+    "image": "images/board_00003.png",
+    "state": "states/board_00003.json",
+    "image_url": "data/kimi_k3_domino/files/images/board_00003.png",
+    "state_url": "data/kimi_k3_domino/files/states/board_00003.json",
+    "has_options": true,
+    "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. How many doubles (tiles whose two halves show the same number of pips) are there in the chain?\n\nOptions:\n[1] 0\n[2] 6\n[3] 2\n[4] 3\n[5] 1\n[6] 4\n[7] 5\n[8] 7",
+    "analysis": "Reading the chain from left to right: 6-4, 4-5, 5-6, 6-3, 3-0. The tiles with two equal halves are: none. That is 0 doubles in total.\n\nSo the answer is 0. The option number is 1.",
+    "options": [
+      "0",
+      "6",
+      "2",
+      "3",
+      "1",
+      "4",
+      "5",
+      "7"
+    ],
+    "state_content": {
+      "chain": [
+        [
+          6,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "chain_oriented": true,
+      "open_left": 6,
+      "open_right": 0,
+      "hand": [
+        {
+          "label": "A",
+          "tile": [
+            5,
+            1
+          ]
+        },
+        {
+          "label": "B",
+          "tile": [
+            3,
+            5
+          ]
+        },
+        {
+          "label": "C",
+          "tile": [
+            2,
+            2
+          ]
+        },
+        {
+          "label": "D",
+          "tile": [
+            0,
+            0
+          ]
+        }
+      ],
+      "table_note": "doubles vertical",
+      "plot_level": "Easy"
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "domino-mcq-00009",
+      "image": "images/board_00003.png",
+      "state": "states/board_00003.json",
+      "plot_level": "Easy",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count the doubles in the chain",
+      "question": "This is a Domino Chain puzzle. A domino tile is a rectangular piece divided into two halves; each half shows from 0 (blank) to 6 pips (dots), and the number of pips is the value of that half. A tile whose two halves are equal (for example 4-4) is called a double. On the green table a chain of domino tiles is laid out in a single horizontal row from left to right. Adjacent tiles in the chain always match: the value of the right half of every tile equals the value of the left half of the next tile. Double tiles in the chain are placed vertically (taller than they are wide); every other chain tile is horizontal (wider than it is tall), and the left/right halves of a horizontal tile are exactly what they look like. The chain has exactly two open ends: the LEFT open end is the value of the left half of the leftmost tile, and the RIGHT open end is the value of the right half of the rightmost tile (if an end tile is a vertical double, the open value is simply its value). Below the chain, on the darker rack, there is a hand of spare tiles labeled with the gold letters A, B, C, ... printed above them. Every hand tile is drawn vertically; a hand tile with U pips on its upper half and D pips on its lower half is written as (U|D). A hand tile can be legally played on an open end of the chain if either of its two halves matches the value of that open end. When a tile is played it is rotated as needed so that its matching half touches the chain, and its other half becomes the new value of that open end; the other open end does not change. How many doubles (tiles whose two halves show the same number of pips) are there in the chain?\n\nOptions:\n[1] 0\n[2] 6\n[3] 2\n[4] 3\n[5] 1\n[6] 4\n[7] 5\n[8] 7",
+      "answer": 1,
+      "analysis": "Reading the chain from left to right: 6-4, 4-5, 5-6, 6-3, 3-0. The tiles with two equal halves are: none. That is 0 doubles in total.\n\nSo the answer is 0. The option number is 1.",
+      "options": [
+        "0",
+        "6",
+        "2",
+        "3",
+        "1",
+        "4",
+        "5",
+        "7"
+      ]
+    }
+  }
+}

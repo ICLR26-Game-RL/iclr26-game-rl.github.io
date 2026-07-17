@@ -1,0 +1,257 @@
+{
+  "sample": {
+    "index": 63,
+    "data_id": "cube_net-mcq-00064",
+    "question_id": 4,
+    "question_description": "Determine which color ends up on a given side of the placed cube",
+    "qa_type": "State Prediction",
+    "qa_level": "Hard",
+    "plot_level": "Hard",
+    "answer": 7,
+    "answer_preview": "7",
+    "question_preview": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared...",
+    "image": "images/board_00014.png",
+    "state": "states/board_00014.json",
+    "image_url": "data/kimi_k3_cube_net/files/images/board_00014.png",
+    "state_url": "data/kimi_k3_cube_net/files/states/board_00014.json",
+    "has_options": true,
+    "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nThe net is folded into a cube and the cube is placed so that the purple face is on the BOTTOM and the red face faces you (the FRONT). Which color is on the LEFT face?\n\nOptions:\n[1] purple\n[2] red\n[3] None of the above\n[4] Cannot be determined\n[5] orange\n[6] green\n[7] blue\n[8] yellow",
+    "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- red face (diamond) at grid (0, 0): front (toward the viewer)\n- orange face (circle) at grid (0, 1): right\n- green face (star) at grid (1, 1): bottom (down)\n- yellow face (heart) at grid (1, 2): back\n- purple face (triangle) at grid (2, 2): left\n- blue face (cross) at grid (2, 3): top (up)\nThe purple face has folded direction (-1, 0, 0) and goes to the BOTTOM; the red face has folded direction (0, 0, 1) and goes to the FRONT. For a proper rotation, the face that lands on the LEFT is the one whose folded direction equals (bottom direction) x (front direction) = (-1, 0, 0) x (0, 0, 1) = (0, 1, 0). From the orientations above, the face with folded direction (0, 1, 0) is the blue face.\n\nSo the answer is blue. The option number is 7.",
+    "options": [
+      "purple",
+      "red",
+      "None of the above",
+      "Cannot be determined",
+      "orange",
+      "green",
+      "blue",
+      "yellow"
+    ],
+    "state_content": {
+      "net_id": 6,
+      "plot_level": "Hard",
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "faces": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "color": "red",
+          "rgb": [
+            231,
+            76,
+            60
+          ],
+          "symbol": "diamond",
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "color": "orange",
+          "rgb": [
+            243,
+            156,
+            18
+          ],
+          "symbol": "circle",
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "color": "green",
+          "rgb": [
+            39,
+            174,
+            96
+          ],
+          "symbol": "star",
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0,
+            -1
+          ]
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "color": "yellow",
+          "rgb": [
+            241,
+            196,
+            15
+          ],
+          "symbol": "heart",
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "up": [
+            1,
+            0,
+            0
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "color": "purple",
+          "rgb": [
+            155,
+            89,
+            182
+          ],
+          "symbol": "triangle",
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "cell": [
+            2,
+            3
+          ],
+          "color": "blue",
+          "rgb": [
+            52,
+            152,
+            219
+          ],
+          "symbol": "cross",
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "up": [
+            0,
+            0,
+            -1
+          ],
+          "right": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "grid_rows": 3,
+      "grid_cols": 4
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "cube_net-mcq-00064",
+      "image": "images/board_00014.png",
+      "state": "states/board_00014.json",
+      "plot_level": "Hard",
+      "qa_level": "Hard",
+      "qa_type": "State Prediction",
+      "question_id": 4,
+      "question_description": "Determine which color ends up on a given side of the placed cube",
+      "question": "This is a cube net puzzle. The image shows a cube net: six square faces arranged edge-to-edge on a sheet of graph paper, which can be folded along their shared edges to form a cube. Each face has a distinct color (red, orange, yellow, green, blue or purple) and a distinct symbol drawn in its center (star, heart, triangle, circle, diamond or cross), printed in white or dark ink for contrast. Row numbers are printed along the left of the grid and column numbers along the top; a grid position is written as (row, column), with both indices starting from 0. When the net is folded into a cube, each pair of faces is either opposite (they never touch) or adjacent (they share exactly one cube edge), and exactly three faces meet at every vertex (corner) of the cube.\n\nThe net is folded into a cube and the cube is placed so that the purple face is on the BOTTOM and the red face faces you (the FRONT). Which color is on the LEFT face?\n\nOptions:\n[1] purple\n[2] red\n[3] None of the above\n[4] Cannot be determined\n[5] orange\n[6] green\n[7] blue\n[8] yellow",
+      "answer": 7,
+      "analysis": "Folding the net (taking the face at grid position (0, 0) as the reference front face) gives these final orientations:\n- red face (diamond) at grid (0, 0): front (toward the viewer)\n- orange face (circle) at grid (0, 1): right\n- green face (star) at grid (1, 1): bottom (down)\n- yellow face (heart) at grid (1, 2): back\n- purple face (triangle) at grid (2, 2): left\n- blue face (cross) at grid (2, 3): top (up)\nThe purple face has folded direction (-1, 0, 0) and goes to the BOTTOM; the red face has folded direction (0, 0, 1) and goes to the FRONT. For a proper rotation, the face that lands on the LEFT is the one whose folded direction equals (bottom direction) x (front direction) = (-1, 0, 0) x (0, 0, 1) = (0, 1, 0). From the orientations above, the face with folded direction (0, 1, 0) is the blue face.\n\nSo the answer is blue. The option number is 7.",
+      "options": [
+        "purple",
+        "red",
+        "None of the above",
+        "Cannot be determined",
+        "orange",
+        "green",
+        "blue",
+        "yellow"
+      ]
+    }
+  }
+}

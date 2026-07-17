@@ -1,0 +1,171 @@
+{
+  "sample": {
+    "index": 48,
+    "data_id": "lights_out-mcq-00049",
+    "question_id": 1,
+    "question_description": "Identify states and counts of lights on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 1,
+    "answer_preview": "1",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00013.png",
+    "state": "states/board_00013.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00013.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00013.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhat are the states of the lights at (1, 1), (2, 4) and (0, 1) (in that order)?\n\nOptions:\n[1] ON, OFF, ON\n[2] OFF, OFF, OFF\n[3] OFF, ON, OFF\n[4] ON, ON, OFF\n[5] OFF, ON, ON\n[6] ON, OFF, OFF\n[7] ON, ON, ON\n[8] OFF, OFF, ON",
+    "analysis": "Looking at the picture, the light at (1, 1) is ON, the light at (2, 4) is OFF, and the light at (0, 1) is ON.\nSo the states in the requested order are ON, OFF, ON.\n\nSo the answer is ON, OFF, ON. The option number is 1.",
+    "options": [
+      "ON, OFF, ON",
+      "OFF, OFF, OFF",
+      "OFF, ON, OFF",
+      "ON, ON, OFF",
+      "OFF, ON, ON",
+      "ON, OFF, OFF",
+      "ON, ON, ON",
+      "OFF, OFF, ON"
+    ],
+    "state_content": {
+      "size": 5,
+      "grid": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "board_kind": "general",
+      "generation_presses": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "on_count": 13,
+      "solver": {
+        "solvable": true,
+        "nullity": 2,
+        "min_weight": 8,
+        "min_presses": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "num_solutions": 4
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00049",
+      "image": "images/board_00013.png",
+      "state": "states/board_00013.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify states and counts of lights on the board",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhat are the states of the lights at (1, 1), (2, 4) and (0, 1) (in that order)?\n\nOptions:\n[1] ON, OFF, ON\n[2] OFF, OFF, OFF\n[3] OFF, ON, OFF\n[4] ON, ON, OFF\n[5] OFF, ON, ON\n[6] ON, OFF, OFF\n[7] ON, ON, ON\n[8] OFF, OFF, ON",
+      "answer": 1,
+      "analysis": "Looking at the picture, the light at (1, 1) is ON, the light at (2, 4) is OFF, and the light at (0, 1) is ON.\nSo the states in the requested order are ON, OFF, ON.\n\nSo the answer is ON, OFF, ON. The option number is 1.",
+      "options": [
+        "ON, OFF, ON",
+        "OFF, OFF, OFF",
+        "OFF, ON, OFF",
+        "ON, ON, OFF",
+        "OFF, ON, ON",
+        "ON, OFF, OFF",
+        "ON, ON, ON",
+        "OFF, OFF, ON"
+      ]
+    }
+  }
+}

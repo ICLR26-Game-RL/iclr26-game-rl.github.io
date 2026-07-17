@@ -1,0 +1,191 @@
+{
+  "sample": {
+    "index": 56,
+    "data_id": "lights_out-mcq-00057",
+    "question_id": 1,
+    "question_description": "Identify states and counts of lights on the board",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Hard",
+    "answer": 6,
+    "answer_preview": "6",
+    "question_preview": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark ...",
+    "image": "images/board_00015.png",
+    "state": "states/board_00015.json",
+    "image_url": "data/kimi_k3_lights_out/files/images/board_00015.png",
+    "state_url": "data/kimi_k3_lights_out/files/states/board_00015.json",
+    "has_options": true,
+    "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhich row has the most lights ON?\n\nOptions:\n[1] Row 4\n[2] Two or more rows are tied for the most\n[3] Row 1\n[4] Row 3\n[5] Row 2\n[6] Row 0",
+    "analysis": "Count the ON lights in each row: row 0: 5 light(s) ON, row 1: 4 light(s) ON, row 2: 4 light(s) ON, row 3: 3 light(s) ON, row 4: 3 light(s) ON.\nRow 0 has 5 light(s) ON, strictly more than any other row, so there is no tie.\n\nSo the answer is Row 0. The option number is 6.",
+    "options": [
+      "Row 4",
+      "Two or more rows are tied for the most",
+      "Row 1",
+      "Row 3",
+      "Row 2",
+      "Row 0"
+    ],
+    "state_content": {
+      "size": 5,
+      "grid": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "board_kind": "general",
+      "generation_presses": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "on_count": 19,
+      "solver": {
+        "solvable": true,
+        "nullity": 2,
+        "min_weight": 10,
+        "min_presses": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "num_solutions": 4
+      }
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "lights_out-mcq-00057",
+      "image": "images/board_00015.png",
+      "state": "states/board_00015.json",
+      "plot_level": "Hard",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Identify states and counts of lights on the board",
+      "question": "Lights Out is a puzzle played on a square grid of buttons, one light per button. In the picture, a light is either ON (a glowing yellow button) or OFF (a dark slate button). Positions are written as (row, column) and are 0-based: the top-left button is at row 0, column 0, rows increase downward and columns increase to the right; row numbers are printed along the left edge of the board and column numbers along the top edge. Pressing a button toggles its own light and the lights of its orthogonal neighbors (the buttons directly above, below, to the left and to the right, as many as exist): every toggled light that was ON turns OFF and every toggled light that was OFF turns ON. Pressing the same button twice has no net effect, and the order of presses does not matter. The classic goal of the puzzle is to turn ALL the lights OFF.\n\nWhich row has the most lights ON?\n\nOptions:\n[1] Row 4\n[2] Two or more rows are tied for the most\n[3] Row 1\n[4] Row 3\n[5] Row 2\n[6] Row 0",
+      "answer": 6,
+      "analysis": "Count the ON lights in each row: row 0: 5 light(s) ON, row 1: 4 light(s) ON, row 2: 4 light(s) ON, row 3: 3 light(s) ON, row 4: 3 light(s) ON.\nRow 0 has 5 light(s) ON, strictly more than any other row, so there is no tie.\n\nSo the answer is Row 0. The option number is 6.",
+      "options": [
+        "Row 4",
+        "Two or more rows are tied for the most",
+        "Row 1",
+        "Row 3",
+        "Row 2",
+        "Row 0"
+      ]
+    }
+  }
+}

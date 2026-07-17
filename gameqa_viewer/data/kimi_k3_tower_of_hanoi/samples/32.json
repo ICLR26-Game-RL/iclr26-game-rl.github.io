@@ -1,0 +1,115 @@
+{
+  "sample": {
+    "index": 32,
+    "data_id": "tower_of_hanoi-mcq-00033",
+    "question_id": 1,
+    "question_description": "Count the disks on a given peg",
+    "qa_type": "Target Perception",
+    "qa_level": "Easy",
+    "plot_level": "Medium",
+    "answer": 3,
+    "answer_preview": "3",
+    "question_preview": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each ...",
+    "image": "images/board_00009.png",
+    "state": "states/board_00009.json",
+    "image_url": "data/kimi_k3_tower_of_hanoi/files/images/board_00009.png",
+    "state_url": "data/kimi_k3_tower_of_hanoi/files/states/board_00009.json",
+    "has_options": true,
+    "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nHow many disks are on peg A?\n\nOptions:\n[1] 1\n[2] 4\n[3] 2\n[4] 3\n[5] 0",
+    "analysis": "Peg A holds (from bottom to top): [4, 2]. That is 2 disk(s).\n\nSo the answer is 2. The option number is 3.",
+    "options": [
+      "1",
+      "4",
+      "2",
+      "3",
+      "0"
+    ],
+    "state_content": {
+      "num_disks": 4,
+      "pegs": {
+        "A": [
+          4,
+          2
+        ],
+        "B": [
+          3,
+          1
+        ],
+        "C": []
+      },
+      "target_peg": "C",
+      "initial_peg": "A",
+      "scramble_moves": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C",
+          "B"
+        ],
+        [
+          "C",
+          "A"
+        ]
+      ]
+    },
+    "state_error": null,
+    "raw": {
+      "data_id": "tower_of_hanoi-mcq-00033",
+      "image": "images/board_00009.png",
+      "state": "states/board_00009.json",
+      "plot_level": "Medium",
+      "qa_level": "Easy",
+      "qa_type": "Target Perception",
+      "question_id": 1,
+      "question_description": "Count the disks on a given peg",
+      "question": "This is a Tower of Hanoi puzzle. The image shows three pegs labeled A, B and C from left to right, standing on a wooden base, with disks stacked on them. Each disk is drawn as a colored rounded bar labeled with its size number: disk 1 is the smallest disk and larger numbers mean larger disks (a wider bar is always a larger disk). The disks on a peg are stacked from bottom to top, and the top disk of a peg is the uppermost disk of its stack.\nRules:\n1. Only one disk may be moved at a time, and only the top disk of a peg may be moved.\n2. A disk may be placed on an empty peg or on top of a larger disk; a larger disk may never be placed on top of a smaller disk.\nA move is written as \"X → Y\", meaning: move the top disk of peg X onto peg Y.\n\nHow many disks are on peg A?\n\nOptions:\n[1] 1\n[2] 4\n[3] 2\n[4] 3\n[5] 0",
+      "answer": 3,
+      "analysis": "Peg A holds (from bottom to top): [4, 2]. That is 2 disk(s).\n\nSo the answer is 2. The option number is 3.",
+      "options": [
+        "1",
+        "4",
+        "2",
+        "3",
+        "0"
+      ]
+    }
+  }
+}
