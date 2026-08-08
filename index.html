@@ -548,6 +548,10 @@
       overflow-x: auto;
     }
 
+    .bibtex-container + .bibtex-container {
+      margin-top: 1rem;
+    }
+
     .bibtex-copy-btn {
       position: absolute;
       top: 1rem;
@@ -917,11 +921,27 @@
     <div class="bibtex-section" id="citation">
       <h2 class="bibtex-header">Citation</h2>
       <div class="bibtex-container">
-        <button class="bibtex-copy-btn" id="bibtex-copy-btn" onclick="copyBibtex()">
+        <button class="bibtex-copy-btn" onclick="copyBibtex(this)">
           <i class="fa-regular fa-copy"></i>
-          <span id="bibtex-copy-text">Copy</span>
+          <span>Copy</span>
         </button>
-        <pre class="bibtex-code" id="bibtex-code">@article{tong2025game,
+        <pre class="bibtex-code">@inproceedings{ICLR2026_3ad98e63,
+  author = {Tong, Jingqi and Tang, Jixin and Li, Hangcheng and Mou, Yurong and Zhang, Ming and Zhao, Jun and Wen, Yanbo and Song, Fan and Zhan, Jiahao and Lu, Yuyang and others},
+  booktitle = {International Conference on Learning Representations},
+  editor = {C. Vondrick and B. Hariharan and C. Raffel and L. Pinto and D. Yang and A. Faust},
+  pages = {34689--34755},
+  title = {Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning},
+  url = {https://proceedings.iclr.cc/paper_files/paper/2026/file/3ad98e6306c5ed8a228b7240152f65af-Paper-Conference.pdf},
+  volume = {2026},
+  year = {2026}
+}</pre>
+      </div>
+      <div class="bibtex-container">
+        <button class="bibtex-copy-btn" onclick="copyBibtex(this)">
+          <i class="fa-regular fa-copy"></i>
+          <span>Copy</span>
+        </button>
+        <pre class="bibtex-code">@article{tong2025game,
   title={Game-RL: Synthesizing Multimodal Verifiable Game Data to Boost VLMs' General Reasoning},
   author={Tong, Jingqi and Tang, Jixin and Li, Hangcheng and Mou, Yurong and Zhang, Ming and Zhao, Jun and Wen, Yanbo and Song, Fan and Zhan, Jiahao and Lu, Yuyang and others},
   journal={arXiv preprint arXiv:2505.13886},
@@ -947,10 +967,10 @@
   </footer>
 
   <script>
-    function copyBibtex() {
-      const bibtexCode = document.getElementById('bibtex-code').textContent;
-      const copyBtn = document.getElementById('bibtex-copy-btn');
-      const copyText = document.getElementById('bibtex-copy-text');
+    function copyBibtex(btn) {
+      const bibtexCode = btn.parentElement.querySelector('.bibtex-code').textContent;
+      const copyBtn = btn;
+      const copyText = btn.querySelector('span');
 
       navigator.clipboard.writeText(bibtexCode).then(() => {
         copyBtn.classList.add('bibtex-copied');
